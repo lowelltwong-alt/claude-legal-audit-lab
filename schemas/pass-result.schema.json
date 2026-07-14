@@ -1,0 +1,256 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "pass_id",
+    "scope",
+    "coverage",
+    "findings",
+    "new_patterns",
+    "negative_evidence",
+    "unknowns"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "pass_id": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "files_reviewed",
+        "lines_reviewed",
+        "deferred"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "files_reviewed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lines_reviewed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "deferred": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "reason"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "claim_status",
+          "evidence",
+          "proves",
+          "does_not_prove",
+          "alternative_explanation",
+          "confidence",
+          "risk",
+          "test_to_confirm",
+          "hypotheses"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "claim_status": {
+            "enum": [
+              "Confirmed",
+              "Inferred",
+              "Assumed",
+              "Unknown",
+              "Contradicted"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "path",
+                "line_start",
+                "line_end",
+                "description"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "line_start": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "line_end": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "source_to_sink": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "string"
+            }
+          },
+          "proves": {
+            "type": "string"
+          },
+          "does_not_prove": {
+            "type": "string"
+          },
+          "alternative_explanation": {
+            "type": "string"
+          },
+          "confidence": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "risk": {
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "critical",
+              "unknown"
+            ]
+          },
+          "test_to_confirm": {
+            "type": "string"
+          },
+          "hypotheses": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "H0",
+                "H1",
+                "H2"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "new_patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "logic",
+          "search_terms",
+          "false_positive_risk"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "logic": {
+            "type": "string"
+          },
+          "search_terms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "false_positive_risk": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "negative_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "description",
+          "effect"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "effect": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "question",
+          "why_source_cannot_answer",
+          "needed_evidence"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "why_source_cannot_answer": {
+            "type": "string"
+          },
+          "needed_evidence": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

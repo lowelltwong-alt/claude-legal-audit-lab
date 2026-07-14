@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/anthropics/claude-for-legal.git",
+  "commit": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+  "reviewed_at": "2026-07-14",
+  "license": "Apache-2.0",
+  "expected_directory": "upstream/claude-for-legal",
+  "note": "The public repository is the plugin/prompt/connectors layer, not Anthropic's proprietary runtime."
+}

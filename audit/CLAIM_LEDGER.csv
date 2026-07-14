@@ -1,0 +1,18 @@
+claim_id,claim,status,basis,confidence,risk
+CL-001,The repo is an official Anthropic public repo for legal plugins,Confirmed,Repository metadata and marketplace manifest,High,Low
+CL-002,Cold start asks for signed agreements and extracts actual playbook positions,Confirmed,commercial-legal/skills/cold-start-interview/SKILL.md,High,High strategic sensitivity
+CL-003,Practice profiles are durable and read by every skill,Confirmed,commercial-legal/CLAUDE.md and root guidance,High,High
+CL-004,A shared profile carries company risk and escalation context across plugins,Confirmed,cold-start and profile template instructions,High,High
+CL-005,Deal debrief captures deviations and attorney rationale,Confirmed,commercial-legal/agents/deal-debrief.md,High,High
+CL-006,Playbook monitor learns patterns and proposes policy updates,Confirmed,commercial-legal/agents/playbook-monitor.md,High,High
+CL-007,The system creates a customer-level partner-judgment ontology,Inferred,Combined workflow fields and feedback loop,Medium-High,High
+CL-008,Customer-specific profiles are represented as local files,Confirmed,~/.claude/plugins/config paths,High,Medium
+CL-009,Relevant customer context may reach a frontier model during inference,Inferred,Claude performs the configured analysis,High,High
+CL-010,Anthropic retains customer workflows for generalized training,Unknown,Not implemented in public repo,Unknown,Critical if true
+CL-011,Anthropic intends to replace law firms,Unknown,Intent not observable,Unknown,High reputational/legal risk if alleged
+CL-012,Managed deployment uploads skills and creates hosted agents,Confirmed,scripts/deploy-managed-agent.sh,High,Medium-High
+CL-013,Open code contains a covert exfiltration client,Contradicted within reviewed subset,No obvious client found; hooks reviewed were empty,Medium,Unknown outside scope
+CL-014,MCP connectors can expose legal repositories subject to permissions,Confirmed,.mcp.json manifests and tool declarations,High,High
+CL-015,"Security controls exist for injection, updates, and tool scope",Confirmed,"orchestrate.py, installer/updater, lint-tool-scope.py",High,Medium residual
+CL-016,Kirkland's strategy treats senior-partner judgment as an encodable firm asset,Confirmed from public reporting,"Reuters and Financial Times, May-June 2026",High,High
+CL-017,"A firm-owned, model-neutral control plane reduces frontier-provider exposure",Inferred,Architecture analysis,Medium-High,Medium implementation risk

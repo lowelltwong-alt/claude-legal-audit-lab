@@ -1,0 +1,7 @@
+results/*
+!results/.gitkeep
+upstream/claude-for-legal/
+.codex-log/
+__pycache__/
+*.pyc
+.DS_Store

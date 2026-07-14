@@ -1,0 +1,114 @@
+[
+  {
+    "id": "WF-001",
+    "category": "workflow_capture",
+    "name": "seed documents or signed examples",
+    "regex": "(?i)(seed docs?|recent signed agreements?|signed agreements?|prior review memo|point me at.*agreement)",
+    "rationale": "Inputs that can reveal actual rather than stated practice.",
+    "false_positive": "Normal document review also uses agreements."
+  },
+  {
+    "id": "WF-002",
+    "category": "workflow_capture",
+    "name": "practice profile and shared profile",
+    "regex": "(?i)(practice profile|company-profile|shared company profile|risk appetite|escalation matrix|deal[- ]breaker|the one thing)",
+    "rationale": "Structured institutional operating context.",
+    "false_positive": "Templates may remain unpopulated."
+  },
+  {
+    "id": "WF-003",
+    "category": "judgment_feedback",
+    "name": "deviation and rationale logging",
+    "regex": "(?i)(deviation-log|deviation log|basis behind this deviation|accepted|rejected|attorney.*context|legal judgment)",
+    "rationale": "Feedback and exception history can encode decision boundaries.",
+    "false_positive": "Accepted/rejected may appear in unrelated legal text."
+  },
+  {
+    "id": "WF-004",
+    "category": "judgment_feedback",
+    "name": "policy/playbook learning loop",
+    "regex": "(?i)(playbook-monitor|propose.*playbook update|pattern_threshold|practice has consistently|update proposals)",
+    "rationale": "Closed-loop policy adaptation.",
+    "false_positive": "Human approval may prevent autonomous policy change."
+  },
+  {
+    "id": "DF-001",
+    "category": "remote_transmission",
+    "name": "Anthropic skill or agent upload",
+    "regex": "(?i)(/v1/skills|/v1/agents|upload_skill|api\\.anthropic\\.com|anthropic\\.Anthropic)",
+    "rationale": "Explicit remote API boundary.",
+    "false_positive": "Upload may contain only public skill definitions, not customer data."
+  },
+  {
+    "id": "DF-002",
+    "category": "remote_transmission",
+    "name": "generic network client",
+    "regex": "(?i)(curl\\s|requests\\.(post|get|put)|urllib|webhook|http[s]?://)",
+    "rationale": "Potential outbound path requiring source-to-sink validation.",
+    "false_positive": "Documentation and declared connectors are expected."
+  },
+  {
+    "id": "DF-003",
+    "category": "telemetry_secondary_use",
+    "name": "analytics or telemetry",
+    "regex": "(?i)(telemetry|analytics|sentry|posthog|mixpanel|segment|usage metrics|quality review|model improvement|fine[- ]?tun|train(?:ing)? on)",
+    "rationale": "Potential retention or secondary-use signal.",
+    "false_positive": "May be a clause the legal reviewer is instructed to flag in other vendors."
+  },
+  {
+    "id": "PR-001",
+    "category": "permissions",
+    "name": "wildcard MCP or broad tools",
+    "regex": "(?i)(mcp__\\*|mcp_toolset|default_config.*enabled.*true|tools:\\s*\\[.*\\*|Bash|Write)",
+    "rationale": "Broad tool access increases blast radius.",
+    "false_positive": "Leaf scoping and read-only settings may constrain it."
+  },
+  {
+    "id": "PR-002",
+    "category": "connectors",
+    "name": "legal repository connector",
+    "regex": "(?i)(iManage|Ironclad|Everlaw|NetDocuments|DocuSign|Google Drive|SharePoint|Box|Slack)",
+    "rationale": "Connectors can expose privileged and institutional data.",
+    "false_positive": "Manifest availability is not proof of connection or access."
+  },
+  {
+    "id": "PS-001",
+    "category": "persistence",
+    "name": "local durable configuration",
+    "regex": "~/.claude/plugins/config/claude-for-legal",
+    "rationale": "Persistent customer-specific operating data.",
+    "false_positive": "Local customer control weighs against provider retention."
+  },
+  {
+    "id": "SC-001",
+    "category": "supply_chain",
+    "name": "installer updater hooks",
+    "regex": "(?i)(auto-updater|skill-installer|hooks.json|allowlist|commit SHA|registry|community skill)",
+    "rationale": "Updates and third-party instructions can alter behavior.",
+    "false_positive": "Repository includes material safeguards."
+  },
+  {
+    "id": "CTX-001",
+    "category": "context_scope",
+    "name": "cross-plugin or cross-matter context",
+    "regex": "(?i)(shared by all|other legal plugins will read|cross-matter|another matter|prior sessions?|ambient context|user memory)",
+    "rationale": "Context boundaries affect confidentiality and ontology aggregation.",
+    "false_positive": "Text may expressly prohibit cross-context use."
+  },
+  {
+    "id": "CTRL-001",
+    "category": "protective_control",
+    "name": "human approval or read-only gate",
+    "regex": "(?i)(explicit approval|explicit confirmation|read-only|do not write|show.*diff|human-in-the-loop|allowlist|schema-validated)",
+    "rationale": "Negative evidence and mitigating control.",
+    "false_positive": "Prompt-only control may not be technically enforced."
+  },
+  {
+    "id": "INJ-001",
+    "category": "prompt_injection",
+    "name": "untrusted data and instruction handling",
+    "regex": "(?i)(untrusted data|prompt injection|ignore previous|instructions embedded|data, not an instruction|handoff_request)",
+    "rationale": "Prompt-heavy legal systems ingest adversarial documents.",
+    "false_positive": "Often defensive documentation rather than a vulnerability."
+  }
+]

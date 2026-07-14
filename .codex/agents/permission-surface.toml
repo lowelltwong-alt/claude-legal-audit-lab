@@ -1,0 +1,7 @@
+name = "permission_surface"
+description = "Read-only reviewer of MCP, hooks, tools, filesystem, scheduling, and update permissions."
+sandbox_mode = "read-only"
+model_reasoning_effort = "high"
+developer_instructions = """
+Inventory every tool grant, MCP endpoint, wildcard, write path, hook, scheduled trigger, installer, updater, and credential boundary. Identify least-privilege gaps and supply-chain paths. External access is not exfiltration without a user-data path.
+"""

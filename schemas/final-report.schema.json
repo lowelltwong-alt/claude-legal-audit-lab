@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scope_boundary",
+    "upstream_commit",
+    "conclusion",
+    "hypothesis_assessment",
+    "validated_findings",
+    "proof_gaps",
+    "recommended_tests"
+  ],
+  "properties": {
+    "scope_boundary": {
+      "type": "string"
+    },
+    "upstream_commit": {
+      "type": "string"
+    },
+    "conclusion": {
+      "type": "string"
+    },
+    "hypothesis_assessment": {
+      "type": "object",
+      "required": [
+        "H0",
+        "H1",
+        "H2"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "H0": {
+          "type": "string"
+        },
+        "H1": {
+          "type": "string"
+        },
+        "H2": {
+          "type": "string"
+        }
+      }
+    },
+    "validated_findings": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "proof_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_tests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
