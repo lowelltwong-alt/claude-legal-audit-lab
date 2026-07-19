@@ -1,0 +1,449 @@
+{
+  "pass_id": "SPECIALIZED-SKEPTICAL-REBUTTAL-001",
+  "scope": [
+    "pinned upstream/claude-for-legal at 5ceb305b30b4c82653c9b6642499c12e946ec319",
+    "leading hostile candidates in ROUND-1-MERGE-001",
+    "local storage, context isolation, human gates, tool scoping, schema controls, supply-chain controls, hosted upload paths, and telemetry/secondary-use proof gaps"
+  ],
+  "coverage": {
+    "files_reviewed": 16,
+    "lines_reviewed": 4121,
+    "deferred": []
+  },
+  "findings": [
+    {
+      "id": "SK-FAL-001",
+      "title": "Firm-specific ontology candidate survives only as customer adaptation and dependency risk",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {
+          "path": "commercial-legal/CLAUDE.md",
+          "line_start": 66,
+          "line_end": 72,
+          "description": "The customer profile holds side-specific playbook positions, risk appetite, fallbacks, approval thresholds, and deal-breakers."
+        },
+        {
+          "path": "CLAUDE.md",
+          "line_start": 88,
+          "line_end": 94,
+          "description": "The repository explains that the shipped profile is a template copied to a version-independent path on the user's machine and is not project context."
+        },
+        {
+          "path": "ai-governance-legal/CLAUDE.md",
+          "line_start": 4,
+          "line_end": 18,
+          "description": "User configuration is directed to ~/.claude/plugins/config, while the shipped file is a replaceable template that must not receive user data."
+        }
+      ],
+      "source_to_sink": [
+        "attorney answers or supplied exemplars",
+        "customer-controlled plaintext profile under ~/.claude/plugins/config",
+        "later customer-requested review or drafting workflows"
+      ],
+      "proves": "The static design intentionally encodes firm-specific operating preferences and makes them reusable within later workflows. The candidate survives for H1 workflow capture/dependency.",
+      "does_not_prove": "It does not establish provider retention, provider ownership, generalized training, cross-customer pooling, product improvement, or covert extraction; the observed durable sink is a local customer path.",
+      "alternative_explanation": "The strongest benign explanation is ordinary retrieval-augmented customer configuration: specificity is needed to perform the user's requested legal work and the files remain editable on the user's machine.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Capture inference payloads and feature-specific storage/retention behavior while using a canary profile, then verify deletion, support access, training/evaluation use, and exportability under the applicable tenant terms.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "SK-FAL-002",
+      "title": "Calibration loop survives as human-governed local policy maintenance, not autonomous provider learning",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {
+          "path": "commercial-legal/agents/deal-debrief.md",
+          "line_start": 15,
+          "line_end": 20,
+          "description": "The debrief records why deviations were accepted in a local deviation log that feeds the monitor."
+        },
+        {
+          "path": "commercial-legal/agents/deal-debrief.md",
+          "line_start": 61,
+          "line_end": 81,
+          "description": "The agent presents deviations, asks which need context and which are one-offs, and waits for the attorney before proceeding."
+        },
+        {
+          "path": "commercial-legal/agents/playbook-monitor.md",
+          "line_start": 18,
+          "line_end": 24,
+          "description": "The monitor detects repeated deviations and proposes an update that the attorney approves or rejects."
+        },
+        {
+          "path": "commercial-legal/agents/playbook-monitor.md",
+          "line_start": 63,
+          "line_end": 74,
+          "description": "Threshold crossings produce proposals, supporting data, and recommendations rather than silent policy edits."
+        }
+      ],
+      "source_to_sink": [
+        "signed-agreement deviations and attorney rationale",
+        "local deviation-log.yaml",
+        "thresholded playbook proposal",
+        "attorney approval or rejection"
+      ],
+      "proves": "The repository designs a decision-to-policy feedback loop and captures attorney rationale. It survives as evidence of H1-relevant institutional memory.",
+      "does_not_prove": "It does not show automatic model learning, provider-side derivation, silent playbook mutation, or reuse outside the customer's context.",
+      "alternative_explanation": "This is a transparent knowledge-management workflow intended to stop institutional reasons from disappearing; the attorney remains the stated policy gate.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Run the workflow in an instrumented tenant and verify every write destination, notification payload, approval event, and whether rejected proposals or rationales appear in telemetry or evaluation systems.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "SK-FAL-003",
+      "title": "Durable matter memory is local and explicitly partitioned, although retention remains a customer governance issue",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {
+          "path": "product-legal/skills/matter-workspace/SKILL.md",
+          "line_start": 13,
+          "line_end": 21,
+          "description": "Matter workspaces are described as separating one client or engagement from every other and provide explicit new/switch/close/none operations."
+        },
+        {
+          "path": "product-legal/skills/matter-workspace/SKILL.md",
+          "line_start": 28,
+          "line_end": 38,
+          "description": "Matter files are written beneath the local plugin config path; writes require confirmation; cross-matter reads are prohibited by instruction unless enabled; archive is not deletion."
+        },
+        {
+          "path": "product-legal/skills/matter-workspace/SKILL.md",
+          "line_start": 49,
+          "line_end": 70,
+          "description": "The storage tree locates matter facts, event history, notes, and outputs under the user's home directory and identifies one local active-matter state line."
+        },
+        {
+          "path": "employment-legal/skills/internal-investigation/SKILL.md",
+          "line_start": 113,
+          "line_end": 155,
+          "description": "Investigation logs, evidentiary gaps, and reviewed-document records are created in a local matter directory."
+        }
+      ],
+      "source_to_sink": [
+        "matter or investigation facts",
+        "local per-matter files",
+        "later matter analysis or customer archive"
+      ],
+      "proves": "The design creates durable sensitive memory, but the visible persistence boundary is customer-local and includes a stated cross-matter partition.",
+      "does_not_prove": "It does not establish that inference requests stay local, that archived data is deleted, or that the running system enforces the prompt-described partition.",
+      "alternative_explanation": "Durable files are necessary for continuity, conflicts, handoff, and auditability; local partitioning is affirmative evidence against a covert centralized ontology store.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Attempt cross-matter canary retrieval with the flag off, inspect filesystem and inference traces, test archive/delete semantics, and verify access controls across users and support roles.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "SK-FAL-004",
+      "title": "Remote connectors are declared trust boundaries, not a completed exfiltration chain",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {
+          "path": "commercial-legal/.mcp.json",
+          "line_start": 2,
+          "line_end": 44,
+          "description": "The plugin declares named HTTPS MCP endpoints for contract, document, signature, chat, and outside-counsel systems."
+        },
+        {
+          "path": "commercial-legal/.mcp.json",
+          "line_start": 15,
+          "line_end": 19,
+          "description": "The iManage declaration expressly describes permission-bound, auditable access and documents remaining in iManage, although this is descriptive text rather than runtime proof."
+        },
+        {
+          "path": "commercial-legal/agents/deal-debrief.md",
+          "line_start": 34,
+          "line_end": 44,
+          "description": "The debrief conditionally queries the customer-selected repository and falls back to attorney upload or stops when no connector is available."
+        },
+        {
+          "path": "commercial-legal/CLAUDE.md",
+          "line_start": 438,
+          "line_end": 440,
+          "description": "Retrieved content is explicitly classified as matter data, not instructions, but this is a prompt-level rule."
+        }
+      ],
+      "source_to_sink": [
+        "customer-authorized repository or chat content",
+        "named remote MCP service",
+        "agent-requested analysis or customer-directed workflow"
+      ],
+      "proves": "Remote systems can become read/write trust boundaries if configured and granted. This survives as an architectural and privilege risk.",
+      "does_not_prove": "Declarations do not prove credentials, grants, actual traffic, arbitrary outbound destinations, provider retention, or secondary use. No source-to-sink chain in the reviewed source supplies both retention and generalized-use evidence.",
+      "alternative_explanation": "The connectors implement requested interoperability with systems where the customer already stores legal work, and actual access is conditional on customer configuration and underlying permissions.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Record connector grants and traffic with canary data, verify scopes and operator identity, and obtain destination-specific retention, logging, support-access, and training/evaluation terms.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "SK-FAL-005",
+      "title": "Hosted deployment uploads instructions and skills, but source does not show upload of live client work product",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {
+          "path": "scripts/deploy-managed-agent.sh",
+          "line_start": 4,
+          "line_end": 12,
+          "description": "The script documents resolving system instructions, uploading skills, and creating callable agents before deployment."
+        },
+        {
+          "path": "scripts/deploy-managed-agent.sh",
+          "line_start": 73,
+          "line_end": 104,
+          "description": "Skill directories are zipped and posted to the configured API /v1/skills endpoint."
+        },
+        {
+          "path": "scripts/deploy-managed-agent.sh",
+          "line_start": 151,
+          "line_end": 182,
+          "description": "Resolved manifests, system text, skill IDs, callable-agent IDs, and cookbook metadata are assembled and posted to /v1/agents."
+        },
+        {
+          "path": "scripts/deploy-managed-agent.sh",
+          "line_start": 193,
+          "line_end": 199,
+          "description": "A dry-run path emits resolved request bodies without deploying them."
+        }
+      ],
+      "source_to_sink": [
+        "repository-authored skill and system instruction files",
+        "zip/JSON transformation",
+        "configured Anthropic-compatible /v1/skills and /v1/agents API"
+      ],
+      "proves": "Repository-authored behavioral instructions can enter hosted custody during an explicitly invoked deployment. This is a real provider-facing path for the template logic itself.",
+      "does_not_prove": "The path does not itself upload customer matter files, attorney decisions, runtime prompts, outputs, telemetry, or local profiles, and it contains no retention or secondary-use evidence.",
+      "alternative_explanation": "Uploading code-like skills and agent instructions is the requested mechanism for creating the customer's hosted agent; it is not covert and can be inspected with dry-run.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Compare dry-run payloads with captured deployment traffic, inspect hosted agent storage and access controls, and verify whether runtime attachment or context mechanisms later add customer-specific files.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "SK-FAL-006",
+      "title": "Isolation, approval, and injection defenses are substantial counterevidence but have mixed enforcement strength",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {
+          "path": "managed-agent-cookbooks/reg-monitor/agent.yaml",
+          "line_start": 9,
+          "line_end": 27,
+          "description": "The orchestrator is instructed not to post directly, treats feeds as untrusted, requires lawyer review, disables tools by default, and enables only local read/grep/glob tools."
+        },
+        {
+          "path": "managed-agent-cookbooks/docket-watcher/subagents/docket-reader.yaml",
+          "line_start": 5,
+          "line_end": 23,
+          "description": "The leaf is instructed to treat filings as untrusted data, avoid links/instructions, emit only schema fields, and has no write or non-docket access."
+        },
+        {
+          "path": "managed-agent-cookbooks/docket-watcher/subagents/docket-reader.yaml",
+          "line_start": 24,
+          "line_end": 59,
+          "description": "The manifest grants bounded tools and declares an additionalProperties-false output schema with lengths, character patterns, item cap, and URL host allowlist."
+        },
+        {
+          "path": "regulatory-legal/skills/policy-redraft/SKILL.md",
+          "line_start": 13,
+          "line_end": 19,
+          "description": "The skill writes a separate proposal, never overwrites approved policy, and leaves closure to the policy owner."
+        },
+        {
+          "path": "regulatory-legal/skills/policy-redraft/SKILL.md",
+          "line_start": 31,
+          "line_end": 40,
+          "description": "The approval and no-direct-apply rules are repeated as hard guardrails, but remain natural-language instructions."
+        },
+        {
+          "path": "CLAUDE.md",
+          "line_start": 111,
+          "line_end": 120,
+          "description": "The repository specifies local-only orchestrators and tool-bearing leaves and says a lint script enforces tool-scope consistency."
+        }
+      ],
+      "source_to_sink": [
+        "untrusted or sensitive input",
+        "prompt instruction plus manifest tool restriction and schema boundary",
+        "bounded leaf output or separately approved write"
+      ],
+      "proves": "The source contains affirmative design measures against ambient authority, prompt injection, unreviewed writes, and unconstrained output. Manifest tool denial and schema declarations are stronger than prose alone.",
+      "does_not_prove": "Natural-language prohibitions do not technically enforce model behavior by themselves; manifests do not prove the deployed runtime honors them; and an output schema does not sanitize every semantically dangerous but schema-valid string.",
+      "alternative_explanation": "The architecture deliberately separates readers, writers, and human decision-makers, which is inconsistent with a design optimized for silent uncontrolled capture.",
+      "confidence": "high",
+      "risk": "low",
+      "test_to_confirm": "Deploy the exact revision, attempt prohibited tool calls and prompt-injection payloads, verify server-side tool denials and schema rejection, and confirm human gates cannot be bypassed by direct invocation or malformed handoffs.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "SK-FAL-007",
+      "title": "Supply-chain workflows are human-gated and fail-closed in prose, with no silent auto-update design",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {
+          "path": "legal-builder-hub/skills/auto-updater/SKILL.md",
+          "line_start": 20,
+          "line_end": 27,
+          "description": "The updater states that no update is applied without a displayed diff and explicit approval."
+        },
+        {
+          "path": "legal-builder-hub/skills/auto-updater/SKILL.md",
+          "line_start": 62,
+          "line_end": 101,
+          "description": "Security-surface changes are flagged, rescanned in read-only context, require human approval, and REFUSE-tier regressions have no override."
+        },
+        {
+          "path": "legal-builder-hub/skills/auto-updater/SKILL.md",
+          "line_start": 157,
+          "line_end": 176,
+          "description": "There is no auto mode; application follows explicit approval and creates a local rollback backup."
+        },
+        {
+          "path": "legal-builder-hub/skills/registry-browser/SKILL.md",
+          "line_start": 61,
+          "line_end": 81,
+          "description": "Registry browsing previews the full skill and does not install or search beyond watched registries."
+        },
+        {
+          "path": "legal-builder-hub/skills/skill-installer/SKILL.md",
+          "line_start": 483,
+          "line_end": 505,
+          "description": "Install trust does not transfer to updates; security-surface changes force review; the documentation expressly disclaims elimination of malicious-skill risk."
+        }
+      ],
+      "source_to_sink": [
+        "third-party registry content",
+        "preview, allowlist, diff, scan, and human approval",
+        "local installation with pinned revision and rollback"
+      ],
+      "proves": "The intended update path is visible, revision-pinned, review-gated, and designed to stop on high-risk changes. This weighs against a hidden supply-chain capture mechanism in the reviewed source.",
+      "does_not_prove": "The controls are principally prompt-defined workflows and do not prove execution, scanner completeness, immutable upstream availability, or resistance to a compromised approved publisher.",
+      "alternative_explanation": "The legal-builder hub is designed as a customer-controlled extension mechanism with explicit acknowledgment that defenses can fail, not as a silent generalized upload channel.",
+      "confidence": "high",
+      "risk": "low",
+      "test_to_confirm": "Exercise malicious update fixtures against a deployed runtime, verify read-only scan isolation and unbypassable approval, and inspect all network/file effects during fetch, install, update, and rollback.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "SK-FAL-008",
+      "title": "Reviewed source does not complete a telemetry-to-secondary-use chain",
+      "claim_status": "Contradicted",
+      "evidence": [
+        {
+          "path": "legal-clinic/skills/cold-start-interview/SKILL.md",
+          "line_start": 84,
+          "line_end": 89,
+          "description": "Setup identifies local maintained artifacts, disclaims reading personal history or other conversations, and requires attorney input or approval before configuration is added."
+        },
+        {
+          "path": "legal-clinic/skills/cold-start-interview/SKILL.md",
+          "line_start": 135,
+          "line_end": 163,
+          "description": "The workflow instructs the clinic to verify account-tier retention/training terms and local data handling, and states core features work with local file access alone."
+        },
+        {
+          "path": "ai-governance-legal/CLAUDE.md",
+          "line_start": 461,
+          "line_end": 475,
+          "description": "Matter context is off for in-house use; private-practice cross-matter context defaults off; reusable learnings are directed to the customer practice profile."
+        }
+      ],
+      "source_to_sink": null,
+      "proves": "Within the reviewed static source, the hostile proposition that a completed covert pooling or generalized-training path is established is contradicted: the required retention and secondary-use steps are absent, while local/control-oriented explanations are explicit.",
+      "does_not_prove": "Repository silence cannot prove zero telemetry, zero hosted retention, flawless compliance, or absence of secondary use in proprietary runtime, contracts, support, analytics, or evaluation systems.",
+      "alternative_explanation": "The public repository governs customer workflows while provider data handling is controlled outside the repository by product runtime, account tier, contracts, and operational systems.",
+      "confidence": "high",
+      "risk": "unknown",
+      "test_to_confirm": "Obtain authenticated feature-specific contract terms and DPA/subprocessor records; capture inference, connector, support, feedback, telemetry, and deletion traffic; then trace any retained customer signal to an identified evaluation, training, or cross-customer product process.",
+      "hypotheses": ["H0", "H1", "H2"]
+    }
+  ],
+  "new_patterns": [
+    {
+      "id": "SK-PAT-001",
+      "name": "Prompt-control versus runtime-enforcement split",
+      "logic": "For every claimed safeguard, classify prose instruction, manifest/tool declaration, local validator, server-side denial, and observed runtime enforcement separately.",
+      "search_terms": ["do not", "never", "tools:", "default_config", "output_schema", "approval", "validate", "lint"],
+      "false_positive_risk": "Repeated imperative language can look like a control even when no runtime component enforces it."
+    },
+    {
+      "id": "SK-PAT-002",
+      "name": "Explicit deployment upload versus runtime customer-data upload",
+      "logic": "Separate repository-authored skill/system payloads posted during deployment from customer profiles, matter files, prompts, outputs, logs, and connector content transmitted during operation.",
+      "search_terms": ["/v1/skills", "/v1/agents", "upload_skill", "files[]=", "system", "attachment", "context", "telemetry"],
+      "false_positive_risk": "Any upload to a provider may be mislabeled as client-data exfiltration without inspecting the payload class."
+    },
+    {
+      "id": "SK-PAT-003",
+      "name": "Local persistence with remote inference gap",
+      "logic": "A local sink rebuts provider-retention claims only for persistence; separately test whether the same content is transmitted for inference, logging, support, feedback, or evaluation.",
+      "search_terms": ["~/.claude/plugins/config", "write", "local", "API", "MCP", "retention", "training", "feedback"],
+      "false_positive_risk": "Local storage can be mistaken for local-only processing."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "path": "CLAUDE.md:111-120",
+      "description": "Orchestrators are limited to local tools while network/write authority is assigned to specific leaves, with repository lint expectations.",
+      "effect": "Weighs against ambient-agent authority and undifferentiated access, while leaving deployed enforcement unknown."
+    },
+    {
+      "path": "ai-governance-legal/CLAUDE.md:461-475",
+      "description": "Cross-matter context defaults off and per-matter work is directed to customer-local folders.",
+      "effect": "Weighs against an intended default cross-matter pooling architecture."
+    },
+    {
+      "path": "legal-clinic/skills/cold-start-interview/SKILL.md:84-89",
+      "description": "Setup says it does not read personal history, other conversations, or home-directory context and requires attorney input or approval.",
+      "effect": "Weighs against ambient history harvesting in the specified setup path."
+    },
+    {
+      "path": "managed-agent-cookbooks/docket-watcher/subagents/docket-reader.yaml:24-59",
+      "description": "A reader leaf has no write tool, bounded MCP access, and a strict output schema with URL host restrictions.",
+      "effect": "Provides structural counterevidence stronger than prompt language alone, subject to runtime verification."
+    },
+    {
+      "path": "regulatory-legal/skills/policy-redraft/SKILL.md:31-40",
+      "description": "The workflow forbids direct policy edits and reserves application/closure to the policy owner.",
+      "effect": "Weighs against autonomous operational policy mutation, but is prompt-level."
+    },
+    {
+      "path": "legal-builder-hub/skills/auto-updater/SKILL.md:69-101",
+      "description": "Updates are rescanned in read-only context, security-surface changes require approval, and refusal-tier results have no documented override.",
+      "effect": "Weighs against a designed silent-update supply-chain path, though enforcement is not established by source text."
+    },
+    {
+      "path": "scripts/deploy-managed-agent.sh:193-199",
+      "description": "Deployment supports inspection through a dry-run that outputs resolved request bodies without posting them.",
+      "effect": "Reduces opacity of the explicit hosted deployment payload, but does not expose later runtime data flows."
+    }
+  ],
+  "unknowns": [
+    {
+      "question": "Are cross-matter, no-history, no-write, and approval instructions enforced by the deployed runtime?",
+      "why_source_cannot_answer": "Most restrictions are prompt text or declarative manifests; the repository contains no authenticated runtime denial logs for the deployed feature.",
+      "needed_evidence": "Adversarial deployed tests with canaries, server-side tool authorization logs, schema rejection receipts, and approval-bypass attempts."
+    },
+    {
+      "question": "What customer content enters inference, telemetry, analytics, support, feedback, safety, or evaluation systems?",
+      "why_source_cannot_answer": "Those proprietary runtime and operational systems are outside the pinned source and no payload captures are registered here.",
+      "needed_evidence": "Feature-specific network captures, data-flow documentation, audit logs, telemetry schemas, support-access records, and authenticated configuration exports."
+    },
+    {
+      "question": "What are the retention, deletion, training, and secondary-use rules for each account tier and hosted feature?",
+      "why_source_cannot_answer": "The clinic setup tells users to confirm applicable terms but does not embed authoritative, revision-bound contract terms.",
+      "needed_evidence": "Executed order form, services terms, DPA, privacy/data-use terms, subprocessor terms, retention schedule, and deletion verification bound to tenant and date."
+    },
+    {
+      "question": "Do any provider systems normalize or aggregate professional interaction signals across customers?",
+      "why_source_cannot_answer": "No reviewed source supplies the required cross-customer destination, retention, and reuse evidence.",
+      "needed_evidence": "Authenticated architecture and governance records, lineage from retained traces into evaluation/training/product datasets, and controlled cross-tenant canary testing."
+    },
+    {
+      "question": "Are declared MCP descriptions and permission claims accurate in actual tenant configurations?",
+      "why_source_cannot_answer": "The .mcp.json files declare endpoints and descriptions but contain no credentials, grants, traffic, or destination audit logs.",
+      "needed_evidence": "Tenant grant exports, connector scopes, access logs, canary traffic captures, operator identity, and connector-specific data-use terms."
+    }
+  ]
+}

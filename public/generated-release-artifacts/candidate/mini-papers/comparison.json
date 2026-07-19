@@ -1,0 +1,183 @@
+{
+  "dimension_leaders": {
+    "boundary": {
+      "maximum_earned_basis_points": 1500,
+      "profiles": [
+        "academic",
+        "adversarial",
+        "executive"
+      ]
+    },
+    "falsifiers": {
+      "maximum_earned_basis_points": 1000,
+      "profiles": [
+        "academic",
+        "adversarial",
+        "executive"
+      ]
+    },
+    "genealogy": {
+      "maximum_earned_basis_points": 2500,
+      "profiles": [
+        "academic",
+        "adversarial",
+        "executive"
+      ]
+    },
+    "objections": {
+      "maximum_earned_basis_points": 1500,
+      "profiles": [
+        "academic",
+        "adversarial",
+        "executive"
+      ]
+    },
+    "profile_order": {
+      "maximum_earned_basis_points": 2500,
+      "profiles": [
+        "academic",
+        "adversarial",
+        "executive"
+      ]
+    },
+    "proof_gaps": {
+      "maximum_earned_basis_points": 1000,
+      "profiles": [
+        "academic",
+        "adversarial",
+        "executive"
+      ]
+    }
+  },
+  "mode": "compare_only",
+  "profiles": [
+    {
+      "audience": "law-firm leadership and technology governance committees",
+      "profile_id": "executive",
+      "simulation": {
+        "example_optimal_order": [
+          "MPU-0007",
+          "MPU-0001",
+          "MPU-0002",
+          "MPU-0003",
+          "MPU-0004",
+          "MPU-0005",
+          "MPU-0006"
+        ],
+        "maximum_total_basis_points": 10000,
+        "mode": "structural_stress_test_not_truth_or_persuasion",
+        "optimal_order_count": 60,
+        "permutations_evaluated": 5040,
+        "planned_is_optimal": true,
+        "planned_order": [
+          "MPU-0007",
+          "MPU-0001",
+          "MPU-0002",
+          "MPU-0003",
+          "MPU-0004",
+          "MPU-0005",
+          "MPU-0006"
+        ],
+        "planned_score": {
+          "dimensions": {
+            "boundary": 1500,
+            "falsifiers": 1000,
+            "genealogy": 2500,
+            "objections": 1500,
+            "profile_order": 2500,
+            "proof_gaps": 1000
+          },
+          "maximum_basis_points": 10000,
+          "total_basis_points": 10000
+        }
+      }
+    },
+    {
+      "audience": "legal-technology researchers and interdisciplinary reviewers",
+      "profile_id": "academic",
+      "simulation": {
+        "example_optimal_order": [
+          "MPU-0007",
+          "MPU-0001",
+          "MPU-0002",
+          "MPU-0003",
+          "MPU-0004",
+          "MPU-0005",
+          "MPU-0006"
+        ],
+        "maximum_total_basis_points": 10000,
+        "mode": "structural_stress_test_not_truth_or_persuasion",
+        "optimal_order_count": 12,
+        "permutations_evaluated": 5040,
+        "planned_is_optimal": true,
+        "planned_order": [
+          "MPU-0007",
+          "MPU-0001",
+          "MPU-0002",
+          "MPU-0003",
+          "MPU-0004",
+          "MPU-0005",
+          "MPU-0006"
+        ],
+        "planned_score": {
+          "dimensions": {
+            "boundary": 1500,
+            "falsifiers": 1000,
+            "genealogy": 2500,
+            "objections": 1500,
+            "profile_order": 2500,
+            "proof_gaps": 1000
+          },
+          "maximum_basis_points": 10000,
+          "total_basis_points": 10000
+        }
+      }
+    },
+    {
+      "audience": "skeptical counsel, providers, regulators, and technical reviewers",
+      "profile_id": "adversarial",
+      "simulation": {
+        "example_optimal_order": [
+          "MPU-0007",
+          "MPU-0002",
+          "MPU-0001",
+          "MPU-0003",
+          "MPU-0004",
+          "MPU-0005",
+          "MPU-0006"
+        ],
+        "maximum_total_basis_points": 10000,
+        "mode": "structural_stress_test_not_truth_or_persuasion",
+        "optimal_order_count": 60,
+        "permutations_evaluated": 5040,
+        "planned_is_optimal": true,
+        "planned_order": [
+          "MPU-0007",
+          "MPU-0002",
+          "MPU-0001",
+          "MPU-0003",
+          "MPU-0004",
+          "MPU-0005",
+          "MPU-0006"
+        ],
+        "planned_score": {
+          "dimensions": {
+            "boundary": 1500,
+            "falsifiers": 1000,
+            "genealogy": 2500,
+            "objections": 1500,
+            "profile_order": 2500,
+            "proof_gaps": 1000
+          },
+          "maximum_basis_points": 10000,
+          "total_basis_points": 10000
+        }
+      }
+    }
+  ],
+  "revision": "1.0.0",
+  "schema": "claude-legal-audit.mini-paper-comparison.v1",
+  "status": "blocked_unpublished_candidate",
+  "universal_winner": null,
+  "warning": "Scores compare inspectable structure only; they cannot promote evidence, measure truth or persuasion, or authorize publication."
+}

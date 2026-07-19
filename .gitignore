@@ -1,7 +1,36 @@
 results/*
 !results/.gitkeep
+!results/coverage.csv
+!results/generated-pattern-matches.jsonl
+!results/inventory.json
+!results/matches.jsonl
+!results/pr-commit-diff-linkage.json
+!results/pr-surface-taxonomy.json
+!results/semantic-coverage-round-1.md
+!results/url-index.csv
+!results/coverage-receipts/
+!results/coverage-receipts/*.jsonl
+!results/pass-results/
+!results/pass-results/*.json
+!results/worklists/
+results/worklists/*
+!results/worklists/*.csv
 upstream/claude-for-legal/
 .codex-log/
+.private/
 __pycache__/
 *.pyc
 .DS_Store
+rust/**/target/
+
+# BEGIN PERSONAL REPO PRIVACY BOUNDARY
+/private/
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.p12
+**/*.pfx
+**/id_rsa
+**/id_ed25519
+# END PERSONAL REPO PRIVACY BOUNDARY

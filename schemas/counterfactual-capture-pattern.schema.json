@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/counterfactual-capture-pattern.schema.json",
+  "title": "Defensive counterfactual ontology-exposure patterns",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "revision", "status", "evidence_binding_contract", "use_policy", "patterns"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.counterfactual-capture-patterns.v1"},
+    "revision": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "status": {"enum": ["candidate", "reviewed"]},
+    "evidence_binding_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_ids_mean", "child_edge_source_inheritance", "direct_support_requires", "generated_relations_are"],
+      "properties": {
+        "source_ids_mean": {"type": "string", "minLength": 20},
+        "child_edge_source_inheritance": {"const": false},
+        "direct_support_requires": {"type": "string", "minLength": 20},
+        "generated_relations_are": {"type": "string", "minLength": 20}
+      }
+    },
+    "use_policy": {"$ref": "#/$defs/usePolicy"},
+    "patterns": {"type": "array", "minItems": 12, "items": {"$ref": "#/$defs/pattern"}}
+  },
+  "$defs": {
+    "usePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode", "capture_mode", "collection_enabled", "network_access", "identity_linkage",
+        "cross_customer_linkage", "training_use", "secondary_use", "forbidden_actions"
+      ],
+      "properties": {
+        "mode": {"const": "defensive_synthetic_only"},
+        "capture_mode": {"const": "conceptual"},
+        "collection_enabled": {"const": false},
+        "network_access": {"const": false},
+        "identity_linkage": {"const": false},
+        "cross_customer_linkage": {"const": false},
+        "training_use": {"const": "prohibited"},
+        "secondary_use": {"const": "prohibited"},
+        "forbidden_actions": {
+          "type": "array",
+          "minItems": 5,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 5}
+        }
+      }
+    },
+    "consentAuthority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "basis", "decline_path", "human_gate"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "basis": {"type": "string", "minLength": 15},
+        "decline_path": {"type": "string", "minLength": 10},
+        "human_gate": {"type": "string", "minLength": 10}
+      }
+    },
+    "pattern": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pattern_id", "name", "objective", "stage_ids", "signal_classes", "derived_asset_planes",
+        "client_content_required", "epistemic_status", "implementation_status", "defensive_test_mode",
+        "consent_and_authority", "privilege_and_confidentiality_risk", "what_it_can_infer",
+        "what_it_cannot_prove", "countercontrols", "applies_when", "does_not_apply_when",
+        "danger_if_misapplied", "source_ids"
+      ],
+      "properties": {
+        "pattern_id": {"type": "string", "pattern": "^CF-[0-9]{3}$"},
+        "name": {"type": "string", "minLength": 3},
+        "alias": {"type": "string", "minLength": 3},
+        "objective": {"type": "string", "minLength": 20},
+        "stage_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^LF-[0-9]{2}$"}},
+        "signal_classes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 3}},
+        "derived_asset_planes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^PLANE-[A-Z]+$"}},
+        "client_content_required": {"enum": ["no", "sometimes", "yes"]},
+        "epistemic_status": {"enum": ["observed_fact", "reasoned_inference", "counterfactual_hypothesis", "unknown", "disconfirmed_or_constrained"]},
+        "implementation_status": {"const": "analysis_only"},
+        "defensive_test_mode": {"enum": ["synthetic_fixture_only", "public_primary_sources_only", "contract_and_policy_review_only"]},
+        "scenario_constraints": {
+          "oneOf": [
+            {"$ref": "#/$defs/publicRecordConstraints"},
+            {"$ref": "#/$defs/acquisitionConstraints"}
+          ]
+        },
+        "consent_and_authority": {"$ref": "#/$defs/consentAuthority"},
+        "privilege_and_confidentiality_risk": {"type": "string", "minLength": 20},
+        "what_it_can_infer": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 10}},
+        "what_it_cannot_prove": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 12}},
+        "countercontrols": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 8}},
+        "applies_when": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 12}},
+        "does_not_apply_when": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 12}},
+        "danger_if_misapplied": {"type": "string", "minLength": 20},
+        "source_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^SRC-[0-9]{4}$"}}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"pattern_id": {"const": "CF-011"}}, "required": ["pattern_id"]},
+          "then": {"required": ["scenario_constraints"], "properties": {"scenario_constraints": {"$ref": "#/$defs/publicRecordConstraints"}}}
+        },
+        {
+          "if": {"properties": {"pattern_id": {"const": "CF-016"}}, "required": ["pattern_id"]},
+          "then": {"required": ["scenario_constraints"], "properties": {"scenario_constraints": {"$ref": "#/$defs/acquisitionConstraints"}}}
+        }
+      ]
+    },
+    "publicRecordConstraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lawful_public_access_only", "sealed_or_restricted_material", "selection_bias_acknowledged", "internal_deliberation_inferred"],
+      "properties": {
+        "lawful_public_access_only": {"const": true},
+        "sealed_or_restricted_material": {"const": false},
+        "selection_bias_acknowledged": {"const": true},
+        "internal_deliberation_inferred": {"const": false}
+      }
+    },
+    "acquisitionConstraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evasion_design", "transaction_playbook", "jurisdiction_specific_review"],
+      "properties": {
+        "evasion_design": {"const": false},
+        "transaction_playbook": {"const": false},
+        "jurisdiction_specific_review": {"const": true}
+      }
+    }
+  }
+}

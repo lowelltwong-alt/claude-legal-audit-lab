@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["schema","required_globs","records"],"properties":{"records":{"type":"array","items":{"type":"object","required":["path","artifact_class","authority_class","parent_artifacts","source_ids","claim_ids","lineage_status"]}}}}
+

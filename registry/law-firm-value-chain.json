@@ -1,0 +1,466 @@
+{
+  "schema": "claude-legal-audit.law-firm-value-chain.v1",
+  "revision": "1.0.0",
+  "status": "candidate",
+  "use_policy": {
+    "mode": "defensive_synthetic_only",
+    "data_boundary": "public_sources_and_fictional_fixtures_only",
+    "authority_boundary": "This model describes exposure and countercontrols; it neither authorizes data collection nor states that any provider performs the modeled acts.",
+    "release_gate": "named_human_review_required"
+  },
+  "asset_planes": [
+    {
+      "plane_id": "PLANE-OPERATIONS",
+      "name": "Operational and process ontology",
+      "definition": "Workflow states, roles, queues, systems, task taxonomies, templates, approvals, economics, exceptions, and handoffs.",
+      "boundary": "Process structure can be sensitive even when no document text is present; metadata combinations can identify matters or institutional priorities."
+    },
+    {
+      "plane_id": "PLANE-JUDGMENT",
+      "name": "Professional judgment ontology",
+      "definition": "Issue framing, choices, risk weighting, fallbacks, escalation thresholds, edits, rationales, negotiation posture, and quality standards.",
+      "boundary": "This is an operational representation of judgment, not a copy of a lawyer's mind and not proof that a choice was legally correct."
+    },
+    {
+      "plane_id": "PLANE-CLIENT",
+      "name": "Client and matter content",
+      "definition": "Identities, facts, communications, evidence, drafts, objectives, advice, personal data, financial information, and prospective-client information.",
+      "boundary": "Information relating to a representation is broader than attorney-client privilege; privilege, work product, confidentiality, privacy, and trade secret rules remain distinct."
+    },
+    {
+      "plane_id": "PLANE-PUBLIC",
+      "name": "Public-derived legal evidence",
+      "definition": "Dockets, filed documents, opinions, public deal and regulatory documents, biographies, and authorized public statements.",
+      "boundary": "Public outputs show only selected visible conduct and cannot reveal sealed material, unfiled work, confidential settlements, abandoned strategies, or internal deliberation."
+    },
+    {
+      "plane_id": "PLANE-GOVERNANCE",
+      "name": "Economic and governance control plane",
+      "definition": "Ownership, professional independence, policy authority, vendor rights, system custody, retention, deletion, audit, pricing, and capital-allocation decisions.",
+      "boundary": "Ownership or partnership never implies unrestricted access, privilege waiver, secondary-use authority, or permission to direct professional judgment."
+    }
+  ],
+  "sensitivity_classes": [
+    {"class_id": "S0", "name": "Intentionally public", "release_rule": "May be used only with public-source provenance and an incompleteness statement."},
+    {"class_id": "S1", "name": "Firm-internal operations", "release_rule": "Keep firm-controlled unless a named owner approves a bounded public abstraction."},
+    {"class_id": "S2", "name": "Client-related metadata or personnel data", "release_rule": "Do not publish or externalize by default; combinations may re-identify people and matters."},
+    {"class_id": "S3", "name": "Analysis, strategy, advice, or work product", "release_rule": "Treat as highly restricted and synthetic-only in this repository."},
+    {"class_id": "S4", "name": "Crown-jewel or regulated material", "release_rule": "Exclude from this repository, including credentials, trust funds, sealed data, conflicts details, and consequential strategic material."}
+  ],
+  "stages": [
+    {
+      "stage_id": "LF-01",
+      "name": "Market intelligence, business development, and referrals",
+      "scope": "Prospects, panels, referrals, pitches, relationship ownership, rate proposals, and market positioning before a specific engagement.",
+      "applicability": ["all", "firm_operations"],
+      "artifacts": [
+        {"artifact_id": "LF-A001", "name": "prospect and relationship graph", "asset_planes": ["PLANE-OPERATIONS", "PLANE-GOVERNANCE"], "sensitivity": "S2"},
+        {"artifact_id": "LF-A002", "name": "pitch themes and rate proposal", "asset_planes": ["PLANE-JUDGMENT", "PLANE-GOVERNANCE"], "sensitivity": "S1"}
+      ],
+      "operational_signals": ["lead source", "referral route", "conversion", "response time", "relationship owner"],
+      "judgment_signals": ["client fit", "market positioning", "relationship priority", "pitch framing"],
+      "public_evidence_availability": "low",
+      "defensive_controls": ["segregate CRM from matter systems", "aggregate analytics", "purpose-limit relationship data", "prohibit provider secondary use"],
+      "does_not_prove": ["A pitch theme does not prove the firm's internal legal strategy or a provider's intent."],
+      "jurisdiction_dependency": "Privacy, solicitation, and professional-conduct requirements vary by jurisdiction.",
+      "source_ids": ["SRC-0033"],
+      "next_stage_ids": ["LF-02"]
+    },
+    {
+      "stage_id": "LF-02",
+      "name": "Prospective-client contact and pre-intake",
+      "scope": "Initial contact, problem summary, adverse parties, urgency, jurisdiction, and routing before a representation is accepted.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A003", "name": "pre-intake record", "asset_planes": ["PLANE-OPERATIONS", "PLANE-CLIENT"], "sensitivity": "S3"},
+        {"artifact_id": "LF-A004", "name": "preliminary issue and urgency classification", "asset_planes": ["PLANE-JUDGMENT", "PLANE-CLIENT"], "sensitivity": "S3"}
+      ],
+      "operational_signals": ["question order", "routing path", "abandonment", "response time", "escalation threshold"],
+      "judgment_signals": ["facts sought first", "preliminary issue spotting", "urgency", "suitability"],
+      "public_evidence_availability": "none",
+      "defensive_controls": ["conflict-first intake", "collect only necessary information", "clear warnings", "short retention", "block unrestricted external-model free text"],
+      "does_not_prove": ["An initial contact does not prove that a representation formed or that the preliminary classification was correct."],
+      "jurisdiction_dependency": "Prospective-client duties and formation of the relationship are fact- and jurisdiction-dependent.",
+      "source_ids": ["SRC-0033", "SRC-0038"],
+      "next_stage_ids": ["LF-03"]
+    },
+    {
+      "stage_id": "LF-03",
+      "name": "Conflicts and eligibility clearance",
+      "scope": "Entity and affiliate matching, adversity analysis, waivers, screens, ethical walls, and clearance decisions.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A005", "name": "conflicts entity graph", "asset_planes": ["PLANE-OPERATIONS", "PLANE-CLIENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A006", "name": "clearance, waiver, and screen decision", "asset_planes": ["PLANE-JUDGMENT", "PLANE-GOVERNANCE"], "sensitivity": "S4"}
+      ],
+      "operational_signals": ["match rules", "review paths", "clearance time", "approval roles", "exception handling"],
+      "judgment_signals": ["adversity", "material limitation", "consentability", "screening judgment"],
+      "public_evidence_availability": "none",
+      "defensive_controls": ["firm-controlled enclave", "strict need-to-know access", "query minimization", "immutable clearance audit", "no cross-customer learning"],
+      "does_not_prove": ["A name match does not prove a conflict, and a cleared matter does not prove the absence of every conflict."],
+      "jurisdiction_dependency": "Conflict, waiver, and screening rules vary by jurisdiction and matter type.",
+      "source_ids": ["SRC-0033"],
+      "next_stage_ids": ["LF-04"]
+    },
+    {
+      "stage_id": "LF-04",
+      "name": "Client acceptance and enterprise risk",
+      "scope": "Accept-or-decline decisions, competence and capacity checks, sanctions or KYC review, credit, insurer, reputational, and strategic fit.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A007", "name": "accept or decline decision", "asset_planes": ["PLANE-JUDGMENT", "PLANE-GOVERNANCE"], "sensitivity": "S3"},
+        {"artifact_id": "LF-A008", "name": "enterprise risk classification", "asset_planes": ["PLANE-OPERATIONS", "PLANE-CLIENT", "PLANE-GOVERNANCE"], "sensitivity": "S3"}
+      ],
+      "operational_signals": ["approval topology", "decline categories", "turnaround", "exception rate"],
+      "judgment_signals": ["risk appetite", "reputational fit", "strategic value", "competence and capacity assessment"],
+      "public_evidence_availability": "low",
+      "defensive_controls": ["separate compliance facts from strategic rationale", "minimize reason codes", "dual authorization", "firm-owned decision log"],
+      "does_not_prove": ["A decline category does not establish the full reason, legal merit, or a firm's general policy."],
+      "jurisdiction_dependency": "Sanctions, KYC, professional competence, and insurer requirements depend on governing rules and client facts.",
+      "source_ids": ["SRC-0033", "SRC-0034"],
+      "next_stage_ids": ["LF-05"]
+    },
+    {
+      "stage_id": "LF-05",
+      "name": "Engagement, scope, pricing, and client instructions",
+      "scope": "Engagement terms, scope and exclusions, outside-counsel rules, budgets, fees, assumptions, and client instructions including approved AI use.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A009", "name": "engagement and scope policy", "asset_planes": ["PLANE-CLIENT", "PLANE-GOVERNANCE"], "sensitivity": "S3"},
+        {"artifact_id": "LF-A010", "name": "fee and budget model", "asset_planes": ["PLANE-OPERATIONS", "PLANE-JUDGMENT", "PLANE-GOVERNANCE"], "sensitivity": "S3"}
+      ],
+      "operational_signals": ["negotiation cycles", "standard deviations", "approval thresholds", "budget changes"],
+      "judgment_signals": ["scope boundaries", "fee-risk tradeoffs", "assumptions", "expectation alignment"],
+      "public_evidence_availability": "low",
+      "defensive_controls": ["convert client instructions into enforceable matter policy", "record specific tool-use authority", "avoid boilerplate AI consent", "keep pricing logic firm-controlled"],
+      "does_not_prove": ["A general engagement clause does not prove informed consent for every later tool, data class, or purpose."],
+      "jurisdiction_dependency": "Fee, communication, consent, and engagement requirements vary by jurisdiction and client agreement.",
+      "source_ids": ["SRC-0033", "SRC-0034"],
+      "next_stage_ids": ["LF-06"]
+    },
+    {
+      "stage_id": "LF-06",
+      "name": "Matter opening and information governance",
+      "scope": "Matter identity, taxonomy, repositories, team, residency, retention, legal holds, access groups, ethical walls, and connector policies.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A011", "name": "matter taxonomy and access policy", "asset_planes": ["PLANE-OPERATIONS", "PLANE-CLIENT", "PLANE-GOVERNANCE"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A012", "name": "retention, hold, and residency policy", "asset_planes": ["PLANE-GOVERNANCE"], "sensitivity": "S3"}
+      ],
+      "operational_signals": ["classification", "provisioning sequence", "access changes", "handoffs", "connector enablement"],
+      "judgment_signals": ["matter characterization", "restricted-team decision", "anticipated complexity", "risk tier"],
+      "public_evidence_availability": "none",
+      "defensive_controls": ["matter-scoped access", "ethical-wall enforcement", "customer-managed encryption", "default-deny connectors", "retention and residency controls"],
+      "does_not_prove": ["A matter taxonomy label does not establish the client's full objectives or the controlling legal analysis."],
+      "jurisdiction_dependency": "Retention, hold, privacy, residency, and professional obligations depend on matter and jurisdiction.",
+      "source_ids": ["SRC-0033", "SRC-0034"],
+      "next_stage_ids": ["LF-07", "LF-08"]
+    },
+    {
+      "stage_id": "LF-07",
+      "name": "Staffing, resourcing, budget, and workplan",
+      "scope": "Work breakdown, roles, skills, staffing pyramid, supervision, timeline, workload, budget, and internal handoffs.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A013", "name": "workplan and staffing graph", "asset_planes": ["PLANE-OPERATIONS", "PLANE-JUDGMENT"], "sensitivity": "S3"},
+        {"artifact_id": "LF-A014", "name": "budget and supervision plan", "asset_planes": ["PLANE-OPERATIONS", "PLANE-GOVERNANCE"], "sensitivity": "S2"}
+      ],
+      "operational_signals": ["assignment pattern", "utilization", "task duration", "handoff", "bottleneck"],
+      "judgment_signals": ["trusted expertise", "sequencing", "supervision intensity", "escalation point"],
+      "public_evidence_availability": "low",
+      "defensive_controls": ["keep named performance data internal", "aggregate capacity signals", "expose task-minimum context", "separate workforce analytics from model improvement"],
+      "does_not_prove": ["An assignment does not prove expertise, performance, authorship, or responsibility for the final result."],
+      "jurisdiction_dependency": "Supervision, staffing, labor, privacy, and fee rules vary by jurisdiction and engagement.",
+      "source_ids": ["SRC-0034", "SRC-0039"],
+      "next_stage_ids": ["LF-08", "LF-09"]
+    },
+    {
+      "stage_id": "LF-08",
+      "name": "Fact development, evidence, diligence, and discovery",
+      "scope": "Chronologies, custodians, evidence graphs, collections, diligence and discovery plans, review tags, interviews, and investigations.",
+      "applicability": ["transactional", "litigation", "advisory"],
+      "artifacts": [
+        {"artifact_id": "LF-A015", "name": "fact chronology and evidence graph", "asset_planes": ["PLANE-CLIENT", "PLANE-JUDGMENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A016", "name": "diligence or discovery review plan", "asset_planes": ["PLANE-OPERATIONS", "PLANE-JUDGMENT"], "sensitivity": "S3"}
+      ],
+      "operational_signals": ["collection sequence", "review category", "re-review", "exception rate", "custodian flow"],
+      "judgment_signals": ["relevance", "credibility", "missing-fact hypothesis", "privilege call", "evidentiary importance"],
+      "public_evidence_availability": "partial",
+      "defensive_controls": ["matter-local processing", "privilege filters", "no cross-matter embeddings", "restricted export", "human verification"],
+      "does_not_prove": ["A review tag does not prove admissibility, privilege, credibility, or the truth of a fact."],
+      "jurisdiction_dependency": "Discovery, diligence, evidence, privacy, privilege, and work-product rules are matter-specific.",
+      "source_ids": ["SRC-0033", "SRC-0034", "SRC-0036"],
+      "next_stage_ids": ["LF-09", "LF-10", "LF-11"]
+    },
+    {
+      "stage_id": "LF-09",
+      "name": "Legal research and analysis",
+      "scope": "Issue trees, authorities, citator status, jurisdictional rules, research queries, memoranda, analogies, counterarguments, and uncertainty.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A017", "name": "issue and authority graph", "asset_planes": ["PLANE-JUDGMENT", "PLANE-PUBLIC"], "sensitivity": "S3"},
+        {"artifact_id": "LF-A018", "name": "research memorandum", "asset_planes": ["PLANE-JUDGMENT", "PLANE-CLIENT", "PLANE-PUBLIC"], "sensitivity": "S3"}
+      ],
+      "operational_signals": ["query sequence", "sources consulted", "research depth", "time", "citation verification"],
+      "judgment_signals": ["issue framing", "analogy", "authority weight", "uncertainty", "counterargument selection"],
+      "public_evidence_availability": "partial",
+      "defensive_controls": ["separate public-corpus research from matter context", "citation validation", "provenance preservation", "suppress external query telemetry"],
+      "does_not_prove": ["A research query does not prove the firm's position, the client's objective, or the final advice."],
+      "jurisdiction_dependency": "Controlling authority, citation duties, confidentiality, and work product vary by forum and matter.",
+      "source_ids": ["SRC-0034", "SRC-0036"],
+      "next_stage_ids": ["LF-10", "LF-11"]
+    },
+    {
+      "stage_id": "LF-10",
+      "name": "Strategy, options, exposure, and matter economics",
+      "scope": "Goals, scenario trees, alternatives, risk assessments, settlement or deal ranges, expected reactions, exposure, and strategic plans.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A019", "name": "strategy and scenario tree", "asset_planes": ["PLANE-JUDGMENT", "PLANE-CLIENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A020", "name": "risk, exposure, and economics assessment", "asset_planes": ["PLANE-JUDGMENT", "PLANE-CLIENT", "PLANE-GOVERNANCE"], "sensitivity": "S4"}
+      ],
+      "operational_signals": ["approval sequence", "update cadence", "scenario reuse", "decision checkpoint"],
+      "judgment_signals": ["risk tolerance", "settlement or deal posture", "option ranking", "predicted reaction", "strategic rationale"],
+      "public_evidence_availability": "none",
+      "defensive_controls": ["do not externalize strategic rationale", "firm-controlled compute", "narrow role access", "ban secondary use and cross-client derivation"],
+      "does_not_prove": ["A modeled scenario does not prove intent, legal merit, authority to settle, or the eventual course of action."],
+      "jurisdiction_dependency": "Authority, privilege, settlement, fiduciary, and professional duties depend on client and matter.",
+      "source_ids": ["SRC-0033", "SRC-0034"],
+      "next_stage_ids": ["LF-11", "LF-12", "LF-14"]
+    },
+    {
+      "stage_id": "LF-11",
+      "name": "Drafting, review, and redlining",
+      "scope": "Drafts, comments, diffs, clause or argument libraries, fallbacks, approvals, and iterative review of legal work product.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A021", "name": "draft and revision genealogy", "asset_planes": ["PLANE-CLIENT", "PLANE-JUDGMENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A022", "name": "clause, argument, and fallback library", "asset_planes": ["PLANE-JUDGMENT", "PLANE-OPERATIONS"], "sensitivity": "S4"}
+      ],
+      "operational_signals": ["review loop", "accepted or rejected edit", "review hierarchy", "revision timing", "rework"],
+      "judgment_signals": ["drafting standard", "issue priority", "fallback position", "tacit quality threshold", "style choice"],
+      "public_evidence_availability": "partial",
+      "defensive_controls": ["keep granular diffs firm-side", "matter isolation", "preserve authorship and provenance", "human signoff", "prohibit provider reuse"],
+      "does_not_prove": ["An edit does not prove why it was made, whether it is correct, or whether it represents general firm policy."],
+      "jurisdiction_dependency": "Privilege, work product, authorship, supervision, and filing duties depend on matter and forum.",
+      "source_ids": ["SRC-0002", "SRC-0033", "SRC-0034"],
+      "next_stage_ids": ["LF-12", "LF-13", "LF-14"]
+    },
+    {
+      "stage_id": "LF-12",
+      "name": "Negotiation, advocacy, filings, hearings, and transaction execution",
+      "scope": "Offers, counteroffers, preparation, depositions, filings, hearings, negotiation moves, closing checklists, and execution steps.",
+      "applicability": ["transactional", "litigation", "advisory"],
+      "artifacts": [
+        {"artifact_id": "LF-A023", "name": "negotiation and advocacy sequence", "asset_planes": ["PLANE-JUDGMENT", "PLANE-CLIENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A024", "name": "filed or executed public artifact", "asset_planes": ["PLANE-PUBLIC", "PLANE-CLIENT"], "sensitivity": "S0"}
+      ],
+      "operational_signals": ["turnaround", "sequence", "concession path", "deadline behavior", "tool use"],
+      "judgment_signals": ["negotiation posture", "witness strategy", "concession logic", "advocacy tactic", "execution judgment"],
+      "public_evidence_availability": "partial",
+      "defensive_controls": ["no ambient recording", "authorized-channel-only capture", "matter isolation", "redact before approved external use", "no provider-owned transcript corpus"],
+      "does_not_prove": ["A public filing or executed term does not reveal confidential advice, rejected alternatives, internal disagreements, or full client objectives."],
+      "jurisdiction_dependency": "Procedure, evidence, ethics, negotiation, filing, and transaction requirements vary by forum and deal.",
+      "source_ids": ["SRC-0033", "SRC-0034", "SRC-0036", "SRC-0037"],
+      "next_stage_ids": ["LF-13", "LF-14", "LF-15"]
+    },
+    {
+      "stage_id": "LF-13",
+      "name": "Supervision, quality assurance, privilege review, ethics, and candor",
+      "scope": "Review assignments, signoffs, citation and fact checks, privilege review, validation, ethical escalation, overrides, and incident handling.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A025", "name": "quality and validation record", "asset_planes": ["PLANE-OPERATIONS", "PLANE-JUDGMENT", "PLANE-GOVERNANCE"], "sensitivity": "S3"},
+        {"artifact_id": "LF-A026", "name": "privilege and ethics exception log", "asset_planes": ["PLANE-CLIENT", "PLANE-JUDGMENT", "PLANE-GOVERNANCE"], "sensitivity": "S4"}
+      ],
+      "operational_signals": ["approval role", "error and rework", "control failure", "override", "incident response"],
+      "judgment_signals": ["error threshold", "reliability judgment", "ethical escalation", "override rationale", "quality standard"],
+      "public_evidence_availability": "low",
+      "defensive_controls": ["mandatory human accountability", "firm-retained audit trail", "citation and fact verification", "supervisor training", "incident logging"],
+      "does_not_prove": ["An override or error does not by itself establish negligence, incompetence, intent, or systemic policy."],
+      "jurisdiction_dependency": "Supervision, candor, privilege, competence, and professional responsibility rules vary by jurisdiction.",
+      "source_ids": ["SRC-0034", "SRC-0039"],
+      "next_stage_ids": ["LF-14", "LF-15"]
+    },
+    {
+      "stage_id": "LF-14",
+      "name": "Client communication, advice, instruction, and decision",
+      "scope": "Status, advice, options, consent, client instructions, recommendations, decisions, and secure communication throughout the matter.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A027", "name": "advice and option presentation", "asset_planes": ["PLANE-JUDGMENT", "PLANE-CLIENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A028", "name": "client instruction and consent record", "asset_planes": ["PLANE-CLIENT", "PLANE-GOVERNANCE"], "sensitivity": "S4"}
+      ],
+      "operational_signals": ["cadence", "response time", "approval point", "decision routing", "communication channel"],
+      "judgment_signals": ["recommendation", "option framing", "client priority", "material-risk discussion", "decision rationale"],
+      "public_evidence_availability": "none",
+      "defensive_controls": ["client-specific communication policy", "secure channels", "specific informed-consent workflow", "prevent communications from becoming provider telemetry"],
+      "does_not_prove": ["Communication metadata does not prove the substance, adequacy, or acceptance of legal advice."],
+      "jurisdiction_dependency": "Communication, authority allocation, informed consent, and confidentiality duties are jurisdiction- and matter-dependent.",
+      "source_ids": ["SRC-0033", "SRC-0034"],
+      "next_stage_ids": ["LF-10", "LF-12", "LF-15"]
+    },
+    {
+      "stage_id": "LF-15",
+      "name": "Resolution, settlement, judgment, closing, and remedies",
+      "scope": "Settlement, judgment, remedies, closing conditions, executed documents, closing books, obligation schedules, and residual risk.",
+      "applicability": ["transactional", "litigation", "advisory"],
+      "artifacts": [
+        {"artifact_id": "LF-A029", "name": "resolution or closing package", "asset_planes": ["PLANE-CLIENT", "PLANE-PUBLIC"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A030", "name": "residual obligation and remedy model", "asset_planes": ["PLANE-OPERATIONS", "PLANE-JUDGMENT", "PLANE-CLIENT"], "sensitivity": "S3"}
+      ],
+      "operational_signals": ["completion sequence", "condition", "approval", "handoff", "post-closing obligation"],
+      "judgment_signals": ["settlement threshold", "negotiated protection", "remedy selection", "residual risk"],
+      "public_evidence_availability": "partial",
+      "defensive_controls": ["restrict negotiation history", "separate public artifact from private genealogy", "post-closing access review", "preserve client reuse authority"],
+      "does_not_prove": ["An outcome does not prove causation, strategy quality, client satisfaction, or the hidden alternatives considered."],
+      "jurisdiction_dependency": "Settlement, judgment, enforcement, closing, confidentiality, and client-authority rules depend on matter and forum.",
+      "source_ids": ["SRC-0033", "SRC-0036", "SRC-0037"],
+      "next_stage_ids": ["LF-16", "LF-19", "LF-20"]
+    },
+    {
+      "stage_id": "LF-16",
+      "name": "Timekeeping, work in progress, and pricing variance",
+      "scope": "Time entries, narratives, task codes, write-downs, budgets, variance, profitability, rework, and task-level economics.",
+      "applicability": ["all", "firm_operations"],
+      "artifacts": [
+        {"artifact_id": "LF-A031", "name": "time and task narrative", "asset_planes": ["PLANE-OPERATIONS", "PLANE-CLIENT"], "sensitivity": "S3"},
+        {"artifact_id": "LF-A032", "name": "write-down and pricing variance record", "asset_planes": ["PLANE-JUDGMENT", "PLANE-GOVERNANCE"], "sensitivity": "S3"}
+      ],
+      "operational_signals": ["task duration", "staffing", "rework", "sequence", "budget variance"],
+      "judgment_signals": ["partner valuation", "discount decision", "perceived quality", "strategic importance"],
+      "public_evidence_availability": "none",
+      "defensive_controls": ["never send raw narratives by default", "firm-side aggregation", "generic approved task codes", "suppress names and matter facts", "purpose-limited retention"],
+      "does_not_prove": ["Time, tokens, or cost do not prove legal complexity, work quality, value, or substantive strategy."],
+      "jurisdiction_dependency": "Fee, billing, labor, privacy, and client-instruction requirements vary by jurisdiction and agreement.",
+      "source_ids": ["SRC-0034"],
+      "next_stage_ids": ["LF-17"]
+    },
+    {
+      "stage_id": "LF-17",
+      "name": "Billing and e-billing",
+      "scope": "Invoices, billing narratives, task codes, outside-counsel-rule compliance, rejections, disputes, write-offs, and adjustments.",
+      "applicability": ["all", "firm_operations"],
+      "artifacts": [
+        {"artifact_id": "LF-A033", "name": "invoice and billing narrative", "asset_planes": ["PLANE-OPERATIONS", "PLANE-CLIENT", "PLANE-GOVERNANCE"], "sensitivity": "S3"},
+        {"artifact_id": "LF-A034", "name": "billing rejection and adjustment record", "asset_planes": ["PLANE-OPERATIONS", "PLANE-JUDGMENT"], "sensitivity": "S3"}
+      ],
+      "operational_signals": ["billing workflow", "rejection category", "client rule", "realization", "adjustment"],
+      "judgment_signals": ["value judgment", "reasonableness", "relationship concession", "disputed-work assessment"],
+      "public_evidence_availability": "none",
+      "defensive_controls": ["validate client policy before generation", "minimize narratives", "separate billing processor", "prohibit invoice text training or secondary use"],
+      "does_not_prove": ["A billing rejection does not prove that work lacked value, was unnecessary, or was performed incorrectly."],
+      "jurisdiction_dependency": "Fee reasonableness, client guidelines, tax, and billing rules vary by engagement and jurisdiction.",
+      "source_ids": ["SRC-0034"],
+      "next_stage_ids": ["LF-18"]
+    },
+    {
+      "stage_id": "LF-18",
+      "name": "Collections, cash application, trust accounting, and disbursement",
+      "scope": "Accounts receivable, payment promises, receipts, remittances, fee disputes, client trust ledgers, disbursements, and cash application.",
+      "applicability": ["all", "firm_operations"],
+      "artifacts": [
+        {"artifact_id": "LF-A035", "name": "collections and payment record", "asset_planes": ["PLANE-OPERATIONS", "PLANE-CLIENT", "PLANE-GOVERNANCE"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A036", "name": "trust ledger and disbursement authority", "asset_planes": ["PLANE-CLIENT", "PLANE-GOVERNANCE"], "sensitivity": "S4"}
+      ],
+      "operational_signals": ["collection cadence", "aging", "payment routing", "cash application", "dispute path"],
+      "judgment_signals": ["relationship-sensitive collection decision", "fee-dispute resolution", "payment exception"],
+      "public_evidence_availability": "none",
+      "defensive_controls": ["exclude credentials and payment rails from generative AI", "segregation of duties", "immutable accounting", "least privilege", "human payment authorization"],
+      "does_not_prove": ["Payment timing or an aging category does not prove client solvency, satisfaction, or the merits of a fee dispute."],
+      "jurisdiction_dependency": "Trust accounting, fee disputes, collections, banking, and client-property rules are jurisdiction-specific.",
+      "source_ids": ["SRC-0033"],
+      "next_stage_ids": ["LF-19"]
+    },
+    {
+      "stage_id": "LF-19",
+      "name": "Matter closure, retention, return, destruction, and relationship follow-up",
+      "scope": "Closing memos, final disposition, return or destruction, legal holds, access deprovisioning, conflict updates, client surveys, and follow-up.",
+      "applicability": ["all"],
+      "artifacts": [
+        {"artifact_id": "LF-A037", "name": "closing and disposition record", "asset_planes": ["PLANE-OPERATIONS", "PLANE-CLIENT", "PLANE-JUDGMENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A038", "name": "retention and destruction trigger", "asset_planes": ["PLANE-GOVERNANCE", "PLANE-CLIENT"], "sensitivity": "S4"}
+      ],
+      "operational_signals": ["closure completeness", "retention clock", "access deprovisioning", "follow-up cadence"],
+      "judgment_signals": ["unresolved risk", "lesson candidate", "reuse eligibility", "relationship assessment"],
+      "public_evidence_availability": "low",
+      "defensive_controls": ["verified return and destruction", "access deprovisioning", "legal-hold override", "client-specific reuse authority", "no automatic de-identification claim"],
+      "does_not_prove": ["A closed docket or matter status does not prove complete deletion, resolved risk, or client authorization for reuse."],
+      "jurisdiction_dependency": "Retention, destruction, client file, hold, and former-client duties vary by jurisdiction and agreement.",
+      "source_ids": ["SRC-0033", "SRC-0036"],
+      "next_stage_ids": ["LF-20"]
+    },
+    {
+      "stage_id": "LF-20",
+      "name": "Knowledge capture, precedent, debrief, and reuse",
+      "scope": "Playbooks, clause and argument banks, checklists, taxonomies, deviations, rationales, debriefs, lessons, precedents, and reuse governance.",
+      "applicability": ["all", "firm_operations"],
+      "artifacts": [
+        {"artifact_id": "LF-A039", "name": "playbook and precedent library", "asset_planes": ["PLANE-OPERATIONS", "PLANE-JUDGMENT", "PLANE-CLIENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A040", "name": "debrief, exception rationale, and outcome linkage", "asset_planes": ["PLANE-JUDGMENT", "PLANE-CLIENT"], "sensitivity": "S4"}
+      ],
+      "operational_signals": ["standardization", "reuse frequency", "update owner", "deviation grouping", "approval history"],
+      "judgment_signals": ["what worked", "why a rule bent", "policy update", "exception rationale", "outcome assessment"],
+      "public_evidence_availability": "low",
+      "defensive_controls": ["matter-source genealogy", "client-derived content isolation", "controlled abstraction", "expiry and revalidation", "prohibit cross-client reuse absent authority"],
+      "does_not_prove": ["A repeated deviation does not prove a general rule, causal success, provider retention, or authority for cross-client reuse."],
+      "jurisdiction_dependency": "Privilege, confidentiality, work product, ownership, client consent, and reuse rules depend on source matter and jurisdiction.",
+      "source_ids": ["SRC-0002", "SRC-0033", "SRC-0034"],
+      "next_stage_ids": []
+    },
+    {
+      "stage_id": "LF-21",
+      "name": "Talent, training, apprenticeship, evaluation, and succession",
+      "scope": "Competency maps, assignments, review comments, training, mentoring, performance, promotion, succession, and communities of expertise.",
+      "applicability": ["firm_operations"],
+      "artifacts": [
+        {"artifact_id": "LF-A041", "name": "competency and expertise graph", "asset_planes": ["PLANE-OPERATIONS", "PLANE-JUDGMENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A042", "name": "training and review record", "asset_planes": ["PLANE-JUDGMENT", "PLANE-GOVERNANCE"], "sensitivity": "S4"}
+      ],
+      "operational_signals": ["learning path", "staffing", "review network", "succession dependency"],
+      "judgment_signals": ["who possesses expertise", "tacit standard", "mentoring pattern", "evaluation rationale"],
+      "public_evidence_availability": "low",
+      "defensive_controls": ["employee privacy controls", "separate HR and knowledge systems", "no external individual scoring", "aggregate skill maps", "human-governed access"],
+      "does_not_prove": ["A staffing or review graph does not prove individual competence, future performance, or ownership of institutional knowledge."],
+      "jurisdiction_dependency": "Employment, privacy, discrimination, professional supervision, and retention rules vary by jurisdiction.",
+      "source_ids": ["SRC-0034", "SRC-0039"],
+      "next_stage_ids": ["LF-07", "LF-13", "LF-20"]
+    },
+    {
+      "stage_id": "LF-22",
+      "name": "Vendors, technology, data, AI, cybersecurity, and records",
+      "scope": "Vendor inventory, data flows, model and connector selection, retention and deletion, security assessments, incidents, audits, and portability.",
+      "applicability": ["firm_operations"],
+      "artifacts": [
+        {"artifact_id": "LF-A043", "name": "vendor and data-flow map", "asset_planes": ["PLANE-OPERATIONS", "PLANE-GOVERNANCE", "PLANE-CLIENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A044", "name": "retention, deletion, and audit evidence", "asset_planes": ["PLANE-GOVERNANCE"], "sensitivity": "S3"}
+      ],
+      "operational_signals": ["tool sequence", "connector topology", "export path", "retention action", "deletion operation"],
+      "judgment_signals": ["acceptable risk", "exception approval", "system-of-record choice", "model substitution decision"],
+      "public_evidence_availability": "low",
+      "defensive_controls": ["contract and runtime verification", "no-training and secondary-use terms", "deletion attestations", "audit rights", "connector allowlists", "portability tests"],
+      "does_not_prove": ["A contract promise does not prove runtime behavior, and service processing does not prove training or secondary use."],
+      "jurisdiction_dependency": "Vendor, privacy, security, breach, confidentiality, and professional duties depend on deployment and jurisdiction.",
+      "source_ids": ["SRC-0005", "SRC-0007", "SRC-0009", "SRC-0034"],
+      "next_stage_ids": ["LF-06", "LF-23"]
+    },
+    {
+      "stage_id": "LF-23",
+      "name": "Firm governance, professional independence, quality, risk, and economics",
+      "scope": "Policies, committees, compensation, capital allocation, practice strategy, insurance, quality, ownership, independence, and enterprise risk.",
+      "applicability": ["firm_operations"],
+      "artifacts": [
+        {"artifact_id": "LF-A045", "name": "decision-rights and committee graph", "asset_planes": ["PLANE-GOVERNANCE", "PLANE-OPERATIONS", "PLANE-JUDGMENT"], "sensitivity": "S4"},
+        {"artifact_id": "LF-A046", "name": "firm risk appetite and strategic plan", "asset_planes": ["PLANE-GOVERNANCE", "PLANE-JUDGMENT"], "sensitivity": "S4"}
+      ],
+      "operational_signals": ["decision rights", "committee topology", "capital allocation", "policy enforcement", "profitability"],
+      "judgment_signals": ["firm risk appetite", "independence boundary", "practice priority", "strategic tradeoff"],
+      "public_evidence_availability": "low",
+      "defensive_controls": ["lawyer-controlled professional decisions", "independent risk and compliance review", "board-level data governance", "policy enforcement", "jurisdiction-specific ownership review"],
+      "does_not_prove": ["Ownership, investment, partnership, or acquisition does not imply authority to access client information, waive privilege, or direct legal judgment."],
+      "jurisdiction_dependency": "Ownership and professional-independence regimes vary materially, including regulated alternatives in some jurisdictions.",
+      "source_ids": ["SRC-0035", "SRC-0039", "SRC-0040"],
+      "next_stage_ids": ["LF-01", "LF-21", "LF-22"]
+    }
+  ]
+}

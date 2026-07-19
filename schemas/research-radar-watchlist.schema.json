@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/research-radar-watchlist.schema.json",
+  "title": "Research radar watchlist",
+  "type": "object",
+  "required": ["schema", "radar_name", "status", "automation_authorized", "policy_document", "source_classes", "signal_families", "invariants"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.research-radar-watchlist.v1"},
+    "status": {"const": "manual_candidate_only"},
+    "automation_authorized": {"const": false},
+    "source_classes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["watch_id", "purpose", "cadence_days", "allowed_publishers", "source_ids"],
+        "properties": {
+          "watch_id": {"type": "string", "pattern": "^WATCH-[A-Z0-9-]+$"},
+          "cadence_days": {"type": "integer", "minimum": 1},
+          "source_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^SRC-[0-9]{4}$"}}
+        }
+      }
+    }
+  }
+}

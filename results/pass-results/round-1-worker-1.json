@@ -1,0 +1,188 @@
+{
+  "pass_id": "round-1-worker-1",
+  "scope": [
+    "results/worklists/worker-1.csv",
+    "53 SHA-256-pinned files under upstream/claude-for-legal"
+  ],
+  "coverage": {
+    "files_reviewed": 53,
+    "lines_reviewed": 8228,
+    "deferred": []
+  },
+  "findings": [
+    {
+      "id": "R1W1-001",
+      "title": "Practice profiles encode a detailed institutional contracting playbook and approval ontology",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "commercial-legal/CLAUDE.md", "line_start": 66, "line_end": 72, "description": "The shared practice profile distinguishes sales and purchasing sides and directs every review to use risk appetite, standard/fallback terms, thresholds, and deal positions."},
+        {"path": "commercial-legal/CLAUDE.md", "line_start": 80, "line_end": 137, "description": "The sales-side schema records cap components, carveouts, fallbacks, never-accept positions, data-protection terms, governing-law positions, and a deal-breaker."},
+        {"path": "commercial-legal/CLAUDE.md", "line_start": 208, "line_end": 219, "description": "The profile records approval levels, escalation recipients, channels, dollar thresholds, and automatic escalation triggers."},
+        {"path": "commercial-legal/skills/escalation-flagger/SKILL.md", "line_start": 51, "line_end": 67, "description": "The skill operationalizes the stored matrix to name an approver and identify automatic triggers."}
+      ],
+      "source_to_sink": ["Attorney/team answers and maintained playbook", "Plain-text practice profile under ~/.claude/plugins/config/claude-for-legal", "Contract-review and escalation skills read matching side and thresholds", "Review or draft escalation output"],
+      "proves": "The source is designed to capture and repeatedly apply firm-specific contracting preferences, forbidden outcomes, fallback positions, and decision authority.",
+      "does_not_prove": "It does not prove provider-side retention, training, cross-customer pooling, ownership transfer, or that a populated profile ever left customer-controlled storage.",
+      "alternative_explanation": "This is the intended benign mechanism for customer-specific adaptation and consistent work product.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Inspect a populated profile's filesystem custody, model-request payloads, access logs, tenant controls, retention terms, and deletion behavior.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "R1W1-002",
+      "title": "Product-legal onboarding deliberately derives calibration from prior attorney decisions",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "product-legal/skills/cold-start-interview/SKILL.md", "line_start": 15, "line_end": 18, "description": "The onboarding flow requests ten past launch reviews, builds a blocked-versus-shipped calibration table, and writes the profile."},
+        {"path": "product-legal/skills/cold-start-interview/SKILL.md", "line_start": 92, "line_end": 100, "description": "The skill says it learns risk calibration and house framework, writes a persistent plain-text profile, and disclaims reading personal history or memory."},
+        {"path": "product-legal/skills/cold-start-interview/SKILL.md", "line_start": 127, "line_end": 127, "description": "It explicitly asks to read past legal reviews because that is where calibration resides."},
+        {"path": "product-legal/skills/cold-start-interview/SKILL.md", "line_start": 280, "line_end": 290, "description": "The flow extracts what was raised, blocked, or waved through into a reusable risk-calibration table."}
+      ],
+      "source_to_sink": ["Past launch-review documents and user-approved interview answers", "Model reads and extracts decision patterns", "Persistent product-legal CLAUDE.md calibration table", "Future launch-review commands reuse the profile"],
+      "proves": "The design intentionally converts past professional decisions into reusable operating policy, a concrete form of workflow and judgment capture.",
+      "does_not_prove": "Inference-time reading and local persistence do not establish generalized training, provider retention, or use for another customer.",
+      "alternative_explanation": "The extraction exists to reduce repetitive onboarding and reproduce the customer's own standards within its future requests.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Capture onboarding network traffic and resulting files; verify whether source reviews or extracted calibration are retained server-side and under what contractual purpose limitation.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "R1W1-003",
+      "title": "Matter workspaces persist client context and history locally with explicit cross-matter controls but archive rather than delete",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "product-legal/skills/matter-workspace/SKILL.md", "line_start": 28, "line_end": 38, "description": "New matters create matter, history, and notes files; closure archives them; cross-matter reads require the configured flag."},
+        {"path": "product-legal/skills/matter-workspace/SKILL.md", "line_start": 80, "line_end": 87, "description": "Matter intake records confidentiality, facts, stakes, playbook overrides, and related matters, then persists files."},
+        {"path": "product-legal/skills/matter-workspace/SKILL.md", "line_start": 175, "line_end": 184, "description": "Cross-matter context defaults off and requires an explicit user request when on; closure is not deletion and retention policy is out of scope."},
+        {"path": "ip-legal/skills/matter-workspace/SKILL.md", "line_start": 173, "line_end": 182, "description": "The IP implementation repeats default isolation and explicitly notes archived retention."}
+      ],
+      "source_to_sink": ["Client/matter intake and later events", "Local matter.md/history.md/notes.md files", "Active-matter selection gates skill reads", "Archived folder remains readable for retention/conflicts"],
+      "proves": "The repository specifies a persistent, customer-side matter memory with a default confidentiality boundary and an acknowledged retention gap.",
+      "does_not_prove": "Prompt-level instructions alone do not prove runtime enforcement, secure deletion, filesystem ACL isolation, encryption, or provider inability to observe inference payloads.",
+      "alternative_explanation": "Archival supports legitimate conflicts, continuity, and legal-retention needs while default-off cross-matter access mitigates accidental mixing.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Attempt cross-matter reads under every flag/confidentiality combination; inspect filesystem permissions, request traces, archive deletion, legal-hold, and retention controls.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "R1W1-004",
+      "title": "Scheduled agents can read legal systems and post derived operational signals through remote connectors",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "commercial-legal/agents/renewal-watcher.md", "line_start": 4, "line_end": 10, "description": "A scheduled renewal agent has Read, Write, Ironclad wildcard, and Slack-send tools."},
+        {"path": "commercial-legal/agents/renewal-watcher.md", "line_start": 22, "line_end": 28, "description": "It reads configuration, refreshes from a connected CLM, and posts reports to a configured destination."},
+        {"path": "litigation-legal/agents/docket-watcher.md", "line_start": 30, "line_end": 36, "description": "The docket agent reads portfolio and matter history, pulls remote docket entries, writes reports and matter history, and posts a Slack summary."},
+        {"path": "regulatory-legal/agents/reg-change-monitor.md", "line_start": 18, "line_end": 27, "description": "The regulatory monitor runs on a configured cadence, reads firm watchlists/materiality thresholds, pulls feeds, runs policy diffs, and posts a digest."}
+      ],
+      "source_to_sink": ["CLM, docket, feed, practice-profile, and matter data", "Scheduled agent reads and classifies", "Local output/history plus Slack message", "Configured external systems and workspace recipients"],
+      "proves": "The static design includes ambient workflows that transmit selected derived legal-operational information to configured external destinations.",
+      "does_not_prove": "It does not show an actual deployment, actual payloads, provider retention, unauthorized access, covert exfiltration, or training use.",
+      "alternative_explanation": "The outbound paths are explicit user-configured workflow functions—alerts and reports—not concealed collection channels.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Deploy in an instrumented tenant with canary records; inspect scheduler identity, connector scopes, exact Slack payloads, approval controls, audit logs, and retry/dead-letter retention.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W1-005",
+      "title": "Plugin-level connector declarations and wildcard tool grants create broad trust boundaries",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "privacy-legal/.mcp.json", "line_start": 1, "line_end": 14, "description": "The plugin declares remote Slack and Google Drive MCP endpoints described as able to search/read workspace messages and documents."},
+        {"path": "external_plugins/cocounsel-legal/.mcp.json", "line_start": 1, "line_end": 8, "description": "The external plugin declares a Thomson Reuters HTTP MCP endpoint and OAuth client ID."},
+        {"path": "litigation-legal/agents/docket-watcher.md", "line_start": 9, "line_end": 10, "description": "The agent grants wildcard Trellis, CourtListener, and Slack-send tool names."},
+        {"path": "regulatory-legal/agents/reg-change-monitor.md", "line_start": 8, "line_end": 10, "description": "The monitor grants WebFetch and wildcard Slack-send authority."}
+      ],
+      "source_to_sink": ["Workspace messages, documents, legal research, and docket sources", "Remote MCP/tool invocation under runtime-granted credentials", "Agent/model context and derived output", "Configured connector operator or Slack workspace"],
+      "proves": "The repository declares remote integrations and some broad wildcard capability surfaces whose effective scope depends on runtime authorization.",
+      "does_not_prove": "Declarations do not establish granted OAuth scopes, calls made, data returned, destination retention, malicious intent, or secondary use.",
+      "alternative_explanation": "Wildcard names may be a concise static declaration while the runtime, OAuth consent, and connector enforce least privilege.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Record OAuth scopes, tool discovery, per-call authorization, connector audit events, tenant boundaries, revocation, and destination retention in a test deployment.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W1-006",
+      "title": "Internal-investigation workflow builds a highly sensitive evidentiary corpus and derived findings",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "employment-legal/skills/internal-investigation/SKILL.md", "line_start": 113, "line_end": 155, "description": "The workflow creates a persistent investigation log, sources checklist, and document-review ledger with parties, allegation, issues, gaps, and metadata."},
+        {"path": "employment-legal/skills/internal-investigation/SKILL.md", "line_start": 164, "line_end": 215, "description": "The checklist covers interviews, email/messages, HR history, prior complaints, comparator data, policies, org charts, calendars, and warning records."},
+        {"path": "employment-legal/skills/internal-investigation/SKILL.md", "line_start": 588, "line_end": 640, "description": "The resulting memo contains factual findings and issue-level conclusions under a stated evidentiary standard."},
+        {"path": "employment-legal/skills/internal-investigation/SKILL.md", "line_start": 752, "line_end": 754, "description": "The skill disclaims making disciplinary decisions or guaranteeing privilege."}
+      ],
+      "source_to_sink": ["Allegations, interviews, communications, personnel and audit records", "Local investigation logs and document ledger", "Model-supported synthesis", "Internal memo, HR summary, or attorney-reviewed external-response workflow"],
+      "proves": "The design can organize sensitive facts and transform them into reusable factual findings and an investigation record.",
+      "does_not_prove": "It does not prove any investigation was run, data was remotely retained, privilege attaches, disciplinary decisions were automated, or the data trained a model.",
+      "alternative_explanation": "The corpus and audit trail support defensible, attorney-directed investigations and source completeness.",
+      "confidence": "high",
+      "risk": "critical",
+      "test_to_confirm": "Use synthetic investigation data to inspect storage ACLs, encryption, model payloads, privilege-circle access, exports, deletion, support access, and retention.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "R1W1-007",
+      "title": "Managed-agent manifests demonstrate meaningful least-privilege and prompt-injection controls",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "managed-agent-cookbooks/reg-monitor/agent.yaml", "line_start": 19, "line_end": 38, "description": "The orchestrator disables tools by default, enables only local reads, and delegates to bounded subagents; the prompt requires untrusted feed treatment."},
+        {"path": "managed-agent-cookbooks/reg-monitor/subagents/feed-reader.yaml", "line_start": 5, "line_end": 31, "description": "The feed reader treats instructions as data, refuses exfiltration behavior, restricts fetches to allowlisted hosts, and blocks body-supplied URLs."},
+        {"path": "managed-agent-cookbooks/reg-monitor/subagents/feed-reader.yaml", "line_start": 33, "line_end": 58, "description": "Tool-layer allowed hosts, redirect limits, private-network blocking, no MCP, and no write capability enforce parts of the boundary."},
+        {"path": "managed-agent-cookbooks/renewal-watcher/subagents/repo-reader.yaml", "line_start": 13, "line_end": 26, "description": "Untrusted contract instructions are treated as data and the reader is explicitly read-only with schema-constrained output."}
+      ],
+      "source_to_sink": ["Untrusted feed or contract content", "Read-only leaf with schema and tool restrictions", "Validated structured handoff", "Separate computation/writer stage"],
+      "proves": "Some managed-agent variants encode defense in depth: disabled-by-default tools, leaf-level write isolation, schema constraints, egress allowlists, and prompt-injection instructions.",
+      "does_not_prove": "Static manifests do not prove the runtime honors every configuration, that all agents use these hardened cookbooks, or that allowed destinations are harmless.",
+      "alternative_explanation": "This is affirmative security architecture consistent with H0 and weighs against a claim of indiscriminate data access.",
+      "confidence": "high",
+      "risk": "low",
+      "test_to_confirm": "Run adversarial feed/contract fixtures and verify tool denials, schema rejection, redirect handling, private-network blocking, and absence of writer/MCP capability at runtime.",
+      "hypotheses": ["H0", "H2"]
+    },
+    {
+      "id": "R1W1-008",
+      "title": "Human approval and proposal-only gates constrain consequential policy and legal actions",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "regulatory-legal/skills/policy-redraft/SKILL.md", "line_start": 14, "line_end": 19, "description": "A redraft is written as a separate proposal and cannot close the gap until a policy owner applies and approves it."},
+        {"path": "regulatory-legal/skills/policy-redraft/SKILL.md", "line_start": 35, "line_end": 38, "description": "The workflow refuses direct source-policy edits and requires current-version confirmation."},
+        {"path": "commercial-legal/skills/escalation-flagger/SKILL.md", "line_start": 22, "line_end": 26, "description": "The skill names the approver and drafts the ask but explicitly does not send it."},
+        {"path": "legal-clinic/skills/client-comms-log/SKILL.md", "line_start": 47, "line_end": 66, "description": "A communication-log entry captures detailed contact facts but must be shown to and confirmed by the user before writing."}
+      ],
+      "source_to_sink": ["Gap, contract issue, or communication facts", "Draft/proposed artifact", "Human review and approval gate", "Separate human-controlled application, sending, or confirmed write"],
+      "proves": "Multiple workflows reserve consequential acts for a human and distinguish a model-generated proposal from an approved state change.",
+      "does_not_prove": "Prompt instructions alone do not guarantee runtime compliance, prevent all mistaken writes, or govern provider-side data handling.",
+      "alternative_explanation": "These controls are central product safety requirements rather than incidental disclaimers.",
+      "confidence": "high",
+      "risk": "low",
+      "test_to_confirm": "Attempt direct apply/send/write requests and verify deterministic refusal, user confirmation receipts, immutable audit events, and permission-layer enforcement.",
+      "hypotheses": ["H0", "H2"]
+    }
+  ],
+  "new_patterns": [
+    {"id": "R1W1-PAT-001", "name": "Decision-to-policy calibration", "logic": "Locate workflows that read prior outcomes or user answers, classify blocked/accepted/deviated decisions, and persist the abstraction for later reuse.", "search_terms": ["past launch reviews", "risk calibration", "blocked", "waved through", "learned from", "playbook"], "false_positive_risk": "Documentation may describe an optional onboarding path that was never executed; persistence does not imply provider retention."},
+    {"id": "R1W1-PAT-002", "name": "Ambient connector handoff", "logic": "Correlate schedule/cadence, remote read capability, local transformation, and outbound post/write capability across agent and managed-agent manifests.", "search_terms": ["on schedule", "mcp__*", "slack_send_message", "Post digest", "callable_agents", "mcp_servers"], "false_positive_risk": "Static capabilities may be disabled or narrowed by deployment-time scopes and may never be invoked."},
+    {"id": "R1W1-PAT-003", "name": "Retention without deletion", "logic": "Find close/archive operations that preserve readable matter histories while declaring retention policy out of scope.", "search_terms": ["Archiving is not deletion", "_archived", "retention policy is out of scope", "remain readable"], "false_positive_risk": "Retention may be legally required and controlled by external storage policy not represented in the repository."},
+    {"id": "R1W1-PAT-004", "name": "Runtime-enforced leaf isolation", "logic": "Identify disabled-by-default tools, no-write/no-MCP leaves, output schemas, allowed-host controls, and private-network blocks as counterevidence to unrestricted-agent theories.", "search_terms": ["default_config: { enabled: false }", "allowed_hosts", "block_private_networks", "mcp_servers: []", "additionalProperties: false"], "false_positive_risk": "Manifest syntax may not be enforced by the actual hosted runtime or may differ from deployed configuration."}
+  ],
+  "negative_evidence": [
+    {"path": "product-legal/skills/cold-start-interview/SKILL.md", "description": "Lines 94 and 100 state that setup does not read personal Claude history, other conversations, home-directory CLAUDE.md, or other personal memory, and only folds in typed or approved inputs.", "effect": "Weighs against an interpretation that the static onboarding design silently mines unrelated conversation history."},
+    {"path": "product-legal/skills/matter-workspace/SKILL.md", "description": "Lines 175-179 make cross-matter reading default-off and require an explicit user request even when enabled.", "effect": "Weighs against an interpretation that cross-client context is automatically pooled by the workspace logic."},
+    {"path": "managed-agent-cookbooks/reg-monitor/subagents/feed-reader.yaml", "description": "Lines 22-58 impose host allowlisting, private-network blocking, redirect limits, read-only operation, no MCP, and schema-only output.", "effect": "Provides concrete static security controls against arbitrary egress and prompt-injection-driven tool use."},
+    {"path": "managed-agent-cookbooks/renewal-watcher/subagents/deadline-calculator.yaml", "description": "Lines 25-39 grant only local read/grep/glob and explicitly deny MCP, web, write, and further agents.", "effect": "Shows architectural compartmentalization rather than every stage receiving broad external authority."},
+    {"path": "regulatory-legal/skills/policy-redraft/SKILL.md", "description": "Lines 35-38 prohibit source-policy mutation and reserve application/approval for the policy owner.", "effect": "Weighs against claims that the static workflow autonomously changes approved institutional policy."},
+    {"path": "litigation-legal/agents/docket-watcher.md", "description": "Lines 63-70 disclaim calendaring, require lawyer verification, distrust heuristic classification, avoid closed matters, and preserve the docketing system's role.", "effect": "Shows bounded automation and human verification for malpractice-sensitive outputs."}
+  ],
+  "unknowns": [
+    {"question": "Does the hosted Claude runtime retain or reuse populated profiles, matter contents, past reviews, tool results, or derived calibrations beyond the requested service?", "why_source_cannot_answer": "The pinned repository describes prompts, local paths, and static integrations, not hosted inference logging, support access, retention, deletion, or training systems.", "needed_evidence": "Authenticated contract/DPA terms, tenant settings, runtime request traces, retention/deletion logs, support-access logs, and provider training/product-use controls."},
+    {"question": "What OAuth scopes and per-tool permissions are actually granted to Slack, Drive, Ironclad, iManage, Trellis, CourtListener, and CoCounsel connectors?", "why_source_cannot_answer": "Static MCP declarations and wildcard tool names do not expose consented scopes, tenant configuration, server implementation, or runtime authorization decisions.", "needed_evidence": "OAuth consent records, discovered tool schemas, connector administration settings, access logs, token audience/scope data, and revocation tests."},
+    {"question": "Are prompt-level matter isolation, human approval, and no-write instructions deterministically enforced?", "why_source_cannot_answer": "The files specify desired behavior but do not include execution receipts or complete platform enforcement code.", "needed_evidence": "Adversarial runtime tests, tool-call traces, filesystem ACL tests, policy-engine configuration, confirmation receipts, and failed-action audit logs."},
+    {"question": "Are scheduled agents deployed, by whom, and what exact records do they send to external destinations?", "why_source_cannot_answer": "Agent prompts and manifests express capability and intended cadence but contain no deployment state or observed payloads.", "needed_evidence": "Deployment manifests, scheduler inventory, service identities, run logs, outbound payload captures, channel membership, retry queues, and deletion policies."},
+    {"question": "Can any firm-specific calibration learned in one tenant improve another tenant's product behavior?", "why_source_cannot_answer": "No assigned static file contains evidence of cross-customer aggregation, generalized training, federated learning, product analytics reuse, or tenant-to-tenant retrieval.", "needed_evidence": "Provider architecture, data-lineage records, training/evaluation dataset provenance, feature analytics specifications, tenant-isolation tests, and contractual purpose limitations."},
+    {"question": "How are archived matters and sensitive investigation files encrypted, expired, placed on hold, exported, and securely deleted?", "why_source_cannot_answer": "Matter-workspace text explicitly says retention policy is out of scope and the investigation instructions describe logical paths rather than storage controls.", "needed_evidence": "Storage architecture, encryption/key controls, ACLs, retention schedules, legal-hold configuration, backup lifecycle, export audit logs, and deletion verification."}
+  ]
+}

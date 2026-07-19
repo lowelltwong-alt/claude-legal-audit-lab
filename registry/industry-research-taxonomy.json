@@ -1,0 +1,146 @@
+{
+  "schema": "claude-legal-audit.industry-research-taxonomy.v1",
+  "methodology_version": "1.0.0",
+  "methodology_document": "docs/CROSS_INDUSTRY_ONTOLOGY_RISK.md",
+  "epistemic_boundary": "Priority routes research. It is not a probability of harm, evidence of provider intent, or a finding of ontology capture.",
+  "facets": {
+    "O": {"name": "ontology_depth", "range": [0, 3]},
+    "F": {"name": "feedback_capture", "range": [0, 3]},
+    "X": {"name": "external_exposure", "range": [0, 3]},
+    "C": {"name": "consequence", "range": [0, 3]},
+    "P": {"name": "portability_control_dependency", "range": [0, 3]},
+    "E": {"name": "evidence_readiness", "range": [0, 3]}
+  },
+  "priority_formula": {
+    "P0": "O>=2 and F>=2 and C>=2 and (X>=2 or P>=2) and E>=2",
+    "P1": "same structural profile as P0 and E<2, or any load-bearing facet is unknown",
+    "P2": "exactly two or three of O,F,X,C,P are >=2 and E>=2",
+    "P3": "all other discovery leads",
+    "tie_break": "E desc, C desc, O desc, industry_id asc",
+    "unknown_rule": "null is never zero and forces P1 or P3 until resolved"
+  },
+  "industries": [
+    {
+      "industry_id": "IND-HEALTHCARE-PAYER-PROVIDER",
+      "name": "Healthcare payer and provider operations",
+      "epistemic_status": "Hypothesis",
+      "priority": "P0",
+      "facets": {"O": 3, "F": 2, "X": 2, "C": 3, "P": 2, "E": 2},
+      "workflow_archetypes": ["coverage policy", "prior authorization", "medical coding", "claims appeals", "clinical handoffs"],
+      "source_ids": ["SRC-0018", "SRC-0020"],
+      "observed_market_direction": "Official sources describe connectors and agents entering coverage, records, coding, claims, and care workflows.",
+      "does_not_prove": "No source establishes covert capture, training, ownership, or cross-customer reuse of a healthcare ontology."
+    },
+    {
+      "industry_id": "IND-LIFE-SCIENCES-PHARMA",
+      "name": "Life sciences and pharmaceutical operations",
+      "epistemic_status": "Hypothesis",
+      "priority": "P0",
+      "facets": {"O": 3, "F": 2, "X": 2, "C": 3, "P": 2, "E": 2},
+      "workflow_archetypes": ["protocol design", "clinical trial operations", "target selection", "regulatory submission", "safety escalation"],
+      "source_ids": ["SRC-0018", "SRC-0021"],
+      "observed_market_direction": "Official sources describe frontier systems spanning discovery, trials, regulatory workflows, and commercialization.",
+      "does_not_prove": "Market integration does not establish transfer or misuse of proprietary scientific judgment."
+    },
+    {
+      "industry_id": "IND-FINANCIAL-SERVICES",
+      "name": "Financial services and investment management",
+      "epistemic_status": "Hypothesis",
+      "priority": "P0",
+      "facets": {"O": 3, "F": 2, "X": 2, "C": 3, "P": 2, "E": 2},
+      "workflow_archetypes": ["risk appetite", "due diligence", "portfolio analysis", "compliance", "financial modeling"],
+      "source_ids": ["SRC-0017", "SRC-0021"],
+      "observed_market_direction": "Official product pages describe connected internal and market data, proprietary models, compliance, and investment workflows.",
+      "does_not_prove": "The sources do not establish any institution's executed controls or provider secondary use."
+    },
+    {
+      "industry_id": "IND-INSURANCE",
+      "name": "Insurance underwriting and claims",
+      "epistemic_status": "Hypothesis",
+      "priority": "P0",
+      "facets": {"O": 3, "F": 3, "X": 2, "C": 3, "P": 2, "E": 2},
+      "workflow_archetypes": ["underwriting", "first notice of loss", "claims triage", "coverage interpretation", "loss outcomes"],
+      "source_ids": ["SRC-0017", "SRC-0019", "SRC-0022"],
+      "observed_market_direction": "Official sources describe model integration into underwriting, claims intake, internal tools, and core-system modernization.",
+      "does_not_prove": "Connected claims and underwriting workflows do not establish ontology extraction or provider ownership."
+    },
+    {
+      "industry_id": "IND-MANUFACTURING-SEMICONDUCTOR",
+      "name": "Manufacturing, semiconductor, and industrial engineering",
+      "epistemic_status": "Hypothesis",
+      "priority": "P0",
+      "facets": {"O": 3, "F": 3, "X": 2, "C": 3, "P": 2, "E": 2},
+      "workflow_archetypes": ["design verification", "tolerance rules", "regression testing", "digital twins", "root-cause analysis", "factory operations"],
+      "source_ids": ["SRC-0019", "SRC-0020", "SRC-0021"],
+      "observed_market_direction": "Official sources describe models reading schematics, running tests, comparing live equipment with digital twins, and entering factory systems.",
+      "does_not_prove": "These statements do not establish retention or reuse of proprietary engineering knowledge."
+    },
+    {
+      "industry_id": "IND-ACCOUNTING-TAX-CFO",
+      "name": "Accounting, tax, audit, and corporate finance",
+      "epistemic_status": "Hypothesis",
+      "priority": "P0",
+      "facets": {"O": 3, "F": 2, "X": 2, "C": 3, "P": 2, "E": 2},
+      "workflow_archetypes": ["materiality", "controls", "forecasting", "reporting", "treasury", "tax positions", "accounting close"],
+      "source_ids": ["SRC-0023"],
+      "observed_market_direction": "An official partnership describes agents across planning, reporting, procurement, treasury, tax, controls, and close.",
+      "does_not_prove": "A partnership announcement does not establish any client's deployment, data custody, or provider learning."
+    },
+    {
+      "industry_id": "IND-CYBERSECURITY",
+      "name": "Cybersecurity and managed incident response",
+      "epistemic_status": "Hypothesis",
+      "priority": "P0",
+      "facets": {"O": 3, "F": 3, "X": 2, "C": 3, "P": 2, "E": 2},
+      "workflow_archetypes": ["detection thresholds", "incident triage", "response playbooks", "escalation", "postmortems"],
+      "source_ids": ["SRC-0019"],
+      "observed_market_direction": "An official partnership describes an always-on security engineer subagent for managed security operations centers.",
+      "does_not_prove": "The announcement does not establish customer telemetry flows, retention, or model training."
+    },
+    {
+      "industry_id": "IND-ENERGY-UTILITIES",
+      "name": "Energy and utilities",
+      "epistemic_status": "Hypothesis",
+      "priority": "P1",
+      "facets": {"O": 3, "F": null, "X": 2, "C": 3, "P": 2, "E": 2},
+      "workflow_archetypes": ["production optimization", "asset operations", "disaster impact", "mitigation", "capacity siting"],
+      "source_ids": ["SRC-0021"],
+      "observed_market_direction": "An official product page names energy disaster-mitigation and operational use cases.",
+      "does_not_prove": "The source does not expose the workflow's feedback or custody architecture."
+    },
+    {
+      "industry_id": "IND-AVIATION-AIRLINES",
+      "name": "Aviation and airline operations",
+      "epistemic_status": "Hypothesis",
+      "priority": "P1",
+      "facets": {"O": 3, "F": null, "X": 2, "C": 3, "P": 2, "E": 2},
+      "workflow_archetypes": ["maintenance", "dispatch", "safety procedure", "disruption recovery", "legacy operations"],
+      "source_ids": ["SRC-0019"],
+      "observed_market_direction": "An official partnership names model integration into mission-critical airline systems.",
+      "does_not_prove": "The source does not identify a specific airline workflow, data path, or secondary use."
+    },
+    {
+      "industry_id": "IND-GOVERNMENT-PUBLIC-ADMIN",
+      "name": "Government and public administration",
+      "epistemic_status": "Hypothesis",
+      "priority": "P1",
+      "facets": {"O": 3, "F": null, "X": 2, "C": 3, "P": 2, "E": 2},
+      "workflow_archetypes": ["eligibility", "procurement", "case handling", "enforcement", "public-service operations"],
+      "source_ids": ["SRC-0019"],
+      "observed_market_direction": "An official partnership names government agencies among mission-critical deployment targets.",
+      "does_not_prove": "The source does not identify a particular agency, authority, or deployed workflow."
+    },
+    {
+      "industry_id": "IND-CREATIVE-DESIGN",
+      "name": "Creative and design production",
+      "epistemic_status": "Hypothesis",
+      "priority": "P0",
+      "facets": {"O": 3, "F": 3, "X": 2, "C": 2, "P": 2, "E": 2},
+      "workflow_archetypes": ["style systems", "iterative critique", "asset pipelines", "3D scenes", "audio-video production"],
+      "source_ids": ["SRC-0024"],
+      "observed_market_direction": "An official product page describes connectors across creative tools, pipeline translation, scripts, iterative feedback, and handoff.",
+      "does_not_prove": "Tool integration does not establish ownership or cross-customer learning from creative assets or taste."
+    }
+  ]
+}
+

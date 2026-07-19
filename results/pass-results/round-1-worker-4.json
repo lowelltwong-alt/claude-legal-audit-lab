@@ -1,0 +1,168 @@
+{
+  "pass_id": "round-1-worker-4",
+  "scope": ["results/worklists/worker-4.csv", "upstream/claude-for-legal@5ceb305b30b4c82653c9b6642499c12e946ec319"],
+  "coverage": {"files_reviewed": 55, "lines_reviewed": 8227, "deferred": []},
+  "findings": [
+    {
+      "id": "R1W4-F001",
+      "title": "Commercial setup converts stated and realized negotiation behavior into a reusable local practice profile",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "commercial-legal/skills/cold-start-interview/SKILL.md", "line_start": 23, "line_end": 29, "description": "Requests signed agreements and an escalation matrix, extracts actual positions and deltas, and writes the resulting profile to the local plugin configuration."},
+        {"path": "commercial-legal/skills/cold-start-interview/SKILL.md", "line_start": 367, "line_end": 393, "description": "Locates executed-contract repositories, requests templates and signed agreements, and defines template-to-signed-term delta and counterparty-pattern extraction."},
+        {"path": "commercial-legal/skills/cold-start-interview/SKILL.md", "line_start": 455, "line_end": 467, "description": "Profile schema stores standard positions, acceptable fallbacks, hard prohibitions, carveouts, and evidence-derived adjustments."}
+      ],
+      "source_to_sink": ["user-provided playbook, escalation matrix, templates, and signed agreements", "skill reads and compares stated and signed positions", "commercial practice profile at ~/.claude/plugins/config/claude-for-legal/commercial-legal/CLAUDE.md", "subsequent plugin skills read the profile"],
+      "proves": "The design intentionally encodes institutional negotiation policy and empirically observed fallbacks in reusable local configuration.",
+      "does_not_prove": "It does not establish that the provider retains, pools, trains on, or productizes the profile or source documents.",
+      "alternative_explanation": "Customer-specific configuration is necessary to perform tailored contract review and is stored in a user-editable local file.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Trace a configured deployment's file, model-request, connector, logging, retention, deletion, and training-control boundaries with packet/log evidence and contract terms.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "R1W4-F002",
+      "title": "The interview explicitly elicits a seven-dimensional firm position on AI and model-data rights",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "commercial-legal/skills/cold-start-interview/SKILL.md", "line_start": 283, "line_end": 292, "description": "Captures positions on training grants, privacy-policy incorporation, anonymization, competitive isolation, opt-outs, output ownership, and regulatory chain."}
+      ],
+      "source_to_sink": ["attorney answers", "structured seven-part interview", "AI/ML training-rights section of local practice profile", "contract review policy"],
+      "proves": "The repository can encode detailed organizational policy about vendor AI data use and competitive contamination.",
+      "does_not_prove": "The questions do not prove compliance with those positions by Anthropic or another vendor.",
+      "alternative_explanation": "This is a protective contract-review checklist designed to help customers resist unfavorable vendor terms.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Inspect generated profiles and review outputs in a consented test tenant, then compare enforcement against executed vendor terms.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "R1W4-F003",
+      "title": "Default matter isolation limits cross-matter reuse while archived matter content remains readable",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "litigation-legal/skills/matter-workspace/SKILL.md", "line_start": 35, "line_end": 36, "description": "States that cross-matter reads are disabled unless explicitly enabled and that archive is not deletion."},
+        {"path": "litigation-legal/skills/matter-workspace/SKILL.md", "line_start": 173, "line_end": 182, "description": "Defines default-off cross-matter context, requires explicit user request even when enabled, and leaves retention policy out of scope."}
+      ],
+      "source_to_sink": ["matter files", "active-matter selection and cross-matter flag", "local matter workspace", "archived but readable matter state"],
+      "proves": "Prompt-level controls constrain cross-matter access by default, but closing a matter does not delete its content.",
+      "does_not_prove": "It does not demonstrate runtime enforcement, storage encryption, provider-side deletion, or retention duration.",
+      "alternative_explanation": "Readable archives support conflicts and retention obligations while explicit flags reduce accidental confidentiality crossover.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Attempt adversarial cross-matter reads in a test tenant and inspect filesystem, audit, archive, and deletion behavior.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W4-F004",
+      "title": "Managed-agent deployment uploads custom skills and creates hosted agents",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "managed-agent-cookbooks/README.md", "line_start": 7, "line_end": 15, "description": "Deployment invokes skill uploads and POST /v1/agents for monitoring workflows over legal systems."},
+        {"path": "managed-agent-cookbooks/README.md", "line_start": 19, "line_end": 31, "description": "Documents inlining systems, uploading plugin skills, creating callable agents, and a one-level delegation limit."},
+        {"path": "managed-agent-cookbooks/README.md", "line_start": 47, "line_end": 54, "description": "Warns deployers to review Anthropic and local storage retention and says templates are not production-ready."}
+      ],
+      "source_to_sink": ["repository skill and agent definitions", "deployment script transformation", "/v1/skills and /v1/agents", "hosted managed-agent execution configured against customer systems"],
+      "proves": "Some prompt and skill definitions are intentionally uploaded to a hosted agent service, and deployed agents may process connected legal-system data.",
+      "does_not_prove": "It does not establish what customer content is retained, how long it is retained, or whether it is used for generalized training or cross-customer learning.",
+      "alternative_explanation": "Hosted artifacts are required to execute explicitly deployed monitoring agents for the customer.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Capture deployment requests and agent runs, inventory transmitted fields, and obtain authenticated retention, training, support-access, and deletion terms.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W4-F005",
+      "title": "Managed-agent tiering is explicit counterevidence to unrestricted document-to-tool execution",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "managed-agent-cookbooks/README.md", "line_start": 37, "line_end": 45, "description": "Readers of untrusted documents have no MCP, Write, or network; analyzers receive bounded structured JSON; writers never see raw documents; orchestrator does not read raw material."}
+      ],
+      "source_to_sink": ["untrusted legal documents", "read-only isolated reader", "length-capped structured JSON", "analyzer", "write-only finalization tier"],
+      "proves": "The documented reference architecture deliberately partitions untrusted inputs from network/write authority.",
+      "does_not_prove": "Documentation alone does not prove deployed manifests, runtime sandboxes, or connector implementations enforce every boundary.",
+      "alternative_explanation": "This is a substantive least-authority and prompt-injection control, not an exfiltration mechanism.",
+      "confidence": "high",
+      "risk": "low",
+      "test_to_confirm": "Validate resolved manifests and run prompt-injection fixtures while observing actual tool invocations and denied calls.",
+      "hypotheses": ["H0", "H2"]
+    },
+    {
+      "id": "R1W4-F006",
+      "title": "Legal Clinic intake captures highly sensitive facts but reserves acceptance and external action for human review",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "legal-clinic/skills/client-intake/SKILL.md", "line_start": 3, "line_end": 18, "description": "Defines structured client intake, conflicts and triage, while explicitly excluding case-acceptance decisions."},
+        {"path": "legal-clinic/skills/client-intake/SKILL.md", "line_start": 60, "line_end": 79, "description": "Default intake asks for immigration, criminal, family, safety, housing, and deadline facts."},
+        {"path": "legal-clinic/skills/supervisor-review-queue/SKILL.md", "line_start": 98, "line_end": 98, "description": "States that external delivery requires a logged licensed-professional approval record."}
+      ],
+      "source_to_sink": ["client interview answers", "practice-specific intake and issue spotting", "formatted case summary", "student analysis and professor review queue"],
+      "proves": "The workflow handles privileged and highly sensitive client facts and includes explicit human responsibility gates.",
+      "does_not_prove": "It does not reveal transport, model-request content, tenant storage, provider logging, support access, or deletion behavior.",
+      "alternative_explanation": "The design reduces intake transcription burden while keeping legal acceptance and client/court delivery with humans.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Use synthetic intake data to trace model, connector, storage, audit, approval, and deletion paths in a configured clinic tenant.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W4-F007",
+      "title": "Default MCP definitions introduce remote legal and workspace trust boundaries",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "legal-clinic/.mcp.json", "line_start": 2, "line_end": 32, "description": "Configures remote Slack, Google Drive, CourtListener, Courtroom5, and Descrybe MCP endpoints."},
+        {"path": "CONNECTORS.md", "line_start": 7, "line_end": 18, "description": "Requires HTTPS/auth, read-heavy tools, client confirmation for writes, provenance, and injection-resistance testing for default connectors."}
+      ],
+      "source_to_sink": ["workspace or legal-research query", "Claude tool invocation", "configured remote MCP endpoint", "third-party connector operator and returned results"],
+      "proves": "The plugin suite is designed to communicate with named remote connector operators and recognizes provenance and prompt-injection risks.",
+      "does_not_prove": "Configuration alone does not show which tools are authorized, what payloads are sent, whether a tenant enabled them, or provider/connector retention and reuse.",
+      "alternative_explanation": "Remote connectors provide requested authoritative research and document retrieval under customer authorization.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Capture consented MCP request/response envelopes, OAuth scopes, authorization prompts, endpoint logs, and connector retention terms.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W4-F008",
+      "title": "Community-skill discovery is a supply-chain boundary with a restrictive default allowlist",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "legal-builder-hub/skills/registry-browser/SKILL.md", "line_start": 30, "line_end": 37, "description": "Fetches watched registry indexes and caches skill frontmatter locally."},
+        {"path": "legal-builder-hub/skills/registry-browser/SKILL.md", "line_start": 61, "line_end": 71, "description": "Previews full remote skills and adds registries only after confirmation."},
+        {"path": "legal-builder-hub/references/allowlist-default.yaml", "line_start": 5, "line_end": 29, "description": "Default policy fails closed for unknown sources and refuses undeclared connectors in restrictive mode."}
+      ],
+      "source_to_sink": ["watched GitHub or marketplace registry", "remote index and SKILL.md fetch", "local registry cache and user preview", "separate installer decision"],
+      "proves": "The ecosystem fetches executable-instruction candidates from external registries but ships a restrictive publisher/registry/connector allowlist and confirmation boundary.",
+      "does_not_prove": "It does not prove remote content integrity, immutable pinning, installation behavior, or that users keep restrictive mode enabled.",
+      "alternative_explanation": "The browser separates discovery from installation and uses explicit review plus fail-closed defaults to manage supply-chain risk.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Test registry mutation, cache poisoning, publisher confusion, connector declaration, revision pinning, and installer confirmation behavior.",
+      "hypotheses": ["H0", "H1", "H2"]
+    }
+  ],
+  "new_patterns": [
+    {"id": "R1W4-P001", "name": "Realized-position extraction", "logic": "Find workflows that compare declared policy or templates with signed outcomes and promote the delta into reusable configuration.", "search_terms": ["seed docs", "actual signed terms", "compute the delta", "acceptable fallback", "positions in the wild"], "false_positive_risk": "May describe one-time document comparison without persistent policy update."},
+    {"id": "R1W4-P002", "name": "Hosted artifact deployment", "logic": "Trace local skill/agent definitions through upload and hosted-agent creation APIs separately from user-content flows.", "search_terms": ["/v1/skills", "/v1/agents", "skill_id", "uploaded-id", "POST /v1/agents"], "false_positive_risk": "Uploading prompt definitions does not itself imply uploading client documents or secondary use."},
+    {"id": "R1W4-P003", "name": "Archive-not-deletion boundary", "logic": "Find lifecycle actions labeled close/archive and determine whether content remains readable and where deletion/retention is governed.", "search_terms": ["archive is not deletion", "remain readable", "retention policy is out of scope", "closed matters"], "false_positive_risk": "Retention may be legally required and customer-controlled rather than provider-controlled."},
+    {"id": "R1W4-P004", "name": "Instruction-candidate supply chain", "logic": "Trace external registries into cached or installed skill instructions and test allowlist, preview, confirmation, and revision binding.", "search_terms": ["watched registries", "registry-cache", "show full SKILL.md", "allowlist", "unknown sources are refused"], "false_positive_risk": "Browsing and previewing content is distinct from executing or installing it."}
+  ],
+  "negative_evidence": [
+    {"path": "commercial-legal/skills/cold-start-interview/SKILL.md", "description": "Lines 138-140 prohibit importing personal history, unrelated conversations, prior sessions, or ambient memory into the team profile without approval.", "effect": "Weighs against ambient or covert profile construction in the documented setup path."},
+    {"path": "litigation-legal/skills/matter-workspace/SKILL.md", "description": "Lines 173-177 make cross-matter reads default-off and require an explicit user request even when enabled.", "effect": "Weighs against an unrestricted cross-matter pooling interpretation at the prompt-policy layer."},
+    {"path": "managed-agent-cookbooks/README.md", "description": "Lines 39-45 separate untrusted readers from MCP/write authority and keep raw documents from writers and orchestrators.", "effect": "Weighs against a designed direct prompt-injection-to-egress path."},
+    {"path": "CONNECTORS.md", "description": "Lines 7-18 prefer read-heavy tools, require confirmation for writes, provenance, and injection-resistance checks.", "effect": "Shows documented connector governance that is inconsistent with unconstrained egress by design."},
+    {"path": "legal-builder-hub/references/allowlist-default.yaml", "description": "Lines 5-29 fail closed on unknown registries, publishers, and connector declarations.", "effect": "Reduces the documented default supply-chain exposure, subject to runtime and user-configuration validation."},
+    {"path": "ai-governance-legal/skills/policy-monitor/SKILL.md", "description": "Lines 97-102 prohibit advancing the sweep checkpoint before human acknowledgment.", "effect": "Preserves human review and prevents silent suppression of unresolved governance gaps."},
+    {"path": "regulatory-legal/skills/reg-feed-watcher/SKILL.md", "description": "Lines 81-85 prohibit silent low-confidence supplementation and preserve primary/secondary-source labels.", "effect": "Weighs against autonomous laundering of uncertain sources into authoritative legal output."}
+  ],
+  "unknowns": [
+    {"question": "What exact customer content is included in hosted model, skill-upload, managed-agent, telemetry, support, and connector requests?", "why_source_cannot_answer": "The repository contains prompts and deployment descriptions, not authenticated runtime request logs.", "needed_evidence": "Consented packet captures, request logs, tenant audit exports, and field-level API documentation."},
+    {"question": "How long do Anthropic and connector operators retain prompts, outputs, tool traces, uploaded skills, and managed-agent state?", "why_source_cannot_answer": "The source warns users to review retention settings but does not encode authoritative service-side retention behavior.", "needed_evidence": "Authenticated product settings, executed terms/DPA, subprocessors, deletion tests, and provider-side audit evidence."},
+    {"question": "Are customer-specific profiles or behavioral traces used for generalized training, cross-customer learning, evaluations, product analytics, or support-derived product development?", "why_source_cannot_answer": "No repository line supplies a retention-plus-secondary-use chain.", "needed_evidence": "Contract terms, policy revisions, training-control attestations, data-lineage records, and independently reproducible source-to-sink evidence."},
+    {"question": "Are matter-isolation, tool-tier, output-schema, and human-approval rules enforced by the deployed runtime?", "why_source_cannot_answer": "The reviewed artifacts are declarative Markdown/YAML/JSON and cannot prove runtime enforcement.", "needed_evidence": "Resolved deployment manifests, sandbox policy, adversarial execution logs, denied-tool events, and approval audit records."},
+    {"question": "What OAuth scopes and payload fields are granted to each enabled MCP connector?", "why_source_cannot_answer": "The .mcp.json files name endpoints and descriptions but not tenant grants or observed requests.", "needed_evidence": "Tenant OAuth grants, connector schemas, request/response captures, operator logs, and retention terms."},
+    {"question": "Does closing or deleting a local matter trigger deletion from model, connector, backup, support, and managed-agent systems?", "why_source_cannot_answer": "The local prompt says archive is not deletion and leaves retention policy out of scope.", "needed_evidence": "End-to-end deletion experiment with timestamps and confirmations from every processor and backup tier."}
+  ]
+}

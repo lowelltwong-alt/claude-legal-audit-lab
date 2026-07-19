@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/chunk-registry.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "format_version", "policy_sha256", "pinned_repository", "pinned_commit", "source_ids", "chunks", "edges", "build", "limitation"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.chunk-registry.v2"},
+    "format_version": {"const": "2.0.0"},
+    "policy_sha256": {"$ref": "#/$defs/sha256"},
+    "pinned_repository": {"const": "anthropics/claude-for-legal"},
+    "pinned_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "source_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/sourceId"}},
+    "chunks": {"type": "array", "minItems": 1, "items": {"oneOf": [{"$ref": "#/$defs/staticChunk"}, {"$ref": "#/$defs/prChunk"}, {"$ref": "#/$defs/webChunk"}]}},
+    "edges": {"type": "array", "items": {"$ref": "#/$defs/edge"}},
+    "build": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generator", "generator_version", "canonical_json", "activated_chunk_kinds"],
+      "properties": {
+        "generator": {"const": "scripts/build_chunk_registry.py"},
+        "generator_version": {"const": "2.0.0"},
+        "canonical_json": {"const": "sorted_keys_pretty_utf8_lf"},
+        "activated_chunk_kinds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["static_file_span", "pr_file_record", "web_capture_span"]}}
+      }
+    },
+    "limitation": {"type": "string", "minLength": 80}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "chunkId": {"type": "string", "pattern": "^chk:sha256:[0-9a-f]{64}$"},
+    "edgeId": {"type": "string", "pattern": "^edge:sha256:[0-9a-f]{64}$"},
+    "sourceId": {"type": "string", "pattern": "^SRC-[0-9]{4}$"},
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["chunk_kind", "source_id", "source_revision", "parent_id", "locator", "content_sha256", "policy_revision"],
+      "properties": {
+        "chunk_kind": {"enum": ["static_file_span", "pr_file_record", "web_capture_span"]},
+        "source_id": {"$ref": "#/$defs/sourceId"},
+        "source_revision": {"type": "string", "minLength": 1},
+        "parent_id": {"type": "string", "pattern": "^parent:sha256:[0-9a-f]{64}$"},
+        "locator": {"type": "object"},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "policy_revision": {"const": "2.0.0"}
+      }
+    },
+    "chunkBase": {
+      "type": "object",
+      "required": ["chunk_id", "chunk_kind", "identity", "authority_class", "source_ids", "parent", "exact_locator", "content_sha256", "review_status", "limitation"],
+      "properties": {
+        "chunk_id": {"$ref": "#/$defs/chunkId"},
+        "chunk_kind": {"enum": ["static_file_span", "pr_file_record", "web_capture_span"]},
+        "identity": {"$ref": "#/$defs/identity"},
+        "authority_class": {"const": "candidate_evidence"},
+        "source_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/sourceId"}},
+        "content_sha256": {"$ref": "#/$defs/sha256"},
+        "review_status": {"enum": ["candidate", "reviewed", "quarantined"]},
+        "limitation": {"type": "string", "minLength": 60}
+      }
+    },
+    "gitLocator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "byte_start", "byte_end_exclusive", "line_start", "line_end"],
+      "properties": {
+        "kind": {"const": "git_blob_span"},
+        "byte_start": {"type": "integer", "minimum": 0},
+        "byte_end_exclusive": {"type": "integer", "minimum": 0},
+        "line_start": {"type": "integer", "minimum": 1},
+        "line_end": {"type": "integer", "minimum": 1}
+      }
+    },
+    "staticChunk": {
+      "allOf": [
+        {"$ref": "#/$defs/chunkBase"},
+        {
+          "type": "object",
+          "required": ["chunk_kind", "parent", "exact_locator"],
+          "properties": {
+            "chunk_kind": {"const": "static_file_span"},
+            "parent": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["parent_id", "repository", "commit", "path", "git_blob_oid", "sha256", "byte_count"],
+              "properties": {
+                "parent_id": {"type": "string", "pattern": "^parent:sha256:[0-9a-f]{64}$"},
+                "repository": {"const": "anthropics/claude-for-legal"},
+                "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+                "path": {"type": "string", "minLength": 1},
+                "git_blob_oid": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+                "sha256": {"$ref": "#/$defs/sha256"},
+                "byte_count": {"type": "integer", "minimum": 0}
+              }
+            },
+            "exact_locator": {"$ref": "#/$defs/gitLocator"}
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "prChunk": {
+      "allOf": [
+        {"$ref": "#/$defs/chunkBase"},
+        {
+          "type": "object",
+          "properties": {
+            "chunk_kind": {"const": "pr_file_record"},
+            "parent": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["parent_id", "repository", "pr_number", "capture_sha256", "record_count"],
+              "properties": {
+                "parent_id": {"type": "string", "minLength": 10},
+                "repository": {"const": "anthropics/claude-for-legal"},
+                "pr_number": {"type": "integer", "minimum": 1},
+                "capture_sha256": {"$ref": "#/$defs/sha256"},
+                "record_count": {"type": "integer", "minimum": 1}
+              }
+            },
+            "exact_locator": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["kind", "record_index", "path"],
+              "properties": {
+                "kind": {"const": "pr_file_record"},
+                "record_index": {"type": "integer", "minimum": 0},
+                "path": {"type": "string", "minLength": 1}
+              }
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "webChunk": {
+      "allOf": [
+        {"$ref": "#/$defs/chunkBase"},
+        {
+          "type": "object",
+          "properties": {
+            "chunk_kind": {"const": "web_capture_span"},
+            "parent": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["parent_id", "source_id", "url", "capture_sha256"],
+              "properties": {
+                "parent_id": {"type": "string", "minLength": 10},
+                "source_id": {"$ref": "#/$defs/sourceId"},
+                "url": {"type": "string", "pattern": "^https://"},
+                "capture_sha256": {"$ref": "#/$defs/sha256"}
+              }
+            },
+            "exact_locator": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["kind", "selector"],
+              "properties": {
+                "kind": {"const": "web_capture_metadata"},
+                "selector": {"type": "string", "minLength": 1}
+              }
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["edge_id", "edge_type", "source_chunk_id", "target_chunk_id", "inverse_edge_id", "authority_class", "creation_method", "review_status", "policy_revision", "limitation"],
+      "properties": {
+        "edge_id": {"$ref": "#/$defs/edgeId"},
+        "edge_type": {"enum": ["NEXT_IN_PARENT", "PREVIOUS_IN_PARENT", "MODIFIES_PATH", "MODIFIED_BY", "DERIVED_FROM", "HAS_DERIVATIVE"]},
+        "source_chunk_id": {"$ref": "#/$defs/chunkId"},
+        "target_chunk_id": {"$ref": "#/$defs/chunkId"},
+        "inverse_edge_id": {"$ref": "#/$defs/edgeId"},
+        "authority_class": {"const": "candidate_evidence"},
+        "creation_method": {"enum": ["deterministic_partition", "deterministic_capture_linkage", "authored_reviewed"]},
+        "review_status": {"enum": ["candidate", "reviewed"]},
+        "policy_revision": {"const": "2.0.0"},
+        "limitation": {"type": "string", "minLength": 40}
+      }
+    }
+  }
+}

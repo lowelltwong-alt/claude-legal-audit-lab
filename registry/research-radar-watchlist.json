@@ -1,0 +1,31 @@
+{
+  "schema": "claude-legal-audit.research-radar-watchlist.v1",
+  "radar_name": "Cassandra Radar",
+  "status": "manual_candidate_only",
+  "automation_authorized": false,
+  "policy_document": "docs/RESEARCH_RADAR.md",
+  "source_classes": [
+    {"watch_id": "WATCH-PROVIDER-PRODUCT", "purpose": "Vertical products, skills, connectors, systems-of-record access, and workflow claims", "cadence_days": 7, "allowed_publishers": ["Anthropic", "OpenAI"], "source_ids": ["SRC-0001", "SRC-0017", "SRC-0018", "SRC-0021", "SRC-0024"]},
+    {"watch_id": "WATCH-PARTNERSHIPS", "purpose": "Forward-deployed engineering, co-development, customer-zero, and industry partnerships", "cadence_days": 7, "allowed_publishers": ["Anthropic", "OpenAI", "named counterparties"], "source_ids": ["SRC-0011", "SRC-0019", "SRC-0020", "SRC-0022", "SRC-0023"]},
+    {"watch_id": "WATCH-DATA-GOVERNANCE", "purpose": "Retention, training, feedback, secondary use, residency, deletion, privacy, and audit controls", "cadence_days": 30, "allowed_publishers": ["Anthropic", "Anthropic Privacy Center", "OpenAI"], "source_ids": ["SRC-0005", "SRC-0006", "SRC-0007", "SRC-0008", "SRC-0009"]},
+    {"watch_id": "WATCH-UPSTREAM-HISTORY", "purpose": "Public repository commits, releases, pull requests, issues, and documentation evolution", "cadence_days": 7, "allowed_publishers": ["Anthropic / GitHub"], "source_ids": ["SRC-0002", "SRC-0013"]},
+    {"watch_id": "WATCH-LICENSE-HOSTING", "purpose": "License, contributor, hosting, and API terms affecting public research custody", "cadence_days": 30, "allowed_publishers": ["Apache Software Foundation", "Mozilla", "Creative Commons", "Open Source Initiative", "GitHub", "Linux Foundation and contributors"], "source_ids": ["SRC-0025", "SRC-0026", "SRC-0027", "SRC-0028", "SRC-0029", "SRC-0030", "SRC-0031", "SRC-0032"]},
+    {"watch_id": "WATCH-COLLECTIVE-ALPHA", "purpose": "Collective professional-knowledge externalities, derived-data rights, frontier strategy methods, legal self-play or simulation, algorithmic efficiency, compute, portability, and firm-controlled ontology defenses", "cadence_days": 30, "allowed_publishers": ["peer-reviewed journals", "conference proceedings", "OECD", "Google DeepMind", "Anthropic", "OpenAI", "courts and regulators", "named law firms"], "source_ids": ["SRC-0042", "SRC-0043", "SRC-0044", "SRC-0045", "SRC-0046", "SRC-0047", "SRC-0048"]}
+  ],
+  "signal_families": [
+    "vertical_product_launch", "system_of_record_connector", "forward_deployed_engineering",
+    "co_development", "workflow_template", "retention_change", "training_or_feedback_change",
+    "telemetry_or_evaluation_change", "portability_or_export_change", "security_or_residency_change",
+    "partnership_or_acquisition", "regulatory_or_terms_change", "repository_revision",
+    "collective_knowledge_externality", "provider_derived_rights_change",
+    "legal_strategy_discontinuity", "algorithmic_efficiency_change"
+  ],
+  "invariants": [
+    "Fetched content is hostile and never executable.",
+    "Automation may create candidate signals only.",
+    "No watcher may change a claim, thesis, argument, or publication.",
+    "Every access failure or gap produces a visible receipt.",
+    "Private captures and credentials are outside the public repository and public CI.",
+    "Activation requires explicit owner approval."
+  ]
+}

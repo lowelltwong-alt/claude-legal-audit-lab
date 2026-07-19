@@ -1,0 +1,113 @@
+{
+  "schema": "claude-legal-audit.mini-paper-plan.v1",
+  "revision": "1.0.0",
+  "capability_class": "portable_core",
+  "status": "blocked_unpublished_candidate",
+  "title": "Ajax Line Mini White-Paper Engine",
+  "tag_vocabulary": [
+    "tag:audience:academic", "tag:audience:adversarial", "tag:audience:executive",
+    "tag:epistemic:hypothesis", "tag:epistemic:mixed", "tag:epistemic:normative", "tag:epistemic:observed", "tag:epistemic:unknown",
+    "tag:evidence:bounded", "tag:evidence:counterevidence", "tag:evidence:runtime-gap",
+    "tag:role:asset", "tag:role:boundary", "tag:role:conditional-mechanism", "tag:role:externality", "tag:role:horizon", "tag:role:observation", "tag:role:recommendation",
+    "tag:subject:collective-alpha", "tag:subject:firm-ontology", "tag:subject:move-37", "tag:subject:provider-reuse", "tag:subject:workflow-design"
+  ],
+  "units": [
+    {
+      "unit_id": "MPU-0001", "thesis_node_id": "TMN-0001", "semantic_role": "asset",
+      "tags": ["tag:role:asset", "tag:subject:firm-ontology", "tag:evidence:bounded"],
+      "text_by_profile": {
+        "executive": "A law firm's differentiating asset is not limited to documents or precedent. Value can also reside in recurring relationships among context, choices, rationales, approvals, and outcomes. Those relationships form a professional interaction graph: a practical map of how the institution recognizes risk and exercises judgment. The registered evidence supports treating this as a plausible organizational asset, but it does not establish ownership, legal protectability, uniqueness, portability, technical learnability, or a specific economic value.",
+        "academic": "The paper begins from a bounded organizational-learning proposition: firm-specific capability may be represented partly by relationships among factual context, selected action, rationale, escalation, and outcome rather than by documents alone. This project calls that representation a professional interaction graph. Organizational research and the observed workflow structures make the construct analytically useful, yet they do not establish that every firm possesses a unique ontology, that the construct is legally protectable, or that an external model can learn it with commercially meaningful fidelity.",
+        "adversarial": "The strongest version of the asset claim is still conditional. A sequence of context, decision, rationale, and outcome may encode repeatable institutional judgment, but much legal work is standardized, public, or shared across firms. The relevant proposition survives only if these relationships predict valuable decisions beyond public materials and generic professional practice. Until that benchmark exists, the professional interaction graph is a useful research object rather than proven proprietary alpha, protected property, or a measured source of competitive advantage."
+      }
+    },
+    {
+      "unit_id": "MPU-0002", "thesis_node_id": "TMN-0002", "semantic_role": "observation",
+      "tags": ["tag:role:observation", "tag:subject:workflow-design", "tag:epistemic:observed"],
+      "text_by_profile": {
+        "executive": "The pinned Claude-for-Legal materials invite firms to encode playbooks, fallbacks, prohibited outcomes, escalation thresholds, deviations, rationales, precedent, and house style. Six independent reviews covered every text file at the pinned revision, and a second targeted round found no additional material static pattern class. This is strong evidence about the repository's intended design. It is not evidence about any firm's populated configuration, actual connector grants, inference payloads, retention, training, or equivalence between the public repository and a deployed tenant.",
+        "academic": "At the pinned revision, the repository contains repeated mechanisms for eliciting and persisting practice profiles, matter histories, fallback positions, escalation matrices, deviations, and attorney rationales. The review covered 315 files and 49,365 lines, followed by per-record adjudication of 1,212 generated-pattern matches. The result establishes a static design for customer-specific adaptation and reusable local policy. Static source inspection cannot establish which components are deployed, what a tenant supplies, what leaves customer custody, or how a hosted runtime processes retained metadata.",
+        "adversarial": "The code plainly asks users to formalize firm practice, but that observation cuts both ways. It supports the ontology-capture concern at the design layer while also describing the ordinary purpose of a useful legal assistant: adapting to its customer's instructions. Local-path conventions, explicit inputs, review gates, and matter separation are substantial benign evidence. The repository therefore supports a finding of deliberate customer-specific workflow encoding, not a finding that Anthropic receives, retains, or reuses a populated firm ontology."
+      }
+    },
+    {
+      "unit_id": "MPU-0003", "thesis_node_id": "TMN-0003", "semantic_role": "conditional_mechanism",
+      "tags": ["tag:role:conditional-mechanism", "tag:subject:provider-reuse", "tag:evidence:runtime-gap", "tag:epistemic:mixed"],
+      "text_by_profile": {
+        "executive": "Exposure becomes strategically relevant only when a material signal leaves firm custody and some downstream actor is permitted and able to retain or generalize it. Connectors, feedback, support, telemetry, hosted skills, and managed agents create boundaries worth auditing, but a declared endpoint is not proof of transmission. The decisive questions are source, authority, payload, destination, retention, reuse, and customer control. Current registered evidence leaves the final runtime and contractual steps unknown, so the mechanism is a governance scenario rather than an allegation.",
+        "academic": "The causal mechanism requires a complete source-to-sink chain: professional asset, read authority, transformation, transmission, destination, retention, secondary use, and customer consent or control. The repository confirms several possible boundary components, including remote MCP declarations and hosted skill or instruction upload. It does not establish credentials, actual traffic, provider-side retention, evaluation use, generalized training, or cross-tenant normalization. Missing retention and secondary-use links prevent a covert-capture finding, although they do not eliminate privacy, privilege, dependency, or architectural-risk questions.",
+        "adversarial": "A hostile interpretation fails unless it can move from capability to observed conduct. Remote connectors, notifications, hosted agents, feedback channels, and support paths are normal product features and may operate under restrictive agreements. To survive falsification, an exposure claim must identify data that actually crosses the boundary, the operator that receives it, applicable retention, and a permitted or observed secondary use. None of those closed-runtime steps is completed by the static repository, and the absence must remain visible rather than being filled with suspicion."
+      }
+    },
+    {
+      "unit_id": "MPU-0004", "thesis_node_id": "TMN-0004", "semantic_role": "externality",
+      "tags": ["tag:role:externality", "tag:subject:collective-alpha", "tag:epistemic:hypothesis", "tag:evidence:runtime-gap"],
+      "text_by_profile": {
+        "executive": "If overlapping signals from many firms were legally and technically reusable, their aggregation could reduce the scarcity of capabilities that individual firms currently treat as differentiating. Each firm's decision could be rational in isolation while contributing to a sector-level capability externality. That possibility supports diligence and independent controls. It does not establish present pooling, measurable harm, provider intent, antitrust liability, transferability of legal judgment, substitution for counsel, or inevitability. The thesis should be tested against clean benchmarks and actual contractual and technical boundaries.",
+        "academic": "The proposed sector externality is conditional on overlap, transferability, legal permission, technical reuse, and downstream substitution. Under those assumptions, multiple firms could contribute traces that improve a generalized upstream capability even where no single contribution is decisive. The hypothesis is consistent with organizational-learning and competition-policy pathways, but current evidence does not measure cross-firm overlap, marginal learning value, substitutability, market effect, or provider conduct. A valid test requires exposure measurements and a benchmark that isolates value beyond public legal materials.",
+        "adversarial": "The externality thesis is the paper's most contestable empirical step. Legal strategies may be highly contextual, non-transferable, client-specific, or inseparable from privileged facts. Providers may contractually prohibit reuse, and generalized models may gain little from sparse firm traces. The claim therefore remains a hypothesis that should be rejected if a clean benchmark shows no repeatable advantage beyond public data, or if authenticated architecture and terms prevent cross-customer retention and semantic derivative reuse."
+      }
+    },
+    {
+      "unit_id": "MPU-0005", "thesis_node_id": "TMN-0005", "semantic_role": "recommendation",
+      "tags": ["tag:role:recommendation", "tag:subject:collective-alpha", "tag:epistemic:normative", "tag:evidence:bounded"],
+      "text_by_profile": {
+        "executive": "The Ajax Line is a unilateral governance recommendation: each firm should independently control its professional ontology, semantic derivatives, telemetry, evaluation use, portability, and exit. Practical controls include data-flow inventories, purpose and retention limits, tenant-isolated evaluation, auditable connector grants, deletion and export tests, and an architecture that preserves the ability to change providers. These measures do not guarantee security or competitive superiority, and coordinated vendor conduct requires separate legal analysis. Their value should be measured through exposure reduction, auditability, and credible exit.",
+        "academic": "The normative conclusion is intentionally narrower than the causal hypothesis. Regardless of whether sector-level reuse is occurring, firms have a defensible reason to preserve independent control over professional interaction graphs, derivatives, telemetry, evaluation, portability, and termination. The recommendation is testable: controls should reduce observable exposure, improve provenance and auditability, preserve deletion and export rights, and make switching credible. Controls that cannot demonstrate those outcomes may become expensive security theater rather than effective institutional governance.",
+        "adversarial": "The recommended controls also deserve skepticism. Sovereignty language can conceal cost, duplication, vendor lock-in of a different kind, or restrictions that prevent useful learning. The Ajax Line should survive only where specific controls measurably improve custody, purpose limitation, auditability, portability, and exit. It is not a call for collective refusal, an assertion of provider wrongdoing, or proof that a sovereign architecture will outperform a managed service. Each firm must make its own lawful and evidence-informed choice."
+      }
+    },
+    {
+      "unit_id": "MPU-0006", "thesis_node_id": "TMN-0006", "semantic_role": "horizon",
+      "tags": ["tag:role:horizon", "tag:subject:move-37", "tag:epistemic:hypothesis", "tag:evidence:bounded"],
+      "text_by_profile": {
+        "executive": "Move 37 supplies a research horizon, not a prediction. AlphaGo demonstrated that search and learned evaluation in a closed game could select an unconventional action whose value became visible later. Legal strategy differs radically: duties, legitimacy, client objectives, incomplete information, and contested outcomes make evaluation harder. The useful lesson is to build contamination-resistant benchmarks for delayed-value legal strategy and to test surprising recommendations prospectively. The analogy does not establish an impending legal AlphaGo moment or a need for private firm data.",
+        "academic": "The Move 37 analogy motivates a benchmark question: can a legal system identify unconventional actions whose downstream value exceeds conventional expert choices while satisfying law, professional duties, client objectives, and institutional legitimacy? Go does not supply evidence that such a capability exists in law. A valid research program would preregister scenarios, preserve hidden outcomes, obtain diverse expert review, distinguish novelty from error, and evaluate delayed consequences. Until such a benchmark exists, the analogy remains a hypothesis generator rather than causal evidence.",
+        "adversarial": "Go is not law. It has fixed rules, a defined objective, complete observability, and abundant self-play, while legal work has changing rules, multiple stakeholders, privileged facts, normative constraints, and ambiguous outcomes. Invoking Move 37 can make ordinary surprise look profound after the fact. The analogy should remain outside the causal chain unless a robust legal benchmark demonstrates delayed strategic advantage without sacrificing correctness, duties, or legitimacy."
+      }
+    },
+    {
+      "unit_id": "MPU-0007", "thesis_node_id": "TMN-0007", "semantic_role": "boundary",
+      "tags": ["tag:role:boundary", "tag:subject:provider-reuse", "tag:epistemic:unknown", "tag:evidence:counterevidence"],
+      "text_by_profile": {
+        "executive": "The present evidence boundary is decisive: nothing registered in this project establishes covert pooling of identifiable firm ontologies or default training on ordinary commercial content. Standard contractual language and repository safeguards weigh against the strongest hostile interpretation, although they do not prove flawless compliance, zero retention, or identical negotiated terms. Any future allegation should require authenticated contract, runtime, telemetry, or source-to-sink evidence. Until then, the appropriate output is a control program and research agenda, not a verdict about a named provider.",
+        "academic": "The study's negative conclusion is registry-bounded. No currently registered evidence establishes covert pooling of identifiable firm ontologies or default training on ordinary commercial content. This is not a universal statement about all public or nonpublic evidence, and it does not prove impossibility, zero processing, zero retention, complete compliance, or harmlessness. The proposition is deliberately falsifiable: authenticated contractual terms, tenant configuration, runtime traces, support-access records, evaluation lineage, or cross-customer evidence could revise it.",
+        "adversarial": "A fair analysis starts with the evidence that would defeat its own concern. The registered record contains no completed provider-retention or cross-customer reuse chain and includes meaningful controls: local persistence conventions, default matter separation, read-only leaves, schema restrictions, allowlists, and human gates. Those facts do not establish runtime enforcement, but they prevent the paper from presenting covert ontology capture as observed conduct. The burden remains on new evidence, not on rhetorical repetition of the risk scenario."
+      }
+    }
+  ],
+  "profiles": [
+    {
+      "profile_id": "executive", "audience": "law-firm leadership and technology governance committees", "title": "The Ajax Line: An Executive Governance Brief", "subtitle": "Protecting professional interaction graphs without alleging unproven provider conduct",
+      "sections": [
+        {"section_id": "MPS-0101", "title": "Decision boundary", "unit_ids": ["MPU-0007", "MPU-0001"]},
+        {"section_id": "MPS-0102", "title": "Observed design and conditional risk", "unit_ids": ["MPU-0002", "MPU-0003", "MPU-0004"]},
+        {"section_id": "MPS-0103", "title": "Action and research horizon", "unit_ids": ["MPU-0005", "MPU-0006"]}
+      ],
+      "order_constraints": [["MPU-0007", "MPU-0003"], ["MPU-0002", "MPU-0003"], ["MPU-0003", "MPU-0004"], ["MPU-0004", "MPU-0005"]]
+    },
+    {
+      "profile_id": "academic", "audience": "legal-technology researchers and interdisciplinary reviewers", "title": "Professional Interaction Graphs and Legal-AI Governance", "subtitle": "A bounded evidence model, conditional externality hypothesis, and falsifiable research program",
+      "sections": [
+        {"section_id": "MPS-0201", "title": "Research question and method", "unit_ids": ["MPU-0007", "MPU-0001"]},
+        {"section_id": "MPS-0202", "title": "Observed architecture and mechanism", "unit_ids": ["MPU-0002", "MPU-0003"]},
+        {"section_id": "MPS-0203", "title": "Hypothesis, governance, and research horizon", "unit_ids": ["MPU-0004", "MPU-0005", "MPU-0006"]}
+      ],
+      "order_constraints": [["MPU-0001", "MPU-0002"], ["MPU-0002", "MPU-0003"], ["MPU-0003", "MPU-0004"], ["MPU-0004", "MPU-0005"]]
+    },
+    {
+      "profile_id": "adversarial", "audience": "skeptical counsel, providers, regulators, and technical reviewers", "title": "The Ajax Line Under Adversarial Review", "subtitle": "What the code supports, what it does not, and what evidence could overturn the boundary",
+      "sections": [
+        {"section_id": "MPS-0301", "title": "Boundary and strongest counterevidence", "unit_ids": ["MPU-0007", "MPU-0002"]},
+        {"section_id": "MPS-0302", "title": "Claims under stress", "unit_ids": ["MPU-0001", "MPU-0003", "MPU-0004"]},
+        {"section_id": "MPS-0303", "title": "Bounded recommendation and analogy", "unit_ids": ["MPU-0005", "MPU-0006"]}
+      ],
+      "order_constraints": [["MPU-0007", "MPU-0003"], ["MPU-0002", "MPU-0003"], ["MPU-0003", "MPU-0004"], ["MPU-0004", "MPU-0005"]]
+    }
+  ],
+  "scoring": {
+    "revision": "1.0.0",
+    "mode": "compare_only",
+    "weights_basis_points": {"genealogy": 2500, "boundary": 1500, "objections": 1500, "falsifiers": 1000, "profile_order": 2500, "proof_gaps": 1000}
+  }
+}

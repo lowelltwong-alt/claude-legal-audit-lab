@@ -1,0 +1,37 @@
+{
+  "schema": "claude-legal-audit.targeted-adjudication-merge.v1",
+  "merge_id": "ROUND-2-MERGE-001",
+  "revision": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+  "source_passes": [
+    "results/pass-results/round-2-adjudication-a.json",
+    "results/pass-results/round-2-adjudication-b.json",
+    "results/pass-results/round-2-adjudication-c.json"
+  ],
+  "record_ledgers": [
+    {"path": "results/coverage-receipts/round-2-adjudication-a.jsonl", "records": 694, "sha256": "fd8f81b69404a593f20b927d9cfbdcbeedd5d1aa60f861ff36fa9f0be1e60234"},
+    {"path": "results/coverage-receipts/round-2-adjudication-b.jsonl", "records": 336, "sha256": "d3bc8b43a97a2df0fb81822057fda5a6556dcc1390dd69524cdab5c777be751c"},
+    {"path": "results/coverage-receipts/round-2-adjudication-c.jsonl", "records": 182, "sha256": "6b4a0863a287627f472d15f5a6be92fac76d40852cf7a9d4579afa07f32ce138"}
+  ],
+  "coverage": {
+    "generated_matches": 1212,
+    "reviewed": 1212,
+    "path_line_hash_failures": 0,
+    "deferred": 0
+  },
+  "classification": {
+    "canonical_cluster_rediscovery": 987,
+    "false_positive": 180,
+    "counterevidence": 45,
+    "new_material_pattern_or_source_to_sink_candidate": 0
+  },
+  "saturation": {
+    "static_pattern_classes_at_pinned_revision": "established_for_reviewed_generated_families",
+    "another_static_round_warranted": false,
+    "reason": "Every generated match was line-hash validated and adjudicated; the targeted round produced zero new material pattern classes and zero new source-to-sink candidates."
+  },
+  "limits": [
+    "Saturation is scoped to the pinned public revision and reviewed static pattern families.",
+    "It does not establish runtime behavior, contract terms, provider retention, cross-customer reuse, complete inaccessible history, or future revisions.",
+    "Thirty-three public PR records remain unknown or incomplete and require bounded temporal capture."
+  ]
+}

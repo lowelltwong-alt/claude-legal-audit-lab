@@ -1,0 +1,74 @@
+{
+  "schema": "claude-legal-audit.independent-saturation-check.v1",
+  "check_id": "INDEPENDENT-SATURATION-CHECK-FINAL-001",
+  "verdict": "PASS",
+  "scope": {
+    "repository": "anthropics/claude-for-legal",
+    "revision": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+    "static_pattern_families": ["GEN-001", "GEN-002", "GEN-003", "GEN-004", "GEN-005", "GEN-006"],
+    "network_used": false,
+    "private_material_used": false
+  },
+  "source_reconciliation": {
+    "generated_match_records": 1212,
+    "unique_generated_match_keys": 1212,
+    "ledger_records": 1212,
+    "unique_ledger_keys": 1212,
+    "missing_ledger_keys": 0,
+    "extra_ledger_keys": 0,
+    "duplicate_ledger_keys": 0,
+    "source_order_reconciliation": "exact",
+    "key_fields": ["pattern_id", "path", "line", "full_line_sha256"]
+  },
+  "ledger_validation": {
+    "results/coverage-receipts/round-2-adjudication-a.jsonl": {
+      "records": 694,
+      "sha256": "fd8f81b69404a593f20b927d9cfbdcbeedd5d1aa60f861ff36fa9f0be1e60234",
+      "merge_binding_matches": true
+    },
+    "results/coverage-receipts/round-2-adjudication-b.jsonl": {
+      "records": 336,
+      "sha256": "d3bc8b43a97a2df0fb81822057fda5a6556dcc1390dd69524cdab5c777be751c",
+      "merge_binding_matches": true
+    },
+    "results/coverage-receipts/round-2-adjudication-c.jsonl": {
+      "records": 182,
+      "sha256": "6b4a0863a287627f472d15f5a6be92fac76d40852cf7a9d4579afa07f32ce138",
+      "merge_binding_matches": true
+    },
+    "source_path_line_hash_failures": 0,
+    "missing_classifications": 0,
+    "missing_reasons": 0,
+    "invalid_canonical_cluster_references": 0
+  },
+  "recomputed_classification": {
+    "canonical_cluster_rediscovery": 987,
+    "false_positive": 180,
+    "counterevidence": 45,
+    "new_material_pattern_or_source_to_sink_candidate": 0,
+    "total": 1212,
+    "matches_round_2_merge": true
+  },
+  "prior_repairs": {
+    "round_1_source_pass_ids_resolve_exactly": true,
+    "runtime_locator_authority_explicit": true,
+    "runtime_pass_schema_errors": 0,
+    "generated_match_full_line_hash_failures": 0,
+    "generated_match_excerpt_or_truncation_metadata_failures": 0
+  },
+  "saturation": {
+    "decision": "established_for_scoped_static_review",
+    "another_static_round_warranted": false,
+    "basis": "All 1,212 generated matches reconcile exactly once to hash-bound per-record adjudications. Recomputed classifications contain zero new material pattern classes and zero new source-to-sink candidates.",
+    "scope_limit": "This establishes saturation only for the pinned public revision and the six reviewed generated pattern families. It does not establish universal absence of patterns outside the audit method or evidence unavailable from the public static repository."
+  },
+  "remaining_non_static_gaps": [
+    "Actual inference-request, telemetry, connector, support, and hosted-agent payloads and traffic",
+    "Feature- and tenant-specific retention, deletion, evaluation, training, and contractual controls",
+    "Provider-side custody, derived-data lineage, cross-customer normalization, or generalized reuse",
+    "Runtime enforcement of documented isolation, permission, allowlist, and human-approval controls",
+    "Thirty-three unknown or incomplete public PR records, inaccessible history, and future revisions"
+  ],
+  "remaining_defects": [],
+  "release_effect": "The scoped static saturation gate passes. Release remains blocked by the separate human approvals, non-static evidence gaps, incomplete PR-history coverage, and frozen-export release controls; this PASS does not authorize publication."
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "claude-legal-audit.repository-history-capture.v1",
+  "capture_id": "HISTCAP-2026-07-15-LOCAL-GIT",
+  "captured_at": "2026-07-15T11:55:00Z",
+  "repository_url": "https://github.com/anthropics/claude-for-legal",
+  "capture_method": "local_git_metadata_snapshot",
+  "capture_scope": "local_ref_snapshot_only",
+  "pinned_commit": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+  "clone_evidence": {"is_shallow": false, "promisor_remote": true, "partial_clone_filter": "blob:none", "fsck_command": "git -C upstream/claude-for-legal fsck --no-dangling"},
+  "raw_snapshot": {"path": "results/history-local-snapshot.json", "sha256": "sha256:f3e772b3c93c150a44e5ecd5205417a3a7e8ec21b41f055304a93798b625f567", "generator": "scripts/build_history_capture_receipt.py"},
+  "categories": [
+    {"kind": "refs", "capture_status": "local_metadata_captured", "coverage": "All retained local remote refs at capture time.", "limitation": "Local refs cannot prove remote completeness or deleted refs."},
+    {"kind": "commits", "capture_status": "local_metadata_captured", "coverage": "Topology and commit metadata reachable from pinned HEAD.", "limitation": "No assertion of complete remote history or all historical blob availability."},
+    {"kind": "pull_requests", "capture_status": "local_metadata_captured", "coverage": "Two unauthenticated public PR-index API responses captured locally: each returned 76 items at per_page=100 with no Link header. The later dedicated capture is retained under SRC-0013 with SHA-256 91da08d7e0e89bd62d2b86b39cf8d6c4aad48a4c66c1663b808ffa0a0277b869.", "limitation": "The local captures are timestamped and hashed but do not include every PR detail, PR file page, or matching public commit response; they cannot prove deleted, private, permission-dependent, or subsequently changed PR history."},
+    {"kind": "issues", "capture_status": "local_metadata_captured", "coverage": "One unauthenticated public API response captured locally: 99 items at per_page=100 with no Link header.", "limitation": "The local capture is timestamped and hashed but cannot prove deleted, private, permission-dependent, or subsequently changed issue history."},
+    {"kind": "releases", "capture_status": "local_metadata_captured", "coverage": "One unauthenticated public API response captured locally: 0 items at per_page=100 with no Link header.", "limitation": "The local capture is timestamped and hashed but cannot prove deleted, private, permission-dependent, or subsequently changed release history."}
+  ],
+  "comparison_policy": "Merge-commit aggregate diffs use first-parent comparison unless a later public capture declares another policy.",
+  "completeness": {"status": "local_snapshot_incomplete_for_remote_history", "remote_pagination_verified": false, "deleted_history_verified": false, "missing_head_object_count": 0},
+  "limitations": [
+    "A local promisor clone does not establish all public GitHub refs, PRs, issues, releases, reviews, pagination, or deleted history.",
+    "Zero missing objects reachable from HEAD at this capture does not establish complete historical blob coverage across remote history.",
+    "Commit subjects and diff scope are evidence of recorded changes, not product strategy, provider intent, or runtime behavior."
+  ]
+}

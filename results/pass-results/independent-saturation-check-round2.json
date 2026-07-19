@@ -1,0 +1,90 @@
+{
+  "schema": "claude-legal-audit.independent-saturation-check.v1",
+  "check_id": "INDEPENDENT-SATURATION-CHECK-ROUND2-001",
+  "verdict": "FAIL",
+  "scope": {
+    "repository": "anthropics/claude-for-legal",
+    "revision": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+    "network_used": false,
+    "private_material_used": false
+  },
+  "verified_repairs": {
+    "round_1_merge_source_pass_ids": {
+      "status": "pass",
+      "value": [
+        "round-1-worker-1",
+        "round-1-worker-2",
+        "round-1-worker-3",
+        "round-1-worker-4",
+        "round-1-worker-5",
+        "round-1-worker-6"
+      ]
+    },
+    "runtime_locator_authority": {
+      "status": "pass",
+      "schema_errors": 0,
+      "evidence_locators_checked": 10,
+      "authority": "audit_project"
+    },
+    "generated_match_integrity": {
+      "status": "pass",
+      "records": 1212,
+      "source_file_sha256": "bceaad8635e510edf07ee439c09f9200972a5a1b5614175840987ef2cdd07a24",
+      "missing_or_invalid_paths": 0,
+      "invalid_line_numbers": 0,
+      "full_line_sha256_failures": 0,
+      "excerpt_or_truncation_metadata_failures": 0,
+      "pattern_counts": {
+        "GEN-001": 13,
+        "GEN-002": 681,
+        "GEN-003": 315,
+        "GEN-004": 21,
+        "GEN-005": 49,
+        "GEN-006": 133
+      }
+    },
+    "lane_partition": {
+      "status": "pass",
+      "adjudication_a_records": 694,
+      "adjudication_b_records": 336,
+      "adjudication_c_records": 182,
+      "total": 1212,
+      "overlapping_pattern_assignments": 0,
+      "unassigned_pattern_families": 0
+    },
+    "aggregate_arithmetic": {
+      "status": "pass",
+      "canonical_cluster_rediscovery": 987,
+      "false_positive": 180,
+      "counterevidence": 45,
+      "new_material_pattern_or_source_to_sink_candidate": 0,
+      "classified_total": 1212
+    }
+  },
+  "remaining_defects": [
+    {
+      "id": "SAT2-DEF-001",
+      "severity": "blocking",
+      "title": "Per-record adjudications are not recorded",
+      "evidence": "The three round-2 artifacts provide aggregate classification counts, methods, and a small number of representative or counterevidence anchors, but they do not bind each of the 1,212 source match records to one exact adjudication category. Consequently, the reported 987/180/45/0 classification cannot be independently recomputed from the artifacts.",
+      "required_action": "Emit a deterministic adjudication ledger with exactly one row per generated-match identity, including pattern_id, path, line, full_line_sha256, adjudication category, canonical cluster where applicable, and reviewer/pass identity. Validate uniqueness, exact coverage of all 1,212 source records, and recompute the merged counts from that ledger."
+    },
+    {
+      "id": "SAT2-DEF-002",
+      "severity": "medium",
+      "title": "Assigned-record-set hash method is not consistently declared",
+      "evidence": "Adjudication B records an assigned_record_set_sha256 but does not specify its canonicalization algorithm; adjudications A and C do not record equivalent assigned-set hashes. The source file hash and family partition are independently valid, but the lane evidence is not uniformly hash-bound.",
+      "required_action": "Define one canonical assigned-record serialization and emit its SHA-256 for all three lanes, preferably deriving lane membership from the per-record adjudication ledger."
+    }
+  ],
+  "saturation": {
+    "decision": "not_deterministically_established",
+    "reported_new_material_classes": 0,
+    "reported_new_source_to_sink_candidates": 0,
+    "independent_content_contradiction_found": false,
+    "another_static_content_round_warranted": false,
+    "required_next_step": "Repair and validate the per-record adjudication genealogy; no additional source reading is required unless that reconciliation exposes unclassified or conflicting records.",
+    "scope_if_repaired": "Pinned public revision and the six reviewed generated pattern families only; runtime, contracts, inaccessible history, and future revisions remain open."
+  },
+  "release_effect": "Release remains blocked. The bounded report and aggregate round-2 conclusion may remain candidates, but the project must not claim deterministic static saturation until SAT2-DEF-001 is repaired and independently reconciled."
+}

@@ -1,0 +1,121 @@
+{
+  "schema": "claude-legal-audit.chunk-policy.v2",
+  "format_version": "2.0.0",
+  "authority_class": "governing_method",
+  "output": "registry/chunk-registry.json",
+  "migration_output": "registry/chunk-id-migration.json",
+  "legacy_registry": {
+    "schema": "claude-legal-audit.chunk-registry.v1",
+    "format_version": "1.0.0",
+    "policy_sha256": "d98db345ce40a6915334d2b15cacbd787cf0a2d9f7f4af1ec5206186038dd1bb",
+    "sha256": "2cf150ec7a99743fe0aa91850b9a0fa6cecb33db66b28c4cb1e4726e7fd74672"
+  },
+  "chunk_kinds": [
+    "static_file_span",
+    "pr_file_record",
+    "web_capture_span"
+  ],
+  "activated_chunk_kinds": [
+    "static_file_span"
+  ],
+  "identity_contract": {
+    "algorithm": "sha256",
+    "prefix": "chk:sha256:",
+    "canonicalization": "UTF-8 JSON with sorted keys, compact separators, and Unicode preserved",
+    "fields": [
+      "chunk_kind",
+      "source_id",
+      "source_revision",
+      "parent_id",
+      "locator",
+      "content_sha256",
+      "policy_revision"
+    ]
+  },
+  "parent_identity_contract": {
+    "algorithm": "sha256",
+    "prefix": "parent:sha256:",
+    "fields": [
+      "kind",
+      "repository",
+      "source_id",
+      "source_revision",
+      "path",
+      "git_blob_oid",
+      "content_sha256"
+    ]
+  },
+  "edge_identity_contract": {
+    "algorithm": "sha256",
+    "prefix": "edge:sha256:",
+    "fields": [
+      "edge_type",
+      "source_chunk_id",
+      "target_chunk_id",
+      "policy_revision"
+    ]
+  },
+  "static_inputs": {
+    "repository": "upstream/claude-for-legal",
+    "pinned_commit_file": "UPSTREAM.lock.json",
+    "source_id": "SRC-0002",
+    "encoding": "utf-8",
+    "byte_source": "git blob objects at the pinned commit",
+    "lines_per_chunk": 200,
+    "partition": "ordered non-overlapping byte spans covering every input byte exactly once"
+  },
+  "pr_inputs": {
+    "linkage": "results/pr-commit-diff-linkage.json",
+    "source_id": "SRC-0013",
+    "require_status": "linked_verified_capture",
+    "require_complete_files": true
+  },
+  "web_inputs": {
+    "source_registry": "registry/source-registry.json",
+    "public_output": "metadata and hashes only; never raw response bytes or private payload paths"
+  },
+  "edge_types": [
+    "NEXT_IN_PARENT",
+    "PREVIOUS_IN_PARENT",
+    "MODIFIES_PATH",
+    "MODIFIED_BY",
+    "DERIVED_FROM",
+    "HAS_DERIVATIVE"
+  ],
+  "required_edge_pairs": {
+    "static_file_span": [
+      "NEXT_IN_PARENT",
+      "PREVIOUS_IN_PARENT"
+    ],
+    "pr_file_record": [
+      "MODIFIES_PATH",
+      "MODIFIED_BY"
+    ],
+    "web_capture_span": [
+      "DERIVED_FROM",
+      "HAS_DERIVATIVE"
+    ]
+  },
+  "privacy": {
+    "forbidden_path_prefixes": [
+      ".private/",
+      "private/"
+    ],
+    "forbidden_embedded_fields": [
+      "source_text",
+      "raw_text",
+      "payload",
+      "body",
+      "content"
+    ]
+  },
+  "prohibitions": [
+    "unicode normalization before hashing",
+    "line-ending normalization before hashing",
+    "private raw payload text in public output",
+    "claim promotion from chunks",
+    "implicit source inheritance",
+    "truncated public identifiers"
+  ],
+  "limitation": "Chunks and edges are deterministic generated candidate evidence for exact drill-down. They are not source truth or proof of runtime behavior, intent, retention, training, customer deployment, or claim validity."
+}

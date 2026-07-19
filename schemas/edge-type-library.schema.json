@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/edge-type-library.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "revision", "status", "pairs"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.edge-type-library.v1"},
+    "revision": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "status": {"const": "candidate_governed"},
+    "pairs": {
+      "type": "array",
+      "minItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["pair_id", "family", "forward", "inverse", "source_types", "target_types", "meaning", "non_implication", "cycle_policy", "promotion_policy"],
+        "properties": {
+          "pair_id": {"type": "string", "pattern": "^EDP-[0-9]{4}$"},
+          "family": {"enum": ["structure", "provenance", "evidence", "argument", "lifecycle"]},
+          "forward": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]+$"},
+          "inverse": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]+$"},
+          "source_types": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+          "target_types": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+          "meaning": {"type": "string", "minLength": 15},
+          "non_implication": {"type": "string", "minLength": 15},
+          "cycle_policy": {"enum": ["forbidden_forward", "allowed", "not_applicable"]},
+          "promotion_policy": {"const": "candidate_until_evidence_and_review_gates_pass"}
+        }
+      }
+    }
+  }
+}

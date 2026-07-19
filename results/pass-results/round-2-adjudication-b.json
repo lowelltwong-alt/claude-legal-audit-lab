@@ -1,0 +1,89 @@
+{
+  "schema": "claude-legal-audit.round-2-adjudication.v1",
+  "version": 1,
+  "adjudication_id": "ROUND-2-ADJUDICATION-B",
+  "assigned_pattern_ids": [
+    "GEN-003",
+    "GEN-004"
+  ],
+  "source": {
+    "matches_path": "results/generated-pattern-matches.jsonl",
+    "matches_file_sha256": "bceaad8635e510edf07ee439c09f9200972a5a1b5614175840987ef2cdd07a24",
+    "assigned_record_set_sha256": "74d4b138589c4ad6c9b69b0fe74d93ac4bcd5c6261c9fe67cee28d3a6b74f1cc",
+    "upstream_path": "upstream/claude-for-legal",
+    "upstream_revision": "5ceb305b30b4c82653c9b6642499c12e946ec319"
+  },
+  "review": {
+    "total_reviewed": 336,
+    "counts": {
+      "canonical_cluster_rediscovery": 158,
+      "false_positive": 157,
+      "counterevidence": 21,
+      "genuinely_new_material_pattern_or_source_to_sink_candidate": 0
+    },
+    "counts_sum": 336,
+    "by_pattern": {
+      "GEN-003": {
+        "total_reviewed": 315,
+        "canonical_cluster_rediscovery": 137,
+        "false_positive": 157,
+        "counterevidence": 21,
+        "genuinely_new_material_pattern_or_source_to_sink_candidate": 0
+      },
+      "GEN-004": {
+        "total_reviewed": 21,
+        "canonical_cluster_rediscovery": 21,
+        "false_positive": 0,
+        "counterevidence": 0,
+        "genuinely_new_material_pattern_or_source_to_sink_candidate": 0
+      }
+    },
+    "classification_basis": {
+      "canonical_cluster_rediscovery": "The line identifies an MCP, managed/scheduled agent, hosted skill or agent upload, external-tool handoff, or typed orchestration boundary already represented by MERGE-004. Declaration and code capability are not treated as evidence of deployed traffic, retention, training, or cross-customer reuse.",
+      "false_positive": "The regex matched ordinary legal notification language, a heading, a local case or workflow handoff, or another use of 'handoff' that does not itself identify a remote or hosted source-to-sink boundary.",
+      "counterevidence": "The line narrows or disables the apparent boundary, including explicit local-only operation, no proactive notification, unavailable-connector fallback, human-operated external tooling, or removal of plugin-command handoffs from a deliverable.",
+      "genuinely_new_material_pattern_or_source_to_sink_candidate": "Reserved for a materially different evidence class or source-to-sink mechanism not already represented by the six round-1 canonical clusters. No assigned record met this standard."
+    },
+    "canonical_cluster": {
+      "id": "MERGE-004",
+      "title": "Remote connector and hosted-agent trust boundaries"
+    },
+    "representative_exact_anchors": {
+      "canonical_cluster_rediscovery": [
+        "CONNECTORS.md:7",
+        "managed-agent-cookbooks/diligence-grid/agent.yaml:87",
+        "scripts/deploy-managed-agent.sh:89",
+        "scripts/deploy-managed-agent.sh:182",
+        "scripts/orchestrate.py:329"
+      ],
+      "false_positive": [
+        "CLA.md:37",
+        "commercial-legal/skills/saas-msa-review/SKILL.md:103",
+        "ip-legal/skills/takedown/SKILL.md:365",
+        "legal-clinic/handoffs/_README.md:1",
+        "privacy-legal/skills/dpa-review/SKILL.md:110"
+      ],
+      "counterevidence": [
+        "corporate-legal/skills/ai-tool-handoff/SKILL.md:131",
+        "legal-clinic/skills/cold-start-interview/SKILL.md:163",
+        "legal-clinic/skills/deadlines/SKILL.md:172",
+        "regulatory-legal/README.md:61",
+        "regulatory-legal/skills/gap-surfacer/SKILL.md:240"
+      ]
+    }
+  },
+  "integrity": {
+    "path_failures": [],
+    "line_failures": [],
+    "full_line_sha256_failures": [],
+    "utf8_failures": [],
+    "validated_records": 336
+  },
+  "exact_new_candidates": [],
+  "runtime_boundary": "No runtime execution, tenant configuration, credentials, traffic, retention, training, telemetry, or cross-customer reuse is inferred from these static matches.",
+  "saturation_recommendation": {
+    "assigned_lane_saturated": true,
+    "recommendation": "GEN-003 and GEN-004 add no new material pattern class or source-to-sink candidate beyond MERGE-004. Treat this targeted lane as saturated, subject to independent aggregate reconciliation with the other round-2 lanes.",
+    "scope_limit": "This recommendation covers only the 336 GEN-003/GEN-004 records at the pinned revision; it does not close runtime, contract, telemetry, or incomplete history proof gaps."
+  }
+}

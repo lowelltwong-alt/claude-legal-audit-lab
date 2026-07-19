@@ -11,7 +11,7 @@ REQUIRED = {
 def main() -> int:
     ap=argparse.ArgumentParser(); ap.add_argument('path'); ap.add_argument('--kind',choices=REQUIRED,required=True); args=ap.parse_args()
     p=Path(args.path); errors=[]; n=0
-    for i,line in enumerate(p.read_text().splitlines(),1):
+    for i,line in enumerate(p.read_text(encoding='utf-8').splitlines(),1):
         if not line.strip(): continue
         n+=1
         try: obj=json.loads(line)

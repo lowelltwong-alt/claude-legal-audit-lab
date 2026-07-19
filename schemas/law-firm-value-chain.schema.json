@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/law-firm-value-chain.schema.json",
+  "title": "Defensive law-firm value-chain model",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "revision", "status", "use_policy", "asset_planes", "sensitivity_classes", "stages"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.law-firm-value-chain.v1"},
+    "revision": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "status": {"enum": ["candidate", "reviewed"]},
+    "use_policy": {"$ref": "#/$defs/usePolicy"},
+    "asset_planes": {
+      "type": "array",
+      "minItems": 4,
+      "items": {"$ref": "#/$defs/assetPlane"}
+    },
+    "sensitivity_classes": {
+      "type": "array",
+      "minItems": 5,
+      "items": {"$ref": "#/$defs/sensitivityClass"}
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 20,
+      "items": {"$ref": "#/$defs/stage"}
+    }
+  },
+  "$defs": {
+    "usePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "data_boundary", "authority_boundary", "release_gate"],
+      "properties": {
+        "mode": {"const": "defensive_synthetic_only"},
+        "data_boundary": {"const": "public_sources_and_fictional_fixtures_only"},
+        "authority_boundary": {"type": "string", "minLength": 20},
+        "release_gate": {"const": "named_human_review_required"}
+      }
+    },
+    "assetPlane": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["plane_id", "name", "definition", "boundary"],
+      "properties": {
+        "plane_id": {"type": "string", "pattern": "^PLANE-[A-Z]+$"},
+        "name": {"type": "string", "minLength": 3},
+        "definition": {"type": "string", "minLength": 20},
+        "boundary": {"type": "string", "minLength": 20}
+      }
+    },
+    "sensitivityClass": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["class_id", "name", "release_rule"],
+      "properties": {
+        "class_id": {"enum": ["S0", "S1", "S2", "S3", "S4"]},
+        "name": {"type": "string", "minLength": 3},
+        "release_rule": {"type": "string", "minLength": 15}
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_id", "name", "asset_planes", "sensitivity"],
+      "properties": {
+        "artifact_id": {"type": "string", "pattern": "^LF-A[0-9]{3}$"},
+        "name": {"type": "string", "minLength": 3},
+        "asset_planes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^PLANE-[A-Z]+$"}
+        },
+        "sensitivity": {"enum": ["S0", "S1", "S2", "S3", "S4"]}
+      }
+    },
+    "stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stage_id", "name", "scope", "applicability", "artifacts", "operational_signals",
+        "judgment_signals", "public_evidence_availability", "defensive_controls",
+        "does_not_prove", "jurisdiction_dependency", "source_ids", "next_stage_ids"
+      ],
+      "properties": {
+        "stage_id": {"type": "string", "pattern": "^LF-[0-9]{2}$"},
+        "name": {"type": "string", "minLength": 3},
+        "scope": {"type": "string", "minLength": 20},
+        "applicability": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"enum": ["all", "transactional", "litigation", "advisory", "firm_operations"]}
+        },
+        "artifacts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/artifact"}},
+        "operational_signals": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 3}},
+        "judgment_signals": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 3}},
+        "public_evidence_availability": {"enum": ["none", "low", "partial", "high"]},
+        "defensive_controls": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 8}},
+        "does_not_prove": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 12}},
+        "jurisdiction_dependency": {"type": "string", "minLength": 12},
+        "source_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^SRC-[0-9]{4}$"}},
+        "next_stage_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^LF-[0-9]{2}$"}}
+      }
+    }
+  }
+}

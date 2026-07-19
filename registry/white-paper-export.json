@@ -1,0 +1,3196 @@
+{
+  "allowlist": [
+    "schema",
+    "revision",
+    "status",
+    "title",
+    "release",
+    "evidence_coverage",
+    "allowlist",
+    "input_sha256",
+    "content_sha256",
+    "sections",
+    "paragraphs",
+    "thesis_nodes",
+    "argument_objects",
+    "graph_edges",
+    "claims",
+    "sources",
+    "chunks",
+    "contribution_lanes"
+  ],
+  "argument_objects": [
+    {
+      "argument_id": "ARG-0001",
+      "argument_type": "supporting_argument",
+      "epistemic_status": "Inferred",
+      "evidence_refs": [
+        "CLM-0001",
+        "CLM-0014",
+        "SRC-0002",
+        "SRC-0047",
+        "SRC-0048"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "Documents are only one projection of professional knowledge; recurring relationships among people, tasks, tools, exceptions, choices, rationales, and outcomes can encode valuable operating and judgment patterns.",
+      "title": "The brain trust is an interaction graph"
+    },
+    {
+      "argument_id": "ARG-0002",
+      "argument_type": "supporting_argument",
+      "epistemic_status": "Hypothesis",
+      "evidence_refs": [
+        "CLM-0015",
+        "SRC-0046"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "If many firms authorize retention or generalized improvement from overlapping professional interaction data, each contribution may strengthen a shared upstream capability whose benefits and competitive effects extend beyond the contributing firm.",
+      "title": "Peer contribution can create a sector externality"
+    },
+    {
+      "argument_id": "ARG-0004",
+      "argument_type": "supporting_argument",
+      "epistemic_status": "Inferred",
+      "evidence_refs": [
+        "CLM-0011",
+        "CLM-0013",
+        "SRC-0042",
+        "SRC-0043",
+        "SRC-0045"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "AlphaGo's Move 37 demonstrates that learned evaluation and search in a closed strategic domain can select an unconventional action whose value becomes clear much later; it motivates testing for analogous delayed-value legal strategies.",
+      "title": "Move-37-like strategic discontinuity is possible but unproven in law"
+    },
+    {
+      "argument_id": "FAL-0001",
+      "argument_type": "falsifier",
+      "epistemic_status": "Hypothesis",
+      "evidence_refs": [
+        "SRC-0005",
+        "SRC-0007",
+        "SRC-0009"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "The provider-mediated sector-externality mechanism is weakened for a bounded deployment if independent contractual and technical evidence proves that ordinary and optional paths prevent retention, cross-customer use, generalized improvement, and semantic derivative reuse.",
+      "title": "Verified isolation and no generalized derivation"
+    },
+    {
+      "argument_id": "FAL-0002",
+      "argument_type": "falsifier",
+      "epistemic_status": "Hypothesis",
+      "evidence_refs": [],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "The overlap thesis weakens if reproducible experiments show that multi-firm interaction abstractions do not improve legal strategy, workflow, or evaluation performance over public-only and single-firm baselines.",
+      "title": "No measurable substitution from multi-firm traces"
+    },
+    {
+      "argument_id": "FAL-0003",
+      "argument_type": "falsifier",
+      "epistemic_status": "Hypothesis",
+      "evidence_refs": [
+        "CLM-0013",
+        "SRC-0045"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "The existential competitive framing weakens if legal strategy capability plateaus despite additional compute, algorithms, tools, public data, and synthetic experience, or remains dependent on non-transferable human context.",
+      "title": "Frontier legal strategy plateaus"
+    },
+    {
+      "argument_id": "GAP-0001",
+      "argument_type": "proof_gap",
+      "epistemic_status": "Unknown",
+      "evidence_refs": [],
+      "node_type": "proof_gap",
+      "review_state": "candidate",
+      "statement": "The repository has no representative measure of how much operational and professional-judgment ontology overlaps across large law firms or how much unique alpha remains after normalization.",
+      "title": "Law-firm ontology overlap is unmeasured"
+    },
+    {
+      "argument_id": "GAP-0002",
+      "argument_type": "proof_gap",
+      "epistemic_status": "Unknown",
+      "evidence_refs": [
+        "CLM-0010",
+        "SRC-0002",
+        "SRC-0005"
+      ],
+      "node_type": "proof_gap",
+      "review_state": "candidate",
+      "statement": "No registered evidence establishes that a named provider aggregates ordinary law-firm interaction patterns across customers for generalized model, product, or strategy improvement.",
+      "title": "Provider aggregation and use are unproven"
+    },
+    {
+      "argument_id": "GAP-0003",
+      "argument_type": "proof_gap",
+      "epistemic_status": "Unknown",
+      "evidence_refs": [
+        "CLM-0011",
+        "SRC-0042"
+      ],
+      "node_type": "proof_gap",
+      "review_state": "candidate",
+      "statement": "There is no registered benchmark that reliably identifies unconventional, delayed-value legal strategies while measuring legal correctness, duties, client objectives, institutional legitimacy, and downstream consequences.",
+      "title": "No validated legal Move 37 benchmark"
+    },
+    {
+      "argument_id": "OBJ-0001",
+      "argument_type": "objection",
+      "epistemic_status": "Observed",
+      "evidence_refs": [
+        "CLM-0003",
+        "CLM-0010",
+        "SRC-0002",
+        "SRC-0005"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "The public record reviewed does not establish that Anthropic or another named frontier provider covertly pools identifiable law-firm ontologies or trains on ordinary commercial content by default.",
+      "title": "No evidence of current covert pooling"
+    },
+    {
+      "argument_id": "OBJ-0002",
+      "argument_type": "objection",
+      "epistemic_status": "Hypothesis",
+      "evidence_refs": [
+        "CLM-0008",
+        "SRC-0041"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "Firm-controlled AI can improve quality, speed, access, consistency, training, and strategic experimentation, so external AI use need not flatten law firms or transfer their control plane.",
+      "title": "AI can complement and differentiate firms"
+    },
+    {
+      "argument_id": "OBJ-0003",
+      "argument_type": "objection",
+      "epistemic_status": "Observed",
+      "evidence_refs": [
+        "SRC-0036",
+        "SRC-0037"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "Statutes, opinions, public filings, forms, professional rules, and widely used workflows limit the portion of legal knowledge that any firm can claim as unique or defensibly withhold.",
+      "title": "The common legal layer is not proprietary"
+    },
+    {
+      "argument_id": "OBJ-0004",
+      "argument_type": "objection",
+      "epistemic_status": "Observed",
+      "evidence_refs": [
+        "CLM-0011",
+        "CLM-0012",
+        "SRC-0042",
+        "SRC-0044"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "Go has fixed rules, a complete visible state, cheap self-play, and a clean objective; law is open, institutional, normative, fact-dependent, relationship-dependent, and governed by professional duties.",
+      "title": "Go is not law"
+    },
+    {
+      "argument_id": "OBJ-0005",
+      "argument_type": "objection",
+      "epistemic_status": "Inferred",
+      "evidence_refs": [
+        "CLM-0012",
+        "SRC-0044"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "AlphaGo Zero demonstrates that a system in a closed strategic domain can surpass expert-trained predecessors through self-play without human game data, so withholding private expert examples may deny a shortcut without preventing formidable capability.",
+      "title": "Private expert traces may be unnecessary"
+    },
+    {
+      "argument_id": "REB-0001",
+      "argument_type": "rebuttal",
+      "epistemic_status": "Normative",
+      "evidence_refs": [
+        "CLM-0003",
+        "CLM-0004",
+        "CLM-0005",
+        "SRC-0005",
+        "SRC-0007",
+        "SRC-0009",
+        "SRC-0034"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "The Ajax Line does not reject AI; it calls for firm-controlled ontology, evaluation, rights, telemetry, portability, and audit so firms can obtain benefits without granting an unexamined upstream learning right.",
+      "title": "Precautionary sovereignty is compatible with adoption"
+    },
+    {
+      "argument_id": "THS-0001",
+      "argument_type": "thesis",
+      "epistemic_status": "Normative",
+      "evidence_refs": [
+        "CLM-0001",
+        "CLM-0003",
+        "CLM-0015",
+        "CLM-0016",
+        "SRC-0046",
+        "SRC-0047",
+        "SRC-0048",
+        "SRC-0049"
+      ],
+      "node_type": "argument_object",
+      "review_state": "candidate",
+      "statement": "Each major law firm should independently maintain a defensive boundary around its collective attorney brain-trust data and derived representations because peer exposure could create an upstream capability that reduces overlapping differentiation, including for protective holdouts.",
+      "title": "The Ajax Line: hold the line"
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227",
+      "chunk_kind": "static_file_span",
+      "content_sha256": "6a04ca05662a0d3757e21a349b2c74ac262b031827c85105c0f4472cf601b51c",
+      "locator": {
+        "byte_end_exclusive": 7574,
+        "byte_start": 0,
+        "kind": "git_blob_span",
+        "line_end": 200,
+        "line_start": 1
+      },
+      "parent_file_id": "file:sha256:d7bb80af5cfb9470ba6c904d33f9c5036935322ac0b3eacb5cc3fc6b71a056ed",
+      "path": "scripts/deploy-managed-agent.sh",
+      "source_ids": [
+        "SRC-0002"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CLM-0001",
+      "does_not_prove": "Provider-side retention, generalized training, covert reuse, or intent.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Product sections on playbooks, standards, fallbacks, setup, and risk calibration",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0001",
+          "support_type": "paraphrase"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Cold-start interviews; practice profiles; deal-debrief; playbook-monitor",
+          "locator_kind": "repository_scope",
+          "source_id": "SRC-0002",
+          "support_type": "structured_observation"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Captured sections on legal plugins, playbooks, precedent, and house style",
+          "locator_kind": "captured_selector",
+          "source_id": "SRC-0050",
+          "support_type": "first_party_documented_design"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Captured sections on skills, subagents, playbooks, precedent, and house style",
+          "locator_kind": "captured_selector",
+          "source_id": "SRC-0051",
+          "support_type": "first_party_documented_design"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "The pinned repository and captured official product pages document a static design that invites legal users to encode playbooks, fallbacks, deviations, rationales, risk posture, and house style.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0002",
+      "does_not_prove": "A hosted runtime never receives profile content through inference or a separate upload.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "reproducible",
+          "locator": "scripts/deploy-managed-agent.sh lines 75-190",
+          "locator_kind": "path_lines",
+          "source_id": "SRC-0002",
+          "support_type": "code_observation"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "The official repository does not automatically upload a populated local practice profile, matter folder, deviation log, or proposal history through its Managed Agent deployment script.",
+      "publication_eligibility": "eligible",
+      "review_state": "reviewed"
+    },
+    {
+      "claim_id": "CLM-0003",
+      "does_not_prove": "Technical compliance, zero processing, zero retention, or the terms of an executed customer agreement.",
+      "epistemic_status": "counterevidence",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Section B",
+          "locator_kind": "section",
+          "source_id": "SRC-0005",
+          "support_type": "paraphrase"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "Anthropic's public standard commercial terms prohibit model training on Customer Content by default and leave input/output ownership with the customer.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0004",
+      "does_not_prove": "Retained material is used for generalized training or cross-customer productization.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "ZDR exclusions and feature table",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0009",
+          "support_type": "paraphrase"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Scope and retention sections",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0010",
+          "support_type": "paraphrase"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "Registered official documentation describes feature-dependent retention and zero-data-retention policy boundaries for hosted services.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0005",
+      "does_not_prove": "Ordinary commercial conversations are used by default or that raw connector content is always included.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Feedback and disabling-feedback sections",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0007",
+          "support_type": "paraphrase"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "Commercial feedback submission is a disclosed secondary-use path that can include the related conversation and support research, behavior analysis, and model training.",
+      "publication_eligibility": "quarantined",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0008",
+      "does_not_prove": "Measured exit cost, anticompetitive conduct, customer harm, or malicious intent.",
+      "epistemic_status": "hypothesis",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Product architecture and customization sections",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0001",
+          "support_type": "paraphrase"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Firm-wide co-development announcement",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0011",
+          "support_type": "paraphrase"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "Deep integration of firm playbooks, connectors, shared Skills, recurring agents, governance, and user habits can create dependency and switching costs without transferring ownership or proving covert training.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0010",
+      "does_not_prove": "That implementation is flawless or that closed runtime, support, telemetry, negotiated agreements, and future practices pose no risk.",
+      "epistemic_status": "unknown",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Repository-wide source-to-sink review",
+          "locator_kind": "repository_scope",
+          "source_id": "SRC-0002",
+          "support_type": "structured_observation"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Sections B and E",
+          "locator_kind": "section",
+          "source_id": "SRC-0005",
+          "support_type": "paraphrase"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "No evidence currently registered in this project establishes covert pooling of identifiable law-firm ontologies or default training on ordinary commercial content.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0011",
+      "does_not_prove": "That AlphaGo's strategy transfers to law, that the move was creative in a human sense, or that a legal system can optimize an equivalent reward.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "A creative spark section, captured page lines 140-144",
+          "locator_kind": "captured_selector",
+          "source_id": "SRC-0042",
+          "support_type": "first_party_retrospective"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "AlphaGo's famous Move 37 occurred in Game 2 against Lee Sedol; professional commentators initially thought the unconventional move was a mistake, and DeepMind's retrospective describes it as decisive much later in the game.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0012",
+      "does_not_prove": "That law has an adequate rule set or reward for self-play, or that private legal expertise is unnecessary for every useful legal capability.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Abstract, page lines 64-66 in the 2026-07-14 observation",
+          "locator_kind": "captured_selector",
+          "source_id": "SRC-0044",
+          "support_type": "peer_reviewed_result"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "AlphaGo Zero achieved superhuman Go performance using reinforcement learning from self-play without human game data, guidance, or domain knowledge beyond the rules.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0013",
+      "does_not_prove": "Indefinite exponential improvement, a universal efficiency law, or any forecast of frontier legal-strategy capability.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Abstract, methodology, and fixed-threshold results",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0045",
+          "support_type": "peer_reviewed_empirical_result"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "A NeurIPS 2024 study found substantial historical algorithmic-efficiency progress across more than 200 language-model evaluations from 2012 through 2023, while attributing more overall performance improvement to increased compute than to algorithmic progress.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0014",
+      "does_not_prove": "That these assets are legally owned, technically learnable by a frontier model, transferable outside the firm, or sufficient to reproduce attorney judgment.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Abstract and interaction-network knowledge-transfer framework",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0047",
+          "support_type": "peer_reviewed_synthesis"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Abstract and two-phase law-firm study",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0048",
+          "support_type": "peer_reviewed_empirical_context"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "Organizational research treats knowledge embedded in relationships among people, tasks, tools, business processes, and employee skills as a potential basis for competitive advantage; empirical law-firm research describes law firms as knowledge-intensive organizations.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0015",
+      "does_not_prove": "Cross-firm ontology overlap, technical learnability, substitutability, provider rights or aggregation, or competitive harm to a law firm; each remains unmeasured.",
+      "epistemic_status": "hypothesis",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Sections on customer-held and specialised industry data, feedback effects, concentration, and market tipping",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0046",
+          "support_type": "hypothesis_context"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Interaction-network knowledge and transfer framework",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0047",
+          "support_type": "hypothesis_context"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "If multiple firms authorize an upstream AI supplier to retain or generalize substantially overlapping professional interaction patterns, the resulting capability could create a sector externality that reduces the relative scarcity of overlapping knowledge even for a firm that withholds its own data.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0016",
+      "does_not_prove": "That a specific standards effort or firm decision violates antitrust law; legal analysis remains fact-specific and requires counsel.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Opening explanation, health-provider example, and purchasing-manager Q&A",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0049",
+          "support_type": "government_guidance_paraphrase"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "FTC guidance distinguishes a business's unilateral choice of trading partners from competitor agreements not to deal with a targeted supplier or to deal only on agreed terms, which may constitute an unlawful group boycott.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0017",
+      "does_not_prove": "That deployed behavior is unsafe, safe, equivalent to the repository, or different from the repository.",
+      "epistemic_status": "unknown",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Pinned repository static design boundary",
+          "locator_kind": "repository_scope",
+          "source_id": "SRC-0002",
+          "support_type": "scope_boundary"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "Whether the static repository design maps to a deployed legal-product runtime, and how that runtime moves or retains tenant data, remains unknown in the registered evidence.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0018",
+      "does_not_prove": "Any tenant's actual configuration, data movement, retention, training use, breach, or compliance failure.",
+      "epistemic_status": "unknown",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Feature-dependent retention and ZDR policy boundary",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0009",
+          "support_type": "scope_boundary"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Customer-specific processing instructions and agreement boundary",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0006",
+          "support_type": "scope_boundary"
+        }
+      ],
+      "lifecycle": "active",
+      "proposition": "A particular tenant's negotiated terms, enabled features, retention settings, connector behavior, and operational compliance remain unknown in the registered evidence.",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate"
+    }
+  ],
+  "content_sha256": "8e82c9b0f8b5041a0ca0c499d6d474b662c80f6841ae4aecdff58e6e18e1dfa0",
+  "contribution_lanes": [
+    {
+      "lane_id": "LANE-0001",
+      "required_fields": [
+        "source_url",
+        "source_revision_or_observation_time",
+        "reproducible_locator",
+        "classification",
+        "content_hash_or_reason_unavailable"
+      ],
+      "status": "draft_inactive",
+      "title": "Source corrections"
+    },
+    {
+      "lane_id": "LANE-0002",
+      "required_fields": [
+        "source_url",
+        "source_revision_or_observation_time",
+        "reproducible_locator",
+        "classification",
+        "content_hash_or_reason_unavailable"
+      ],
+      "status": "draft_inactive",
+      "title": "Contrary evidence"
+    },
+    {
+      "lane_id": "LANE-0003",
+      "required_fields": [
+        "source_url",
+        "source_revision_or_observation_time",
+        "reproducible_locator",
+        "classification",
+        "content_hash_or_reason_unavailable"
+      ],
+      "status": "draft_inactive",
+      "title": "Falsifiers"
+    },
+    {
+      "lane_id": "LANE-0004",
+      "required_fields": [
+        "source_url",
+        "source_revision_or_observation_time",
+        "reproducible_locator",
+        "classification",
+        "content_hash_or_reason_unavailable"
+      ],
+      "status": "draft_inactive",
+      "title": "Runtime evidence"
+    },
+    {
+      "lane_id": "LANE-0005",
+      "required_fields": [
+        "source_url",
+        "source_revision_or_observation_time",
+        "reproducible_locator",
+        "classification",
+        "content_hash_or_reason_unavailable"
+      ],
+      "status": "draft_inactive",
+      "title": "Upstream history capture"
+    },
+    {
+      "lane_id": "LANE-0006",
+      "required_fields": [
+        "source_url",
+        "source_revision_or_observation_time",
+        "reproducible_locator",
+        "classification",
+        "content_hash_or_reason_unavailable"
+      ],
+      "status": "draft_inactive",
+      "title": "Analogous-industry research"
+    },
+    {
+      "lane_id": "LANE-0007",
+      "required_fields": [
+        "source_url",
+        "source_revision_or_observation_time",
+        "reproducible_locator",
+        "classification",
+        "content_hash_or_reason_unavailable"
+      ],
+      "status": "draft_inactive",
+      "title": "Chunk and graph tooling"
+    }
+  ],
+  "evidence_coverage": {
+    "blocked_claim_count": 17,
+    "claim_count": 18,
+    "eligible_claim_count": 1,
+    "eligible_thesis_node_count": 0,
+    "open_unmerged_snapshot_count": 29,
+    "thesis_node_count": 7,
+    "unknown_pr_count": 33,
+    "verified_merged_pr_count": 14
+  },
+  "graph_edges": [
+    {
+      "edge_id": "gedge:sha256:dac2f600f7bd3b621dd723cf35fa352bb2f36ced728fc58920cb86563832ccc0",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:74fb3839036cd2d23b6bd02d9781b22f2a793f4b980e19d0b7cc8f07a98a9a6e",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0001",
+      "target_node_id": "CLM-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:8fdb6d86b0d6841c23e5eacf084388276a358743349951846f2baebbfcdc6c64",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:62269be3c85a224a77b279b052cf85764b91d8f881ce28a33cc644ef70ec06fd",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0001",
+      "target_node_id": "CLM-0014"
+    },
+    {
+      "edge_id": "gedge:sha256:712d8e6442d2b1ed81e27a883b6e147587c4ce3834f5a3525d0c140ff986fba3",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:02627cb8f269fa2a7891c219bda871605b8a879e7c5b5e8ad2a2f52097a564e3",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0001",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:53e9dcc490d88dd18b70c6ebf17ed00dbb97e3965a3c32429205d8646eefa4d9",
+      "edge_type": "FALSIFIES_IF",
+      "inverse_edge_id": "gedge:sha256:d40afb7130505bb678ed47907e54a4fa9754d6c6786df75988da194088fda86f",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0002",
+      "target_node_id": "FAL-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:bffc59abd26430fd728e95364668d32f8d9890c3fec91f07739e03f704cefa5c",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:dbf7789091dc4b8194a9be89443f7ab13048664406188eb66d0be8fba8bf1f80",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0002",
+      "target_node_id": "CLM-0015"
+    },
+    {
+      "edge_id": "gedge:sha256:e71bb762d9688eb542c70f26c5deaf6b0e2a3d533daffc32992e065f590cb6e3",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:d6799bb1e7ae72025d51e8f87c5018f284b4f31235347e0e8386d0a933f82f6e",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0002",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:7167f145634de2cbfb3f7f75b9edb882ae4ccd549ef4df2b621d3f8c97b64dc1",
+      "edge_type": "CHALLENGED_BY",
+      "inverse_edge_id": "gedge:sha256:2f38c72c6e14b8932bc67a529f41e4cc9e53d06dba974c112a087cea91d774b2",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0004",
+      "target_node_id": "OBJ-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:7a5289e4a1382385df973f67012b8ee543bb02e1b26d4107245609cb4327d6f2",
+      "edge_type": "FALSIFIES_IF",
+      "inverse_edge_id": "gedge:sha256:724a3bcfee1a8bb46d7c08c381e7742c2e419bf19d581db6a8458b83b500ae4a",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0004",
+      "target_node_id": "FAL-0003"
+    },
+    {
+      "edge_id": "gedge:sha256:ce89f18f54a9483a496774cc482480c0857384641bc9e00e821eb80579e96671",
+      "edge_type": "HAS_PROOF_GAP",
+      "inverse_edge_id": "gedge:sha256:929a8a90d0fdd7d59cb91d403c8bcfcbc9195702b6379ae2c9e6ddef9ad0aa1f",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0004",
+      "target_node_id": "GAP-0003"
+    },
+    {
+      "edge_id": "gedge:sha256:423f8ef0b5f557cc9d8343c5545f0290e922f3d08f97250e1e253064e9d25448",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:57412f383c1763e02c62be9ad27f363a280e39c660d15f10d30e0aec0e28a8ed",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0004",
+      "target_node_id": "CLM-0011"
+    },
+    {
+      "edge_id": "gedge:sha256:b9d20679370b667492b3e00fb7841cad773ca7bbdeb8e29c9692be049b33f4c6",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:78666c5450916bce65edadfdf416cdea8a1a74bafdb5b848fa2ecab4ecfe153e",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0004",
+      "target_node_id": "CLM-0013"
+    },
+    {
+      "edge_id": "gedge:sha256:de8f18448160192eb6d35d15626ae1417cd25a3cd1ecf0172a14882070ff25ec",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:dde0b073c612324e0d9a33710dab576463752e01205b22332e82a4c5c9e4ef09",
+      "review_state": "candidate",
+      "source_node_id": "ARG-0004",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:955bc94a4cab6b9ba9277e0b628ddae24f8522788ecaef048e699825bb754daf",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:6f13723fe6a17cb1a4d82cac64164b80ae68ec42fcd76764bfd4f6fae603e4ec",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0001",
+      "target_node_id": "SRC-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:8c31b0fb932d2bcbafaced5422362034738702dc6d6a19f7ca60c55ae12216e1",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:beff571b1b8af1ab7be4068319783088fd3c7ebd06cf2639a31ab2c34ae5b8d2",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0001",
+      "target_node_id": "SRC-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:9fa97c1efe0ddfdd748f363e37829b206d0682ba60b5f8bb8f2bb5d11dd37f32",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:c31018b1236831982d379d37e28536c1717488d350052ed48a224843e31ab5af",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0001",
+      "target_node_id": "SRC-0050"
+    },
+    {
+      "edge_id": "gedge:sha256:723c68067f5f4124b11d3426cd9f79ce33e94a41788692890ed3cdac04feeead",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:4de3bea5817f7a0050d211c6abd8d9e6c0c176aae320e079a9b2f0bcf2f0e221",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0001",
+      "target_node_id": "SRC-0051"
+    },
+    {
+      "edge_id": "gedge:sha256:74fb3839036cd2d23b6bd02d9781b22f2a793f4b980e19d0b7cc8f07a98a9a6e",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:dac2f600f7bd3b621dd723cf35fa352bb2f36ced728fc58920cb86563832ccc0",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0001",
+      "target_node_id": "ARG-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:0c4a79cb96509cb0fa5c7da0df12cc04a3084283174362235c2d4283c580cbb5",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:92469e8d26b51177527eabd432256210b5f7f28de63e8f2600b55406dc061a7f",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0001",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:e7ec2721f6e5ef1590ae933cc504ffc5291d803f9e6494f5697065220fcb5919",
+      "edge_type": "DERIVED_FROM",
+      "inverse_edge_id": "gedge:sha256:eeb1f97eac98d2d78f787fe63c0a54c3b9cee863dcbf6e762988733e3b8ba6d0",
+      "review_state": "reviewed",
+      "source_node_id": "CLM-0002",
+      "target_node_id": "chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227"
+    },
+    {
+      "edge_id": "gedge:sha256:c44e452c7000bdea7d3cac49b5603b2df2cfceaf89b86efd5cb12ef60572e197",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:bdd4d64c05d49af5327b6028e50f60b57d649c93f73d2316d0128ffe34edd06b",
+      "review_state": "reviewed",
+      "source_node_id": "CLM-0002",
+      "target_node_id": "SRC-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:c579a3018511fd34f88138d43dceb61a1f72cd22ff34fef9ee02dd06c50ea937",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:b5447c2b45cbedc0d6963ecaabda511b949e409b41af2dfc156da1c76dd51d4b",
+      "review_state": "reviewed",
+      "source_node_id": "CLM-0002",
+      "target_node_id": "chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227"
+    },
+    {
+      "edge_id": "gedge:sha256:2d7aea383d25e71e8c864eabc2d171649ab074ab5d524c486bc9130e4d0b4cfa",
+      "edge_type": "CONSTRAINED_BY",
+      "inverse_edge_id": "gedge:sha256:ac4a6dc53314247fd7a7311169e80044c35c31a16bf28459ea5bb356e46afe4b",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0003",
+      "target_node_id": "SRC-0005"
+    },
+    {
+      "edge_id": "gedge:sha256:607baf0aa6ca02c90bb34be99da41f6120198188ed291a806fef419a6a8dfe8b",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:872199b95deecd75ab8bd53b63fb959ff832581d7ab586cdb6ef1d98d8721ddf",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0003",
+      "target_node_id": "OBJ-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:60501854abe66e6772490707c9e80c44e06d595344c1bfa5afb7fd19955ee8f8",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:517eda60cb6c2059e0b73530c4e3cfd6ccaf458b465644e9625f5f875b56f9e0",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0003",
+      "target_node_id": "REB-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:ea980668d6072fb6595fba387ca81bbc4d029143b312e01afbda9760a7d2f38a",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:0d3efccf644538386c6e849ffd20275805ed521257090ec6579c16eb731b8d59",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0003",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:c3953f56eb9e7caede8f5341f42e7fa9cc187402e3b48d4467c585dbd5014ce4",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:461b0c8d20d5d8e57ea5e31548b1f48f02ad169d9dff81fd3d2210264935a795",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0004",
+      "target_node_id": "SRC-0009"
+    },
+    {
+      "edge_id": "gedge:sha256:29d06a07a34013f0cc04503edb20b4c89d94a52b084dd147f8a5c4b350776b43",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:b394fea9cd10d45d96c38cedc6099d44e06a7ab00bde811fd3d2633c9d88b33c",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0004",
+      "target_node_id": "SRC-0010"
+    },
+    {
+      "edge_id": "gedge:sha256:4a181596a8368da55f5ac26b621ea41e59e52fe8754b855533a4e17bfc9c4657",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:fb2646e107cebd9c80f919a2cc6176c00d45095b9ac22dc594a14531ec254419",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0004",
+      "target_node_id": "REB-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:ea26dd1b6c2af67959bbc748fd2a8acc9182eaae546be3025a699b96eb72c30a",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:04572b47e30231fdd5c15c227850c7dc96d019cc09ae285943460ca9c153361e",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0005",
+      "target_node_id": "SRC-0007"
+    },
+    {
+      "edge_id": "gedge:sha256:a7e597d3f93d59235eaeb4bceb668ec65407ad182cc6a0194930baecbc6d85a9",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:34d43f182c2a822a333fb9bfed91fd1b22a399a416345b75e1fb15f6bafa50ea",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0005",
+      "target_node_id": "REB-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:330deba8f1b88bac6808d146ef7cd858a9df01ab7b1ab7aec8e997980e7598a7",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:90adbb0a44b5e303e958cdeeecba8cac21d6ef78d6589885fe615973c6e2ca8a",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0008",
+      "target_node_id": "SRC-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:5cfa709e153becfa00e91a485164f17c959e95edc1c5ee85112f7be733a35603",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:c2d2c79b90d2c578bcb9d8a55d55d32418ddfaed7d75bb50eff8e734a201dcf3",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0008",
+      "target_node_id": "SRC-0011"
+    },
+    {
+      "edge_id": "gedge:sha256:e9499303dbce487b3b87bea261a9646d204d3edcd2ad90f11c51397f7bfd6b80",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:fa574fc6e1c6c2c686a63f9e7a6a768d6503d3861297901965d1faeb75e0e951",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0008",
+      "target_node_id": "OBJ-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:43ffe474a2378fd9413f28bca5d8f209fe5727247d16482943e0098c0d6dc4b0",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:350fc425affeb251d2075b64ff2210f0d1e9cca7d738e1208eae54a93505d3b0",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0010",
+      "target_node_id": "GAP-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:99f12e0cd960d83dee4d99f563ebe45c421a524dbfbbf407493bd853fadfbba2",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:382727b7726a3c2a9b60c9f583ed8c363b79ec2af12845447a32d9d01f15aa5d",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0010",
+      "target_node_id": "OBJ-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:ddd1ca8d74a8b8c03718dac68e0d49a6cbe71f4f31ef1fbb82ea2b040e213927",
+      "edge_type": "UNKNOWN_LEFT_BY",
+      "inverse_edge_id": "gedge:sha256:5a6d3bfc4738bb8734918bce33ddfacec8db6f70dcc7e69ebd87822dd3191909",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0010",
+      "target_node_id": "SRC-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:508772fe51e584771eea8d123d0b700efb72feee381a44b1533a68a7f6aa240f",
+      "edge_type": "UNKNOWN_LEFT_BY",
+      "inverse_edge_id": "gedge:sha256:d5449a37eb28a5528079d1530f51703f09ff20b5f2a1476dca256d5fd0e0ec73",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0010",
+      "target_node_id": "SRC-0005"
+    },
+    {
+      "edge_id": "gedge:sha256:a16ae62a6b361c102f1049497397874add5972f4a64cf0e84fe8c4a69aa034c0",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:69b9ecdc5b19c708fac4d944423bdf97f21617a90a563f5c43a12e5b54f36bdd",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0011",
+      "target_node_id": "SRC-0042"
+    },
+    {
+      "edge_id": "gedge:sha256:2acb20f69fee233a9c52f0247284a2c5461ace5bacd0354f78baabe111ca13f3",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:075627b8c38e8a61d2736d0b8b953edd8e1b35e3196017bcbf510469c9802c51",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0011",
+      "target_node_id": "GAP-0003"
+    },
+    {
+      "edge_id": "gedge:sha256:7d011f4d5beff79ffcc4865305e2c66ec9608fdf5f3046559f634cdf30a1e702",
+      "edge_type": "PRESENTED_IN",
+      "inverse_edge_id": "gedge:sha256:e5c296bca284abfa2ab59394dd6957d99d87dc2fd013e593f5ec0142d9cc966f",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0011",
+      "target_node_id": "SEC-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:57412f383c1763e02c62be9ad27f363a280e39c660d15f10d30e0aec0e28a8ed",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:423f8ef0b5f557cc9d8343c5545f0290e922f3d08f97250e1e253064e9d25448",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0011",
+      "target_node_id": "ARG-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:5200925d4f92b89bea65feadd96c82916182f8b88fac37e1db66425cbe4d8bbe",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:92e6236813983140719739b949bea3b9d309ffb7051d5dda22697f300c2bc20d",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0011",
+      "target_node_id": "OBJ-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:6cc5cbb7e0a0758864ca4e05b6937c5b1e98ff0b4c80bdc697a6ec3c7c876a7e",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:a86ed7a6322473134437cf309458f07e2871467757bbed6616ea1472087a7d81",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0012",
+      "target_node_id": "SRC-0044"
+    },
+    {
+      "edge_id": "gedge:sha256:dcff73d3d03b2cf757a3fac7757cd57b3e5935fc6a1dfcd3a661eb9d4c63d7d5",
+      "edge_type": "PRESENTED_IN",
+      "inverse_edge_id": "gedge:sha256:e9af3adacf789c036c6bf1742e27df26074af3298fc2ed0773cca74de3bd68aa",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0012",
+      "target_node_id": "SEC-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:2f8642a54b6557a728c6121d7d596fc331d02831d169d34e2a3ded27efee6926",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:eb8ee869ca721f97b7d4085c3fdb35d6f6ceb1130f7e399df2cc2871ae244a59",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0012",
+      "target_node_id": "OBJ-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:0eb5269c0f98ca8c4fa3ffc5e998f076485aee3aff4e87b81219b133c292071c",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:93b1f187b322cb0b592c807854f56ec5d21c2e4fa55c8689b52c957aaf67266d",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0012",
+      "target_node_id": "OBJ-0005"
+    },
+    {
+      "edge_id": "gedge:sha256:fe8b65bebc6b00c9f662abf6f680c35e89bab7dbfcd1642244c2cf3af8b7392b",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:ffca5dae25dd29e7837ea4a67e68eff3b52bbaf9245df0a2efdc8a27c4804aaa",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0013",
+      "target_node_id": "SRC-0045"
+    },
+    {
+      "edge_id": "gedge:sha256:1c10d78c07b99f42ae4f09ef6e2a6fe161cb4e395bcf1c58ce347b775b732fde",
+      "edge_type": "PRESENTED_IN",
+      "inverse_edge_id": "gedge:sha256:bb25e32d5062a92fac886fe2f042843771d214e66c901e7ef2f246040903d9b6",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0013",
+      "target_node_id": "SEC-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:78666c5450916bce65edadfdf416cdea8a1a74bafdb5b848fa2ecab4ecfe153e",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:b9d20679370b667492b3e00fb7841cad773ca7bbdeb8e29c9692be049b33f4c6",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0013",
+      "target_node_id": "ARG-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:7da70e30131774fb964b7e40c14b9d863d5e5bff62e7bf6e6ea61c8f8fd35fcc",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:1a0e1fcd0081d3663494ff7040f5c6340d759c67d92241fe30d2c1c5a6355bd4",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0013",
+      "target_node_id": "FAL-0003"
+    },
+    {
+      "edge_id": "gedge:sha256:ccde28d13ed94b25cba197fc889f5a0d64ff099720043bd06b0710652083c7a8",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:c147a7e6b556f36962981cfc7b6d7bf8d7c8caa6f0cebb7d08e8eefb4c5b7734",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0014",
+      "target_node_id": "SRC-0047"
+    },
+    {
+      "edge_id": "gedge:sha256:46727421715d962fa0ed624d66bd46d4fee4f355c043abce55c5d4c5bc96cc4f",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:f7ba444222219d6b5f712163f50986e0390eea29204fd2073e300e233f14abc4",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0014",
+      "target_node_id": "SRC-0048"
+    },
+    {
+      "edge_id": "gedge:sha256:5813dbff68606488ec9c25deaf07b16e0dd79d42f5cbb7e811ab7db608a16476",
+      "edge_type": "PRESENTED_IN",
+      "inverse_edge_id": "gedge:sha256:61c652bb3cbe64c019d487c1fb56e410137b68c2c5112a409afc3079c7f98243",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0014",
+      "target_node_id": "SEC-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:62269be3c85a224a77b279b052cf85764b91d8f881ce28a33cc644ef70ec06fd",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:8fdb6d86b0d6841c23e5eacf084388276a358743349951846f2baebbfcdc6c64",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0014",
+      "target_node_id": "ARG-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:157cce96a8f3973cc001faa933af6abf74e9e040a51fbbad585f8f064ad95827",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:2e609f077b6f50e601f3cad7cb4d702dc3fe22bcd6139584c6187e576b4f2ff7",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0015",
+      "target_node_id": "SRC-0046"
+    },
+    {
+      "edge_id": "gedge:sha256:c8a743b961c4ee28750c721f8d8770a21f61b8d868aa111fd5606a0646ce4bfc",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:f1b610c60b8f8bdc432cd96b17195f23f9f5dc4850bb2b2b96ae8a2debed1097",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0015",
+      "target_node_id": "SRC-0047"
+    },
+    {
+      "edge_id": "gedge:sha256:6facfee6ebcd73041b95af30695a9ae31c8e87bd804d9662e0fceb083baf7297",
+      "edge_type": "PRESENTED_IN",
+      "inverse_edge_id": "gedge:sha256:052a28661da203bcee299558082cfedc4fe1c3af3f524dc61c76fd44d9872af9",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0015",
+      "target_node_id": "SEC-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:dbf7789091dc4b8194a9be89443f7ab13048664406188eb66d0be8fba8bf1f80",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:bffc59abd26430fd728e95364668d32f8d9890c3fec91f07739e03f704cefa5c",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0015",
+      "target_node_id": "ARG-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:4d997135dc57628825b10d47d5b59ec267549a4e16787f74ec4c767230dea57b",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:b20a3bb3688ed6c15206ea7f3517a0798b3fdba7acda8aaaaeca56d4f81beba7",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0015",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:24df2dc191d0b7636d9ec2ca70ef565c7bdda56ed39f61f1342ed4c891f15728",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:0e3b7ee80e34ed04659294dadafbcf07036235ea5bbd1f6add251695b0b19eee",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0016",
+      "target_node_id": "SRC-0049"
+    },
+    {
+      "edge_id": "gedge:sha256:70ec980215a932b6b23164d54bcec585fb71b9d8c9725282baeb74403900eff4",
+      "edge_type": "SUPPORTS",
+      "inverse_edge_id": "gedge:sha256:1bf01403d770212522644a944015f204414ba365a38e61df47ccd857bd2078c0",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0016",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:5080700ea2b4fa0cf61e70940ed96ee3daefad5966b111b8f009081295770363",
+      "edge_type": "UNKNOWN_LEFT_BY",
+      "inverse_edge_id": "gedge:sha256:4ae51bcc4fe261610e0998be1812388d1ac2fd48a28c909f2fb1ea0fc7dd9ad7",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0017",
+      "target_node_id": "SRC-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:fca80a6d85e3da8c45a3502bf7c3de1ef512e006d87846afbfea258dc53e55e9",
+      "edge_type": "UNKNOWN_LEFT_BY",
+      "inverse_edge_id": "gedge:sha256:48e3520b784fe10c5f6ffd8a2996258208bbd120d3a01eb8ca83e15482fc3da9",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0018",
+      "target_node_id": "SRC-0006"
+    },
+    {
+      "edge_id": "gedge:sha256:e51e99ec722955c01ca6e6e57421601ff671b0640b2d6a59ccc973504002ce7a",
+      "edge_type": "UNKNOWN_LEFT_BY",
+      "inverse_edge_id": "gedge:sha256:cfc58738e0977e5b52db16fbd164fe558344200c278f6c19a4313a737c918afa",
+      "review_state": "candidate",
+      "source_node_id": "CLM-0018",
+      "target_node_id": "SRC-0009"
+    },
+    {
+      "edge_id": "gedge:sha256:d40afb7130505bb678ed47907e54a4fa9754d6c6786df75988da194088fda86f",
+      "edge_type": "FALSIFIER_OF",
+      "inverse_edge_id": "gedge:sha256:53e9dcc490d88dd18b70c6ebf17ed00dbb97e3965a3c32429205d8646eefa4d9",
+      "review_state": "candidate",
+      "source_node_id": "FAL-0001",
+      "target_node_id": "ARG-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:724a3bcfee1a8bb46d7c08c381e7742c2e419bf19d581db6a8458b83b500ae4a",
+      "edge_type": "FALSIFIER_OF",
+      "inverse_edge_id": "gedge:sha256:7a5289e4a1382385df973f67012b8ee543bb02e1b26d4107245609cb4327d6f2",
+      "review_state": "candidate",
+      "source_node_id": "FAL-0003",
+      "target_node_id": "ARG-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:1a0e1fcd0081d3663494ff7040f5c6340d759c67d92241fe30d2c1c5a6355bd4",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:7da70e30131774fb964b7e40c14b9d863d5e5bff62e7bf6e6ea61c8f8fd35fcc",
+      "review_state": "candidate",
+      "source_node_id": "FAL-0003",
+      "target_node_id": "CLM-0013"
+    },
+    {
+      "edge_id": "gedge:sha256:67731cad91ca7a7b82b77265d8aa8a4617d00febeb1ee29c813fa43ef3f84b8f",
+      "edge_type": "PROOF_GAP_OF",
+      "inverse_edge_id": "gedge:sha256:71fd5be72e7526a3b664b51cb6a9339d88687ffa935ee43b830c322f5b548ad5",
+      "review_state": "candidate",
+      "source_node_id": "GAP-0001",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:350fc425affeb251d2075b64ff2210f0d1e9cca7d738e1208eae54a93505d3b0",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:43ffe474a2378fd9413f28bca5d8f209fe5727247d16482943e0098c0d6dc4b0",
+      "review_state": "candidate",
+      "source_node_id": "GAP-0002",
+      "target_node_id": "CLM-0010"
+    },
+    {
+      "edge_id": "gedge:sha256:4abd9bc30ba8f7d7d479234c3f65c919e86531ade91549387f14fdc8aefa5428",
+      "edge_type": "PROOF_GAP_OF",
+      "inverse_edge_id": "gedge:sha256:a254eb0c2487868e23768d382911152df550b2e9b73aced0a7b2d244603eac79",
+      "review_state": "candidate",
+      "source_node_id": "GAP-0002",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:075627b8c38e8a61d2736d0b8b953edd8e1b35e3196017bcbf510469c9802c51",
+      "edge_type": "EVIDENCED_BY",
+      "inverse_edge_id": "gedge:sha256:2acb20f69fee233a9c52f0247284a2c5461ace5bacd0354f78baabe111ca13f3",
+      "review_state": "candidate",
+      "source_node_id": "GAP-0003",
+      "target_node_id": "CLM-0011"
+    },
+    {
+      "edge_id": "gedge:sha256:929a8a90d0fdd7d59cb91d403c8bcfcbc9195702b6379ae2c9e6ddef9ad0aa1f",
+      "edge_type": "PROOF_GAP_OF",
+      "inverse_edge_id": "gedge:sha256:ce89f18f54a9483a496774cc482480c0857384641bc9e00e821eb80579e96671",
+      "review_state": "candidate",
+      "source_node_id": "GAP-0003",
+      "target_node_id": "ARG-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:6370643f4c57f18966cd3d74e750fa225eb6049c01b7fbc5905eb1db32d1cf0b",
+      "edge_type": "CHALLENGES",
+      "inverse_edge_id": "gedge:sha256:f40bb14af68d5dc0fa27b5b030863d4381b80adcef44583eb060eee658d63fd2",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0001",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:872199b95deecd75ab8bd53b63fb959ff832581d7ab586cdb6ef1d98d8721ddf",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:607baf0aa6ca02c90bb34be99da41f6120198188ed291a806fef419a6a8dfe8b",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0001",
+      "target_node_id": "CLM-0003"
+    },
+    {
+      "edge_id": "gedge:sha256:382727b7726a3c2a9b60c9f583ed8c363b79ec2af12845447a32d9d01f15aa5d",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:99f12e0cd960d83dee4d99f563ebe45c421a524dbfbbf407493bd853fadfbba2",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0001",
+      "target_node_id": "CLM-0010"
+    },
+    {
+      "edge_id": "gedge:sha256:55cb65cf9d149e287883084b9b4bd2bcf7853ac1cb5415ba9728919d3e040d05",
+      "edge_type": "CHALLENGES",
+      "inverse_edge_id": "gedge:sha256:981433fcbebea9030ab5461afe35c450b36f49fc417a2012fb6ee42388385bf5",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0002",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:d7d7a9415705cadb1cdaf06cec56e043704f28fea9d4232c607ff28bba7cacf5",
+      "edge_type": "REBUTTED_BY",
+      "inverse_edge_id": "gedge:sha256:6b54526bef7d2140f78844120876549c3b1c46cc17fe8c1dee23ded91cb00b80",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0002",
+      "target_node_id": "REB-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:fa574fc6e1c6c2c686a63f9e7a6a768d6503d3861297901965d1faeb75e0e951",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:e9499303dbce487b3b87bea261a9646d204d3edcd2ad90f11c51397f7bfd6b80",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0002",
+      "target_node_id": "CLM-0008"
+    },
+    {
+      "edge_id": "gedge:sha256:c38719311e936f919d178e950afeb11d1ab6b2258b60757025e9d8a64965b6d7",
+      "edge_type": "CHALLENGES",
+      "inverse_edge_id": "gedge:sha256:90549d05ee04ecd2eac88d6811a746f59ec2c179d8a61b5e24ff022e43be2869",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0003",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:2f38c72c6e14b8932bc67a529f41e4cc9e53d06dba974c112a087cea91d774b2",
+      "edge_type": "CHALLENGES",
+      "inverse_edge_id": "gedge:sha256:7167f145634de2cbfb3f7f75b9edb882ae4ccd549ef4df2b621d3f8c97b64dc1",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0004",
+      "target_node_id": "ARG-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:92e6236813983140719739b949bea3b9d309ffb7051d5dda22697f300c2bc20d",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:5200925d4f92b89bea65feadd96c82916182f8b88fac37e1db66425cbe4d8bbe",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0004",
+      "target_node_id": "CLM-0011"
+    },
+    {
+      "edge_id": "gedge:sha256:eb8ee869ca721f97b7d4085c3fdb35d6f6ceb1130f7e399df2cc2871ae244a59",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:2f8642a54b6557a728c6121d7d596fc331d02831d169d34e2a3ded27efee6926",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0004",
+      "target_node_id": "CLM-0012"
+    },
+    {
+      "edge_id": "gedge:sha256:166f73077ba4bd2bc41e1594f13ebb1cd9043343be1d8b4d816467a30fe27699",
+      "edge_type": "CHALLENGES",
+      "inverse_edge_id": "gedge:sha256:b4e80e40b084cde40f400fec1d1a119d78cd6c0261fe2598d7e6949f8780bb99",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0005",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:93b1f187b322cb0b592c807854f56ec5d21c2e4fa55c8689b52c957aaf67266d",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:0eb5269c0f98ca8c4fa3ffc5e998f076485aee3aff4e87b81219b133c292071c",
+      "review_state": "candidate",
+      "source_node_id": "OBJ-0005",
+      "target_node_id": "CLM-0012"
+    },
+    {
+      "edge_id": "gedge:sha256:6b54526bef7d2140f78844120876549c3b1c46cc17fe8c1dee23ded91cb00b80",
+      "edge_type": "REBUTS",
+      "inverse_edge_id": "gedge:sha256:d7d7a9415705cadb1cdaf06cec56e043704f28fea9d4232c607ff28bba7cacf5",
+      "review_state": "candidate",
+      "source_node_id": "REB-0001",
+      "target_node_id": "OBJ-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:517eda60cb6c2059e0b73530c4e3cfd6ccaf458b465644e9625f5f875b56f9e0",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:60501854abe66e6772490707c9e80c44e06d595344c1bfa5afb7fd19955ee8f8",
+      "review_state": "candidate",
+      "source_node_id": "REB-0001",
+      "target_node_id": "CLM-0003"
+    },
+    {
+      "edge_id": "gedge:sha256:fb2646e107cebd9c80f919a2cc6176c00d45095b9ac22dc594a14531ec254419",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:4a181596a8368da55f5ac26b621ea41e59e52fe8754b855533a4e17bfc9c4657",
+      "review_state": "candidate",
+      "source_node_id": "REB-0001",
+      "target_node_id": "CLM-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:34d43f182c2a822a333fb9bfed91fd1b22a399a416345b75e1fb15f6bafa50ea",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:a7e597d3f93d59235eaeb4bceb668ec65407ad182cc6a0194930baecbc6d85a9",
+      "review_state": "candidate",
+      "source_node_id": "REB-0001",
+      "target_node_id": "CLM-0005"
+    },
+    {
+      "edge_id": "gedge:sha256:e5c296bca284abfa2ab59394dd6957d99d87dc2fd013e593f5ec0142d9cc966f",
+      "edge_type": "PRESENTS",
+      "inverse_edge_id": "gedge:sha256:7d011f4d5beff79ffcc4865305e2c66ec9608fdf5f3046559f634cdf30a1e702",
+      "review_state": "candidate",
+      "source_node_id": "SEC-0001",
+      "target_node_id": "CLM-0011"
+    },
+    {
+      "edge_id": "gedge:sha256:e9af3adacf789c036c6bf1742e27df26074af3298fc2ed0773cca74de3bd68aa",
+      "edge_type": "PRESENTS",
+      "inverse_edge_id": "gedge:sha256:dcff73d3d03b2cf757a3fac7757cd57b3e5935fc6a1dfcd3a661eb9d4c63d7d5",
+      "review_state": "candidate",
+      "source_node_id": "SEC-0001",
+      "target_node_id": "CLM-0012"
+    },
+    {
+      "edge_id": "gedge:sha256:bb25e32d5062a92fac886fe2f042843771d214e66c901e7ef2f246040903d9b6",
+      "edge_type": "PRESENTS",
+      "inverse_edge_id": "gedge:sha256:1c10d78c07b99f42ae4f09ef6e2a6fe161cb4e395bcf1c58ce347b775b732fde",
+      "review_state": "candidate",
+      "source_node_id": "SEC-0001",
+      "target_node_id": "CLM-0013"
+    },
+    {
+      "edge_id": "gedge:sha256:61c652bb3cbe64c019d487c1fb56e410137b68c2c5112a409afc3079c7f98243",
+      "edge_type": "PRESENTS",
+      "inverse_edge_id": "gedge:sha256:5813dbff68606488ec9c25deaf07b16e0dd79d42f5cbb7e811ab7db608a16476",
+      "review_state": "candidate",
+      "source_node_id": "SEC-0001",
+      "target_node_id": "CLM-0014"
+    },
+    {
+      "edge_id": "gedge:sha256:052a28661da203bcee299558082cfedc4fe1c3af3f524dc61c76fd44d9872af9",
+      "edge_type": "PRESENTS",
+      "inverse_edge_id": "gedge:sha256:6facfee6ebcd73041b95af30695a9ae31c8e87bd804d9662e0fceb083baf7297",
+      "review_state": "candidate",
+      "source_node_id": "SEC-0001",
+      "target_node_id": "CLM-0015"
+    },
+    {
+      "edge_id": "gedge:sha256:dd6547fb48c043a6e1a301b50aad0fdfa429abf9272529bc615a3461d46d2d63",
+      "edge_type": "PRESENTS",
+      "inverse_edge_id": "gedge:sha256:a42dba27a715ab68173c3c601dbb563c38741c7be80a03101019f2ecb2a6cbf1",
+      "review_state": "candidate",
+      "source_node_id": "SEC-0001",
+      "target_node_id": "THS-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:6f13723fe6a17cb1a4d82cac64164b80ae68ec42fcd76764bfd4f6fae603e4ec",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:955bc94a4cab6b9ba9277e0b628ddae24f8522788ecaef048e699825bb754daf",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0001",
+      "target_node_id": "CLM-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:90adbb0a44b5e303e958cdeeecba8cac21d6ef78d6589885fe615973c6e2ca8a",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:330deba8f1b88bac6808d146ef7cd858a9df01ab7b1ab7aec8e997980e7598a7",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0001",
+      "target_node_id": "CLM-0008"
+    },
+    {
+      "edge_id": "gedge:sha256:beff571b1b8af1ab7be4068319783088fd3c7ebd06cf2639a31ab2c34ae5b8d2",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:8c31b0fb932d2bcbafaced5422362034738702dc6d6a19f7ca60c55ae12216e1",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0002",
+      "target_node_id": "CLM-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:bdd4d64c05d49af5327b6028e50f60b57d649c93f73d2316d0128ffe34edd06b",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:c44e452c7000bdea7d3cac49b5603b2df2cfceaf89b86efd5cb12ef60572e197",
+      "review_state": "reviewed",
+      "source_node_id": "SRC-0002",
+      "target_node_id": "CLM-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:5a6d3bfc4738bb8734918bce33ddfacec8db6f70dcc7e69ebd87822dd3191909",
+      "edge_type": "LEAVES_UNKNOWN",
+      "inverse_edge_id": "gedge:sha256:ddd1ca8d74a8b8c03718dac68e0d49a6cbe71f4f31ef1fbb82ea2b040e213927",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0002",
+      "target_node_id": "CLM-0010"
+    },
+    {
+      "edge_id": "gedge:sha256:4ae51bcc4fe261610e0998be1812388d1ac2fd48a28c909f2fb1ea0fc7dd9ad7",
+      "edge_type": "LEAVES_UNKNOWN",
+      "inverse_edge_id": "gedge:sha256:5080700ea2b4fa0cf61e70940ed96ee3daefad5966b111b8f009081295770363",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0002",
+      "target_node_id": "CLM-0017"
+    },
+    {
+      "edge_id": "gedge:sha256:e45117c6b7a6220f8d95fa6ff952e8c6de47a2061663c0b3217833bab2381234",
+      "edge_type": "LOCATES",
+      "inverse_edge_id": "gedge:sha256:22134dc18733f69b65fed5db4e0ba8231a3cce97c9e992e7d8c431ddb43e05e5",
+      "review_state": "reviewed",
+      "source_node_id": "SRC-0002",
+      "target_node_id": "chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227"
+    },
+    {
+      "edge_id": "gedge:sha256:ac4a6dc53314247fd7a7311169e80044c35c31a16bf28459ea5bb356e46afe4b",
+      "edge_type": "CONSTRAINS",
+      "inverse_edge_id": "gedge:sha256:2d7aea383d25e71e8c864eabc2d171649ab074ab5d524c486bc9130e4d0b4cfa",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0005",
+      "target_node_id": "CLM-0003"
+    },
+    {
+      "edge_id": "gedge:sha256:d5449a37eb28a5528079d1530f51703f09ff20b5f2a1476dca256d5fd0e0ec73",
+      "edge_type": "LEAVES_UNKNOWN",
+      "inverse_edge_id": "gedge:sha256:508772fe51e584771eea8d123d0b700efb72feee381a44b1533a68a7f6aa240f",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0005",
+      "target_node_id": "CLM-0010"
+    },
+    {
+      "edge_id": "gedge:sha256:48e3520b784fe10c5f6ffd8a2996258208bbd120d3a01eb8ca83e15482fc3da9",
+      "edge_type": "LEAVES_UNKNOWN",
+      "inverse_edge_id": "gedge:sha256:fca80a6d85e3da8c45a3502bf7c3de1ef512e006d87846afbfea258dc53e55e9",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0006",
+      "target_node_id": "CLM-0018"
+    },
+    {
+      "edge_id": "gedge:sha256:04572b47e30231fdd5c15c227850c7dc96d019cc09ae285943460ca9c153361e",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:ea26dd1b6c2af67959bbc748fd2a8acc9182eaae546be3025a699b96eb72c30a",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0007",
+      "target_node_id": "CLM-0005"
+    },
+    {
+      "edge_id": "gedge:sha256:461b0c8d20d5d8e57ea5e31548b1f48f02ad169d9dff81fd3d2210264935a795",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:c3953f56eb9e7caede8f5341f42e7fa9cc187402e3b48d4467c585dbd5014ce4",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0009",
+      "target_node_id": "CLM-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:cfc58738e0977e5b52db16fbd164fe558344200c278f6c19a4313a737c918afa",
+      "edge_type": "LEAVES_UNKNOWN",
+      "inverse_edge_id": "gedge:sha256:e51e99ec722955c01ca6e6e57421601ff671b0640b2d6a59ccc973504002ce7a",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0009",
+      "target_node_id": "CLM-0018"
+    },
+    {
+      "edge_id": "gedge:sha256:b394fea9cd10d45d96c38cedc6099d44e06a7ab00bde811fd3d2633c9d88b33c",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:29d06a07a34013f0cc04503edb20b4c89d94a52b084dd147f8a5c4b350776b43",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0010",
+      "target_node_id": "CLM-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:c2d2c79b90d2c578bcb9d8a55d55d32418ddfaed7d75bb50eff8e734a201dcf3",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:5cfa709e153becfa00e91a485164f17c959e95edc1c5ee85112f7be733a35603",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0011",
+      "target_node_id": "CLM-0008"
+    },
+    {
+      "edge_id": "gedge:sha256:69b9ecdc5b19c708fac4d944423bdf97f21617a90a563f5c43a12e5b54f36bdd",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:a16ae62a6b361c102f1049497397874add5972f4a64cf0e84fe8c4a69aa034c0",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0042",
+      "target_node_id": "CLM-0011"
+    },
+    {
+      "edge_id": "gedge:sha256:a86ed7a6322473134437cf309458f07e2871467757bbed6616ea1472087a7d81",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:6cc5cbb7e0a0758864ca4e05b6937c5b1e98ff0b4c80bdc697a6ec3c7c876a7e",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0044",
+      "target_node_id": "CLM-0012"
+    },
+    {
+      "edge_id": "gedge:sha256:ffca5dae25dd29e7837ea4a67e68eff3b52bbaf9245df0a2efdc8a27c4804aaa",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:fe8b65bebc6b00c9f662abf6f680c35e89bab7dbfcd1642244c2cf3af8b7392b",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0045",
+      "target_node_id": "CLM-0013"
+    },
+    {
+      "edge_id": "gedge:sha256:2e609f077b6f50e601f3cad7cb4d702dc3fe22bcd6139584c6187e576b4f2ff7",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:157cce96a8f3973cc001faa933af6abf74e9e040a51fbbad585f8f064ad95827",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0046",
+      "target_node_id": "CLM-0015"
+    },
+    {
+      "edge_id": "gedge:sha256:c147a7e6b556f36962981cfc7b6d7bf8d7c8caa6f0cebb7d08e8eefb4c5b7734",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:ccde28d13ed94b25cba197fc889f5a0d64ff099720043bd06b0710652083c7a8",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0047",
+      "target_node_id": "CLM-0014"
+    },
+    {
+      "edge_id": "gedge:sha256:f1b610c60b8f8bdc432cd96b17195f23f9f5dc4850bb2b2b96ae8a2debed1097",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:c8a743b961c4ee28750c721f8d8770a21f61b8d868aa111fd5606a0646ce4bfc",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0047",
+      "target_node_id": "CLM-0015"
+    },
+    {
+      "edge_id": "gedge:sha256:f7ba444222219d6b5f712163f50986e0390eea29204fd2073e300e233f14abc4",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:46727421715d962fa0ed624d66bd46d4fee4f355c043abce55c5d4c5bc96cc4f",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0048",
+      "target_node_id": "CLM-0014"
+    },
+    {
+      "edge_id": "gedge:sha256:0e3b7ee80e34ed04659294dadafbcf07036235ea5bbd1f6add251695b0b19eee",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:24df2dc191d0b7636d9ec2ca70ef565c7bdda56ed39f61f1342ed4c891f15728",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0049",
+      "target_node_id": "CLM-0016"
+    },
+    {
+      "edge_id": "gedge:sha256:c31018b1236831982d379d37e28536c1717488d350052ed48a224843e31ab5af",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:9fa97c1efe0ddfdd748f363e37829b206d0682ba60b5f8bb8f2bb5d11dd37f32",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0050",
+      "target_node_id": "CLM-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:4de3bea5817f7a0050d211c6abd8d9e6c0c176aae320e079a9b2f0bcf2f0e221",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:723c68067f5f4124b11d3426cd9f79ce33e94a41788692890ed3cdac04feeead",
+      "review_state": "candidate",
+      "source_node_id": "SRC-0051",
+      "target_node_id": "CLM-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:f40bb14af68d5dc0fa27b5b030863d4381b80adcef44583eb060eee658d63fd2",
+      "edge_type": "CHALLENGED_BY",
+      "inverse_edge_id": "gedge:sha256:6370643f4c57f18966cd3d74e750fa225eb6049c01b7fbc5905eb1db32d1cf0b",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "OBJ-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:981433fcbebea9030ab5461afe35c450b36f49fc417a2012fb6ee42388385bf5",
+      "edge_type": "CHALLENGED_BY",
+      "inverse_edge_id": "gedge:sha256:55cb65cf9d149e287883084b9b4bd2bcf7853ac1cb5415ba9728919d3e040d05",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "OBJ-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:90549d05ee04ecd2eac88d6811a746f59ec2c179d8a61b5e24ff022e43be2869",
+      "edge_type": "CHALLENGED_BY",
+      "inverse_edge_id": "gedge:sha256:c38719311e936f919d178e950afeb11d1ab6b2258b60757025e9d8a64965b6d7",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "OBJ-0003"
+    },
+    {
+      "edge_id": "gedge:sha256:b4e80e40b084cde40f400fec1d1a119d78cd6c0261fe2598d7e6949f8780bb99",
+      "edge_type": "CHALLENGED_BY",
+      "inverse_edge_id": "gedge:sha256:166f73077ba4bd2bc41e1594f13ebb1cd9043343be1d8b4d816467a30fe27699",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "OBJ-0005"
+    },
+    {
+      "edge_id": "gedge:sha256:71fd5be72e7526a3b664b51cb6a9339d88687ffa935ee43b830c322f5b548ad5",
+      "edge_type": "HAS_PROOF_GAP",
+      "inverse_edge_id": "gedge:sha256:67731cad91ca7a7b82b77265d8aa8a4617d00febeb1ee29c813fa43ef3f84b8f",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "GAP-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:a254eb0c2487868e23768d382911152df550b2e9b73aced0a7b2d244603eac79",
+      "edge_type": "HAS_PROOF_GAP",
+      "inverse_edge_id": "gedge:sha256:4abd9bc30ba8f7d7d479234c3f65c919e86531ade91549387f14fdc8aefa5428",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "GAP-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:a42dba27a715ab68173c3c601dbb563c38741c7be80a03101019f2ecb2a6cbf1",
+      "edge_type": "PRESENTED_IN",
+      "inverse_edge_id": "gedge:sha256:dd6547fb48c043a6e1a301b50aad0fdfa429abf9272529bc615a3461d46d2d63",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "SEC-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:02627cb8f269fa2a7891c219bda871605b8a879e7c5b5e8ad2a2f52097a564e3",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:712d8e6442d2b1ed81e27a883b6e147587c4ce3834f5a3525d0c140ff986fba3",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "ARG-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:d6799bb1e7ae72025d51e8f87c5018f284b4f31235347e0e8386d0a933f82f6e",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:e71bb762d9688eb542c70f26c5deaf6b0e2a3d533daffc32992e065f590cb6e3",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "ARG-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:dde0b073c612324e0d9a33710dab576463752e01205b22332e82a4c5c9e4ef09",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:de8f18448160192eb6d35d15626ae1417cd25a3cd1ecf0172a14882070ff25ec",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "ARG-0004"
+    },
+    {
+      "edge_id": "gedge:sha256:92469e8d26b51177527eabd432256210b5f7f28de63e8f2600b55406dc061a7f",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:0c4a79cb96509cb0fa5c7da0df12cc04a3084283174362235c2d4283c580cbb5",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "CLM-0001"
+    },
+    {
+      "edge_id": "gedge:sha256:0d3efccf644538386c6e849ffd20275805ed521257090ec6579c16eb731b8d59",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:ea980668d6072fb6595fba387ca81bbc4d029143b312e01afbda9760a7d2f38a",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "CLM-0003"
+    },
+    {
+      "edge_id": "gedge:sha256:b20a3bb3688ed6c15206ea7f3517a0798b3fdba7acda8aaaaeca56d4f81beba7",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:4d997135dc57628825b10d47d5b59ec267549a4e16787f74ec4c767230dea57b",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "CLM-0015"
+    },
+    {
+      "edge_id": "gedge:sha256:1bf01403d770212522644a944015f204414ba365a38e61df47ccd857bd2078c0",
+      "edge_type": "SUPPORTED_BY",
+      "inverse_edge_id": "gedge:sha256:70ec980215a932b6b23164d54bcec585fb71b9d8c9725282baeb74403900eff4",
+      "review_state": "candidate",
+      "source_node_id": "THS-0001",
+      "target_node_id": "CLM-0016"
+    },
+    {
+      "edge_id": "gedge:sha256:b5447c2b45cbedc0d6963ecaabda511b949e409b41af2dfc156da1c76dd51d4b",
+      "edge_type": "EVIDENCES",
+      "inverse_edge_id": "gedge:sha256:c579a3018511fd34f88138d43dceb61a1f72cd22ff34fef9ee02dd06c50ea937",
+      "review_state": "reviewed",
+      "source_node_id": "chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227",
+      "target_node_id": "CLM-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:eeb1f97eac98d2d78f787fe63c0a54c3b9cee863dcbf6e762988733e3b8ba6d0",
+      "edge_type": "HAS_DERIVATIVE",
+      "inverse_edge_id": "gedge:sha256:e7ec2721f6e5ef1590ae933cc504ffc5291d803f9e6494f5697065220fcb5919",
+      "review_state": "reviewed",
+      "source_node_id": "chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227",
+      "target_node_id": "CLM-0002"
+    },
+    {
+      "edge_id": "gedge:sha256:22134dc18733f69b65fed5db4e0ba8231a3cce97c9e992e7d8c431ddb43e05e5",
+      "edge_type": "LOCATED_BY",
+      "inverse_edge_id": "gedge:sha256:e45117c6b7a6220f8d95fa6ff952e8c6de47a2061663c0b3217833bab2381234",
+      "review_state": "reviewed",
+      "source_node_id": "chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227",
+      "target_node_id": "SRC-0002"
+    }
+  ],
+  "input_sha256": {
+    "registry/claim-registry.json": "c751f9178d9c73bb2b796ca0d48077c2855f53f412a5f97455a079fa8883979c",
+    "registry/evidence-graph.json": "5bd7d3cec94d98f8d8fce493af523ff4f577bf95ef5dbb9c8cbbbe7656028af5",
+    "registry/release-readiness.json": "5637f3f2f05711a993983fdd2aa3115a5e9c0dcba7607dcf2a063a17a9e502a7",
+    "registry/source-registry.json": "58e184814546c50a9821e44fdf414a6c38ac803c725594baca1d62f512850f0a",
+    "registry/thesis-map.json": "f212db19f141ac276103283b7c9c0f8204bcb703b0b2306f0dbe266401c60076",
+    "results/pr-commit-diff-linkage.json": "5b180fb498fb82a0822ae154f594136cef9cd450321486da6a8905e6ed673b3d"
+  },
+  "paragraphs": [
+    {
+      "does_not_prove": "Ownership, legal protectability, uniqueness, portability, technical learnability, or economic value.",
+      "genealogy": {
+        "argument_ids": [
+          "ARG-0001",
+          "FAL-0002",
+          "GAP-0001",
+          "OBJ-0003",
+          "THS-0001"
+        ],
+        "chunk_ids": [],
+        "claim_ids": [
+          "CLM-0014"
+        ],
+        "content_hashes": [],
+        "graph_edge_ids": [
+          "gedge:sha256:62269be3c85a224a77b279b052cf85764b91d8f881ce28a33cc644ef70ec06fd",
+          "gedge:sha256:712d8e6442d2b1ed81e27a883b6e147587c4ce3834f5a3525d0c140ff986fba3",
+          "gedge:sha256:c147a7e6b556f36962981cfc7b6d7bf8d7c8caa6f0cebb7d08e8eefb4c5b7734",
+          "gedge:sha256:f7ba444222219d6b5f712163f50986e0390eea29204fd2073e300e233f14abc4"
+        ],
+        "graph_path_ids": [
+          "TEP-0001",
+          "TEP-0002"
+        ],
+        "locators": [
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Abstract and interaction-network knowledge-transfer framework",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0047"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Abstract and two-phase law-firm study",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0048"
+          }
+        ],
+        "source_ids": [
+          "SRC-0047",
+          "SRC-0048"
+        ],
+        "thesis_node_ids": [
+          "TMN-0001"
+        ]
+      },
+      "genealogy_sha256": "ff1b41ccc7df69d3975dd4a7bde9ed14ae9232a6000e5bbdd96348aaf2b68950",
+      "label": "mixed",
+      "order": 1,
+      "paragraph_id": "WPP-0001",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate",
+      "section_id": "SEC-0001",
+      "text": "Firm-specific value can reside in context-to-choice-to-rationale-to-outcome relationships, not merely in standalone documents."
+    },
+    {
+      "does_not_prove": "Actual tenant configuration, data movement, retention, training, connector execution, or deployed runtime equivalence.",
+      "genealogy": {
+        "argument_ids": [
+          "ARG-0001",
+          "FAL-0001",
+          "GAP-0002",
+          "OBJ-0001",
+          "THS-0001"
+        ],
+        "chunk_ids": [
+          "chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227"
+        ],
+        "claim_ids": [
+          "CLM-0001",
+          "CLM-0002",
+          "CLM-0017"
+        ],
+        "content_hashes": [
+          "20af2a0d41ae5f3773638aa926a3e99b73584a694e2967480cc28c1549961e0d",
+          "6a04ca05662a0d3757e21a349b2c74ac262b031827c85105c0f4472cf601b51c",
+          "dcc71d847b201fd8e4efbb0b632c5ef731e8b0f9773ebe64262f0c2f2cb8066f"
+        ],
+        "graph_edge_ids": [
+          "gedge:sha256:712d8e6442d2b1ed81e27a883b6e147587c4ce3834f5a3525d0c140ff986fba3",
+          "gedge:sha256:74fb3839036cd2d23b6bd02d9781b22f2a793f4b980e19d0b7cc8f07a98a9a6e",
+          "gedge:sha256:b5447c2b45cbedc0d6963ecaabda511b949e409b41af2dfc156da1c76dd51d4b",
+          "gedge:sha256:c31018b1236831982d379d37e28536c1717488d350052ed48a224843e31ab5af",
+          "gedge:sha256:e45117c6b7a6220f8d95fa6ff952e8c6de47a2061663c0b3217833bab2381234"
+        ],
+        "graph_path_ids": [
+          "TEP-0003",
+          "TEP-0004"
+        ],
+        "locators": [
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Product sections on playbooks, standards, fallbacks, setup, and risk calibration",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0001"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Cold-start interviews; practice profiles; deal-debrief; playbook-monitor",
+            "locator_kind": "repository_scope",
+            "source_id": "SRC-0002"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Captured sections on legal plugins, playbooks, precedent, and house style",
+            "locator_kind": "captured_selector",
+            "source_id": "SRC-0050"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Captured sections on skills, subagents, playbooks, precedent, and house style",
+            "locator_kind": "captured_selector",
+            "source_id": "SRC-0051"
+          },
+          {
+            "evidence_grade": "reproducible",
+            "locator": "scripts/deploy-managed-agent.sh lines 75-190",
+            "locator_kind": "path_lines",
+            "source_id": "SRC-0002"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Pinned repository static design boundary",
+            "locator_kind": "repository_scope",
+            "source_id": "SRC-0002"
+          },
+          {
+            "chunk_id": "chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227",
+            "content_sha256": "6a04ca05662a0d3757e21a349b2c74ac262b031827c85105c0f4472cf601b51c",
+            "locator": {
+              "byte_end_exclusive": 7574,
+              "byte_start": 0,
+              "kind": "git_blob_span",
+              "line_end": 200,
+              "line_start": 1
+            },
+            "path": "scripts/deploy-managed-agent.sh"
+          }
+        ],
+        "source_ids": [
+          "SRC-0001",
+          "SRC-0002",
+          "SRC-0050",
+          "SRC-0051"
+        ],
+        "thesis_node_ids": [
+          "TMN-0002"
+        ]
+      },
+      "genealogy_sha256": "c3f1a576d376ddf83d7b54cf9b2d6f910fa4e435529f51e142ef912b761ead57",
+      "label": "observed",
+      "order": 2,
+      "paragraph_id": "WPP-0002",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate",
+      "section_id": "SEC-0001",
+      "text": "Pinned legal materials invite users to encode playbooks, fallbacks, deviations, rationales, risk posture, precedent, and house style."
+    },
+    {
+      "does_not_prove": "That a named provider currently captures, retains, pools, trains on, or generalizes a firm's ontology.",
+      "genealogy": {
+        "argument_ids": [
+          "FAL-0001",
+          "GAP-0002",
+          "OBJ-0001",
+          "OBJ-0002",
+          "THS-0001"
+        ],
+        "chunk_ids": [],
+        "claim_ids": [
+          "CLM-0003",
+          "CLM-0004",
+          "CLM-0018"
+        ],
+        "content_hashes": [
+          "386dd211007587aa05ce59bb6869690c8c74976df8161d9fe57ad5d31e1de02e",
+          "573e1018aec92cc04fc1c60bce27959e8efeddb9d15ce76992fbadb31885b282",
+          "dccc8d857d3b5fc5f7e119bca400ce27c72319bfa93d5e4c6901eb3527d16eb4"
+        ],
+        "graph_edge_ids": [
+          "gedge:sha256:461b0c8d20d5d8e57ea5e31548b1f48f02ad169d9dff81fd3d2210264935a795",
+          "gedge:sha256:ac4a6dc53314247fd7a7311169e80044c35c31a16bf28459ea5bb356e46afe4b",
+          "gedge:sha256:ea980668d6072fb6595fba387ca81bbc4d029143b312e01afbda9760a7d2f38a"
+        ],
+        "graph_path_ids": [
+          "TEP-0005",
+          "TEP-0006"
+        ],
+        "locators": [
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Section B",
+            "locator_kind": "section",
+            "source_id": "SRC-0005"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "ZDR exclusions and feature table",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0009"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Scope and retention sections",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0010"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Feature-dependent retention and ZDR policy boundary",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0009"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Customer-specific processing instructions and agreement boundary",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0006"
+          }
+        ],
+        "source_ids": [
+          "SRC-0005",
+          "SRC-0006",
+          "SRC-0009",
+          "SRC-0010"
+        ],
+        "thesis_node_ids": [
+          "TMN-0003"
+        ]
+      },
+      "genealogy_sha256": "63d4420653859052fcee260bbbdeb5c02faf3886ed0f59bede42591ebc15090c",
+      "label": "mixed",
+      "order": 3,
+      "paragraph_id": "WPP-0003",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate",
+      "section_id": "SEC-0001",
+      "text": "Connectors, feedback, support, telemetry, or hosted features could expose professional signals if material leaves firm custody and reuse is permitted."
+    },
+    {
+      "does_not_prove": "Present harm, provider intent, data aggregation, antitrust violation, transferability, substitutability, or inevitability.",
+      "genealogy": {
+        "argument_ids": [
+          "ARG-0002",
+          "FAL-0002",
+          "GAP-0001",
+          "GAP-0002",
+          "OBJ-0002",
+          "OBJ-0005",
+          "THS-0001"
+        ],
+        "chunk_ids": [],
+        "claim_ids": [
+          "CLM-0015"
+        ],
+        "content_hashes": [
+          "bd8b592d5015d0c8af67ffedfda4961917828d37bde0ef48bc50ffbece97f0d0"
+        ],
+        "graph_edge_ids": [
+          "gedge:sha256:2e609f077b6f50e601f3cad7cb4d702dc3fe22bcd6139584c6187e576b4f2ff7",
+          "gedge:sha256:dbf7789091dc4b8194a9be89443f7ab13048664406188eb66d0be8fba8bf1f80",
+          "gedge:sha256:e71bb762d9688eb542c70f26c5deaf6b0e2a3d533daffc32992e065f590cb6e3"
+        ],
+        "graph_path_ids": [
+          "TEP-0007"
+        ],
+        "locators": [
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Sections on customer-held and specialised industry data, feedback effects, concentration, and market tipping",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0046"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Interaction-network knowledge and transfer framework",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0047"
+          }
+        ],
+        "source_ids": [
+          "SRC-0046",
+          "SRC-0047"
+        ],
+        "thesis_node_ids": [
+          "TMN-0004"
+        ]
+      },
+      "genealogy_sha256": "52ad1114bd52b59b9bb6c177e0d0bb55f48568c5a71d809a8906084b747fec3f",
+      "label": "hypothesis",
+      "order": 4,
+      "paragraph_id": "WPP-0004",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate",
+      "section_id": "SEC-0001",
+      "text": "If overlapping multi-firm professional traces are legally and technically reusable, resulting capability could reduce the scarcity of firm-specific capability."
+    },
+    {
+      "does_not_prove": "Guaranteed security, competitive superiority, compliance, provider wrongdoing, or business survival.",
+      "genealogy": {
+        "argument_ids": [
+          "FAL-0001",
+          "FAL-0002",
+          "GAP-0001",
+          "GAP-0002",
+          "OBJ-0002",
+          "OBJ-0003",
+          "REB-0001",
+          "THS-0001"
+        ],
+        "chunk_ids": [],
+        "claim_ids": [
+          "CLM-0003",
+          "CLM-0015",
+          "CLM-0016"
+        ],
+        "content_hashes": [
+          "573e1018aec92cc04fc1c60bce27959e8efeddb9d15ce76992fbadb31885b282",
+          "bd8b592d5015d0c8af67ffedfda4961917828d37bde0ef48bc50ffbece97f0d0"
+        ],
+        "graph_edge_ids": [
+          "gedge:sha256:0e3b7ee80e34ed04659294dadafbcf07036235ea5bbd1f6add251695b0b19eee",
+          "gedge:sha256:55cb65cf9d149e287883084b9b4bd2bcf7853ac1cb5415ba9728919d3e040d05",
+          "gedge:sha256:6b54526bef7d2140f78844120876549c3b1c46cc17fe8c1dee23ded91cb00b80",
+          "gedge:sha256:70ec980215a932b6b23164d54bcec585fb71b9d8c9725282baeb74403900eff4"
+        ],
+        "graph_path_ids": [
+          "TEP-0008",
+          "TEP-0009"
+        ],
+        "locators": [
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Section B",
+            "locator_kind": "section",
+            "source_id": "SRC-0005"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Sections on customer-held and specialised industry data, feedback effects, concentration, and market tipping",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0046"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Interaction-network knowledge and transfer framework",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0047"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Opening explanation, health-provider example, and purchasing-manager Q&A",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0049"
+          }
+        ],
+        "source_ids": [
+          "SRC-0005",
+          "SRC-0046",
+          "SRC-0047",
+          "SRC-0049"
+        ],
+        "thesis_node_ids": [
+          "TMN-0005"
+        ]
+      },
+      "genealogy_sha256": "32a0fbaa6266e9c9ed555150323e4cac59f079ac9d83688275bf97c705d43793",
+      "label": "normative",
+      "order": 5,
+      "paragraph_id": "WPP-0005",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate",
+      "section_id": "SEC-0001",
+      "text": "Each firm should independently control ontology, derivatives, telemetry, evaluation, portability, and exit while preserving lawful unilateral decision-making."
+    },
+    {
+      "does_not_prove": "That an AlphaGo moment exists in law, that Go predicts legal performance, or that private expert traces are necessary.",
+      "genealogy": {
+        "argument_ids": [
+          "ARG-0004",
+          "FAL-0003",
+          "GAP-0003",
+          "OBJ-0004",
+          "OBJ-0005",
+          "THS-0001"
+        ],
+        "chunk_ids": [],
+        "claim_ids": [
+          "CLM-0011",
+          "CLM-0012",
+          "CLM-0013"
+        ],
+        "content_hashes": [],
+        "graph_edge_ids": [
+          "gedge:sha256:57412f383c1763e02c62be9ad27f363a280e39c660d15f10d30e0aec0e28a8ed",
+          "gedge:sha256:69b9ecdc5b19c708fac4d944423bdf97f21617a90a563f5c43a12e5b54f36bdd",
+          "gedge:sha256:de8f18448160192eb6d35d15626ae1417cd25a3cd1ecf0172a14882070ff25ec"
+        ],
+        "graph_path_ids": [
+          "TEP-0010"
+        ],
+        "locators": [
+          {
+            "evidence_grade": "locator_only",
+            "locator": "A creative spark section, captured page lines 140-144",
+            "locator_kind": "captured_selector",
+            "source_id": "SRC-0042"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Abstract, page lines 64-66 in the 2026-07-14 observation",
+            "locator_kind": "captured_selector",
+            "source_id": "SRC-0044"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Abstract, methodology, and fixed-threshold results",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0045"
+          }
+        ],
+        "source_ids": [
+          "SRC-0042",
+          "SRC-0044",
+          "SRC-0045"
+        ],
+        "thesis_node_ids": [
+          "TMN-0006"
+        ]
+      },
+      "genealogy_sha256": "def66f1d3b4ba452b0c1caca0c3c509b43c80553dd0e30120d6929b5a2026afd",
+      "label": "hypothesis",
+      "order": 6,
+      "paragraph_id": "WPP-0006",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate",
+      "section_id": "SEC-0001",
+      "text": "Legal-AI research should test unconventional delayed-value strategies, while treating Move 37 as analogy and benchmark motivation only."
+    },
+    {
+      "does_not_prove": "Impossibility, flawless compliance, zero processing or retention, absence of negotiated differences, or harmlessness.",
+      "genealogy": {
+        "argument_ids": [
+          "FAL-0001",
+          "GAP-0002",
+          "OBJ-0001",
+          "THS-0001"
+        ],
+        "chunk_ids": [],
+        "claim_ids": [
+          "CLM-0003",
+          "CLM-0010",
+          "CLM-0017",
+          "CLM-0018"
+        ],
+        "content_hashes": [
+          "386dd211007587aa05ce59bb6869690c8c74976df8161d9fe57ad5d31e1de02e",
+          "573e1018aec92cc04fc1c60bce27959e8efeddb9d15ce76992fbadb31885b282",
+          "dccc8d857d3b5fc5f7e119bca400ce27c72319bfa93d5e4c6901eb3527d16eb4"
+        ],
+        "graph_edge_ids": [
+          "gedge:sha256:5a6d3bfc4738bb8734918bce33ddfacec8db6f70dcc7e69ebd87822dd3191909",
+          "gedge:sha256:6370643f4c57f18966cd3d74e750fa225eb6049c01b7fbc5905eb1db32d1cf0b",
+          "gedge:sha256:99f12e0cd960d83dee4d99f563ebe45c421a524dbfbbf407493bd853fadfbba2",
+          "gedge:sha256:ac4a6dc53314247fd7a7311169e80044c35c31a16bf28459ea5bb356e46afe4b"
+        ],
+        "graph_path_ids": [
+          "TEP-0011",
+          "TEP-0012"
+        ],
+        "locators": [
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Section B",
+            "locator_kind": "section",
+            "source_id": "SRC-0005"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Repository-wide source-to-sink review",
+            "locator_kind": "repository_scope",
+            "source_id": "SRC-0002"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Sections B and E",
+            "locator_kind": "section",
+            "source_id": "SRC-0005"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Pinned repository static design boundary",
+            "locator_kind": "repository_scope",
+            "source_id": "SRC-0002"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Feature-dependent retention and ZDR policy boundary",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0009"
+          },
+          {
+            "evidence_grade": "locator_only",
+            "locator": "Customer-specific processing instructions and agreement boundary",
+            "locator_kind": "section_description",
+            "source_id": "SRC-0006"
+          }
+        ],
+        "source_ids": [
+          "SRC-0002",
+          "SRC-0005",
+          "SRC-0006",
+          "SRC-0009"
+        ],
+        "thesis_node_ids": [
+          "TMN-0007"
+        ]
+      },
+      "genealogy_sha256": "c6f90676e6e268884aeaf6472b70536cfbe1d85a8314072135117cb0da0a5b04",
+      "label": "unknown",
+      "order": 7,
+      "paragraph_id": "WPP-0007",
+      "publication_eligibility": "blocked_review",
+      "review_state": "candidate",
+      "section_id": "SEC-0001",
+      "text": "No evidence currently registered in this project establishes covert pooling of identifiable firm ontologies or default training on ordinary commercial content."
+    }
+  ],
+  "release": {
+    "blockers": [
+      "REL-DEC-001",
+      "REL-DEC-002",
+      "REL-DEC-003",
+      "REL-DEC-004",
+      "REL-DEC-005",
+      "REL-DEC-006",
+      "REL-DEC-007",
+      "REL-RCP-001",
+      "REL-RCP-002",
+      "REL-RCP-003",
+      "REL-RCP-004",
+      "REL-RCP-005",
+      "REL-RCP-006",
+      "REL-RCP-007",
+      "REL-RCP-008",
+      "REL-RCP-009"
+    ],
+    "human_decisions": [
+      {
+        "decision_id": "REL-DEC-001",
+        "status": "pending",
+        "subject": "public repository name"
+      },
+      {
+        "decision_id": "REL-DEC-002",
+        "status": "pending",
+        "subject": "copyright holder or governing entity"
+      },
+      {
+        "decision_id": "REL-DEC-003",
+        "status": "pending",
+        "subject": "path-level software research and metadata licenses"
+      },
+      {
+        "decision_id": "REL-DEC-004",
+        "status": "pending",
+        "subject": "trademark and name policy"
+      },
+      {
+        "decision_id": "REL-DEC-005",
+        "status": "pending",
+        "subject": "public security contact and disclosure route"
+      },
+      {
+        "decision_id": "REL-DEC-006",
+        "status": "pending",
+        "subject": "named release approver and contribution activation authority"
+      },
+      {
+        "decision_id": "REL-DEC-007",
+        "status": "pending",
+        "subject": "physical separation of the private research workspace"
+      }
+    ],
+    "release_eligible": false,
+    "status": "blocked"
+  },
+  "revision": "1.1.0",
+  "schema": "claude-legal-audit.white-paper-export.v1",
+  "sections": [
+    {
+      "order": 1,
+      "paragraph_ids": [
+        "WPP-0001",
+        "WPP-0002",
+        "WPP-0003",
+        "WPP-0004",
+        "WPP-0005",
+        "WPP-0006",
+        "WPP-0007"
+      ],
+      "section_id": "SEC-0001",
+      "title": "Hold the line: collective alpha and the Move 37 risk"
+    }
+  ],
+  "sources": [
+    {
+      "accessed_at": "2026-07-14T14:57:06Z",
+      "limitation": "Vendor product statement; establishes stated capability and positioning, not production compliance.",
+      "locator": "Product sections on precedents, playbooks, standards, fallback language, setup, risk calibration, and house style",
+      "publisher": "Anthropic",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "dated_dynamic_page",
+        "value": "2026-07-14"
+      },
+      "source_class": "official_product",
+      "source_id": "SRC-0001",
+      "status": "verified_metadata",
+      "title": "Claude for the legal industry",
+      "url": "https://claude.com/blog/claude-for-the-legal-industry"
+    },
+    {
+      "accessed_at": "2026-07-14T14:57:06Z",
+      "limitation": "Public plugin, prompt, connector, and orchestration layer only; closed Anthropic systems are absent.",
+      "locator": "commercial-legal/skills/cold-start-interview/SKILL.md lines 23-25 and 72-74; commercial-legal/agents/deal-debrief.md lines 89-118; commercial-legal/agents/playbook-monitor.md lines 50-74 and 135-166, all at commit 5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "publisher": "Anthropic",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "git_commit",
+        "value": "5ceb305b30b4c82653c9b6642499c12e946ec319"
+      },
+      "source_class": "official_repository",
+      "source_id": "SRC-0002",
+      "status": "immutable_revision",
+      "title": "anthropics/claude-for-legal at pinned commit",
+      "url": "https://github.com/anthropics/claude-for-legal/tree/5ceb305b30b4c82653c9b6642499c12e946ec319"
+    },
+    {
+      "accessed_at": "2026-07-15T13:29:28Z",
+      "limitation": "Public standard terms bind only the retrieved text. They do not establish that a particular firm is covered by these terms, its order form or negotiated terms, actual configuration, data flow, access, enforcement, or third-party handling.",
+      "locator": "Captured HTML: Sections A.2, B, and E covering third-party features, Customer Content rights and model training terms, and confidentiality",
+      "publisher": "Anthropic",
+      "revision_binding": {
+        "content_sha256": "573e1018aec92cc04fc1c60bce27959e8efeddb9d15ce76992fbadb31885b282",
+        "kind": "content_hash",
+        "value": "private local public-source capture retrieved 2026-07-15T13:29:28Z"
+      },
+      "source_class": "controlling_terms",
+      "source_id": "SRC-0005",
+      "status": "verified_content_hash",
+      "title": "Commercial Terms of Service",
+      "url": "https://www.anthropic.com/legal/commercial-terms"
+    },
+    {
+      "accessed_at": "2026-07-15T13:29:33Z",
+      "limitation": "DPA terms bind only the retrieved text and apply only where the DPA and Customer Personal Data scope govern. They do not prove that a particular firm signed or qualifies for the DPA, actual access logs, actual deletion, or a legal customer's runtime behavior.",
+      "locator": "Captured HTML: Sections B, F, H, and Schedule 2 on processing scope, audit/reporting, deletion/return terms, and stated security controls",
+      "publisher": "Anthropic",
+      "revision_binding": {
+        "content_sha256": "dccc8d857d3b5fc5f7e119bca400ce27c72319bfa93d5e4c6901eb3527d16eb4",
+        "kind": "content_hash",
+        "value": "private local public-source capture retrieved 2026-07-15T13:29:33Z"
+      },
+      "source_class": "controlling_terms",
+      "source_id": "SRC-0006",
+      "status": "verified_content_hash",
+      "title": "Data Processing Addendum",
+      "url": "https://www.anthropic.com/legal/data-processing-addendum"
+    },
+    {
+      "accessed_at": "2026-07-14T14:57:06Z",
+      "limitation": "A captured rendering and a secondary observation disagreed on feedback retention duration; reverify before publication.",
+      "locator": "Commercial default, feedback, retention, and admin controls",
+      "publisher": "Anthropic Privacy Center",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "dated_dynamic_page",
+        "value": "2026-07-14"
+      },
+      "source_class": "official_documentation",
+      "source_id": "SRC-0007",
+      "status": "dynamic_conflict_watch",
+      "title": "Is my data used for model training?",
+      "url": "https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training"
+    },
+    {
+      "accessed_at": "2026-07-15T13:12:19Z",
+      "limitation": "Feature-specific vendor documentation may change. It states documented policy/eligibility conditions, not a particular legal customer's configuration, actual retention, personnel access, data flow, or model-training use.",
+      "locator": "Captured HTML: API and data retention sections, feature eligibility table, stateful products, and ZDR exclusions",
+      "publisher": "Anthropic",
+      "revision_binding": {
+        "content_sha256": "386dd211007587aa05ce59bb6869690c8c74976df8161d9fe57ad5d31e1de02e",
+        "kind": "content_hash",
+        "value": "private local public-source capture retrieved 2026-07-15T13:12:19Z"
+      },
+      "source_class": "official_documentation",
+      "source_id": "SRC-0009",
+      "status": "verified_content_hash",
+      "title": "API and data retention",
+      "url": "https://platform.claude.com/docs/en/manage-claude/api-and-data-retention"
+    },
+    {
+      "accessed_at": "2026-07-14T14:57:06Z",
+      "limitation": "Distinguishes local filesystem Skills from uploaded workspace Skills.",
+      "locator": "Organizational knowledge, local versus workspace scope, and retention",
+      "publisher": "Anthropic",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "dated_dynamic_page",
+        "value": "2026-07-14"
+      },
+      "source_class": "official_documentation",
+      "source_id": "SRC-0010",
+      "status": "dynamic_unarchived",
+      "title": "Agent Skills overview",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview"
+    },
+    {
+      "accessed_at": "2026-07-14T14:57:06Z",
+      "limitation": "Evidence of consensual collaboration, not covert reuse.",
+      "locator": "Firm-wide co-development, deployment, and connection to institutional knowledge",
+      "publisher": "Freshfields",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "dated_page",
+        "value": "2026-04-23"
+      },
+      "source_class": "counterparty_primary",
+      "source_id": "SRC-0011",
+      "status": "verified_metadata",
+      "title": "Freshfields and Anthropic team up to co-build AI legal workflows",
+      "url": "https://www.freshfields.com/en/our-thinking/news/news-search/2026/04/freshfields-and-anthropic-team-up-to-co-build-ai-legal-workflows-deploying-claude-across-the-firm-globally"
+    },
+    {
+      "accessed_at": "2026-07-14T17:40:00Z",
+      "limitation": "General ethics guidance under the Model Rules; fact-specific and not jurisdiction-specific legal advice.",
+      "locator": "Sections on competence, confidentiality, communication, supervision, candor, and fees",
+      "publisher": "American Bar Association Standing Committee on Ethics and Professional Responsibility",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "stable_dated_pdf",
+        "value": "2024-07-29"
+      },
+      "source_class": "formal_ethics_opinion",
+      "source_id": "SRC-0034",
+      "status": "verified_metadata",
+      "title": "ABA Formal Opinion 512: Generative Artificial Intelligence Tools",
+      "url": "https://www.americanbar.org/content/dam/aba/administrative/professional_responsibility/ethics-opinions/aba-formal-opinion-512.pdf"
+    },
+    {
+      "accessed_at": "2026-07-14T17:40:00Z",
+      "limitation": "PACER coverage does not include every state matter, every historical record, sealed material, unfiled work, or internal deliberation.",
+      "locator": "Electronic case files, dockets, opinions, historical records, and access terms",
+      "publisher": "Administrative Office of the U.S. Courts",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "dated_dynamic_page",
+        "value": "2026-07-14"
+      },
+      "source_class": "government_primary",
+      "source_id": "SRC-0036",
+      "status": "verified_metadata",
+      "title": "Find a Case (PACER)",
+      "url": "https://www.uscourts.gov/court-records/find-a-case-pacer"
+    },
+    {
+      "accessed_at": "2026-07-14T17:40:00Z",
+      "limitation": "Public availability does not make the record complete, representative, or a source of internal strategy.",
+      "locator": "Public case and docket information plus stated exclusions for sealed and restricted materials",
+      "publisher": "Administrative Office of the U.S. Courts",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "dated_dynamic_page",
+        "value": "2026-07-14"
+      },
+      "source_class": "government_primary",
+      "source_id": "SRC-0037",
+      "status": "verified_metadata",
+      "title": "What information is available through PACER?",
+      "url": "https://pacer.uscourts.gov/help/faqs/what-information-available-through-pacer"
+    },
+    {
+      "accessed_at": "2026-07-14T17:40:00Z",
+      "limitation": "Vendor product positioning supports the control-plane comparison; it does not prove custody, access, or behavior in any law-firm deployment.",
+      "locator": "Ontology as enterprise data, logic, action, security, and Human+AI decision orchestration",
+      "publisher": "Palantir Technologies",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "dated_dynamic_page",
+        "value": "2026-07-14"
+      },
+      "source_class": "official_product",
+      "source_id": "SRC-0041",
+      "status": "dynamic_unarchived",
+      "title": "Palantir Ontology",
+      "url": "https://www.palantir.com/platforms/ontology/"
+    },
+    {
+      "accessed_at": "2026-07-14T18:45:00Z",
+      "limitation": "DeepMind describes its own system and a closed game; this does not prove analogous legal creativity or capability.",
+      "locator": "A creative spark section, especially Move 37 in Game 2 and the delayed strategic value described at page lines 140-144 in the 2026-07-14 observation",
+      "publisher": "Google DeepMind",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "dated_dynamic_page",
+        "value": "2026-07-14"
+      },
+      "source_class": "official_first_party_retrospective",
+      "source_id": "SRC-0042",
+      "status": "dynamic_unarchived",
+      "title": "AlphaGo at 10: How AI Innovation Is Paving the Path to AGI",
+      "url": "https://deepmind.google/blog/10-years-of-alphago/"
+    },
+    {
+      "accessed_at": "2026-07-14T18:45:00Z",
+      "limitation": "The paper predates the Lee Sedol match and establishes AlphaGo's technical foundation, not transfer to open-ended professional reasoning.",
+      "locator": "Nature 529, 484-489; DOI 10.1038/nature16961; architecture, expert-game supervision, reinforcement learning, and tree-search method",
+      "publisher": "Nature",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "stable_doi",
+        "value": "10.1038/nature16961"
+      },
+      "source_class": "peer_reviewed_primary_research",
+      "source_id": "SRC-0043",
+      "status": "verified_metadata",
+      "title": "Mastering the game of Go with deep neural networks and tree search",
+      "url": "https://www.nature.com/articles/nature16961"
+    },
+    {
+      "accessed_at": "2026-07-14T18:45:00Z",
+      "limitation": "AlphaGo Zero operated in a closed game with known rules and a clean reward; performance without human game data does not establish the same result in law.",
+      "locator": "Abstract and Figures 1-6; Nature 550, 354-359; DOI 10.1038/nature24270",
+      "publisher": "Nature",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "stable_doi",
+        "value": "10.1038/nature24270"
+      },
+      "source_class": "peer_reviewed_primary_research",
+      "source_id": "SRC-0044",
+      "status": "verified_metadata",
+      "title": "Mastering the game of Go without human knowledge",
+      "url": "https://www.nature.com/articles/nature24270"
+    },
+    {
+      "accessed_at": "2026-07-14T18:45:00Z",
+      "limitation": "Efficiency estimates are benchmark-, model-, dataset-, and period-specific and do not justify indefinite exponential growth or predict legal capability.",
+      "locator": "Abstract, methodology, and benchmark-threshold estimates across more than 200 language-model evaluations from 2012-2023; arXiv 2403.05812",
+      "publisher": "NeurIPS",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "stable_proceedings",
+        "value": "NeurIPS 2024; arXiv:2403.05812"
+      },
+      "source_class": "peer_reviewed_empirical_research",
+      "source_id": "SRC-0045",
+      "status": "verified_metadata",
+      "title": "Algorithmic progress in language models",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/6b066da6a23bc55f9b887e7298102884-Abstract-Conference.html"
+    },
+    {
+      "accessed_at": "2026-07-14T18:45:00Z",
+      "limitation": "The original 24 May 2024 version was updated in place; this hash binds the reviewed updated PDF. Competition-policy analysis identifies possible pathways and uncertain market effects; it does not prove law-firm data use by a named provider.",
+      "locator": "Updated 62-page PDF; OECD Artificial Intelligence Papers No. 18; DOI 10.1787/e7e88884-en; page 2 update note and sections on customer-held data, specialised industry data, feedback effects, concentration, and market tipping",
+      "publisher": "OECD",
+      "revision_binding": {
+        "content_sha256": "bd8b592d5015d0c8af67ffedfda4961917828d37bde0ef48bc50ffbece97f0d0",
+        "kind": "content_hash",
+        "value": "updated edition downloaded 2026-07-14"
+      },
+      "source_class": "authoritative_policy_research",
+      "source_id": "SRC-0046",
+      "status": "verified_content_hash",
+      "title": "Artificial intelligence, data and competition",
+      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/05/artificial-intelligence-data-and-competition_9d0ac766/e7e88884-en.pdf"
+    },
+    {
+      "accessed_at": "2026-07-14T18:45:00Z",
+      "limitation": "Organizational-learning theory is not specific to law firms or foundation models; application to attorney brain trusts is a reasoned analogy.",
+      "locator": "Volume 82, Issue 1, pages 150-169; DOI 10.1006/obhd.2000.2893; knowledge embedded in members, tools, tasks, and interaction networks",
+      "publisher": "Organizational Behavior and Human Decision Processes",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "stable_doi",
+        "value": "10.1006/obhd.2000.2893"
+      },
+      "source_class": "peer_reviewed_research",
+      "source_id": "SRC-0047",
+      "status": "verified_metadata",
+      "title": "Knowledge Transfer: A Basis for Competitive Advantage in Firms",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0749597800928930"
+    },
+    {
+      "accessed_at": "2026-07-14T18:45:00Z",
+      "limitation": "The study concerns Norwegian law firms in 2000 and IT-supported knowledge management, not frontier-model training or current global large-law competition.",
+      "locator": "Abstract and study design; Volume 15, Issue 1, pages 69-78; DOI 10.1177/026839620001500107",
+      "publisher": "Journal of Information Technology",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "stable_doi",
+        "value": "10.1177/026839620001500107"
+      },
+      "source_class": "peer_reviewed_law_firm_research",
+      "source_id": "SRC-0048",
+      "status": "verified_metadata",
+      "title": "Predictors of IT Support for Knowledge Management in the Professions: An Empirical Study of Law Firms in Norway",
+      "url": "https://journals.sagepub.com/doi/10.1177/026839620001500107"
+    },
+    {
+      "accessed_at": "2026-07-14T22:50:00Z",
+      "limitation": "General federal enforcement guidance is not legal advice, is fact-specific, may change, and does not resolve every standard-setting or professional-association arrangement.",
+      "locator": "Independent refusal-to-deal boundary and competitor agreements not to deal or to deal only on agreed terms",
+      "publisher": "Federal Trade Commission",
+      "revision_binding": {
+        "content_sha256": null,
+        "kind": "dated_dynamic_page",
+        "value": "2026-07-14"
+      },
+      "source_class": "government_enforcement_guidance",
+      "source_id": "SRC-0049",
+      "status": "dynamic_unarchived",
+      "title": "Group Boycotts",
+      "url": "https://www.ftc.gov/advice-guidance/competition-guidance/guide-antitrust-laws/dealings-competitors/group-boycotts"
+    },
+    {
+      "accessed_at": "2026-07-15T11:58:07Z",
+      "limitation": "A private local capture binds only the retrieved vendor response. It can evidence stated capabilities and integration framing, not a customer deployment, model-training use, telemetry, retention, provider ownership, or intent.",
+      "locator": "Captured HTML: sections describing legal plugins, MCP connectors, and customization to playbooks, precedent, and house style",
+      "publisher": "Anthropic",
+      "revision_binding": {
+        "content_sha256": "20af2a0d41ae5f3773638aa926a3e99b73584a694e2967480cc28c1549961e0d",
+        "kind": "content_hash",
+        "value": "private local public-source capture retrieved 2026-07-15T11:58:07Z"
+      },
+      "source_class": "official_product_announcement",
+      "source_id": "SRC-0050",
+      "status": "verified_content_hash",
+      "title": "Claude for the legal industry",
+      "url": "https://claude.com/blog/claude-for-the-legal-industry"
+    },
+    {
+      "accessed_at": "2026-07-15T11:58:08Z",
+      "limitation": "A private local capture binds only the retrieved vendor response. It can evidence stated capabilities and integration framing, not a particular firm’s configuration, data flow, retention, training, access, or contractual terms.",
+      "locator": "Captured HTML: sections describing matter-level work, connectors, skills, subagents, plugins, playbooks, precedent, house style, and vendor-stated control topics",
+      "publisher": "Anthropic",
+      "revision_binding": {
+        "content_sha256": "dcc71d847b201fd8e4efbb0b632c5ef731e8b0f9773ebe64262f0c2f2cb8066f",
+        "kind": "content_hash",
+        "value": "private local public-source capture retrieved 2026-07-15T11:58:08Z"
+      },
+      "source_class": "official_product_announcement",
+      "source_id": "SRC-0051",
+      "status": "verified_content_hash",
+      "title": "Deploying Claude across the legal industry",
+      "url": "https://claude.com/blog/deploying-claude-across-the-legal-industry"
+    }
+  ],
+  "status": "blocked_unpublished_candidate",
+  "thesis_nodes": [
+    {
+      "argument_ids": [
+        "ARG-0001",
+        "FAL-0002",
+        "GAP-0001",
+        "OBJ-0003",
+        "THS-0001"
+      ],
+      "claim_ids": [
+        "CLM-0014"
+      ],
+      "does_not_prove": "Ownership, legal protectability, uniqueness, portability, technical learnability, or economic value.",
+      "epistemic_status": "mixed",
+      "evidence_paths": [
+        {
+          "edge_types": [
+            "EVIDENCES",
+            "SUPPORTS",
+            "SUPPORTS"
+          ],
+          "limitation": "Organizational-learning research is not direct evidence of technical learnability or legal ownership.",
+          "node_ids": [
+            "SRC-0047",
+            "CLM-0014",
+            "ARG-0001",
+            "THS-0001"
+          ],
+          "path_id": "TEP-0001",
+          "status": "candidate"
+        },
+        {
+          "edge_types": [
+            "EVIDENCES"
+          ],
+          "limitation": "A 2000 Norwegian law-firm study does not establish current frontier-model effects.",
+          "node_ids": [
+            "SRC-0048",
+            "CLM-0014"
+          ],
+          "path_id": "TEP-0002",
+          "status": "candidate"
+        }
+      ],
+      "export_eligibility": "blocked_review",
+      "falsifiers": [
+        "FAL-0002"
+      ],
+      "objections": [
+        "OBJ-0003"
+      ],
+      "order": 1,
+      "paper_sections": [
+        "SEC-0001"
+      ],
+      "proof_gaps": [
+        "GAP-0001"
+      ],
+      "proposition": "Firm-specific value can reside in context-to-choice-to-rationale-to-outcome relationships, not merely in standalone documents.",
+      "review_state": "candidate",
+      "role": "asset",
+      "stable_id": "TMN-0001"
+    },
+    {
+      "argument_ids": [
+        "ARG-0001",
+        "FAL-0001",
+        "GAP-0002",
+        "OBJ-0001",
+        "THS-0001"
+      ],
+      "claim_ids": [
+        "CLM-0001",
+        "CLM-0002",
+        "CLM-0017"
+      ],
+      "does_not_prove": "Actual tenant configuration, data movement, retention, training, connector execution, or deployed runtime equivalence.",
+      "epistemic_status": "observed",
+      "evidence_paths": [
+        {
+          "edge_types": [
+            "LOCATES",
+            "EVIDENCES"
+          ],
+          "limitation": "This exact deployment-script path establishes only a negative static-code observation.",
+          "node_ids": [
+            "SRC-0002",
+            "chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227",
+            "CLM-0002"
+          ],
+          "path_id": "TEP-0003",
+          "status": "reproducible"
+        },
+        {
+          "edge_types": [
+            "EVIDENCES",
+            "SUPPORTS",
+            "SUPPORTS"
+          ],
+          "limitation": "A captured product announcement describes intended design, not a deployed tenant runtime.",
+          "node_ids": [
+            "SRC-0050",
+            "CLM-0001",
+            "ARG-0001",
+            "THS-0001"
+          ],
+          "path_id": "TEP-0004",
+          "status": "candidate"
+        }
+      ],
+      "export_eligibility": "blocked_review",
+      "falsifiers": [
+        "FAL-0001"
+      ],
+      "objections": [
+        "OBJ-0001"
+      ],
+      "order": 2,
+      "paper_sections": [
+        "SEC-0001"
+      ],
+      "proof_gaps": [
+        "GAP-0002"
+      ],
+      "proposition": "Pinned legal materials invite users to encode playbooks, fallbacks, deviations, rationales, risk posture, precedent, and house style.",
+      "review_state": "candidate",
+      "role": "observable_design",
+      "stable_id": "TMN-0002"
+    },
+    {
+      "argument_ids": [
+        "FAL-0001",
+        "GAP-0002",
+        "OBJ-0001",
+        "OBJ-0002",
+        "THS-0001"
+      ],
+      "claim_ids": [
+        "CLM-0003",
+        "CLM-0004",
+        "CLM-0018"
+      ],
+      "does_not_prove": "That a named provider currently captures, retains, pools, trains on, or generalizes a firm's ontology.",
+      "epistemic_status": "mixed",
+      "evidence_paths": [
+        {
+          "edge_types": [
+            "EVIDENCES"
+          ],
+          "limitation": "Documented retention policy is not verified tenant behavior or a source-to-sink runtime trace.",
+          "node_ids": [
+            "SRC-0009",
+            "CLM-0004"
+          ],
+          "path_id": "TEP-0005",
+          "status": "candidate"
+        },
+        {
+          "edge_types": [
+            "CONSTRAINS",
+            "SUPPORTS"
+          ],
+          "limitation": "Standard commercial terms are counterevidence but do not prove technical compliance or a negotiated agreement.",
+          "node_ids": [
+            "SRC-0005",
+            "CLM-0003",
+            "THS-0001"
+          ],
+          "path_id": "TEP-0006",
+          "status": "candidate"
+        }
+      ],
+      "export_eligibility": "blocked_review",
+      "falsifiers": [
+        "FAL-0001"
+      ],
+      "objections": [
+        "OBJ-0001",
+        "OBJ-0002"
+      ],
+      "order": 3,
+      "paper_sections": [
+        "SEC-0001"
+      ],
+      "proof_gaps": [
+        "GAP-0002"
+      ],
+      "proposition": "Connectors, feedback, support, telemetry, or hosted features could expose professional signals if material leaves firm custody and reuse is permitted.",
+      "review_state": "candidate",
+      "role": "conditional_exposure",
+      "stable_id": "TMN-0003"
+    },
+    {
+      "argument_ids": [
+        "ARG-0002",
+        "FAL-0002",
+        "GAP-0001",
+        "GAP-0002",
+        "OBJ-0002",
+        "OBJ-0005",
+        "THS-0001"
+      ],
+      "claim_ids": [
+        "CLM-0015"
+      ],
+      "does_not_prove": "Present harm, provider intent, data aggregation, antitrust violation, transferability, substitutability, or inevitability.",
+      "epistemic_status": "hypothesis",
+      "evidence_paths": [
+        {
+          "edge_types": [
+            "EVIDENCES",
+            "SUPPORTS",
+            "SUPPORTS"
+          ],
+          "limitation": "Competition-policy pathways and organizational theory do not establish actual cross-firm overlap or substitution.",
+          "node_ids": [
+            "SRC-0046",
+            "CLM-0015",
+            "ARG-0002",
+            "THS-0001"
+          ],
+          "path_id": "TEP-0007",
+          "status": "candidate"
+        }
+      ],
+      "export_eligibility": "blocked_review",
+      "falsifiers": [
+        "FAL-0002"
+      ],
+      "objections": [
+        "OBJ-0002",
+        "OBJ-0005"
+      ],
+      "order": 4,
+      "paper_sections": [
+        "SEC-0001"
+      ],
+      "proof_gaps": [
+        "GAP-0001",
+        "GAP-0002"
+      ],
+      "proposition": "If overlapping multi-firm professional traces are legally and technically reusable, resulting capability could reduce the scarcity of firm-specific capability.",
+      "review_state": "candidate",
+      "role": "sector_externality",
+      "stable_id": "TMN-0004"
+    },
+    {
+      "argument_ids": [
+        "FAL-0001",
+        "FAL-0002",
+        "GAP-0001",
+        "GAP-0002",
+        "OBJ-0002",
+        "OBJ-0003",
+        "REB-0001",
+        "THS-0001"
+      ],
+      "claim_ids": [
+        "CLM-0003",
+        "CLM-0015",
+        "CLM-0016"
+      ],
+      "does_not_prove": "Guaranteed security, competitive superiority, compliance, provider wrongdoing, or business survival.",
+      "epistemic_status": "normative",
+      "evidence_paths": [
+        {
+          "edge_types": [
+            "EVIDENCES",
+            "SUPPORTS"
+          ],
+          "limitation": "General FTC guidance requires fact-specific legal analysis and does not bless coordinated vendor action.",
+          "node_ids": [
+            "SRC-0049",
+            "CLM-0016",
+            "THS-0001"
+          ],
+          "path_id": "TEP-0008",
+          "status": "candidate"
+        },
+        {
+          "edge_types": [
+            "REBUTS",
+            "CHALLENGES"
+          ],
+          "limitation": "A normative rebuttal is a proposed governance position, not empirical proof of effectiveness.",
+          "node_ids": [
+            "REB-0001",
+            "OBJ-0002",
+            "THS-0001"
+          ],
+          "path_id": "TEP-0009",
+          "status": "candidate"
+        }
+      ],
+      "export_eligibility": "blocked_review",
+      "falsifiers": [
+        "FAL-0001",
+        "FAL-0002"
+      ],
+      "objections": [
+        "OBJ-0002",
+        "OBJ-0003"
+      ],
+      "order": 5,
+      "paper_sections": [
+        "SEC-0001"
+      ],
+      "proof_gaps": [
+        "GAP-0001",
+        "GAP-0002"
+      ],
+      "proposition": "Each firm should independently control ontology, derivatives, telemetry, evaluation, portability, and exit while preserving lawful unilateral decision-making.",
+      "review_state": "candidate",
+      "role": "ajax_line",
+      "stable_id": "TMN-0005"
+    },
+    {
+      "argument_ids": [
+        "ARG-0004",
+        "FAL-0003",
+        "GAP-0003",
+        "OBJ-0004",
+        "OBJ-0005",
+        "THS-0001"
+      ],
+      "claim_ids": [
+        "CLM-0011",
+        "CLM-0012",
+        "CLM-0013"
+      ],
+      "does_not_prove": "That an AlphaGo moment exists in law, that Go predicts legal performance, or that private expert traces are necessary.",
+      "epistemic_status": "hypothesis",
+      "evidence_paths": [
+        {
+          "edge_types": [
+            "EVIDENCES",
+            "SUPPORTS",
+            "SUPPORTS"
+          ],
+          "limitation": "A first-party retrospective about a closed game cannot establish an analogous legal capability.",
+          "node_ids": [
+            "SRC-0042",
+            "CLM-0011",
+            "ARG-0004",
+            "THS-0001"
+          ],
+          "path_id": "TEP-0010",
+          "status": "candidate"
+        }
+      ],
+      "export_eligibility": "blocked_review",
+      "falsifiers": [
+        "FAL-0003"
+      ],
+      "objections": [
+        "OBJ-0004",
+        "OBJ-0005"
+      ],
+      "order": 6,
+      "paper_sections": [
+        "SEC-0001"
+      ],
+      "proof_gaps": [
+        "GAP-0003"
+      ],
+      "proposition": "Legal-AI research should test unconventional delayed-value strategies, while treating Move 37 as analogy and benchmark motivation only.",
+      "review_state": "candidate",
+      "role": "move_37_horizon",
+      "stable_id": "TMN-0006"
+    },
+    {
+      "argument_ids": [
+        "FAL-0001",
+        "GAP-0002",
+        "OBJ-0001",
+        "THS-0001"
+      ],
+      "claim_ids": [
+        "CLM-0003",
+        "CLM-0010",
+        "CLM-0017",
+        "CLM-0018"
+      ],
+      "does_not_prove": "Impossibility, flawless compliance, zero processing or retention, absence of negotiated differences, or harmlessness.",
+      "epistemic_status": "unknown",
+      "evidence_paths": [
+        {
+          "edge_types": [
+            "LEAVES_UNKNOWN",
+            "SUPPORTS",
+            "CHALLENGES"
+          ],
+          "limitation": "A bounded registry absence cannot establish impossibility or describe evidence outside this project.",
+          "node_ids": [
+            "SRC-0002",
+            "CLM-0010",
+            "OBJ-0001",
+            "THS-0001"
+          ],
+          "path_id": "TEP-0011",
+          "status": "unknown"
+        },
+        {
+          "edge_types": [
+            "CONSTRAINS"
+          ],
+          "limitation": "Contractual counterevidence does not prove zero retention, flawless compliance, or harmlessness.",
+          "node_ids": [
+            "SRC-0005",
+            "CLM-0003"
+          ],
+          "path_id": "TEP-0012",
+          "status": "candidate"
+        }
+      ],
+      "export_eligibility": "blocked_review",
+      "falsifiers": [
+        "FAL-0001"
+      ],
+      "objections": [
+        "OBJ-0001"
+      ],
+      "order": 7,
+      "paper_sections": [
+        "SEC-0001"
+      ],
+      "proof_gaps": [
+        "GAP-0002"
+      ],
+      "proposition": "No evidence currently registered in this project establishes covert pooling of identifiable firm ontologies or default training on ordinary commercial content.",
+      "review_state": "candidate",
+      "role": "present_boundary",
+      "stable_id": "TMN-0007"
+    }
+  ],
+  "title": "The Ajax Line"
+}

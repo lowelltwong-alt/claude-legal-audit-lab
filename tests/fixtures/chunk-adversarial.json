@@ -1,0 +1,31 @@
+{
+  "schema": "claude-legal-audit.chunk-adversarial-fixtures.v1",
+  "cases": [
+    {
+      "name": "bom_utf8_crlf",
+      "text": "\ufeffalpha\r\nπ-line\r\nfinal",
+      "lines_per_chunk": 1
+    },
+    {
+      "name": "composed_and_decomposed_unicode",
+      "text": "é\né\n",
+      "lines_per_chunk": 1
+    },
+    {
+      "name": "lf_without_final_newline",
+      "text": "alpha\nomega",
+      "lines_per_chunk": 1
+    },
+    {
+      "name": "empty_file",
+      "text": "",
+      "lines_per_chunk": 200
+    },
+    {
+      "name": "very_long_line",
+      "repeat": "x",
+      "repeat_count": 100000,
+      "lines_per_chunk": 200
+    }
+  ]
+}

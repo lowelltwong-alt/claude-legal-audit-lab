@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/thesis-map.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "revision", "status", "title", "bounded_thesis", "causal_scope", "export_gate", "nodes"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.thesis-map.v1"},
+    "revision": {"const": "1.0.0"},
+    "status": {"const": "candidate_blocked"},
+    "title": {"const": "The Ajax Line"},
+    "bounded_thesis": {"type": "string", "minLength": 100},
+    "causal_scope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["included", "excluded"],
+      "properties": {
+        "included": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "excluded": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    },
+    "export_gate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "reason", "required_claim_review_state", "release_authorization_required"],
+      "properties": {
+        "status": {"const": "blocked"}, "reason": {"type": "string", "minLength": 20},
+        "required_claim_review_state": {"const": "reviewed"}, "release_authorization_required": {"const": true}
+      }
+    },
+    "nodes": {
+      "type": "array", "minItems": 7, "maxItems": 7,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["stable_id", "order", "role", "proposition", "epistemic_status", "claim_ids", "evidence_paths", "objections", "falsifiers", "does_not_prove", "proof_gaps", "paper_sections", "review_state", "export_eligibility"],
+        "properties": {
+          "stable_id": {"type": "string", "pattern": "^TMN-[0-9]{4}$"},
+          "order": {"type": "integer", "minimum": 1, "maximum": 7},
+          "role": {"enum": ["asset", "observable_design", "conditional_exposure", "sector_externality", "ajax_line", "move_37_horizon", "present_boundary"]},
+          "proposition": {"type": "string", "minLength": 30},
+          "epistemic_status": {"enum": ["observed", "counterevidence", "hypothesis", "normative", "unknown", "mixed"]},
+          "claim_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^CLM-[0-9]{4}$"}},
+          "evidence_paths": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/path"}},
+          "objections": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^OBJ-[0-9]{4}$"}},
+          "falsifiers": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^FAL-[0-9]{4}$"}},
+          "does_not_prove": {"type": "string", "minLength": 20},
+          "proof_gaps": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^GAP-[0-9]{4}$"}},
+          "paper_sections": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^SEC-[0-9]{4}$"}},
+          "review_state": {"enum": ["candidate", "reviewed", "rejected"]},
+          "export_eligibility": {"enum": ["eligible", "blocked_review", "blocked_evidence"]}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "path": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path_id", "node_ids", "edge_types", "status", "limitation"],
+      "properties": {
+        "path_id": {"type": "string", "pattern": "^TEP-[0-9]{4}$"},
+        "node_ids": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+        "edge_types": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]+$"}},
+        "status": {"enum": ["reproducible", "reviewed_bounded", "candidate", "unknown"]},
+        "limitation": {"type": "string", "minLength": 15}
+      }
+    }
+  }
+}

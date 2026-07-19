@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/white-paper-export.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "revision", "status", "title", "release", "evidence_coverage", "allowlist", "input_sha256", "content_sha256", "sections", "paragraphs", "thesis_nodes", "argument_objects", "graph_edges", "claims", "sources", "chunks", "contribution_lanes"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.white-paper-export.v1"},
+    "revision": {"const": "1.1.0"},
+    "status": {"const": "blocked_unpublished_candidate"},
+    "title": {"const": "The Ajax Line"},
+    "release": {
+      "type":"object","additionalProperties":false,
+      "required":["release_eligible","status","blockers","human_decisions"],
+      "properties": {
+        "release_eligible":{"const":false}, "status":{"const":"blocked"},
+        "blockers":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string"}},
+        "human_decisions":{"type":"array","minItems":1,"items":{"type":"object","additionalProperties":false,"required":["decision_id","subject","status"],"properties":{"decision_id":{"type":"string"},"subject":{"type":"string"},"status":{"type":"string"}}}}
+      }
+    },
+    "evidence_coverage": {"type":"object","additionalProperties":false,"required":["claim_count","eligible_claim_count","blocked_claim_count","thesis_node_count","eligible_thesis_node_count","verified_merged_pr_count","open_unmerged_snapshot_count","unknown_pr_count"],"properties":{"claim_count":{"type":"integer"},"eligible_claim_count":{"type":"integer"},"blocked_claim_count":{"type":"integer"},"thesis_node_count":{"type":"integer"},"eligible_thesis_node_count":{"type":"integer"},"verified_merged_pr_count":{"type":"integer"},"open_unmerged_snapshot_count":{"type":"integer"},"unknown_pr_count":{"type":"integer"}}},
+    "allowlist": {"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string"}},
+    "input_sha256": {"type":"object","additionalProperties":{"type":"string","pattern":"^[0-9a-f]{64}$"}},
+    "content_sha256": {"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "sections": {"type":"array","minItems":1,"items":{"type":"object","additionalProperties":false,"required":["section_id","order","title","paragraph_ids"],"properties":{"section_id":{"type":"string","pattern":"^SEC-[0-9]{4}$"},"order":{"type":"integer","minimum":1},"title":{"type":"string"},"paragraph_ids":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","pattern":"^WPP-[0-9]{4}$"}}}}},
+    "paragraphs": {"type":"array","minItems":7,"items":{"$ref":"#/$defs/paragraph"}},
+    "thesis_nodes": {"type":"array","minItems":7,"items":{"type":"object"}},
+    "argument_objects": {"type":"array","minItems":1,"items":{"$ref":"#/$defs/argumentObject"}},
+    "graph_edges": {"type":"array","minItems":1,"items":{"$ref":"#/$defs/graphEdge"}},
+    "claims": {"type":"array","minItems":1,"items":{"type":"object"}},
+    "sources": {"type":"array","minItems":1,"items":{"type":"object"}},
+    "chunks": {"type":"array","items":{"type":"object"}},
+    "contribution_lanes": {"type":"array","minItems":7,"items":{"type":"object","additionalProperties":false,"required":["lane_id","title","required_fields","status"],"properties":{"lane_id":{"type":"string","pattern":"^LANE-[0-9]{4}$"},"title":{"type":"string"},"required_fields":{"type":"array","minItems":3,"items":{"type":"string"}},"status":{"const":"draft_inactive"}}}}
+  },
+  "$defs": {
+    "argumentObject": {
+      "type":"object","additionalProperties":false,
+      "required":["argument_id","node_type","argument_type","title","statement","epistemic_status","review_state","evidence_refs"],
+      "properties": {
+        "argument_id":{"type":"string","pattern":"^(?:ARG|OBJ|REB|FAL|GAP|THS|THY)-[0-9]{4}$"},
+        "node_type":{"enum":["argument_object","proof_gap"]},
+        "argument_type":{"type":"string","minLength":1},
+        "title":{"type":"string","minLength":1},
+        "statement":{"type":"string","minLength":1},
+        "epistemic_status":{"type":"string","minLength":1},
+        "review_state":{"enum":["candidate","reviewed","rejected"]},
+        "evidence_refs":{"type":"array","uniqueItems":true,"items":{"type":"string"}}
+      }
+    },
+    "graphEdge": {
+      "type":"object","additionalProperties":false,
+      "required":["edge_id","inverse_edge_id","source_node_id","edge_type","target_node_id","review_state"],
+      "properties": {
+        "edge_id":{"type":"string","pattern":"^gedge:sha256:[0-9a-f]{64}$"},
+        "inverse_edge_id":{"type":"string","pattern":"^gedge:sha256:[0-9a-f]{64}$"},
+        "source_node_id":{"type":"string","minLength":1},
+        "edge_type":{"type":"string","minLength":1},
+        "target_node_id":{"type":"string","minLength":1},
+        "review_state":{"enum":["candidate","reviewed","rejected"]}
+      }
+    },
+    "paragraph": {
+      "type":"object","additionalProperties":false,
+      "required":["paragraph_id","section_id","order","label","text","does_not_prove","review_state","publication_eligibility","genealogy","genealogy_sha256"],
+      "properties": {
+        "paragraph_id":{"type":"string","pattern":"^WPP-[0-9]{4}$"}, "section_id":{"type":"string","pattern":"^SEC-[0-9]{4}$"}, "order":{"type":"integer","minimum":1},
+        "label":{"enum":["observed","counterevidence","hypothesis","normative","unknown","mixed"]},
+        "text":{"type":"string","minLength":30}, "does_not_prove":{"type":"string","minLength":20},
+        "review_state":{"enum":["candidate","reviewed","rejected"]}, "publication_eligibility":{"enum":["eligible","blocked_review","blocked_evidence"]},
+        "genealogy":{"$ref":"#/$defs/genealogy"}, "genealogy_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"}
+      }
+    },
+    "genealogy": {
+      "type":"object","additionalProperties":false,
+      "required":["thesis_node_ids","argument_ids","claim_ids","graph_path_ids","graph_edge_ids","source_ids","chunk_ids","locators","content_hashes"],
+      "properties": {
+        "thesis_node_ids":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","pattern":"^TMN-[0-9]{4}$"}},
+        "argument_ids":{"type":"array","uniqueItems":true,"items":{"type":"string"}},
+        "claim_ids":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","pattern":"^CLM-[0-9]{4}$"}},
+        "graph_path_ids":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","pattern":"^TEP-[0-9]{4}$"}},
+        "graph_edge_ids":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","pattern":"^gedge:sha256:[0-9a-f]{64}$"}},
+        "source_ids":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"string","pattern":"^SRC-[0-9]{4}$"}},
+        "chunk_ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^chk:sha256:[0-9a-f]{64}$"}},
+        "locators":{"type":"array","minItems":1,"items":{"type":"object"}},
+        "content_hashes":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^[0-9a-f]{64}$"}}
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","required":["schema","freshness_date","sources"],"properties":{"sources":{"type":"array","items":{"type":"object","required":["source_id","title","publisher","source_class","authority_tier","accessed_at","locator","revision_binding","status","limitation"]}}}}
+

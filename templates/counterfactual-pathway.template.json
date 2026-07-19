@@ -1,0 +1,23 @@
+{
+  "schema": "claude-legal-audit.counterfactual-pathway-submission.v1",
+  "submission_status": "candidate",
+  "source_class": "synthetic_or_public_primary_only",
+  "synthetic_only": true,
+  "collection_enabled": false,
+  "network_access": false,
+  "stage_id": "LF-00",
+  "pattern_id": "CF-000",
+  "signal_class": "replace_with_nonidentifying_signal_class",
+  "possible_inference": "Describe a bounded defensive inference without claiming actual collection or intent.",
+  "epistemic_status": "counterfactual_hypothesis",
+  "source_ids": ["SRC-0000"],
+  "source_locators": ["Replace with an exact registered public locator."],
+  "alternative_explanations": ["State at least one benign or non-proprietary explanation."],
+  "what_it_cannot_prove": ["State the missing arrow or evidentiary limitation."],
+  "confidentiality_privilege_privacy_risk": "Explain the distinct data and professional-duty risks.",
+  "countercontrols": ["Name a technical, contractual, governance, or human control."],
+  "applies_when": ["State the bounded conditions under which the inference is relevant."],
+  "does_not_apply_when": ["State the conditions under which reuse would be misleading or unsafe."],
+  "danger_if_misapplied": "Explain how the pathway could become an overclaim or extraction blueprint.",
+  "requires_human_decision": true
+}

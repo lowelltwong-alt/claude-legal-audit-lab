@@ -1,0 +1,42 @@
+name: Cross-industry research proposal
+description: Propose one bounded ontology-exposure research question using public sources.
+title: "[Industry research] "
+labels: ["industry-research", "candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: "This form proposes research; it does not establish capture, training, ownership, misuse, or intent. Intake remains closed until the license gate is resolved."
+  - type: input
+    id: industry_workflow
+    attributes:
+      label: Industry and one bounded workflow
+    validations:
+      required: true
+  - type: textarea
+    id: ontology
+    attributes:
+      label: Rules, exceptions, escalation, rationale, feedback, or outcomes to investigate
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official public sources with dates, revisions, and exact locators
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Falsifiable hypothesis, does-not-prove boundary, and falsifiers
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Source and rights checks
+      options:
+        - label: Every source is public and I have not pasted restricted source text.
+          required: true
+        - label: I have not stated provider intent as fact.
+          required: true
+

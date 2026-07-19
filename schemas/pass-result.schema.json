@@ -118,6 +118,12 @@
                 },
                 "description": {
                   "type": "string"
+                },
+                "locator_authority": {
+                  "enum": [
+                    "pinned_upstream",
+                    "audit_project"
+                  ]
                 }
               }
             }

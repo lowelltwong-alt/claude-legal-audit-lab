@@ -1,0 +1,101 @@
+{
+  "schema": "claude-legal-audit.thesis-map.v1",
+  "revision": "1.0.0",
+  "status": "candidate_blocked",
+  "title": "The Ajax Line",
+  "bounded_thesis": "Law firms should independently preserve control over firm-specific professional interaction graphs and their derivatives because, if external AI systems are permitted to retain and generalize substantially overlapping multi-firm signals, a sector-level capability externality could erode differentiation—even though current registered evidence does not establish that Anthropic or another named provider is doing so.",
+  "causal_scope": {
+    "included": ["Registered primary sources, the pinned anthropics/claude-for-legal revision, byte-exact chunks, bounded claims, objections, falsifiers, proof gaps, and unilateral governance recommendations."],
+    "excluded": ["Iliad and Trojan-War naming material, Move 37 as causal proof, claims about other user repositories, Karp flatten/eat rhetoric, Kirkland architecture assertions, making-a-god language, and present-tense existential-threat assertions."]
+  },
+  "export_gate": {
+    "status": "blocked",
+    "reason": "Seventeen of eighteen claims remain unreviewed, quarantined, or retired; no thesis node is yet export-eligible, and human release decisions remain unresolved.",
+    "required_claim_review_state": "reviewed",
+    "release_authorization_required": true
+  },
+  "nodes": [
+    {
+      "stable_id": "TMN-0001", "order": 1, "role": "asset", "epistemic_status": "mixed",
+      "proposition": "Firm-specific value can reside in context-to-choice-to-rationale-to-outcome relationships, not merely in standalone documents.",
+      "claim_ids": ["CLM-0014"],
+      "evidence_paths": [
+        {"path_id":"TEP-0001","node_ids":["SRC-0047","CLM-0014","ARG-0001","THS-0001"],"edge_types":["EVIDENCES","SUPPORTS","SUPPORTS"],"status":"candidate","limitation":"Organizational-learning research is not direct evidence of technical learnability or legal ownership."},
+        {"path_id":"TEP-0002","node_ids":["SRC-0048","CLM-0014"],"edge_types":["EVIDENCES"],"status":"candidate","limitation":"A 2000 Norwegian law-firm study does not establish current frontier-model effects."}
+      ],
+      "objections": ["OBJ-0003"], "falsifiers": ["FAL-0002"],
+      "does_not_prove": "Ownership, legal protectability, uniqueness, portability, technical learnability, or economic value.",
+      "proof_gaps": ["GAP-0001"], "paper_sections": ["SEC-0001"], "review_state": "candidate", "export_eligibility": "blocked_review"
+    },
+    {
+      "stable_id": "TMN-0002", "order": 2, "role": "observable_design", "epistemic_status": "observed",
+      "proposition": "Pinned legal materials invite users to encode playbooks, fallbacks, deviations, rationales, risk posture, precedent, and house style.",
+      "claim_ids": ["CLM-0001", "CLM-0002", "CLM-0017"],
+      "evidence_paths": [
+        {"path_id":"TEP-0003","node_ids":["SRC-0002","chk:sha256:df2e7459bf10d78ca10b60de738be13e2b81fe0345df0f28c01dfc14a4136227","CLM-0002"],"edge_types":["LOCATES","EVIDENCES"],"status":"reproducible","limitation":"This exact deployment-script path establishes only a negative static-code observation."},
+        {"path_id":"TEP-0004","node_ids":["SRC-0050","CLM-0001","ARG-0001","THS-0001"],"edge_types":["EVIDENCES","SUPPORTS","SUPPORTS"],"status":"candidate","limitation":"A captured product announcement describes intended design, not a deployed tenant runtime."}
+      ],
+      "objections": ["OBJ-0001"], "falsifiers": ["FAL-0001"],
+      "does_not_prove": "Actual tenant configuration, data movement, retention, training, connector execution, or deployed runtime equivalence.",
+      "proof_gaps": ["GAP-0002"], "paper_sections": ["SEC-0001"], "review_state": "candidate", "export_eligibility": "blocked_review"
+    },
+    {
+      "stable_id": "TMN-0003", "order": 3, "role": "conditional_exposure", "epistemic_status": "mixed",
+      "proposition": "Connectors, feedback, support, telemetry, or hosted features could expose professional signals if material leaves firm custody and reuse is permitted.",
+      "claim_ids": ["CLM-0003", "CLM-0004", "CLM-0018"],
+      "evidence_paths": [
+        {"path_id":"TEP-0005","node_ids":["SRC-0009","CLM-0004"],"edge_types":["EVIDENCES"],"status":"candidate","limitation":"Documented retention policy is not verified tenant behavior or a source-to-sink runtime trace."},
+        {"path_id":"TEP-0006","node_ids":["SRC-0005","CLM-0003","THS-0001"],"edge_types":["CONSTRAINS","SUPPORTS"],"status":"candidate","limitation":"Standard commercial terms are counterevidence but do not prove technical compliance or a negotiated agreement."}
+      ],
+      "objections": ["OBJ-0001", "OBJ-0002"], "falsifiers": ["FAL-0001"],
+      "does_not_prove": "That a named provider currently captures, retains, pools, trains on, or generalizes a firm's ontology.",
+      "proof_gaps": ["GAP-0002"], "paper_sections": ["SEC-0001"], "review_state": "candidate", "export_eligibility": "blocked_review"
+    },
+    {
+      "stable_id": "TMN-0004", "order": 4, "role": "sector_externality", "epistemic_status": "hypothesis",
+      "proposition": "If overlapping multi-firm professional traces are legally and technically reusable, resulting capability could reduce the scarcity of firm-specific capability.",
+      "claim_ids": ["CLM-0015"],
+      "evidence_paths": [
+        {"path_id":"TEP-0007","node_ids":["SRC-0046","CLM-0015","ARG-0002","THS-0001"],"edge_types":["EVIDENCES","SUPPORTS","SUPPORTS"],"status":"candidate","limitation":"Competition-policy pathways and organizational theory do not establish actual cross-firm overlap or substitution."}
+      ],
+      "objections": ["OBJ-0002", "OBJ-0005"], "falsifiers": ["FAL-0002"],
+      "does_not_prove": "Present harm, provider intent, data aggregation, antitrust violation, transferability, substitutability, or inevitability.",
+      "proof_gaps": ["GAP-0001", "GAP-0002"], "paper_sections": ["SEC-0001"], "review_state": "candidate", "export_eligibility": "blocked_review"
+    },
+    {
+      "stable_id": "TMN-0005", "order": 5, "role": "ajax_line", "epistemic_status": "normative",
+      "proposition": "Each firm should independently control ontology, derivatives, telemetry, evaluation, portability, and exit while preserving lawful unilateral decision-making.",
+      "claim_ids": ["CLM-0003", "CLM-0015", "CLM-0016"],
+      "evidence_paths": [
+        {"path_id":"TEP-0008","node_ids":["SRC-0049","CLM-0016","THS-0001"],"edge_types":["EVIDENCES","SUPPORTS"],"status":"candidate","limitation":"General FTC guidance requires fact-specific legal analysis and does not bless coordinated vendor action."},
+        {"path_id":"TEP-0009","node_ids":["REB-0001","OBJ-0002","THS-0001"],"edge_types":["REBUTS","CHALLENGES"],"status":"candidate","limitation":"A normative rebuttal is a proposed governance position, not empirical proof of effectiveness."}
+      ],
+      "objections": ["OBJ-0002", "OBJ-0003"], "falsifiers": ["FAL-0001", "FAL-0002"],
+      "does_not_prove": "Guaranteed security, competitive superiority, compliance, provider wrongdoing, or business survival.",
+      "proof_gaps": ["GAP-0001", "GAP-0002"], "paper_sections": ["SEC-0001"], "review_state": "candidate", "export_eligibility": "blocked_review"
+    },
+    {
+      "stable_id": "TMN-0006", "order": 6, "role": "move_37_horizon", "epistemic_status": "hypothesis",
+      "proposition": "Legal-AI research should test unconventional delayed-value strategies, while treating Move 37 as analogy and benchmark motivation only.",
+      "claim_ids": ["CLM-0011", "CLM-0012", "CLM-0013"],
+      "evidence_paths": [
+        {"path_id":"TEP-0010","node_ids":["SRC-0042","CLM-0011","ARG-0004","THS-0001"],"edge_types":["EVIDENCES","SUPPORTS","SUPPORTS"],"status":"candidate","limitation":"A first-party retrospective about a closed game cannot establish an analogous legal capability."}
+      ],
+      "objections": ["OBJ-0004", "OBJ-0005"], "falsifiers": ["FAL-0003"],
+      "does_not_prove": "That an AlphaGo moment exists in law, that Go predicts legal performance, or that private expert traces are necessary.",
+      "proof_gaps": ["GAP-0003"], "paper_sections": ["SEC-0001"], "review_state": "candidate", "export_eligibility": "blocked_review"
+    },
+    {
+      "stable_id": "TMN-0007", "order": 7, "role": "present_boundary", "epistemic_status": "unknown",
+      "proposition": "No evidence currently registered in this project establishes covert pooling of identifiable firm ontologies or default training on ordinary commercial content.",
+      "claim_ids": ["CLM-0003", "CLM-0010", "CLM-0017", "CLM-0018"],
+      "evidence_paths": [
+        {"path_id":"TEP-0011","node_ids":["SRC-0002","CLM-0010","OBJ-0001","THS-0001"],"edge_types":["LEAVES_UNKNOWN","SUPPORTS","CHALLENGES"],"status":"unknown","limitation":"A bounded registry absence cannot establish impossibility or describe evidence outside this project."},
+        {"path_id":"TEP-0012","node_ids":["SRC-0005","CLM-0003"],"edge_types":["CONSTRAINS"],"status":"candidate","limitation":"Contractual counterevidence does not prove zero retention, flawless compliance, or harmlessness."}
+      ],
+      "objections": ["OBJ-0001"], "falsifiers": ["FAL-0001"],
+      "does_not_prove": "Impossibility, flawless compliance, zero processing or retention, absence of negotiated differences, or harmlessness.",
+      "proof_gaps": ["GAP-0002"], "paper_sections": ["SEC-0001"], "review_state": "candidate", "export_eligibility": "blocked_review"
+    }
+  ]
+}

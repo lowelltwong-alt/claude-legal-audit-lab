@@ -1,0 +1,377 @@
+{
+  "pass_id": "SPECIALIZED-COUNTERFACTUAL-001",
+  "scope": [
+    "Counterfactual seven-step provider-leverage mechanism at pinned upstream commit 5ceb305b30b4c82653c9b6642499c12e946ec319",
+    "Strongest benign architecture using the same visible code",
+    "Comparative explanatory-power assessment bounded to static repository evidence"
+  ],
+  "coverage": {
+    "files_reviewed": 19,
+    "lines_reviewed": 5536,
+    "deferred": []
+  },
+  "findings": [
+    {
+      "id": "CF-SPEC-001",
+      "title": "Step 1 — useful legal tooling is designed for deployment with connector access",
+      "claim_status": "Inferred",
+      "evidence": [
+        {
+          "path": "commercial-legal/.mcp.json",
+          "line_start": 2,
+          "line_end": 44,
+          "description": "The plugin declares remote Ironclad, DocuSign, iManage, Slack, and Google Drive connectors capable of searching or reading customer repositories, subject to runtime permissions."
+        },
+        {
+          "path": "scripts/deploy-managed-agent.sh",
+          "line_start": 4,
+          "line_end": 12,
+          "description": "The deployment helper is designed to upload skills and create managed agents through provider API endpoints."
+        }
+      ],
+      "source_to_sink": [
+        "customer legal repository or workflow",
+        "declared remote MCP connector or managed-agent deployment",
+        "legal plugin or hosted agent analysis",
+        "runtime destination and actual grants remain unobserved"
+      ],
+      "proves": "The repository is technically designed to support connector-mediated legal work and hosted-agent deployment, making step 1 coherent as an architecture.",
+      "does_not_prove": "It does not prove that any customer deployed these components, granted a particular permission, transmitted data, or adopted the product because of its value.",
+      "alternative_explanation": "The connectors and deployment tooling exist solely to perform customer-requested work under customer-selected permissions.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Obtain a tenant configuration export, connector authorization grants, deployment receipts, and runtime request logs showing the exact data paths and operators.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "CF-SPEC-002",
+      "title": "Step 2 — onboarding explicitly captures firm-specific playbooks and operating rules",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {
+          "path": "commercial-legal/skills/cold-start-interview/SKILL.md",
+          "line_start": 23,
+          "line_end": 25,
+          "description": "The interview requests signed agreements and an escalation matrix, then extracts actual positions and deltas from stated positions."
+        },
+        {
+          "path": "commercial-legal/skills/cold-start-interview/SKILL.md",
+          "line_start": 367,
+          "line_end": 393,
+          "description": "The workflow asks where executed contracts live, requests templates and signed agreements, and computes the delta described as the real playbook."
+        },
+        {
+          "path": "commercial-legal/CLAUDE.md",
+          "line_start": 66,
+          "line_end": 72,
+          "description": "The practice-profile template encodes side-dependent risk appetite, fallback terms, approval thresholds, liability, indemnity, IP, and termination positions."
+        }
+      ],
+      "source_to_sink": [
+        "attorney answers, escalation matrix, templates, and signed agreements",
+        "cold-start extraction and delta computation",
+        "customer-specific plain-text practice profile",
+        "later skills read the profile"
+      ],
+      "proves": "Static instructions deliberately elicit and encode a customer-specific operating playbook, including risk appetite, exceptions, escalation rules, and local terminology.",
+      "does_not_prove": "It does not prove provider custody, uniqueness, protectability, retention, training, or cross-customer use of the resulting profile.",
+      "alternative_explanation": "Customer-specific configuration is necessary to provide accurate, requested legal assistance and is kept as customer-editable local configuration.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "For deployed behavior, capture the exact profile write location, file ownership and access controls, inference payloads, connector reads, and tenant-level retention configuration.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "CF-SPEC-003",
+      "title": "Step 3 — routine use is designed to record deviations, rationales, outcomes, and accept/reject decisions",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {
+          "path": "commercial-legal/agents/deal-debrief.md",
+          "line_start": 15,
+          "line_end": 20,
+          "description": "The weekly debrief captures why deviations were accepted and feeds a local deviation log read by the playbook monitor."
+        },
+        {
+          "path": "commercial-legal/agents/deal-debrief.md",
+          "line_start": 89,
+          "line_end": 118,
+          "description": "The debrief schema records playbook versus signed position, severity, a categorized basis, optional context, and one-off exclusions."
+        },
+        {
+          "path": "commercial-legal/agents/playbook-monitor.md",
+          "line_start": 50,
+          "line_end": 74,
+          "description": "The monitor groups consistent deviations and their bases, then drafts a proposed playbook revision with supporting data."
+        },
+        {
+          "path": "commercial-legal/agents/playbook-monitor.md",
+          "line_start": 135,
+          "line_end": 166,
+          "description": "An attorney accepts, rejects, edits, or defers each proposal; writes require an exact diff and explicit confirmation."
+        }
+      ],
+      "source_to_sink": [
+        "signed deviation and attorney rationale",
+        "customer-local deviation-log.yaml",
+        "pattern grouping and proposed profile update",
+        "attorney accept, reject, edit, or defer decision",
+        "confirmed customer-local profile write"
+      ],
+      "proves": "The static design creates a high-value customer-specific calibration loop that can encode context, choice, rationale, and outcome relationships.",
+      "does_not_prove": "It does not prove automatic model learning, remote retention, provider derivation, or any use outside the customer's requested workflow.",
+      "alternative_explanation": "The loop is a transparent, local knowledge-management feature with one-off exclusions and human approval, intended to keep customer instructions accurate.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Observe a synthetic deployed debrief end to end and compare local writes, inference payloads, telemetry, hosted logs, deletion behavior, and support access.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "CF-SPEC-004",
+      "title": "Step 4 — provider retention or derivation of structured customer signals is not established",
+      "claim_status": "Unknown",
+      "evidence": [
+        {
+          "path": "commercial-legal/CLAUDE.md",
+          "line_start": 4,
+          "line_end": 18,
+          "description": "Visible instructions place the populated practice profile at a version-independent user configuration path and describe this repository file as a replaceable template."
+        },
+        {
+          "path": "commercial-legal/agents/deal-debrief.md",
+          "line_start": 17,
+          "line_end": 20,
+          "description": "The visible persistence destination for debrief knowledge is a user-path deviation log; the source says nothing about inference-service or telemetry retention."
+        }
+      ],
+      "source_to_sink": [
+        "customer-local profile or deviation log",
+        "model inference or hosted feature may process content",
+        "provider retention or structured derivation is unobserved",
+        "secondary-use destination is unobserved"
+      ],
+      "proves": "The repository identifies customer-local persistence but leaves provider-side inference, telemetry, support, and hosted-agent retention outside source scope.",
+      "does_not_prove": "Local persistence does not prove zero provider processing or retention; conversely, model processing capability does not prove durable provider retention or derivation.",
+      "alternative_explanation": "The provider processes only what is necessary to answer the customer's request under contractual retention controls, while durable operational memory remains customer-controlled.",
+      "confidence": "high",
+      "risk": "unknown",
+      "test_to_confirm": "Obtain feature-specific data-flow documentation, raw synthetic request and response captures, telemetry schemas, retention and deletion logs, support-access audit logs, subprocessors, and controlling contract terms.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "CF-SPEC-005",
+      "title": "Step 5 — cross-organization normalization into a common ontology is not established",
+      "claim_status": "Unknown",
+      "evidence": [
+        {
+          "path": "commercial-legal/skills/cold-start-interview/SKILL.md",
+          "line_start": 389,
+          "line_end": 399,
+          "description": "The observed normalization is within one customer's templates, signed agreements, agreement types, and counterparty sizes, written into that customer's profile."
+        },
+        {
+          "path": "commercial-legal/agents/playbook-monitor.md",
+          "line_start": 50,
+          "line_end": 61,
+          "description": "Pattern grouping is specified over one local deviation log and stops locally when no threshold is crossed."
+        }
+      ],
+      "source_to_sink": [
+        "customer-specific profile and deviation signals",
+        "within-customer normalization is visible",
+        "cross-customer aggregation mechanism is absent from source",
+        "common provider ontology and operator are unobserved"
+      ],
+      "proves": "The code supports within-customer normalization, not cross-organization pooling.",
+      "does_not_prove": "The absence of cross-customer code in this repository does not establish that no separate provider system performs aggregation, but it supplies no affirmative evidence that one does.",
+      "alternative_explanation": "All normalization is tenant-specific adaptation used only to improve that customer's playbook.",
+      "confidence": "high",
+      "risk": "unknown",
+      "test_to_confirm": "Require authenticated architecture diagrams, tenant-isolation tests, aggregation job definitions, feature-store lineage, organization-key handling, access logs, and contractual restrictions on cross-customer derivation.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "CF-SPEC-006",
+      "title": "Step 6 — generalized workflow, evaluation, routing, or vertical-product improvement is not established",
+      "claim_status": "Unknown",
+      "evidence": [
+        {
+          "path": "commercial-legal/agents/playbook-monitor.md",
+          "line_start": 63,
+          "line_end": 74,
+          "description": "The only evidenced improvement target is a specific customer's playbook language, supported by that customer's deviation entries."
+        },
+        {
+          "path": "commercial-legal/agents/playbook-monitor.md",
+          "line_start": 151,
+          "line_end": 166,
+          "description": "The visible update is customer-approved and writes to the customer-specific profile; no generalized evaluation or product pipeline is identified."
+        }
+      ],
+      "source_to_sink": [
+        "customer-specific calibrated signal",
+        "customer-local proposal and approval are visible",
+        "generalized training, evaluation, routing, or product-improvement pipeline is absent from source",
+        "generalized artifact and consumers are unobserved"
+      ],
+      "proves": "The repository demonstrates customer-specific improvement but contains no reproducible source-to-sink path to generalized provider improvement.",
+      "does_not_prove": "It does not establish that generalized improvement is impossible or that all provider systems are represented in this repository.",
+      "alternative_explanation": "The calibration loop improves only the customer's local configuration, while the base service remains governed by separate commercial data-use controls.",
+      "confidence": "high",
+      "risk": "unknown",
+      "test_to_confirm": "Inspect training and evaluation dataset lineage, feedback-routing rules, feature flags, model or workflow release notes tied to customer-derived signals, opt-in records, and independent deletion tests.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "CF-SPEC-007",
+      "title": "Step 7 — architectural dependency is plausible, while adjacent-market displacement is unestablished",
+      "claim_status": "Inferred",
+      "evidence": [
+        {
+          "path": "commercial-legal/CLAUDE.md",
+          "line_start": 4,
+          "line_end": 18,
+          "description": "Every plugin skill is instructed to read a shared version-independent profile, making that configuration operationally central while keeping it in a plain user path."
+        },
+        {
+          "path": "commercial-legal/skills/cold-start-interview/SKILL.md",
+          "line_start": 618,
+          "line_end": 629,
+          "description": "The product explicitly describes a month-of-use calibration effect and proposes policy updates from repeated deviations."
+        },
+        {
+          "path": "scripts/deploy-managed-agent.sh",
+          "line_start": 4,
+          "line_end": 12,
+          "description": "Skills and callable agents can be uploaded and referenced through hosted provider agent APIs, creating a plausible service dependency when that mode is chosen."
+        }
+      ],
+      "source_to_sink": [
+        "accumulated customer configuration and calibration",
+        "many plugin skills depend on the profile",
+        "optional hosted skill and agent deployment",
+        "switching effort is plausible",
+        "bundling, intermediary weakening, and market effects are unobserved"
+      ],
+      "proves": "Accumulated configuration and hosted deployment can plausibly create switching effort or bargaining leverage even without covert secondary use.",
+      "does_not_prove": "It does not prove lock-in is material, data is non-portable, adjacent legal work is bundled, firms are weakened, or the provider intends disintermediation.",
+      "alternative_explanation": "Plain-text local profiles, direct editability, and customer-controlled connectors reduce switching costs and are ordinary product-integration choices.",
+      "confidence": "medium",
+      "risk": "medium",
+      "test_to_confirm": "Measure complete export and re-import fidelity, dependency on provider-only identifiers or APIs, termination and deletion behavior, migration time, contractual exit rights, and comparative performance after migration.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "CF-SPEC-008",
+      "title": "The benign customer-adaptation architecture currently explains the visible code better than covert secondary use",
+      "claim_status": "Inferred",
+      "evidence": [
+        {
+          "path": "commercial-legal/CLAUDE.md",
+          "line_start": 4,
+          "line_end": 18,
+          "description": "Durable practice configuration is described as customer-local, shared across plugins, editable, and separate from replaceable plugin templates."
+        },
+        {
+          "path": "commercial-legal/agents/playbook-monitor.md",
+          "line_start": 135,
+          "line_end": 166,
+          "description": "Policy changes require attorney choice, an exact diff, and explicit confirmation; reject and defer do not modify the profile."
+        },
+        {
+          "path": "managed-agent-cookbooks/diligence-grid/subagents/doc-reader.yaml",
+          "line_start": 5,
+          "line_end": 35,
+          "description": "The document-reader leaf is declared read-only, treats document bytes as data, limits outbound access to configured VDR MCPs, and enables only specified connectors."
+        },
+        {
+          "path": "managed-agent-cookbooks/reg-monitor/agent.yaml",
+          "line_start": 19,
+          "line_end": 38,
+          "description": "The orchestrator is limited to local read tools, with MCP and web access delegated to bounded leaves and only one writer leaf."
+        }
+      ],
+      "source_to_sink": [
+        "customer supplies firm-specific material for requested work",
+        "bounded skills and connectors process it",
+        "customer-local profiles and logs preserve reusable memory",
+        "human gates control policy mutation",
+        "no visible cross-customer or generalized-reuse sink"
+      ],
+      "proves": "H0 explains every confirmed static component without requiring the missing retention, pooling, and generalized-reuse mechanisms. H1 remains plausible through dependency and product insight. H2 has lower explanatory support because its decisive steps 4 through 6 are unknown, not observed.",
+      "does_not_prove": "This comparison does not validate runtime enforcement, contract compliance, zero provider retention, or the impossibility of undisclosed systems outside the repository.",
+      "alternative_explanation": "A hostile architecture could reside entirely outside the public repository, but that possibility has no greater evidentiary weight without runtime, contractual, or source-to-sink evidence.",
+      "confidence": "high",
+      "risk": "unknown",
+      "test_to_confirm": "Run synthetic canary tests across inference, connectors, feedback, support, telemetry, and hosted agents; reconcile observations with tenant-specific contracts, deletion proofs, and independent technical audit evidence.",
+      "hypotheses": ["H0", "H1", "H2"]
+    }
+  ],
+  "new_patterns": [
+    {
+      "id": "CF-PATTERN-001",
+      "name": "Provider-retained structured derivative",
+      "logic": "Detect a complete path from customer-specific legal signal through provider-controlled durable storage to a structured derivative, with retention authority and tenant boundary identified.",
+      "search_terms": ["retention", "derived data", "feature store", "telemetry schema", "support access", "deletion log"],
+      "false_positive_risk": "Local customer persistence, transient inference processing, or aggregate service metrics can be mistaken for provider-retained customer ontology."
+    },
+    {
+      "id": "CF-PATTERN-002",
+      "name": "Cross-organization normalization",
+      "logic": "Require evidence that customer-originated signals cross tenant boundaries into a common taxonomy, benchmark, router, workflow, or product artifact.",
+      "search_terms": ["cross-tenant", "cross-customer", "global ontology", "shared evaluation", "organization normalization", "aggregate feedback"],
+      "false_positive_risk": "Common static schemas and generic legal taxonomies do not establish pooling of customer-derived signals."
+    },
+    {
+      "id": "CF-PATTERN-003",
+      "name": "Portable-exit fidelity",
+      "logic": "Measure whether accumulated profile, rationale, proposal, and outcome genealogy can be exported and reproduced outside provider-specific APIs without material loss.",
+      "search_terms": ["export", "migration", "portability", "delete", "termination", "provider id", "skill_id", "agent id"],
+      "false_positive_risk": "Use of a hosted API or ordinary integration effort is not by itself material lock-in."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "path": "commercial-legal/CLAUDE.md",
+      "description": "The populated practice profile is designated for a user-controlled, version-independent plain-text configuration path; the repository copy is only a replaceable template.",
+      "effect": "Supports H0 and constrains any claim that this repository visibly stores the durable firm profile in provider-controlled shared infrastructure."
+    },
+    {
+      "path": "commercial-legal/agents/playbook-monitor.md",
+      "description": "A proposed policy change is not written until an attorney reviews an exact diff and explicitly confirms; rejected and deferred proposals do not alter the profile.",
+      "effect": "Contradicts an automatic-learning characterization of the visible playbook update loop and supports a customer-governed adaptation explanation."
+    },
+    {
+      "path": "managed-agent-cookbooks/diligence-grid/subagents/doc-reader.yaml",
+      "description": "The untrusted-document reader is declared read-only, schema-bound, and limited to configured VDR connectors, with unused connectors disabled.",
+      "effect": "Provides affirmative design counterevidence to unrestricted tool egress, while leaving deployed enforcement unknown."
+    },
+    {
+      "path": "managed-agent-cookbooks/reg-monitor/agent.yaml",
+      "description": "The orchestrator is scoped to local read tools; network access is isolated to leaves and only a designated leaf has write authority.",
+      "effect": "Supports least-authority and separation-of-duties as a benign architectural explanation."
+    }
+  ],
+  "unknowns": [
+    {
+      "question": "What exact customer content, derivatives, and metadata leave local custody during inference, connector use, feedback, support, telemetry, and hosted-agent operation?",
+      "why_source_cannot_answer": "The public repository contains static prompts, manifests, and deployment helpers, not the proprietary runtime, tenant grants, network captures, or production logs.",
+      "needed_evidence": "Synthetic request and network captures, connector audit logs, telemetry schemas and samples, hosted-agent traces, data-flow diagrams, and tenant configuration exports."
+    },
+    {
+      "question": "What is retained, for how long, under whose control, and with what deletion and support-access guarantees?",
+      "why_source_cannot_answer": "Visible local paths describe customer persistence but do not specify provider-side feature retention or contractual overrides.",
+      "needed_evidence": "Feature-specific contract terms, privacy and retention schedules, subprocessors, support-access logs, deletion receipts, backups policy, and independent audit results."
+    },
+    {
+      "question": "Are any firm-specific signals normalized across organizations or used in generalized training, evaluation, routing, workflow, or vertical-product development?",
+      "why_source_cannot_answer": "No cross-customer aggregation, dataset lineage, or generalized-improvement sink is present in the reviewed source.",
+      "needed_evidence": "Dataset and feature-store lineage, aggregation jobs, tenant-key controls, training and evaluation manifests, feedback-routing records, opt-in records, and release genealogy."
+    },
+    {
+      "question": "How portable is the accumulated firm profile and its decision genealogy at exit?",
+      "why_source_cannot_answer": "Plain-text profile storage favors portability, but hosted skill IDs, agent IDs, connector state, logs, and full migration fidelity are not tested here.",
+      "needed_evidence": "A reproducible export, deletion, re-import, and comparative-function test covering profiles, deviation logs, proposals, rationales, outcomes, connector state, and hosted agents."
+    }
+  ]
+}

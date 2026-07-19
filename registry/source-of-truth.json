@@ -1,0 +1,88 @@
+{
+  "schema": "claude-legal-audit.source-of-truth.v1",
+  "repository": "claude-legal-audit-lab",
+  "precedence_order": [
+    "AGENTS.md",
+    "UPSTREAM.lock.json",
+    "registry/project-roadmap.json",
+    "registry/release-readiness.json",
+    "registry/source-registry.json",
+    "registry/repository-history-capture.json",
+    "schemas/",
+    "registry/chunk-policy.json",
+    "registry/claim-registry.json",
+    "registry/edge-type-library.json",
+    "registry/argument-mesh.json",
+    "registry/thesis-map.json",
+    "registry/lineage-policy.json",
+    "registry/industry-research-taxonomy.json",
+    "registry/research-radar-watchlist.json",
+    "registry/law-firm-value-chain.json",
+    "registry/counterfactual-capture-patterns.json",
+    "reviewed analysis",
+    "generated candidate evidence",
+    "legacy candidate material"
+  ],
+  "rules": [
+    "The pinned upstream bytes control claims about public repository behavior.",
+    "A source record identifies evidence but does not prove a derived claim without a locator and claim record.",
+    "A claim status never changes the underlying source bytes.",
+    "Inference-time processing, retention, training, telemetry, and strategic intent are separate propositions.",
+    "Generated graphs, chunks, matches, and reports are candidate evidence only.",
+    "Closed-system behavior remains Unknown until runtime, contractual, or other primary evidence resolves it.",
+    "Counterfactual exposure patterns describe possible inference value and controls; they do not establish actual collection, retention, training, secondary use, or intent.",
+    "Full SHA-256 chunk identities bind canonical preimages and immutable Git-blob spans; they do not promote semantic truth.",
+    "The typed evidence graph is a deterministic projection. Similarity, connectivity, and centrality never promote claims or edges.",
+    "Both .private/ and private/ are excluded custody paths and may never enter public builders or generated release artifacts.",
+    "Iliad and Trojan-War material is outside the causal evidence chain; Move 37 is analogy and benchmark motivation only."
+  ],
+  "authoritative_files": {
+    "method": "AGENTS.md",
+    "upstream_identity": "UPSTREAM.lock.json",
+    "source_metadata": "registry/source-registry.json",
+    "repository_history_capture": "registry/repository-history-capture.json",
+    "claim_contract": "registry/claim-registry.json",
+    "chunk_contract": "registry/chunk-policy.json",
+    "edge_type_contract": "registry/edge-type-library.json",
+    "thesis_map": "registry/thesis-map.json",
+    "lineage_declarations": "registry/lineage-policy.json",
+    "industry_research_method": "docs/CROSS_INDUSTRY_ONTOLOGY_RISK.md",
+    "industry_taxonomy": "registry/industry-research-taxonomy.json",
+    "radar_policy": "docs/RESEARCH_RADAR.md",
+    "radar_watchlist": "registry/research-radar-watchlist.json",
+    "counterfactual_method": "docs/FRONTIER_LAB_ONTOLOGY_CAPTURE_COUNTERFACTUAL.md",
+    "law_firm_value_chain": "registry/law-firm-value-chain.json",
+    "counterfactual_patterns": "registry/counterfactual-capture-patterns.json",
+    "argument_method": "docs/ARGUMENT_MESH_STANDARD.md",
+    "argument_mesh": "registry/argument-mesh.json",
+    "contribution_policy": "CONTRIBUTING.md",
+    "licensing_decision": "docs/LICENSING_OPTIONS.md",
+    "navigation": "MACHINE_NAVIGATION_MANIFEST.json"
+    ,"project_execution": "registry/project-roadmap.json"
+    ,"public_release_readiness": "registry/release-readiness.json"
+  },
+  "generated_candidate_files": {
+    "lineage_projection": "registry/derivation-registry.json",
+    "counterfactual_projection": "registry/counterfactual-exposure-graph.json",
+    "chunk_registry": "registry/chunk-registry.json",
+    "chunk_id_migration": "registry/chunk-id-migration.json",
+    "evidence_graph": "registry/evidence-graph.json",
+    "white_paper_export": "registry/white-paper-export.json",
+    "white_paper_candidate": "public/generated-release-artifacts/candidate/white-paper.md",
+    "mini_paper_plan": "registry/mini-paper-plan.json",
+    "mini_paper_related_work": "registry/mini-paper-related-work.json",
+    "mini_paper_method": "docs/MINI_WHITE_PAPER_ENGINE.md",
+    "read_only_explorer": "public/generated-release-artifacts/candidate/index.html"
+    ,"mini_paper_outputs": "public/generated-release-artifacts/candidate/mini-papers/"
+  },
+  "non_authoritative_globs": [
+    "results/**",
+    "patterns/generated-patterns.json",
+    "registry/counterfactual-exposure-graph.json",
+    "registry/chunk-registry.json",
+    "registry/chunk-id-migration.json",
+    "registry/evidence-graph.json",
+    "registry/white-paper-export.json",
+    "public/generated-release-artifacts/candidate/**"
+  ]
+}

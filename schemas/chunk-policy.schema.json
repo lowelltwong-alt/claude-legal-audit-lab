@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/chunk-policy.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "format_version",
+    "authority_class",
+    "output",
+    "migration_output",
+    "legacy_registry",
+    "chunk_kinds",
+    "activated_chunk_kinds",
+    "identity_contract",
+    "parent_identity_contract",
+    "edge_identity_contract",
+    "static_inputs",
+    "pr_inputs",
+    "web_inputs",
+    "edge_types",
+    "required_edge_pairs",
+    "privacy",
+    "prohibitions",
+    "limitation"
+  ],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.chunk-policy.v2"},
+    "format_version": {"const": "2.0.0"},
+    "authority_class": {"const": "governing_method"},
+    "output": {"const": "registry/chunk-registry.json"},
+    "migration_output": {"const": "registry/chunk-id-migration.json"},
+    "legacy_registry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema", "format_version", "policy_sha256", "sha256"],
+      "properties": {
+        "schema": {"const": "claude-legal-audit.chunk-registry.v1"},
+        "format_version": {"const": "1.0.0"},
+        "policy_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "chunk_kinds": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {"enum": ["static_file_span", "pr_file_record", "web_capture_span"]}
+    },
+    "activated_chunk_kinds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["static_file_span", "pr_file_record", "web_capture_span"]}
+    },
+    "identity_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "prefix", "canonicalization", "fields"],
+      "properties": {
+        "algorithm": {"const": "sha256"},
+        "prefix": {"const": "chk:sha256:"},
+        "canonicalization": {"type": "string", "minLength": 20},
+        "fields": {
+          "const": ["chunk_kind", "source_id", "source_revision", "parent_id", "locator", "content_sha256", "policy_revision"]
+        }
+      }
+    },
+    "parent_identity_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "prefix", "fields"],
+      "properties": {
+        "algorithm": {"const": "sha256"},
+        "prefix": {"const": "parent:sha256:"},
+        "fields": {"const": ["kind", "repository", "source_id", "source_revision", "path", "git_blob_oid", "content_sha256"]}
+      }
+    },
+    "edge_identity_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "prefix", "fields"],
+      "properties": {
+        "algorithm": {"const": "sha256"},
+        "prefix": {"const": "edge:sha256:"},
+        "fields": {"const": ["edge_type", "source_chunk_id", "target_chunk_id", "policy_revision"]}
+      }
+    },
+    "static_inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "pinned_commit_file", "source_id", "encoding", "byte_source", "lines_per_chunk", "partition"],
+      "properties": {
+        "repository": {"const": "upstream/claude-for-legal"},
+        "pinned_commit_file": {"const": "UPSTREAM.lock.json"},
+        "source_id": {"type": "string", "pattern": "^SRC-[0-9]{4}$"},
+        "encoding": {"const": "utf-8"},
+        "byte_source": {"const": "git blob objects at the pinned commit"},
+        "lines_per_chunk": {"type": "integer", "minimum": 1, "maximum": 10000},
+        "partition": {"type": "string", "minLength": 40}
+      }
+    },
+    "pr_inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["linkage", "source_id", "require_status", "require_complete_files"],
+      "properties": {
+        "linkage": {"const": "results/pr-commit-diff-linkage.json"},
+        "source_id": {"type": "string", "pattern": "^SRC-[0-9]{4}$"},
+        "require_status": {"const": "linked_verified_capture"},
+        "require_complete_files": {"const": true}
+      }
+    },
+    "web_inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_registry", "public_output"],
+      "properties": {
+        "source_registry": {"const": "registry/source-registry.json"},
+        "public_output": {"type": "string", "minLength": 40}
+      }
+    },
+    "edge_types": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {"enum": ["NEXT_IN_PARENT", "PREVIOUS_IN_PARENT", "MODIFIES_PATH", "MODIFIED_BY", "DERIVED_FROM", "HAS_DERIVATIVE"]}
+    },
+    "required_edge_pairs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["static_file_span", "pr_file_record", "web_capture_span"],
+      "properties": {
+        "static_file_span": {"const": ["NEXT_IN_PARENT", "PREVIOUS_IN_PARENT"]},
+        "pr_file_record": {"const": ["MODIFIES_PATH", "MODIFIED_BY"]},
+        "web_capture_span": {"const": ["DERIVED_FROM", "HAS_DERIVATIVE"]}
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["forbidden_path_prefixes", "forbidden_embedded_fields"],
+      "properties": {
+        "forbidden_path_prefixes": {"const": [".private/", "private/"]},
+        "forbidden_embedded_fields": {"const": ["source_text", "raw_text", "payload", "body", "content"]}
+      }
+    },
+    "prohibitions": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 10}},
+    "limitation": {"type": "string", "minLength": 100}
+  }
+}

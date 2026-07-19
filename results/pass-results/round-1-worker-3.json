@@ -1,0 +1,215 @@
+{
+  "pass_id": "round-1-worker-3",
+  "scope": [
+    "Pinned upstream/claude-for-legal files assigned by results/worklists/worker-3.csv",
+    "52 files; no network, private paths, other repositories, or runtime assertions"
+  ],
+  "coverage": {
+    "files_reviewed": 52,
+    "lines_reviewed": 8228,
+    "deferred": []
+  },
+  "findings": [
+    {
+      "id": "R1W3-001",
+      "title": "AI-governance setup encodes a detailed institution-specific operating ontology",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "ai-governance-legal/skills/cold-start-interview/SKILL.md", "line_start": 374, "line_end": 425, "description": "The interview solicits and extracts AI policies, prior impact assessments, vendor agreements, model inventories, allowlists, commitments, data-use terms, liability positions, and auditability commitments."},
+        {"path": "ai-governance-legal/skills/cold-start-interview/SKILL.md", "line_start": 427, "line_end": 435, "description": "The interview records locations of completed reviews and the operative policy so a monitor can crawl them for drift."},
+        {"path": "ai-governance-legal/skills/cold-start-interview/SKILL.md", "line_start": 478, "line_end": 587, "description": "The generated profile contains approved/conditional/prohibited use cases, red lines, governance tiers, assessment house style, vendor standards and fallbacks, policy commitments, escalation roles, and seed-document locations."},
+        {"path": "ai-governance-legal/skills/cold-start-interview/SKILL.md", "line_start": 659, "line_end": 670, "description": "The profile is explicitly designed to learn from use, including preference changes, escalation thresholds, and policy-drift proposals."}
+      ],
+      "source_to_sink": [
+        "Source: user interview answers and user-supplied governance documents",
+        "Read authority: cold-start skill reads supplied documents and answers",
+        "Transformation: extracts policy positions, fallbacks, prohibitions, thresholds, roles, and house style",
+        "Sink: ~/.claude/plugins/config/claude-for-legal/ai-governance-legal/CLAUDE.md plus recorded document locations",
+        "Retention evidence: local persistent profile is expressly described",
+        "Secondary-use evidence: none for provider training or cross-customer reuse",
+        "Control/consent: user supplies or approves inputs and can edit the plain-text profile"
+      ],
+      "proves": "The public design intentionally converts governance documents and interviews into a reusable, firm-specific decision and escalation profile.",
+      "does_not_prove": "It does not prove that Anthropic retains, trains on, pools, or productizes this profile across customers; the observed sink is a user configuration path.",
+      "alternative_explanation": "This is ordinary customer-controlled configuration that improves requested inference while preserving institutional consistency.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Trace runtime reads and writes for the configuration path, inspect tenant storage controls and contracts, and test whether profile-derived canaries appear outside the originating tenant.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W3-002",
+      "title": "Deal debrief captures accepted deviations and attorney rationales into a reusable local feedback loop",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "commercial-legal/agents/deal-debrief.md", "line_start": 15, "line_end": 20, "description": "The weekly agent preserves why deviations were accepted and feeds the resulting log to a playbook-monitor."},
+        {"path": "commercial-legal/agents/deal-debrief.md", "line_start": 27, "line_end": 59, "description": "It reads the full practice profile, retrieves signed agreements, and compares key clauses with playbook standards, fallbacks, and never-accept positions."},
+        {"path": "commercial-legal/agents/deal-debrief.md", "line_start": 83, "line_end": 118, "description": "It asks the attorney to classify the basis for each deviation and collect optional deal-specific and one-off context."},
+        {"path": "commercial-legal/agents/deal-debrief.md", "line_start": 120, "line_end": 156, "description": "It persists standard and signed positions, severity, rationale category, free-text context, and exclusions in deviation-log.yaml."}
+      ],
+      "source_to_sink": [
+        "Source: signed agreements, firm playbook, and attorney explanations",
+        "Read authority: local Read plus wildcard MCP search/fetch/query/list tools",
+        "Transformation: deviation classification and rationale elicitation",
+        "Sink: local commercial-legal/deviation-log.yaml",
+        "Retention evidence: durable local YAML entries with duplicate checks",
+        "Secondary-use evidence: downstream local playbook-monitor pattern proposals; no provider-level reuse evidence",
+        "Control/consent: attorney chooses context entries, flags one-offs, and playbook modification requires approval"
+      ],
+      "proves": "The design captures context-choice-rationale relationships and intentionally makes non-one-off patterns available for proposed playbook evolution.",
+      "does_not_prove": "It does not establish where model inference is processed, how prompts are logged, whether a connector operator retains content, or whether any provider trains on the data.",
+      "alternative_explanation": "The feedback loop is an explicit local knowledge-management feature controlled by the firm and designed to reduce institutional memory loss.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Run a canary agreement through a controlled tenant; capture MCP, model, filesystem, and network traces; verify one-off exclusion and approval behavior; obtain retention and training terms for every operator.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W3-003",
+      "title": "Legal plugins declare multiple remote MCP trust boundaries without pinning endpoint-level scopes in these manifests",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "commercial-legal/.mcp.json", "line_start": 2, "line_end": 44, "description": "Commercial Legal declares remote Ironclad, DocuSign, iManage, TopCounsel, Definely, Slack, and Google Drive MCP endpoints."},
+        {"path": "commercial-legal/agents/deal-debrief.md", "line_start": 9, "line_end": 10, "description": "The agent requests wildcard MCP search, fetch, query, and list tool families."},
+        {"path": "ip-legal/.mcp.json", "line_start": 2, "line_end": 32, "description": "IP Legal declares remote patent/legal research, Slack, and Google Drive MCP endpoints."}
+      ],
+      "source_to_sink": [
+        "Source: contract repositories, messages, documents, and legal-research systems",
+        "Read authority: authenticated remote MCP tools, including wildcard tool names for deal-debrief",
+        "Transformation: tool results become model-visible matter data and workflow inputs",
+        "Transmission: HTTPS MCP endpoints listed in plugin manifests",
+        "Destination/operator: the named third-party MCP services",
+        "Retention evidence: not specified in these files",
+        "Secondary-use evidence: not specified in these files",
+        "Control/consent: authentication and permission descriptions exist, but concrete scopes and tenant policies are outside these manifests"
+      ],
+      "proves": "Installing and authorizing these connectors can create remote, multi-operator data paths, and wildcard tool declarations broaden the callable interface exposed to the agent.",
+      "does_not_prove": "A declaration does not prove successful authorization, any particular invocation, overbroad server-side permissions, retention, exfiltration, or training.",
+      "alternative_explanation": "The connectors are user-authorized productivity integrations; server-enforced permissions may be narrower than the manifest surface.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Enumerate tools and OAuth scopes after authorization, test least-privilege accounts, capture requests and responses, and review each MCP operator's retention, subprocessors, logs, and secondary-use terms.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W3-004",
+      "title": "Managed-agent deployment uploads skill packages and resolved agent instructions to Anthropic APIs",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "scripts/deploy-managed-agent.sh", "line_start": 4, "line_end": 12, "description": "The script states that it resolves system files, uploads skills, creates subagents, and posts managed-agent definitions."},
+        {"path": "scripts/deploy-managed-agent.sh", "line_start": 73, "line_end": 104, "description": "Skill directories are zipped and uploaded to /v1/skills with the Anthropic API key."},
+        {"path": "scripts/deploy-managed-agent.sh", "line_start": 107, "line_end": 174, "description": "Plugin skills, system files, and callable-agent manifests are resolved into API payloads."},
+        {"path": "scripts/deploy-managed-agent.sh", "line_start": 177, "line_end": 190, "description": "Non-dry runs POST the resolved JSON to /v1/agents and retain returned agent identifiers."}
+      ],
+      "source_to_sink": [
+        "Source: repository skill directories, system prompts, and managed-agent manifests",
+        "Read authority: local deployment script",
+        "Transformation: zip skills and inline/resolve manifests",
+        "Transmission: authenticated multipart /v1/skills and JSON /v1/agents requests",
+        "Destination/operator: configured ANTHROPIC_API_BASE, default api.anthropic.com",
+        "Retention evidence: remote skill and agent IDs imply service-side persistence, duration not stated",
+        "Secondary-use evidence: none",
+        "Control/consent: an operator runs the deployment script with an API key; --dry-run avoids upload"
+      ],
+      "proves": "The code contains an explicit remote upload path for reusable prompts, skills, and agent definitions.",
+      "does_not_prove": "The assigned files do not show customer matter data being uploaded during deployment, nor do they establish training, cross-customer sharing, retention duration, or production use.",
+      "alternative_explanation": "Remote persistence is required to deploy the managed agents requested by the customer and is distinct from model training.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Inspect resolved dry-run payloads, compare them with captured API traffic, query deletion/version behavior, and obtain managed-agent and custom-skill retention and training terms.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W3-005",
+      "title": "Reference handoff orchestrator validates targets and intents independently but does not bind allowed intents to compatible targets",
+      "claim_status": "Inferred",
+      "evidence": [
+        {"path": "scripts/orchestrate.py", "line_start": 51, "line_end": 53, "description": "The target allowlist contains five legal workflow agents."},
+        {"path": "scripts/orchestrate.py", "line_start": 65, "line_end": 103, "description": "A separate global intent schema includes Slack delivery, launch review, deal debrief, and playbook monitor intents."},
+        {"path": "scripts/orchestrate.py", "line_start": 266, "line_end": 299, "description": "Extraction checks target membership, then validates the payload and intent parameters, but performs no target-to-intent compatibility check before rendering steering input."},
+        {"path": "scripts/orchestrate.py", "line_start": 320, "line_end": 342, "description": "Approved steering input is sent to the agent ID selected solely by target_slug."}
+      ],
+      "source_to_sink": [
+        "Source: handoff_request JSON embedded in streamed agent text",
+        "Read authority: local event-loop parser",
+        "Transformation: independent allowlist and schema validation, template rendering",
+        "Sink: steer call for the target agent selected by target_slug",
+        "Control gap: no declared matrix binds each intent to a compatible target",
+        "Secondary-use relevance: none; this is an integrity/routing issue"
+      ],
+      "proves": "The reference implementation lacks a target-intent compatibility invariant in the reviewed source.",
+      "does_not_prove": "It does not prove exploitation, that deployed agents accept mismatched steering, or that a production orchestrator uses this reference script.",
+      "alternative_explanation": "Target agents may reject incompatible prompts through their own system instructions, and the file is expressly labeled a reference implementation.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Add adversarial unit tests pairing every valid intent with every allowlisted target; inspect deployed agent behavior; define and enforce a target-to-intent allowlist before steering.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "R1W3-006",
+      "title": "The source includes material isolation, injection, approval, and provenance controls that weigh against an unconstrained-capture interpretation",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "ip-legal/CLAUDE.md", "line_start": 346, "line_end": 353, "description": "Retrieved MCP, web, and uploaded content is explicitly treated as data rather than instructions and may not override guardrails or reveal profiles and matter files."},
+        {"path": "ip-legal/CLAUDE.md", "line_start": 378, "line_end": 390, "description": "Matter workspaces default off for in-house users and cross-matter context defaults off; matter A must not read matter B when disabled."},
+        {"path": "managed-agent-cookbooks/diligence-grid/subagents/grid-writer.yaml", "line_start": 55, "line_end": 77, "description": "The write-only leaf receives structured data rather than raw documents and applies CSV injection defenses before emitting files."},
+        {"path": "regulatory-legal/skills/gap-surfacer/SKILL.md", "line_start": 16, "line_end": 25, "description": "Every Slack send requires preview and explicit confirmation, including scheduled and batch messages."}
+      ],
+      "source_to_sink": null,
+      "proves": "The public design contains explicit controls for cross-matter isolation, prompt injection, writer separation, output injection, and consequential external actions.",
+      "does_not_prove": "Prompt-level controls are not deterministic runtime enforcement, and the source does not prove correct deployment, connector enforcement, or absence of logging and secondary use.",
+      "alternative_explanation": "These are reference instructions whose actual enforcement depends on the closed model runtime and deployment environment.",
+      "confidence": "high",
+      "risk": "low",
+      "test_to_confirm": "Run adversarial cross-matter, embedded-instruction, formula-injection, and unauthorized-send tests with filesystem and network observation.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1W3-007",
+      "title": "Assigned source does not establish covert provider training or cross-customer learning",
+      "claim_status": "Unknown",
+      "evidence": [
+        {"path": "ai-governance-legal/skills/aia-generation/SKILL.md", "line_start": 133, "line_end": 140, "description": "The skill treats company-specific training and third-party perimeter crossing as questions to investigate, not facts asserted about Claude itself."},
+        {"path": "scripts/deploy-managed-agent.sh", "line_start": 73, "line_end": 104, "description": "The deployment path proves skill upload but contains no training or cross-customer reuse step."},
+        {"path": "commercial-legal/agents/deal-debrief.md", "line_start": 120, "line_end": 156, "description": "The observed rationale sink is a local YAML file; no remote retention or secondary-use mechanism is described."}
+      ],
+      "source_to_sink": [
+        "Potential sources: prompts, documents, profiles, deviations, and attorney rationales",
+        "Inference path: model and authorized connectors may process these inputs",
+        "Retention evidence: absent for the model/provider in assigned source",
+        "Secondary-use evidence: absent",
+        "Cross-customer learning evidence: absent",
+        "Conclusion: source-to-sink chain stops before H2"
+      ],
+      "proves": "The reviewed slice provides no complete source-to-secondary-use chain supporting H2.",
+      "does_not_prove": "Absence in this public repository does not prove zero retention, zero training, correct contractual performance, or absence in closed systems.",
+      "alternative_explanation": "Commercial contracts and hosted runtime controls, not this repository, govern retention and training behavior.",
+      "confidence": "high",
+      "risk": "unknown",
+      "test_to_confirm": "Obtain authenticated contracts, data-processing terms, admin settings, audit exports, support/feedback policies, network traces, deletion tests, and cross-tenant canary evaluations.",
+      "hypotheses": ["H2"]
+    }
+  ],
+  "new_patterns": [
+    {"id": "R1W3-PAT-001", "name": "Decision ontology extraction", "logic": "Find workflows that jointly capture standards, fallbacks, prohibitions, exceptions, rationales, outcomes, and later update approval.", "search_terms": ["acceptable fallback", "never accept", "basis behind", "rationale", "exclude_from_patterns", "propose playbook updates"], "false_positive_risk": "Individual terms may be ordinary templates; require a connected capture-to-reuse chain."},
+    {"id": "R1W3-PAT-002", "name": "Profile-to-crawl feedback loop", "logic": "Find configuration that records output locations and later agents that crawl those locations to propose policy changes.", "search_terms": ["Where do you save", "crawls this folder", "policy drift", "practice profile learns", "watches for drift"], "false_positive_risk": "A crawl may remain local and user-controlled; do not infer provider retention."},
+    {"id": "R1W3-PAT-003", "name": "Remote reusable artifact upload", "logic": "Identify local prompt/skill/agent artifacts transformed into authenticated remote API payloads and persisted under remote IDs.", "search_terms": ["/v1/skills", "/v1/agents", "skill_id", "callable_agents", "inline_system", "POST"], "false_positive_risk": "Deployment upload is not customer-content training and may be explicitly requested."},
+    {"id": "R1W3-PAT-004", "name": "Target-intent binding gap", "logic": "Compare target allowlists with intent allowlists and flag routers that validate them separately without a compatibility relation.", "search_terms": ["ALLOWED_TARGETS", "HANDOFF_INTENTS", "target_agent", "intent", "sessions.steer"], "false_positive_risk": "Downstream agents may enforce compatibility; confirm with runtime tests."},
+    {"id": "R1W3-PAT-005", "name": "Privilege-sensitive local derivative", "logic": "Locate persistent derivatives of privileged or sensitive source material and their distribution/sanitization gates.", "search_terms": ["privilege_posture", "deviation-log.yaml", "investigation memo", "audience-specific summary", "matter workspace", "Cross-matter context"], "false_positive_risk": "Persistence may be required, locally controlled, and appropriately segregated."}
+  ],
+  "negative_evidence": [
+    {"path": "commercial-legal/agents/deal-debrief.md", "description": "One-off deals are excluded from pattern analysis, duplicate entries are blocked, and playbook edits require explicit attorney approval.", "effect": "Supports bounded, user-governed local learning and weighs against an autonomous universal-learning interpretation."},
+    {"path": "ip-legal/CLAUDE.md", "description": "Cross-matter context defaults off and retrieved content cannot override instructions or expose profiles and matter files.", "effect": "Affirmative design evidence for contextual isolation and prompt-injection resistance, subject to runtime validation."},
+    {"path": "managed-agent-cookbooks/docket-watcher/README.md", "description": "Untrusted filings are isolated to a read-only leaf, writers see structured JSON, and computed deadlines require attorney verification.", "effect": "Shows deliberate least-authority and human-review architecture rather than unconstrained automation."},
+    {"path": "managed-agent-cookbooks/reg-monitor/README.md", "description": "Feed content is isolated, writer and reader roles are separated, and output is expressly a screened lead rather than a legal conclusion.", "effect": "Weighs against claims that the source authorizes autonomous legal decisions."},
+    {"path": "regulatory-legal/skills/gap-surfacer/SKILL.md", "description": "Slack notifications require a per-send preview and explicit confirmation; unverified rules cannot be classified as overdue.", "effect": "Shows action and epistemic gates that reduce irreversible-message and false-compliance risks."},
+    {"path": "scripts/orchestrate.py", "description": "Handoff free text is not used as the steering template; targets and structured parameters are allowlisted and every accepted/rejected handoff is audited.", "effect": "Substantially narrows prompt-injection paths despite the separate target-intent compatibility gap."}
+  ],
+  "unknowns": [
+    {"question": "Does Anthropic retain prompts, outputs, custom skills, agent traces, or profile-derived signals, and for how long?", "why_source_cannot_answer": "Retention and hosted telemetry infrastructure are outside the public repository.", "needed_evidence": "Authenticated product terms, DPA, tenant settings, audit exports, deletion results, and provider documentation tied to the tested service tier."},
+    {"question": "Are customer-specific legal workflow signals used for generalized model or product improvement or across customers?", "why_source_cannot_answer": "No secondary-use or cross-customer learning mechanism appears in the assigned code.", "needed_evidence": "Contractual reuse clauses, training pipeline documentation, data lineage, opt-in records, and controlled cross-tenant canary testing."},
+    {"question": "What exact content reaches the model and each MCP operator during legal workflows?", "why_source_cannot_answer": "The prompts describe intended tool use, but connector implementations and hosted runtime traces are closed.", "needed_evidence": "Network capture, MCP audit logs, tool-call traces, OAuth scopes, redacted payload samples, and operator retention terms."},
+    {"question": "Are matter-isolation, prompt-injection, writer-separation, and confirmation instructions enforced under adversarial conditions?", "why_source_cannot_answer": "Most controls are declarative Markdown/YAML instructions whose runtime adherence is not shown.", "needed_evidence": "Adversarial harness results with filesystem/network observation and model/runtime revision pinned."},
+    {"question": "Does the production handoff router enforce target-to-intent compatibility even though the reference script does not?", "why_source_cannot_answer": "The script labels itself reference-only and the production workflow engine is not present.", "needed_evidence": "Production router policy, tests, audit logs, and failed mismatched-target receipts."}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "claude-legal-audit.mini-paper-related-work.v1",
+  "revision": "1.0.0",
+  "status": "candidate_research_metadata",
+  "search_receipt": {
+    "searched_at": "2026-07-16T17:00:00-04:00",
+    "method": "Bounded web discovery emphasizing official standards, official project documentation, and primary research papers; claims were limited to documented component capabilities.",
+    "queries": [
+      "official W3C Web Annotation Data Model selectors fragments provenance standard",
+      "official JATS XML standard article structure scholarly publishing NISO",
+      "RO-Crate specification provenance research object official",
+      "academic paper automated long-form research report generation STORM Stanford PaperQA2 Manubot",
+      "Manubot official documentation citations provenance collaborative scholarly manuscript",
+      "STORM Stanford paper assisting writing Wikipedia-like articles primary paper official",
+      "Argdown official argument mapping syntax documentation AIF argument interchange format primary",
+      "nanopublication official guidelines assertion provenance publication info trusty URI"
+    ],
+    "selection_rule": "Include primary or official sources that materially inform anchors, provenance, article interchange, argument representation, reproducible publishing, research automation, typed citations, or search receipts; exclude secondary summaries when a primary source is available.",
+    "limitations": [
+      "This was a bounded landscape scan, not a systematic review, patent search, or proof of novelty.",
+      "Most URLs were registered from live primary pages without a local byte capture; their contents may change.",
+      "Failure to find a fully integrated comparable system does not prove none exists."
+    ]
+  },
+  "sources": ["SRC-0053", "SRC-0054", "SRC-0055", "SRC-0056", "SRC-0057", "SRC-0058", "SRC-0059", "SRC-0060", "SRC-0061", "SRC-0062", "SRC-0063", "SRC-0064"],
+  "bounded_conclusion": "The reviewed systems provide strong precedents for individual layers, but this bounded scan did not identify a single primary-source-described system combining revision-bound paragraph anchors, byte-exact evidence genealogy, typed objections and falsifiers, deterministic multi-version rendering, and fail-closed publication gates. This is an inference from the reviewed set, not a universal novelty claim."
+}

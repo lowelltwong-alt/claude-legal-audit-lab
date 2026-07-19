@@ -1,0 +1,3065 @@
+{
+  "capture": {
+    "custody_id": "custody:sha256:f05bd4a4e6e5a7983ff07a2e9be0a1109b919c9251e42157d499c0376b8be5f1",
+    "item_count": 76,
+    "observed_at": "2026-07-15T13:35:11Z",
+    "pagination_terminal_observation": true,
+    "sha256": "91da08d7e0e89bd62d2b86b39cf8d6c4aad48a4c66c1663b808ffa0a0277b869",
+    "url": "https://api.github.com/repos/anthropics/claude-for-legal/pulls?state=all&per_page=100"
+  },
+  "limitation": "This normalized public artifact contains hashes, timestamps, source URLs, and opaque custody IDs only. Raw API payloads remain in ignored private custody.",
+  "records": [
+    {
+      "base_sha": "d541734b08e67aae330a362b256d1eb6808a08f5",
+      "diff_summary": {
+        "additions": 289,
+        "comparison": "base_to_merge_commit",
+        "deletions": 16,
+        "files_changed": 33
+      },
+      "event_time": {
+        "closed_at": "2026-05-11T22:59:46Z",
+        "created_at": "2026-05-11T20:50:52Z",
+        "merged_at": "2026-05-11T22:59:46Z",
+        "updated_at": "2026-05-11T23:00:07Z"
+      },
+      "head_sha": "78abd16e99fa887d3309d93ec41db2f37dc75396",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/1",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "d96c61846eebc5affc9f00f3890d7fc23af68ab9",
+      "pr_number": 1,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:61f36e15f219337452ae37db1700e9d5b9b69a15da66047ab3c451884c0332f6",
+          "observed_at": "2026-07-15T13:44:53Z",
+          "sha256": "c135c76e64e5430295ac9ce59789a7ed1e5e54370128bf40ecfa22c478151673"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:efae7f6176354570be947b169572e455cd2e4b7d6c2ba56beee214fce0f8f5fa",
+          "observed_at": "2026-07-15T13:44:25Z",
+          "sha256": "fd0f0d1633f261b36c6c59c2fbded40c1915aa6d7d9bf48d21bc88bfd05df634"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:682e4dc14a764c314dd4b6309653f9914612b7eb373470d9a727f53ebbad5e3b"
+          ],
+          "file_count": 33,
+          "observed_at": [
+            "2026-07-15T13:49:38Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "4cd8990e707aad1c0f5153f33ec81fc57c2af0c41e0bff2361b9995fa0325a5e"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Tighten handoff param patterns; ad-hoc questions use the practice profile"
+    },
+    {
+      "base_sha": "d96c61846eebc5affc9f00f3890d7fc23af68ab9",
+      "diff_summary": {
+        "additions": 72,
+        "comparison": "base_to_merge_commit",
+        "deletions": 38,
+        "files_changed": 29
+      },
+      "event_time": {
+        "closed_at": "2026-05-12T15:33:56Z",
+        "created_at": "2026-05-12T05:09:47Z",
+        "merged_at": "2026-05-12T15:33:56Z",
+        "updated_at": "2026-05-12T15:34:09Z"
+      },
+      "head_sha": "942961fc1feef33b4afa3278c7c109720aac6a11",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/2",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "2d3259870a87c278d15fb055b67c2955024afe70",
+      "pr_number": 2,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:8ee53ff7772856f87c7ca75e269486ec94176afdf2cff955bb6407a0b262b077",
+          "observed_at": "2026-07-15T13:44:54Z",
+          "sha256": "9fec30ae99abc32efc8582558b6750621e3e2eadd6379f5136db2107ce240eaf"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:9f9ffb10ceb50132eb35945128016bd84136b7020f18f39aa2bf41bb7248b7b1",
+          "observed_at": "2026-07-15T13:44:28Z",
+          "sha256": "cdb5ba5a35f6a1a573c6b56247e234a0eee9316c3512fae2703f4ee3c9804129"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:8d818471129cbb19a08c23715579609fd636be8b0e65de59e060574dd46972ae"
+          ],
+          "file_count": 29,
+          "observed_at": [
+            "2026-07-15T13:49:41Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "6ea44a77c866a19e788083f3cd6cd46c91558c8e45f596d46ae0a38acc373d37"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Launch morning fixes from overnight QA re-run"
+    },
+    {
+      "base_sha": "2d3259870a87c278d15fb055b67c2955024afe70",
+      "diff_summary": {
+        "additions": 16,
+        "comparison": "base_to_merge_commit",
+        "deletions": 2,
+        "files_changed": 2
+      },
+      "event_time": {
+        "closed_at": "2026-05-12T15:58:55Z",
+        "created_at": "2026-05-12T15:50:38Z",
+        "merged_at": "2026-05-12T15:58:55Z",
+        "updated_at": "2026-05-12T15:59:14Z"
+      },
+      "head_sha": "f30ffa40b3b9fd1129a76495b3a181feff90eba5",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/3",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "52e06d17db6e0820c800213774a1d7f62ad98dba",
+      "pr_number": 3,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:a4ece70f7e3079d5721bf714b3fd4a37fe19e60afbc18ddd5ff61d09f10c0e50",
+          "observed_at": "2026-07-15T13:44:55Z",
+          "sha256": "5a5a83e974622d9cc3f84cf549c65d96f64db8887ed46c3e95a6d53f53598d1f"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:7d20371b5af7c113d93bc94be6c2202a14ced5082a850ca0c3193224ddc49ddc",
+          "observed_at": "2026-07-15T13:44:29Z",
+          "sha256": "e8d3f1704f2caa53e46d072289fb13398a8173d332b6346b15cb2965928309a9"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:b2fe51eccb5f0a9ed2d26c583a514231079f764f3cb939318f75adaa5e30ea08"
+          ],
+          "file_count": 2,
+          "observed_at": [
+            "2026-07-15T13:49:42Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "19e9225e82b78fbd2f605fe4da564528387d3cb08a3c3f76e66ee2af9ea0ed71"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Update README.md"
+    },
+    {
+      "base_sha": "52e06d17db6e0820c800213774a1d7f62ad98dba",
+      "diff_summary": {
+        "additions": 223,
+        "comparison": "base_to_merge_commit",
+        "deletions": 0,
+        "files_changed": 6
+      },
+      "event_time": {
+        "closed_at": "2026-05-12T16:34:19Z",
+        "created_at": "2026-05-12T16:11:35Z",
+        "merged_at": "2026-05-12T16:34:19Z",
+        "updated_at": "2026-05-12T16:34:30Z"
+      },
+      "head_sha": "7603d0a8c1778d347f414d27ed2fb2fcbd2e2e5d",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/4",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "993f6619fc2f321cfdd65daa6919ad6cd2c56d92",
+      "pr_number": 4,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:ce8bae41d9f0d8b24ae2d8788861abea87af5cac22c86174e412e8fabf32c4f3",
+          "observed_at": "2026-07-15T13:44:55Z",
+          "sha256": "57e25917a488d66e56b7c58d09e49bf905141b2db9e23aee27535dc4c513e6ef"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:4339f6554da4ff2683c72059430816c2b4b23d0afeff67ca1716fb1b05b2c687",
+          "observed_at": "2026-07-15T13:44:30Z",
+          "sha256": "25dfba26fb815e74656c493be079bb8f519a32594899fbaf5dbebf0ecb2d42d0"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:8c9cf068164c188154cf6946e42db88c89ded3e6027fecd6af4c1a1f8ad58efd"
+          ],
+          "file_count": 6,
+          "observed_at": [
+            "2026-07-15T13:49:43Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "f558295872c922b74a42df0c51df99295a1a0486ec03151298b25d65d9c8916f"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Add CoCounsel Legal partner plugin under external_plugins/"
+    },
+    {
+      "base_sha": "993f6619fc2f321cfdd65daa6919ad6cd2c56d92",
+      "diff_summary": {
+        "additions": 242,
+        "comparison": "base_to_merge_commit",
+        "deletions": 311,
+        "files_changed": 97
+      },
+      "event_time": {
+        "closed_at": "2026-05-12T18:58:49Z",
+        "created_at": "2026-05-12T18:47:07Z",
+        "merged_at": "2026-05-12T18:58:49Z",
+        "updated_at": "2026-05-12T18:58:58Z"
+      },
+      "head_sha": "210fd7a6cffaa86a2f8c0fee12a7d155c37ef23c",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/5",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "pr_number": 5,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:b06cd511bac7c0d075585c71a71b94c37dae99f843b033c0640199716c299d10",
+          "observed_at": "2026-07-15T13:44:56Z",
+          "sha256": "b682a09f8401b85bffdc7915eebdbb98398c0bf039a99aef5e57aad39d87b318"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:2afb1162f32217627be2355e20dd1fef358440081b7d1c31963f33ab7577cb93",
+          "observed_at": "2026-07-15T13:44:30Z",
+          "sha256": "8b6597d056b658c9d37e5c3044b28b701643fb559e62ded4fc8f91506416c61a"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:95a3f2327d279bd3ff253d4dea49173c1f498594a5d0fa10bb40307e2f768a1a"
+          ],
+          "file_count": 97,
+          "observed_at": [
+            "2026-07-15T13:49:44Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "fd8161d9a6693cd022751142b4975eb4f81b78a022e9a0576327ec20b610027d"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Remove Lexis references at partner request"
+    },
+    {
+      "base_sha": "7603d0a8c1778d347f414d27ed2fb2fcbd2e2e5d",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-12T18:58:58Z",
+        "created_at": "2026-05-12T18:50:53Z",
+        "merged_at": null,
+        "updated_at": "2026-05-12T18:59:15Z"
+      },
+      "head_sha": "5582d40cbce1f46c7a4b8780353f58c474fe74dd",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/6",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "6eee406a6870daa29f23c94193021fbcd6dcfd0e",
+      "pr_number": 6,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:c8e12f2c3018f5ac1b1f376fa07587fac518df19810c1db89ede6dca9eb52a47",
+          "observed_at": "2026-07-16T15:38:15Z",
+          "sha256": "2399135ad4cbf6e0ca6092379f78b5e378acd748f5e8f0546eda3e5c7fe652c8"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:4039397c391ebb018f057ddf567ade37fb3d69b04e9906dad7ab60d2a66f23a8"
+          ],
+          "file_count": 85,
+          "observed_at": [
+            "2026-07-16T15:38:16Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "13f2fbede093b0eebbfebdd577a9416b8b8b5674b70a22b02352fec0104a83bf"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "closed",
+      "title": "Remove Lexis references across plugins, docs, and cookbooks"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-12T19:49:18Z",
+        "merged_at": null,
+        "updated_at": "2026-05-12T21:19:03Z"
+      },
+      "head_sha": "4382f234797a232ff4e15b2f76da72ae48b221f6",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/7",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "727ccfb31a09f294771cb396d66797fda485a9f6",
+      "pr_number": 7,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:5501405728c647a55c869e9039b48d83fd3bea833e104ccab595fde56277c3ee",
+          "observed_at": "2026-07-16T15:38:16Z",
+          "sha256": "4c1d905492c4dc8bfab83a00c8fb4f015dc23608da0dfb1a2795eda403e2c243"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:cb584738727dab809aade1bac43a202be388c4ad0df06c3bb324f14d2b3dab21"
+          ],
+          "file_count": 4,
+          "observed_at": [
+            "2026-07-16T15:38:17Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "d5679d9656bae91d5722adda5d8cc950c285f4b65dc7d7202bc22be462cfcec7"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add Patent Client Agents MCP server to ip-legal (USPTO patent + trademark / EPO)"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-13T05:05:12Z",
+        "merged_at": null,
+        "updated_at": "2026-05-13T05:12:26Z"
+      },
+      "head_sha": "f75025978104891789dfccd6580b9a48a9af6851",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/8",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": null,
+      "pr_number": 8,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:69ec92b4a19aa8ee99af2c16da65c48d7dce65a84daf439473b9e451ebe417aa",
+          "observed_at": "2026-07-16T15:38:18Z",
+          "sha256": "3fab823e54089852eda941c4f366b054d3d91c7b06287975d527629b90cf999e"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:65afca6a8ec48241fc3a72b1558d78c886b24dce0e6b91b85358dd47eaee0818"
+          ],
+          "file_count": 4,
+          "observed_at": [
+            "2026-07-16T15:38:18Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "c054785c906a08f2cc5e514ccf2b695e529624008a1ab72b2dc4b4de17963afc"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add Vaquill (USC + CFR primary source search) to regulatory-legal"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-13T06:00:46Z",
+        "merged_at": null,
+        "updated_at": "2026-05-13T06:21:17Z"
+      },
+      "head_sha": "faecb0a098c8b035cd767e182014d60509f25f32",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/9",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "5cec1ffd370f1af7cf00edfee49255b0f8b07a02",
+      "pr_number": 9,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:f346adaafef414c93169c06900063e2c8cfa8a000b15e33f92bd1bd5ee5f924e",
+          "observed_at": "2026-07-16T15:38:19Z",
+          "sha256": "9cad0642549103e871513c5330d6195ab8d34d930e3b3a4329b338ebef33dba6"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:e2f524b9925973fe0649ff58626ccc6f79c2cb2f8c1a205ce4de072b0a8c6867"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-16T15:38:20Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "d5de73b13a0e4a18efc561ecfbd72e394a1e465c004b29c334fd5a40f86acb23"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "fix(validate): show usage before dependency imports"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-13T15:09:47Z",
+        "merged_at": null,
+        "updated_at": "2026-05-13T15:11:04Z"
+      },
+      "head_sha": "31299cbc79f9f24c7b3b0951ba1abcd0b046860b",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/10",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "e0451bfa99080ec06a9f93ba2128bcb4e9bd7c68",
+      "pr_number": 10,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:d80e6e8a4bf3504f810d672ce24a62e9f15e6019fb16e73ecc543094a15de6d2",
+          "observed_at": "2026-07-16T15:38:20Z",
+          "sha256": "990bc16141b7e5418be41f3bf2d3beb7f29f76bd00cc56f2f65d125d158bbf7a"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:57b291c3f0e58f09999791ddde716174feeb0d56c3b1df4b4427a1a094a11dbb"
+          ],
+          "file_count": 4,
+          "observed_at": [
+            "2026-07-16T15:38:21Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "871ab7aa0594a8c15023a0c7d20b2ec295ad4f71714f893d2d2a4a734896e8f4"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add ArcPrime MCP server to ip-legal"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-13T18:53:22Z",
+        "merged_at": null,
+        "updated_at": "2026-05-21T16:51:52Z"
+      },
+      "head_sha": "12a347fe44318089e85c01836ebbd485b505c4d3",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/11",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "63b3cedcaaaa7eee4d814be599adbad8e402f50b",
+      "pr_number": 11,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:7848e17eb701ed402e61b2dfb14989940bb090e7c08e7fe2be8e03c318d17137",
+          "observed_at": "2026-07-16T20:06:37Z",
+          "sha256": "d3f53279d8b68675677659661904b1120d2d66631b678bc6fbcb57204fab85e5"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:617cf3d2b218ef3e252f56c57a17ce56b29f4db9f3cb4c075c2445c18a31cedb"
+          ],
+          "file_count": 3,
+          "observed_at": [
+            "2026-07-16T20:06:38Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "35deffd8070dcd57c7ec89e16da302ef514d2e915325303483a3ed718b2722d2"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "feat(connectors): add Crivo eDiscovery \u2014 Claude-native eDiscovery with AI audit chain"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-29T00:49:05Z",
+        "created_at": "2026-05-13T21:40:01Z",
+        "merged_at": null,
+        "updated_at": "2026-05-29T00:49:15Z"
+      },
+      "head_sha": "3680eb3f63f4127d0efb068229588251f6821894",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/12",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "0c8ca6e2440f0b104ae3645a4882f5194d857543",
+      "pr_number": 12,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:3b5b7af3c3b01bf40d64280c5aca101d49b10dabd9d07ce2867b1cdc47716408",
+          "observed_at": "2026-07-16T20:06:38Z",
+          "sha256": "848f104356af6c70f20e88315fbccb86ac376c6afe0c67b320baded23404ea57"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:700e5bd4f3f02b46e3c447c0fc094db20e082ccdcfcb25277094fb86215de9b8"
+          ],
+          "file_count": 3,
+          "observed_at": [
+            "2026-07-16T20:06:38Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "c4c2c15555155db1aaf431de15e92fac2daca6fc034cbe64f70d88c6ff1d7ea9"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "closed",
+      "title": "Add Apiges Pro (IPMS)"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-14T14:52:16Z",
+        "merged_at": null,
+        "updated_at": "2026-05-14T15:01:07Z"
+      },
+      "head_sha": "2e291ca1a81f0d93f2a063d4c623d42956c5e759",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/14",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "31b5c45c0e19d76ff2ca5afff65350fbcf754143",
+      "pr_number": 14,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:17d549297bab4caca6604e4605225882f95d3abcb0c0452e540d0f5b511a3dfe",
+          "observed_at": "2026-07-16T20:06:39Z",
+          "sha256": "4bb088cc123dba48c081fd3b50e322426c587e7bd3ecbdcc3ff98fac2f7ca708"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:f67c7d359ac7a0bff4c7efbc933cd5fa5219353e7a6476cc0b635a6d7f151b1c"
+          ],
+          "file_count": 14,
+          "observed_at": [
+            "2026-07-16T20:06:40Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "2d8a55f2c892e4d9c39a1cfcfdd046c4dfb93aeb8556d575ba19039896ff1c70"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add education-legal plugin: K-12 special ed, civil rights, FERPA, Title IX (closes #13)"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-14T15:54:09Z",
+        "merged_at": null,
+        "updated_at": "2026-05-19T02:31:19Z"
+      },
+      "head_sha": "6b96b0356586a9626de973ee5ef73ef6824c9f75",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/15",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "e952696844434edead9c230db4e77c4b1769a1b5",
+      "pr_number": 15,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:1d0805dd8329c26faa9cfc30628a4e21e0e14f55124dafda68025881955c1381",
+          "observed_at": "2026-07-16T20:06:40Z",
+          "sha256": "680d47ab5d995f2122e86f04c0e9638628dee8e3c22b0c592539af630cbefcec"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:895546c431ba8b78a48d5369691175fad7cee21e465492439cf20eac438620aa"
+          ],
+          "file_count": 4,
+          "observed_at": [
+            "2026-07-16T20:06:41Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "10275a539a3fede4608d3522168bcd3dbaa350ff06e930f8b1eec36c1eb1f272"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add Neimo regulatory KB connector to regulatory-legal, ai-governance-legal, privacy-legal, product-legal"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-29T00:49:07Z",
+        "created_at": "2026-05-14T15:55:21Z",
+        "merged_at": null,
+        "updated_at": "2026-05-29T00:49:16Z"
+      },
+      "head_sha": "12b3b34cfe7fa868272c646799396ac78eb7fcda",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/16",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "45e675af87c11ef8d36ae6fb69c64f194a9cdead",
+      "pr_number": 16,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:1d5252e935254ceb3f0fab1b98659b11ea3eca0ea217456f99b109fc95971d9e",
+          "observed_at": "2026-07-16T20:06:41Z",
+          "sha256": "3eed5ead309e760e529f1282125e235ee6d0b256b00875bf0229a375d73523c1"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:5fbb3851c12119a159a33d0869df2ba7508d88edb7133914e3c6f309dc1c5769"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-16T20:06:42Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "1162a4a5465866088a57ab85bbb3353bd4ae8026a3450fb1c66c957e356f9274"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "closed",
+      "title": "Enhance linting for subagent routing and tools"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-14T17:25:44Z",
+        "merged_at": null,
+        "updated_at": "2026-05-14T18:39:46Z"
+      },
+      "head_sha": "066b9c8836875e741f80991d8404686d1b9a7a9b",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/17",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "57583eaa3d440fad65e7217bbc8e595e61515ec2",
+      "pr_number": 17,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:78919c410169a4d4841c2be1754461cecb0b6f9bc8245dca58cadf9b0a5b793c",
+          "observed_at": "2026-07-16T20:07:17Z",
+          "sha256": "87ad8e495426f02be95b50864601821e74e43965045ca4150af97c726f2b2d4d"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:25b8f20ddc8cf5c791e5e1e10f1a0e20bc2347b5c0fe7ebbf12583a98a4a9219"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-16T20:07:17Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "ec6a836b4db6d9223fa22373fca000a061629111f96df5e6e1636515d40c72dc"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Fix managed api docs url."
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-14T21:43:54Z",
+        "merged_at": null,
+        "updated_at": "2026-05-14T21:58:53Z"
+      },
+      "head_sha": "933478708d4ddca451f20390616436b621a2de6d",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/19",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "349f0af245b51d3a6b6ce8f5d46b12aff29848b5",
+      "pr_number": 19,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:bdb81da6b32dc24d0627072e6fa139bc82a7b942a794ae179fa83524a3a05de4",
+          "observed_at": "2026-07-16T20:07:17Z",
+          "sha256": "f5230fd1811ecb752ed06bf9261178ec527ac487313871b94556277290f5532a"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:6b870b493754b95dbc7e79e3380a4eee28dd47a8a4720669b07908b1e440dd3d"
+          ],
+          "file_count": 11,
+          "observed_at": [
+            "2026-07-16T20:07:17Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "9e6d0e7ca7cee3ffb43fa2b51670d973871aef4dd6e7287401e3e5cb9849532a"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add employment-legal-es plugin for Spanish employment law guidance"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-21T05:06:42Z",
+        "created_at": "2026-05-14T22:33:36Z",
+        "merged_at": null,
+        "updated_at": "2026-05-21T05:06:53Z"
+      },
+      "head_sha": "33fa90f1547a15eafe4cfece421dd11280df0a12",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/20",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "de3f51386cc87d7faeb40a63c400580cc82b510c",
+      "pr_number": 20,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:369d32aea5bd5366855707d226558efda96fbe9a523b0524415aa92b4a686905",
+          "observed_at": "2026-07-16T20:07:18Z",
+          "sha256": "c14b6d9ed3370e815815146655074b2640597a69e0115c11fc022ccd307c5f32"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:f6410a94802cdede3a62ee5d274074d3915a5ec69f555511214df7c0d0866884"
+          ],
+          "file_count": 7,
+          "observed_at": [
+            "2026-07-16T20:07:18Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "03f328424fd0e0de73d5c3455bbf6422cb2837c7ff4a91064ae34ab3f3ccd1b7"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "closed",
+      "title": "Add Verdict connector: evidence layer for legal AI outputs (6 plugins)"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-29T00:49:08Z",
+        "created_at": "2026-05-15T04:13:03Z",
+        "merged_at": null,
+        "updated_at": "2026-05-29T00:49:16Z"
+      },
+      "head_sha": "3c65ba995937adcdd9b710287025758454938d1b",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/21",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "e6d6587440ae3edff860117c7311c0a4adb74ef9",
+      "pr_number": 21,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:ae3ba713c0e3b8affdfd343aad248df76d8b63a728445862402024d05d28d1f4",
+          "observed_at": "2026-07-16T20:07:18Z",
+          "sha256": "a4b63cd5c74cb1c68ffe535527c3c93eda259586ba39b95368e28c803b27e284"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:fdd986cb136c89638dc39e226d4768ec2bc922c6bfeaf99e9462a2d78cad2402"
+          ],
+          "file_count": 2,
+          "observed_at": [
+            "2026-07-16T20:07:18Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "68aa2dffb0dc9ada18097998c46b4b297a1673ecf67d3d82b02d357316daf287"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "closed",
+      "title": "branch created"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-15T11:43:00Z",
+        "merged_at": null,
+        "updated_at": "2026-05-16T13:53:24Z"
+      },
+      "head_sha": "b8ebdcba31b4e9c2ea70a07f8b3d4d05ffe9f276",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/24",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "6d7b9b2292167108b9562d588d4611939d0f39f9",
+      "pr_number": 24,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:a0cd517b73a882787adc45b1b4212b52f3f1143f572ea20e095ed3a23dbd23d6",
+          "observed_at": "2026-07-16T20:07:18Z",
+          "sha256": "4df8f1769bbd60e803b0422ff5283343fbf4f18a1850b374cb7f477c50b97bc2"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:df383e8b8fcdb16faa2a74880a05a86afc01c6f9fb8b13b21ec69c7d5d83dd55"
+          ],
+          "file_count": 4,
+          "observed_at": [
+            "2026-07-16T20:07:18Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "9eda83a1d763bc67d6d065a35a6a0a5cab52420afd6ea644cf463513050af171"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add EULEX.AI Legal external connector (read-only EU legal research)"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-06-30T15:04:37Z",
+        "created_at": "2026-05-15T14:16:46Z",
+        "merged_at": null,
+        "updated_at": "2026-06-30T15:04:47Z"
+      },
+      "head_sha": "8eeb6d0084ccfc5b7fa2e73b1a410ca621ceda3f",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/27",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "ceae94d63d3d2aa68ffcf0ca81a524142aab0da2",
+      "pr_number": 27,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:d3094b7a1774ea7c1e98a3d432808b4254fa8a6dd8fe095de398b6af9b5d5879",
+          "observed_at": "2026-07-16T20:08:32Z",
+          "sha256": "c459cacc24bc81c28677c871caf68239f0d501d838d1185c7ab6da7f73f63f52"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:c0de3d49db589d964c053ce591c248ee814ccad76921cb7cea3fc234898cc4e7"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-16T20:08:33Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "156c0b92db357b2f9c6bdece4988a4334fc8afa7b3180250c074177bb98f1902"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "closed",
+      "title": "fix: remove duplicate MCP servers from corporate-legal"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-15T14:48:16Z",
+        "merged_at": null,
+        "updated_at": "2026-06-20T11:46:09Z"
+      },
+      "head_sha": "ab69a787bfa49c9f84113bb2fd1aacbc811ca0c7",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/28",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "cc1044d0a9fd9f42d0b759580d3a835eb26a2a10",
+      "pr_number": 28,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:40bb3402fee6a5280910bf49a0ecd0a8a1aef78a89c861eb4d2dbfe283b9a721",
+          "observed_at": "2026-07-16T20:08:33Z",
+          "sha256": "aff3ed8f32e5b07ceb20c613dd0c8dd2dd503149b67b897368afe77840d4ac8c"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:49bcaa341c2067b5db95e49d80bdbf61b2ec8c98598b3bf015507fec5ff7f3e6"
+          ],
+          "file_count": 5,
+          "observed_at": [
+            "2026-07-16T20:08:34Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "a3677c6fbfb694a154a5fac986d68184b53a4832d0237f6aaf38791bc96b5d99"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add EU SPARQL search skill to regulatory-legal plugin"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-15T17:36:55Z",
+        "merged_at": null,
+        "updated_at": "2026-05-16T05:00:37Z"
+      },
+      "head_sha": "d6c24b3045a6856a7b3e03d0cee009a1567b796e",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/30",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "ad462fa69c4425cee26e121e1546a6fd3673e2b1",
+      "pr_number": 30,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:dea94af2669ceb0cf9aa19515a652592058229090b2dacc42fbd6a925b998f66",
+          "observed_at": "2026-07-16T20:08:34Z",
+          "sha256": "afe27f939eadeceaa1617342c9625c574b470b76922b26f8ac52770b7157a803"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:453753a512ea7ff9cc50d884e64556a79473dbfff2d84062bc196aac77bfa0b0"
+          ],
+          "file_count": 5,
+          "observed_at": [
+            "2026-07-16T20:08:35Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "6f459836bbcc4b2b962a3db36793d5f24cfa5f59050f44e949226fec84793ccc"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "add Digital Policy Alert connector"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-15T17:37:38Z",
+        "merged_at": null,
+        "updated_at": "2026-06-24T06:39:20Z"
+      },
+      "head_sha": "baa995497bf3474ab606a17850a170e397eed4e0",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/31",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "a7dddfe2b50d2be119dc54e958bae66eff8a13b6",
+      "pr_number": 31,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:a65638147111ed7777c2a80e814871fbeca3b5e8f9669e7e388bc2cf7a701bce",
+          "observed_at": "2026-07-16T20:08:35Z",
+          "sha256": "bdea9a0a9561206d331fa3c52084e3de470198f3b45210bd3554ae28a6e96a81"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:35f8e0d72d19c2ee5e794a81b0809f4d2c06d95f7f59be0d89dc7cf641c86b9f"
+          ],
+          "file_count": 3,
+          "observed_at": [
+            "2026-07-16T20:08:36Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "cce048f4d0186ec842423f3172f24a7df6df505a0264429c91ea18ddd12086c5"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "ip-legal clearance skill improvements"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": {
+        "additions": 207,
+        "comparison": "base_to_merge_commit",
+        "deletions": 70,
+        "files_changed": 35
+      },
+      "event_time": {
+        "closed_at": "2026-05-15T21:10:10Z",
+        "created_at": "2026-05-15T18:15:14Z",
+        "merged_at": "2026-05-15T21:10:10Z",
+        "updated_at": "2026-05-15T21:10:23Z"
+      },
+      "head_sha": "5ce6ceb0c666b71a218606afe9d531c0af9bab2a",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/33",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "pr_number": 33,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:dd7e17d2ceb056a951114615b4787faf56b732c4aa9b24a034040ac13e56927f",
+          "observed_at": "2026-07-15T13:44:57Z",
+          "sha256": "8a589f4a04c3cccaa42f8de98246cd75af9077e42e913597ee03593d161bf37c"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:012c9075d9e85dc666e46f7f9f1971ed8e0279397760166043d53a88527688a2",
+          "observed_at": "2026-07-15T13:44:31Z",
+          "sha256": "deab7f3667c24321dd0595be2ff17f06c623976acaa0b4d9c3e4b1658dc10b83"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:957547f8ae361fb4ee4c37508837fd8c71e12ce5548fd1df342fd45883751a35"
+          ],
+          "file_count": 35,
+          "observed_at": [
+            "2026-07-15T13:49:48Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "cfa1c61a6d98df3520b9fb7ff43a61c62493735c684a7a32028b2a7c15a64501"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Post-merge cleanup: whitespace, doc sync, and canonical skill names"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-29T00:49:12Z",
+        "created_at": "2026-05-15T19:57:22Z",
+        "merged_at": null,
+        "updated_at": "2026-05-29T02:19:28Z"
+      },
+      "head_sha": "a34e4983ae69fe222ef528a000f201352f40dbb4",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/34",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "40dcdfd714dee85e081e619241641569d674dd80",
+      "pr_number": 34,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:99bf1bdd3a5fb4c81f297c3d520533b3d40d94fe093c9f92a88744ef41fcac33",
+          "observed_at": "2026-07-16T20:08:36Z",
+          "sha256": "a468c57bb624fe3e1a6c63e2675ed66f1ed15f8352bb42e79e7efb636f394d2b"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:822284361270867978240df5edaadff2ef1796ef998a3777f036a53526a3e2df"
+          ],
+          "file_count": 7,
+          "observed_at": [
+            "2026-07-16T20:08:37Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "10b49934f0f3057f4db4d9aa2323fd84aaa34e94c589401791bcf2641d0213d3"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "closed",
+      "title": "Add LawAIGovHub MCP connector to ai-governance-legal and regulatory\u2026"
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-15T21:09:41Z",
+        "merged_at": null,
+        "updated_at": "2026-05-15T21:10:39Z"
+      },
+      "head_sha": "457067a4b476e32ec397d80234c2708ee540d33e",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/35",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "f4c34a797660b7e8ad84b17b57a25dd93812b755",
+      "pr_number": 35,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:ca8cc528bd1534ee23659babcc41f156d2c990116ab8a5bd6c103ff10837bd9a",
+          "observed_at": "2026-07-16T20:08:51Z",
+          "sha256": "50d35be807e5fd288f65c3cb4a564b3d422b8e3981767ed2f89ddbd09a27eb6b"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:c16f5314c16963e94ff2e8d42795c4f28cc90f88a917cc9034a74d66fb81b21c"
+          ],
+          "file_count": 3,
+          "observed_at": [
+            "2026-07-16T20:08:51Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "a4c905ce51742135faab0cda1f274623bd7f85c05baa1593b172b63d7d568558"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "feat(litigation-legal): add Scope action-tier vendor dispatch"
+    },
+    {
+      "base_sha": "b0aeeba7fea60a5de911549f2852fa5b078c7d76",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-16T05:43:19Z",
+        "merged_at": null,
+        "updated_at": "2026-06-06T15:50:45Z"
+      },
+      "head_sha": "bf774b55037c1d85a1cdef3d710e7dfa622a67ed",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/38",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "891232239a81cc1944e6153c2331cbf1510b92a2",
+      "pr_number": 38,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:20072fed3aa0d41817a07174862377faa90f4766a3a8146db7b15c87410c048d",
+          "observed_at": "2026-07-16T20:08:52Z",
+          "sha256": "85e7e960755e99ae9ca0bcc8180b1191f7e646aa8612d3949afadcf152b88ab2"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:38b51a0519266f1c42176fb13331e17e62af0b3bc48bda52475c02bed1347472"
+          ],
+          "file_count": 15,
+          "observed_at": [
+            "2026-07-16T20:08:52Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "49dabae6727aa12ce909f6910886d754d23bfa713fe7549490bf71acec20614a"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Adding immigration-legal skill"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-16T09:55:44Z",
+        "merged_at": null,
+        "updated_at": "2026-05-16T09:55:54Z"
+      },
+      "head_sha": "c37ffd2d613d12915ad41c4e849e0e0dffff9185",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/39",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "4f76e4ecc6bab68d05faa4f85b16b2f54e8e9089",
+      "pr_number": 39,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:8bfb387b9971d98985f5cca402af40368bca51ccbfb57400e041f941f1b6b78c",
+          "observed_at": "2026-07-16T20:08:53Z",
+          "sha256": "12c53a5bf733226201ddb9b1374c3e19fc8d5b279a4ab9df6cbebd0ac534cb23"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:19b3b5474c10630a7bae9cc6c6ec5302470e1d2ec3aa3c7df220f8114cc8e736"
+          ],
+          "file_count": 2,
+          "observed_at": [
+            "2026-07-16T20:08:53Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "3d02a01f5b4503b0673e4bd3fec43dec49a5102dbfcf7faf75e10a10c9eeaea2"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "feat: localize commercial-legal plugin for Taiwan (ROC) jurisdiction"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-29T00:49:13Z",
+        "created_at": "2026-05-16T16:41:23Z",
+        "merged_at": null,
+        "updated_at": "2026-05-29T00:49:22Z"
+      },
+      "head_sha": "d1bd890ab51f4d0cf4fe6c64eb8eb2ae3f73930c",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/40",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "8f53b362a485d3353a13235b797f681d8fc5a878",
+      "pr_number": 40,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:526e4f7374dfb2bc586bc1bddb80a80282052d07eb4d14970a5e36cc473f0337",
+          "observed_at": "2026-07-16T20:08:54Z",
+          "sha256": "0fe12f28e98b8dc55747424bbd8a50264069ff0b4f4afd7406ec81d1058087e0"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:25b2e7f9ce95de6e4ff9804f8fc2cb472ce0ff68ac0304d0e180584638371c8d"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-16T20:08:54Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "dcfd153f5a86292d1dd0d8ef873bece6ad0ac32b7b427bf8137a0e545da32824"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "closed",
+      "title": "Fix inaccurate connector suggestions in IP clearance skill (Fixes #29)"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": {
+        "additions": 40,
+        "comparison": "base_to_merge_commit",
+        "deletions": 20,
+        "files_changed": 10
+      },
+      "event_time": {
+        "closed_at": "2026-05-29T00:48:18Z",
+        "created_at": "2026-05-16T18:27:15Z",
+        "merged_at": "2026-05-29T00:48:18Z",
+        "updated_at": "2026-05-29T00:48:28Z"
+      },
+      "head_sha": "bf6aea18bb2b94ddf0e7f095f29c987b421c1004",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/41",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "efc8d4edf9c625c93d393feeb2fc710badc32069",
+      "pr_number": 41,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:5351a9ca6343f5e231c55202160582535512667f6deae2121df9864d413a3c9a",
+          "observed_at": "2026-07-15T13:44:59Z",
+          "sha256": "7e4f347917897c71e43f9107e4d7e1dc897e7eff142893104d38a996980133b7"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:079ea926bb74a0bba70333b7f51dae357c1b4157acefc261c89f97e19b934379",
+          "observed_at": "2026-07-15T13:44:32Z",
+          "sha256": "4499885520ad9391cf3dc43233319bbca8e8b6e7c60104b4138fe4ccb6df9e11"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:9b00a5ea658ab8b1cd7bd8d08c527d5a5bb5b8ae620cc291bedd84b8017c8490"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-15T13:49:52Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "6ab0da35ba26ec484fd64a1966ad554fd277ce92b34e2aa8a601ee9c9359ad11"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Fix mktemp template so deploy-managed-agent.sh runs on Linux"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-17T02:41:39Z",
+        "merged_at": null,
+        "updated_at": "2026-05-17T08:52:40Z"
+      },
+      "head_sha": "ec8879512e6d1d26f2facc154318b3ff9ec0a6f6",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/42",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "ec45a4f32dd2cb79daaf42480fa8d97574ebb585",
+      "pr_number": 42,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:67f2b969ba477dce01b7bc929ee573b012a23a6dcc3efc454b02be9569d815b0",
+          "observed_at": "2026-07-16T20:08:55Z",
+          "sha256": "05440627c750eecf3354e747c31418c5f93dca046ebcc13000b2de18b96a6dfc"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:d7938af1ead1aa2a2280924e18bfc46121c6fac842df2a518d19db409b64bc6c"
+          ],
+          "file_count": 2,
+          "observed_at": [
+            "2026-07-16T20:08:55Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "1418778c8ec4d54be4508271c72dc0eaf8c32a6effea830a01ffc9cdbbc812d8"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add Global AI Regulation Tracker MCP connector (ai-governance-legal,   regulatory-legal)"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-17T13:38:13Z",
+        "merged_at": null,
+        "updated_at": "2026-05-17T13:43:57Z"
+      },
+      "head_sha": "192eba77951fe78aa70c4973d230b72533ae62e1",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/44",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "d05dee7a775dfb78b59aa76dbe0bc762dc0af177",
+      "pr_number": 44,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:79041f9359119cf7466711533eb73a6bacad5d7dd67c2bb0fd21d2cf0975d783",
+          "observed_at": "2026-07-16T20:09:11Z",
+          "sha256": "85c38bfd9495f29f29f02bcd82eea5345b3aedb70f714836db8f723cf3e49264"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:91d11d128eae331e940c62bc3060886f906af0092c43ab6e31207080893efe88"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-16T20:09:11Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "753c979b35ac2e7318d08db140ec5816c06aad66dd6cd81b5a5b715cf6f4d8cb"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add Zeeker legal dataset configuration"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-18T09:42:26Z",
+        "merged_at": null,
+        "updated_at": "2026-06-20T21:47:23Z"
+      },
+      "head_sha": "f73d3ca6cee14ddd5419ef45c1c78ddeea09bf40",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/45",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "1a298dca4c962eae76478644d73096be0d8a3f53",
+      "pr_number": 45,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:0e22e7b8fb15540e60035055016a903b03dbb4f0b1ba6adf837a997b5d4ef4cc",
+          "observed_at": "2026-07-16T20:09:11Z",
+          "sha256": "1f4fcbfd660b872f41d30e445bbfda2e660e2133918d5a9ab4e5f1d04ae69d95"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:2a763e04f76263da1b5dd6ef6494dabc973ee0c4da424968ac2d7250c6c81c6b"
+          ],
+          "file_count": 8,
+          "observed_at": [
+            "2026-07-16T20:09:12Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "12cd093776d4d31b7b38376a9a17fb12d37f763f3d1dead85d4ac087591afb5c"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "open",
+      "title": "Add arguman-legal external connector (Turkish/ECtHR/BGH multilingual case-law research)"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-22T16:50:16Z",
+        "created_at": "2026-05-18T14:23:02Z",
+        "merged_at": null,
+        "updated_at": "2026-05-22T16:50:27Z"
+      },
+      "head_sha": "3bde5216b6e496cbcdf97fc449433cf199743550",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/46",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "56edb2e7c0ca1f0ec8228c857aac1e5c0f8e8381",
+      "pr_number": 46,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:f579e69029206815d888764b4aa346fefcae8cf64894b2e66e33c2c9cb4e54f3",
+          "observed_at": "2026-07-16T20:14:45Z",
+          "sha256": "7ba7441e224dda8a17847f7db93d3cab6091eead909d78ea21b8d3c9a37fa485"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:ec7b2d644227ccb6bf15d0acc51af87a0ff1f7443a085d31252825b761e2c53b",
+            "custody:sha256:ba19576b73f7142c98b2d59e7ae37edde7f63420ba31c9d8be080aad2ff3d336",
+            "custody:sha256:a97db887dd9375ebaa812244bc6903dde7498b936e6f8cf3bfef21286e22dffb"
+          ],
+          "file_count": 241,
+          "observed_at": [
+            "2026-07-16T20:14:45Z",
+            "2026-07-16T20:14:46Z",
+            "2026-07-16T20:14:47Z"
+          ],
+          "page_count": 3,
+          "page_sha256": [
+            "b2da6e08b1932dc6f137bd37e4274219e07b108218bf8593c37babc25253a236",
+            "6ac66fc2b0dfb892a576be0474db65313749bcfd9fe820c905c4cf4f4d9d3dae",
+            "b27523f8a6483cfdd9ce382b10a475821c769b49b443baded9f9a3f27635c590"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "closed",
+      "title": "feat: add UK jurisdiction suite \u2014 11 plugins (England & Wales / Scotland / Northern Ireland)"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-18T21:50:39Z",
+        "created_at": "2026-05-18T21:45:13Z",
+        "merged_at": null,
+        "updated_at": "2026-05-18T21:53:42Z"
+      },
+      "head_sha": "c7575997eeea08d8862e0c235d2d37dd50840a1f",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/48",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "492703a09291c763b6b6dbfa0d9c7a99ee645709",
+      "pr_number": 48,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:68fae92505f8ef410ad64dd3943533062175da6e3785ee1cf841752c884cd136",
+          "observed_at": "2026-07-16T20:14:48Z",
+          "sha256": "c9c406495501e790c3b57d2ecd60a9259435409a956cd15abc92b2e23b084c1e"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:f38efaeec9d247c3be96dd0533e0e89965d04088e2063f0aa6b4fbe63456a145",
+            "custody:sha256:e6475ccd26b6674cba9e0f05091b38d96a306946aa864c48484f0e521ef8e7ac"
+          ],
+          "file_count": 121,
+          "observed_at": [
+            "2026-07-16T20:14:48Z",
+            "2026-07-16T20:14:49Z"
+          ],
+          "page_count": 2,
+          "page_sha256": [
+            "a6b109b08cdfdb07e9dffd53894689fa8d53372289ae3d317bd3a2a0e3f28261",
+            "6ed4f4842994ed96c09124541fe7094d3b434e95cbbfe35e310862fc9bc52469"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
+      },
+      "state": "closed",
+      "title": "feat(za): add privacy-legal South African overlay"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-19T23:26:42Z",
+        "created_at": "2026-05-19T23:26:21Z",
+        "merged_at": null,
+        "updated_at": "2026-05-19T23:26:53Z"
+      },
+      "head_sha": "b097ac9a671629b6c12f4c2dc02543a47ef6a375",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/50",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "e9547e88e6b9fa2c343382dac4e1a32aa8ce7d7b",
+      "pr_number": 50,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": {
+          "custody_id": "custody:sha256:ebcba7178a59b1b029f791e0ff478e14593ddd78c85b993bb9b33243150775f4",
+          "observed_at": "2026-07-16T20:14:50Z",
+          "sha256": "623562f9efd92327f938d407803a12368707da91cdd5ed1d20791a4d30e94a12"
+        },
+        "files": null,
+        "reason": "open or unmerged detail snapshot lacks complete PR-file pagination",
+        "status": "captured_incomplete_unknown"
+      },
+      "state": "closed",
+      "title": "Corpus normativa Chile v0.1 \u2014 126 perfiles capa 3 + ~11.800 capa 2"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-20T04:08:04Z",
+        "merged_at": null,
+        "updated_at": "2026-05-22T06:02:10Z"
+      },
+      "head_sha": "51b56c4cbe13627d5d1dfb567821a5eb695a7a94",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/51",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "c48f71436b4eeef8957b3341d818d766c4522700",
+      "pr_number": 51,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "feat(commercial-legal): SpotDraft CLM connector + four new skills"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-20T10:07:23Z",
+        "merged_at": null,
+        "updated_at": "2026-05-20T10:13:41Z"
+      },
+      "head_sha": "45e36ee7c65de8a6d5b66cf226688897bb7ba5b3",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/52",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "3e51dc3724a678842dd2c1f32c3b6a01ee11c2ba",
+      "pr_number": 52,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Update Definely connector URL"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-20T20:21:15Z",
+        "merged_at": null,
+        "updated_at": "2026-06-12T02:26:33Z"
+      },
+      "head_sha": "39031cb1a360749833a558df0ab4b1052ea35017",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/53",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "baada020516c249fa7e4dfd7ba3e320ff4e2670d",
+      "pr_number": 53,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Add Brazilian legal MCP (Letra da Lei) as external plugin and connector"
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "diff_summary": {
+        "additions": 8,
+        "comparison": "base_to_merge_commit",
+        "deletions": 0,
+        "files_changed": 1
+      },
+      "event_time": {
+        "closed_at": "2026-05-21T01:20:28Z",
+        "created_at": "2026-05-20T23:41:04Z",
+        "merged_at": "2026-05-21T01:20:28Z",
+        "updated_at": "2026-05-21T01:20:38Z"
+      },
+      "head_sha": "c705e020f3da6bfca8a0d6bb994e122957ed0275",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/54",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "cd764014578e82fd347821af6eab6d4dfeea6981",
+      "pr_number": 54,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:a48d70b3a45e5ad47f409cc245c2cf0f30c2341651952757c75dc7d66f80de62",
+          "observed_at": "2026-07-15T13:45:01Z",
+          "sha256": "c9b85db89e79c3debe442708e63d96872377039ab09960c95c141a26840a0d11"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:1aeb32a86b461675b9a71fbff920bfb2c46fd33beda58b8a4099a548d99e78e6",
+          "observed_at": "2026-07-15T13:44:32Z",
+          "sha256": "1f82c5da05e6311d67cbbd68175cfbf38b4ba654f32904fdf71085f86b670888"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:95d96bc0d74e3ac5691e069ae0f9946ef1ad6742e6f21a42f97500166e10885b"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-15T13:49:54Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "593f0df9187a3fcff898860d2b690e124580f6e9028ef198c07780bbdc29f67f"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Stamp metadata.anthropic_cookbook on managed-agent deploys"
+    },
+    {
+      "base_sha": "b0aeeba7fea60a5de911549f2852fa5b078c7d76",
+      "diff_summary": {
+        "additions": 22,
+        "comparison": "base_to_merge_commit",
+        "deletions": 12,
+        "files_changed": 2
+      },
+      "event_time": {
+        "closed_at": "2026-05-29T00:48:22Z",
+        "created_at": "2026-05-21T05:55:53Z",
+        "merged_at": "2026-05-29T00:48:22Z",
+        "updated_at": "2026-05-29T00:48:31Z"
+      },
+      "head_sha": "88c89068315dba1358dd5058ac4cdce4023682d8",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/56",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "pr_number": 56,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:d1605d94c37794c6cea8a41fe261b87b6d83e0e1fccf90011bfdf1de849eb655",
+          "observed_at": "2026-07-15T13:45:03Z",
+          "sha256": "d3230157911a91924e19b555f94c6d23e56787cfbec44ce78365b6465518db4f"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:ad075500374681474ce9d873bc11e23f15786205b58a981f283dfad8f3c5af01",
+          "observed_at": "2026-07-15T13:44:33Z",
+          "sha256": "c377a25231df56a8c4ebc8faeb431dbd79b9029f43677bb0ace11ea1009b30bb"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:688aa4337adf5687f1940a22a104c06b71e4b5cbc78141e8b8fee183fce57073"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-15T13:49:55Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "388f80af0f05f9951bd124c6601457082d1ab1d13209a29a8c78f8df691fcfc9"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Fix handoff_request extractor truncating nested payloads at the first `}`"
+    },
+    {
+      "base_sha": "cd764014578e82fd347821af6eab6d4dfeea6981",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-29T00:49:10Z",
+        "created_at": "2026-05-21T07:54:25Z",
+        "merged_at": null,
+        "updated_at": "2026-05-29T00:49:17Z"
+      },
+      "head_sha": "4bfcc5124d082a1969c2904a4ff7b74f6120d0ab",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/58",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "cd26f7fb602fde5a68e146d305781b33000c4260",
+      "pr_number": 58,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "closed",
+      "title": "Add compliance baseline for ip-legal plugin"
+    },
+    {
+      "base_sha": "cd764014578e82fd347821af6eab6d4dfeea6981",
+      "diff_summary": {
+        "additions": 12,
+        "comparison": "base_to_merge_commit",
+        "deletions": 0,
+        "files_changed": 1
+      },
+      "event_time": {
+        "closed_at": "2026-05-21T16:14:48Z",
+        "created_at": "2026-05-21T16:13:28Z",
+        "merged_at": "2026-05-21T16:14:48Z",
+        "updated_at": "2026-05-21T16:15:18Z"
+      },
+      "head_sha": "448cedf677ec5e3afe7ecda45ec9ca3a784bc5fb",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/59",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "2859912482261374c8aebed7316d2685e994ee26",
+      "pr_number": 59,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:712266dad3ecb1a5034c8cbba215f433cffee919b62f69512b8d1d0437e4ec32",
+          "observed_at": "2026-07-15T13:45:05Z",
+          "sha256": "eaea5b569c09ad166d189b47676de4df8061d9abcdb2d11ac864ff4ab57006f3"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:fb7fa4a3e451db0e0ee66c8b49a9d1cb43458fc15e388093eeec5b732b582394",
+          "observed_at": "2026-07-15T13:44:35Z",
+          "sha256": "fc91cf88fef89412468f0e792db65a28040baa12c1144507bd7000b0704459ff"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:76c963c9c6a62e55d7549cd2bbfb96b0924ca526c6fe64ddc465c5eb47e53c79"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-15T13:49:59Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "19f4a7b3b859980d376af186d98db119e6d6ce3b282ca9d8fcf18748a4c9992d"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Add displayName to all marketplace plugin entries"
+    },
+    {
+      "base_sha": "2859912482261374c8aebed7316d2685e994ee26",
+      "diff_summary": {
+        "additions": 1,
+        "comparison": "base_to_merge_commit",
+        "deletions": 0,
+        "files_changed": 1
+      },
+      "event_time": {
+        "closed_at": "2026-05-21T16:30:57Z",
+        "created_at": "2026-05-21T16:28:43Z",
+        "merged_at": "2026-05-21T16:30:57Z",
+        "updated_at": "2026-05-21T16:31:15Z"
+      },
+      "head_sha": "53b8fd444d94944d6dfba158b80d27476217c291",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/60",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "1657cb355a2432853e49b7ec922d61c8029b10f0",
+      "pr_number": 60,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:5d00e9fdff7b0570af0d7c6780297b1a7e8dbd513365c763fa316133ea87aee0",
+          "observed_at": "2026-07-15T13:45:07Z",
+          "sha256": "9e9123dea9817fadfb9c3c9cabed87ec11538710c9141e7ac092740e962158e6"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:dff7a2cec6de1778f3e117d7c5ae8db82104ea03a37e83c32d581e06f0423fa8",
+          "observed_at": "2026-07-15T13:44:37Z",
+          "sha256": "a765f95040e87335aadc783cb2be3eaecb82865a3e73ed48f7ecc972485e67df"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:d4ada8d2a022191d95d1ac54c301f7005c4a929433c382735cd7eeb04eb2972c"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-15T13:50:03Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "fdc2564b94fc228e916462c4275bfd5c7c743b67749d127e9b4557e2000ed637"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Add displayName to cocounsel-legal marketplace entry"
+    },
+    {
+      "base_sha": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-21T21:37:58Z",
+        "merged_at": null,
+        "updated_at": "2026-07-12T22:33:43Z"
+      },
+      "head_sha": "787fe7fc55f468f6e87df106eb2b999a006fb8ca",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/61",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "77d172591fd1bd268d6cc03733502e02d508cbdd",
+      "pr_number": 61,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Add billing-legal plugin \u2014 time tracking and billing for AI-assisted legal work"
+    },
+    {
+      "base_sha": "1657cb355a2432853e49b7ec922d61c8029b10f0",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-22T12:52:42Z",
+        "merged_at": null,
+        "updated_at": "2026-05-22T12:52:55Z"
+      },
+      "head_sha": "50a4bfa0d0838b58f27027cd83539bd46404fe3b",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/62",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "0dcd7db19236d6fc10a0a97e5eddb9b1f5026164",
+      "pr_number": 62,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Add belgian-corporate-law skill to corporate-legal"
+    },
+    {
+      "base_sha": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-22T14:08:51Z",
+        "merged_at": null,
+        "updated_at": "2026-07-09T18:25:06Z"
+      },
+      "head_sha": "a7a49236b53b9600cbc52956c2dbd17458584eed",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/63",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "71feed10e6f562baecdaa4b7e2bf154eeb9754ec",
+      "pr_number": 63,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Add external plugin: redjudicial-legal (Chile + LATAM hispano)"
+    },
+    {
+      "base_sha": "1657cb355a2432853e49b7ec922d61c8029b10f0",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-05-22T15:54:41Z",
+        "created_at": "2026-05-22T15:49:58Z",
+        "merged_at": null,
+        "updated_at": "2026-05-22T15:54:53Z"
+      },
+      "head_sha": "b2caffc899981dc950477e70fd83395d2430e9e1",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/64",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "507d02c59b36efa87b6d66edda455045907b066f",
+      "pr_number": 64,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "closed",
+      "title": "Remove unused references"
+    },
+    {
+      "base_sha": "1657cb355a2432853e49b7ec922d61c8029b10f0",
+      "diff_summary": {
+        "additions": 17,
+        "comparison": "base_to_merge_commit",
+        "deletions": 18,
+        "files_changed": 8
+      },
+      "event_time": {
+        "closed_at": "2026-05-22T15:55:54Z",
+        "created_at": "2026-05-22T15:54:15Z",
+        "merged_at": "2026-05-22T15:55:54Z",
+        "updated_at": "2026-05-22T15:56:06Z"
+      },
+      "head_sha": "c1998de2e63b916d9c8f3b8db0fedd5c6bac69ed",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/65",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "b0aeeba7fea60a5de911549f2852fa5b078c7d76",
+      "pr_number": 65,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:bda5aed0655bc04eaf97a5ab83206fedc1ba3eafed123fb9d845a6b747710496",
+          "observed_at": "2026-07-15T13:45:09Z",
+          "sha256": "5c4fc6fff78aeb2a1efaff24666661b5fc2e7ae568056abee81af72f5d8fa87f"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:df95d3821cd0819a36aa93394fae6fb97d02317275b5f0ea83d3f3e126968557",
+          "observed_at": "2026-07-15T13:44:38Z",
+          "sha256": "8702a719f344c84457e0e57a57afd3802b2fa99b283f9a1721c8ed7b307e7664"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:f93842fc7cc2a54da33dda988eb6b55155a9c3ac7b22c31f0dc53a6007be948d"
+          ],
+          "file_count": 8,
+          "observed_at": [
+            "2026-07-15T13:50:05Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "11745ed7fcffc4fc579ab80bd803d3398e4cb6c2f269bb53993c285032ee91cc"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Remove unused references"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-24T07:01:48Z",
+        "merged_at": null,
+        "updated_at": "2026-06-20T05:24:46Z"
+      },
+      "head_sha": "d2c5c2a1c5ba57a99f7a58f0d9a6627dbd241a07",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/67",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "e3ff0465fe96cf3c7b0301371d9c2077818cf503",
+      "pr_number": 67,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Add Patent Connector to ip-legal"
+    },
+    {
+      "base_sha": "b0aeeba7fea60a5de911549f2852fa5b078c7d76",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-06-08T13:27:54Z",
+        "created_at": "2026-05-26T09:57:47Z",
+        "merged_at": null,
+        "updated_at": "2026-06-08T13:28:06Z"
+      },
+      "head_sha": "b8f84aae0da43dac86ecf49ae15b631854090d73",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/69",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "de44b7e95fa543ceee7d8196090048654f04bdfa",
+      "pr_number": 69,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "closed",
+      "title": "Add eu-finreg plugin \u2014 EU financial regulation specialist"
+    },
+    {
+      "base_sha": "b0aeeba7fea60a5de911549f2852fa5b078c7d76",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-28T06:26:05Z",
+        "merged_at": null,
+        "updated_at": "2026-05-28T16:13:24Z"
+      },
+      "head_sha": "d2811d08e2f6a3fbf1403163d06e672b1e86f8f9",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/71",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "5734dfc438c84453f1be00835ff7d3c98d5599bb",
+      "pr_number": 71,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Add ContractsAI MCP connector for commerical-legal"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": {
+        "additions": 39,
+        "comparison": "base_to_merge_commit",
+        "deletions": 0,
+        "files_changed": 1
+      },
+      "event_time": {
+        "closed_at": "2026-06-17T16:17:27Z",
+        "created_at": "2026-05-29T00:50:46Z",
+        "merged_at": "2026-06-17T16:17:27Z",
+        "updated_at": "2026-06-17T16:17:43Z"
+      },
+      "head_sha": "9250e808959b1f9a0dd9e74b2a6f673d35481370",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/72",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "ef27866472e487c0e691f230e82c2a54a35bd356",
+      "pr_number": 72,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:1fa093b746279c74365e4bc23fcbae61121f16e84b5dd8cd7161b5d8ebcb642e",
+          "observed_at": "2026-07-15T13:45:10Z",
+          "sha256": "cefdad3f0419e1f7b8d961d5ef8c9a95d6cc73528bf6b7376e8a143e23443e73"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:23f691e502c4999f268321369501f87881671ed5148bb2088acecac97a876dfb",
+          "observed_at": "2026-07-15T13:44:39Z",
+          "sha256": "4d2646e85c66ba09faff69e7d9703addbe0914040f8e9367e6fcbdf5e8a5697d"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:409eea793e0c178bfd01e56ec58b2bf7eadfc85b7c5ad119a01a1198972ee6ca"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-15T13:50:07Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "c69bede4d7067725708d7dc9c8061e1c94592885e9ae50f3db3c0cab3acdfa55"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Add CLA.md referenced by CONTRIBUTING.md and the CLA Assistant workflow"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-29T02:33:02Z",
+        "merged_at": null,
+        "updated_at": "2026-07-14T02:09:34Z"
+      },
+      "head_sha": "ff3ee7aeeba8d58f8f07f10d6ccafbe78c4ad403",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/73",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "5a7f747e591c17eaeab7a59677a213e6973eebbd",
+      "pr_number": 73,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Lawaigovhub"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": {
+        "additions": 49,
+        "comparison": "base_to_merge_commit",
+        "deletions": 3,
+        "files_changed": 2
+      },
+      "event_time": {
+        "closed_at": "2026-06-17T16:17:49Z",
+        "created_at": "2026-05-29T02:43:05Z",
+        "merged_at": "2026-06-17T16:17:49Z",
+        "updated_at": "2026-06-17T16:18:05Z"
+      },
+      "head_sha": "b54336aa159bdda0010789abe09d478e4a2027b6",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/74",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": true
+      },
+      "merge_commit_sha": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "pr_number": 74,
+      "public_capture_linkage": {
+        "commit": {
+          "custody_id": "custody:sha256:c7c03128d8e8f2e1cb99e5a829cec6536bf05e96345e0670fd4e1486833775df",
+          "observed_at": "2026-07-15T13:45:11Z",
+          "sha256": "6e727c5afb13aef4c412eff64c64ad0530e692bc103ee52a3999d2067a41f313"
+        },
+        "detail": {
+          "custody_id": "custody:sha256:e8bba0c4c03ba1a907e687d336574bc1eae68552497e4f3c555b54647e3acd78",
+          "observed_at": "2026-07-15T13:44:39Z",
+          "sha256": "0db934bcd54cc1348ec40e35f0a8f31b8e2c76c638f88f0daf0fb6ecea6e5919"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:eb0660edb04c3d1f614890ba1b3f4c5a11ce7cbb91050765c7558a45f712cf8b"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-15T13:50:08Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "fca167d1f13e4c2cda944ece6b8e50995087caa4f1394dbfa9ae0a76aecbc8aa"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail, merged commit, and terminally verified file pages agree",
+        "status": "linked_verified_capture"
+      },
+      "state": "closed",
+      "title": "Make the CLA workflow tolerant of comment whitespace and assistant-authored commits"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-29T06:04:09Z",
+        "merged_at": null,
+        "updated_at": "2026-05-29T07:18:10Z"
+      },
+      "head_sha": "6d2c970e14a7d2f9535e8048c1104a364fc4c516",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/75",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "4cc6a74c01fa562f2517279d27d17ddfece651b5",
+      "pr_number": 75,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "ip-legal/invention-intake: correct \u00a7102 bar-date screen to post-AIA framing"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-29T09:17:58Z",
+        "merged_at": null,
+        "updated_at": "2026-05-29T09:32:27Z"
+      },
+      "head_sha": "e3c53bd78109ed95c50c221dbe3473a8b90eb43a",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/76",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "fd9b23f7898bd6003cf5cef8e38fd183114cf70f",
+      "pr_number": 76,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Bump managed-agent cookbooks from claude-opus-4-7 to claude-opus-4-8"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-29T11:16:50Z",
+        "merged_at": null,
+        "updated_at": "2026-05-29T11:17:04Z"
+      },
+      "head_sha": "113062887019e3304b7aad44aa89a8d7b6d056a6",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/78",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "599133419cc806c8d6d14ff6d5038c9e85134583",
+      "pr_number": 78,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Make deploy-managed-agent.sh fail when an env-var value is refused"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-06-08T13:27:56Z",
+        "created_at": "2026-05-29T17:38:50Z",
+        "merged_at": null,
+        "updated_at": "2026-06-08T13:28:08Z"
+      },
+      "head_sha": "14d24715d493bb2a68bbabdded6786416748053b",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/79",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "cc72246151de786b55badcfd56ee02890493a113",
+      "pr_number": 79,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "closed",
+      "title": "feat: add eu-legal external plugin (EU legal ops for regulated financial institutions)"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-05-30T20:35:27Z",
+        "merged_at": null,
+        "updated_at": "2026-05-30T21:19:36Z"
+      },
+      "head_sha": "19f874c84da9fa84b25d1644f8b9019cbb09afe9",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/81",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "eea8649975be9b7dc093afe06c404dc07f806a31",
+      "pr_number": 81,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Add an external-benchmark reference to skills-qa's performance discla\u2026"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-06-08T13:27:59Z",
+        "created_at": "2026-06-02T09:53:14Z",
+        "merged_at": null,
+        "updated_at": "2026-06-08T13:28:09Z"
+      },
+      "head_sha": "599b2d8cf1dc47be492fa789f89664bf75d4575c",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/83",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "5127aa2a983906300359bf4c069e14217515469f",
+      "pr_number": 83,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "closed",
+      "title": "feat: add fi-startup-legal \u2014 Finnish startup legal toolkit"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-06-08T13:28:02Z",
+        "created_at": "2026-06-02T09:58:43Z",
+        "merged_at": null,
+        "updated_at": "2026-06-08T13:28:14Z"
+      },
+      "head_sha": "48c18220a980095b45e065fb7b830d56f03c55ba",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/84",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "d63cfd524616297861bd6ed17dea7591e26722e2",
+      "pr_number": 84,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "closed",
+      "title": "feat: add Velvoite as connector to regulatory-legal and privacy-legal"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-06-02T23:37:19Z",
+        "merged_at": null,
+        "updated_at": "2026-06-30T09:20:07Z"
+      },
+      "head_sha": "f189f6b847da67905c434a7aeb25ba9bc0f1af7d",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/85",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": true,
+        "merge_commit": false
+      },
+      "merge_commit_sha": null,
+      "pr_number": 85,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "New release \u2014 June 3: jurisdiction support, plaintiff-side litigation, and suite-wide refinements from launch feedback"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-06-03T14:19:19Z",
+        "created_at": "2026-06-03T14:16:19Z",
+        "merged_at": null,
+        "updated_at": "2026-06-03T14:24:29Z"
+      },
+      "head_sha": "2a2d3a78363378ea9d442f66ccd7dc0b987a9b7d",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/86",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "70d8582d4905dec065b824626f61982db627e5f5",
+      "pr_number": 86,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "closed",
+      "title": "localize(privacy-legal): replace GDPR/ICO/CCPA with LGPD/ANPD equivalents"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-06-22T19:50:21Z",
+        "created_at": "2026-06-03T14:48:22Z",
+        "merged_at": null,
+        "updated_at": "2026-06-22T19:50:32Z"
+      },
+      "head_sha": "a56e646f5bdb23e2dee72f22f3276866eaabe60e",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/87",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "967f07e4cdf5e73c7a80645bde6cd404a6a2c55c",
+      "pr_number": 87,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "closed",
+      "title": "Add PharosLex connector (EU primary law + CJEU, via EUR-Lex/CELLAR) to 5 plugins"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-06-04T15:36:44Z",
+        "merged_at": null,
+        "updated_at": "2026-06-04T15:46:54Z"
+      },
+      "head_sha": "d5105e9b0eda7aba71eaa420c0e680ce12115f7a",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/88",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "3c9ce60793bd820658a1e009df3ea41966f0946d",
+      "pr_number": 88,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "feat(connectors): add ARBI as external plugin"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-06-08T13:21:15Z",
+        "merged_at": null,
+        "updated_at": "2026-06-08T13:28:04Z"
+      },
+      "head_sha": "bc0bb35279e0e216ab98f86db1702ce8f045d6b2",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/92",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "16ca2f807dded31f34117a41e9374112808c1e8c",
+      "pr_number": 92,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "feat: add eu-legal and fi-startup-legal external plugins (Silly Pilot Oy)"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-06-08T13:26:06Z",
+        "merged_at": null,
+        "updated_at": "2026-06-08T13:28:06Z"
+      },
+      "head_sha": "7bdd9ddd8a4c0d0ca957a9b5e774c501a552273f",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/93",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "f17495a8d321809e48060708700d540c87316977",
+      "pr_number": 93,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "feat: add Velvoite as MCP connector to regulatory-legal, privacy-legal, ai-governance-legal"
+    },
+    {
+      "base_sha": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-06-13T18:23:51Z",
+        "merged_at": null,
+        "updated_at": "2026-06-28T18:42:28Z"
+      },
+      "head_sha": "5c697e5c0f4869b4d33a03a74a1398850606a677",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/95",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "ed62efa69f04f8dcb129fabf8016391b47ea8714",
+      "pr_number": 95,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Add `singapore-court-legal` \u2014 MikeROS connector for Singapore civil court procedure"
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-06-14T22:30:40Z",
+        "merged_at": null,
+        "updated_at": "2026-06-14T22:30:57Z"
+      },
+      "head_sha": "8f2cc9f5a8f13354bccc3f5d6c8f829f672d4a9a",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/96",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "14699fa0716e0a71ac520587618afc264a836aa8",
+      "pr_number": 96,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Update print statement from 'Hello' to 'Goodbye'"
+    },
+    {
+      "base_sha": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-06-21T00:48:57Z",
+        "merged_at": null,
+        "updated_at": "2026-06-21T00:49:55Z"
+      },
+      "head_sha": "d4f3ed9db9248013edc885c7f4d5f295b6b91811",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/97",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "8a55aa6eeee4b01f9b12cd8e7b98e7522215bad5",
+      "pr_number": 97,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Add boolean-search skill to litigation-legal"
+    },
+    {
+      "base_sha": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-06-26T02:45:42Z",
+        "created_at": "2026-06-26T02:19:16Z",
+        "merged_at": null,
+        "updated_at": "2026-06-26T02:45:51Z"
+      },
+      "head_sha": "e53830c5dfad6a6b3776eaeb196b0262c83042a7",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/98",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "2cae06b2a2f900fe0595f6b495049047cf54c7e1",
+      "pr_number": 98,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "closed",
+      "title": "Add 12 Japanese legal plugins (\u65e5\u672c\u6cd5\u5bfe\u5fdc\u30d7\u30e9\u30b0\u30a4\u30f3)"
+    },
+    {
+      "base_sha": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": "2026-06-27T00:17:15Z",
+        "created_at": "2026-06-26T23:44:49Z",
+        "merged_at": null,
+        "updated_at": "2026-06-27T11:28:28Z"
+      },
+      "head_sha": "14771e416cb25fee0802276a9b6ce5a39ce53882",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/99",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "8afa30ccc3e106d1640b7ded5bdb399ef7bcb3ca",
+      "pr_number": 99,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "closed",
+      "title": "Harden validation CLI argument handling"
+    },
+    {
+      "base_sha": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-07-05T10:19:28Z",
+        "merged_at": null,
+        "updated_at": "2026-07-05T10:19:40Z"
+      },
+      "head_sha": "f6a75ffc35e38cec95c03af4756589aa86f64d54",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/101",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": null,
+      "pr_number": 101,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Fix documentation URL in README"
+    },
+    {
+      "base_sha": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "diff_summary": null,
+      "event_time": {
+        "closed_at": null,
+        "created_at": "2026-07-07T03:13:30Z",
+        "merged_at": null,
+        "updated_at": "2026-07-07T03:35:20Z"
+      },
+      "head_sha": "e00750d83c9a15676bce3a70d9d373fd7858fd64",
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/102",
+      "limitation": "Identifiers and diff statistics describe the captured public PR record and locally available Git objects only. They do not establish reviewer intent, product strategy, runtime behavior, or complete remote history.",
+      "local_availability": {
+        "base_commit": true,
+        "head_commit": false,
+        "merge_commit": false
+      },
+      "merge_commit_sha": "1724dfe191c8e8fe523b4cbf0536bd06fae27f1e",
+      "pr_number": 102,
+      "public_capture_linkage": {
+        "commit": null,
+        "detail": null,
+        "files": null,
+        "status": "unknown"
+      },
+      "state": "open",
+      "title": "Add Ansvar Gateway connector \u2014 European regulatory primary sources (regulatory-legal, privacy-legal, ai-governance-legal)"
+    }
+  ],
+  "schema": "claude-legal-audit.pr-commit-diff-linkage.v2",
+  "summary": {
+    "captured_open_or_unmerged_snapshot_count": 29,
+    "coverage_statement": "14 of 76 captured public PR index records have hash-verified detail, merged-commit, and terminal file-page linkage; 29 have bounded open/unmerged detail and file snapshots; 33 remain unknown or incomplete.",
+    "diff_available_count": 14,
+    "local_merge_commit_count": 14,
+    "pr_count": 76,
+    "public_linkage_unknown_count": 33,
+    "publicly_linked_capture_count": 14
+  }
+}

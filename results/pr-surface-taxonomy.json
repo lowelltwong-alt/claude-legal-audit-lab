@@ -1,0 +1,1344 @@
+{
+  "input_linkage_capture_sha256": "940fa06362d0db53f28f710ef48c8fdd503acaf38212257617011315f0a57fc9",
+  "records": [
+    {
+      "base_sha": "d541734b08e67aae330a362b256d1eb6808a08f5",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": ".github/workflows/cla.yaml",
+          "status": "A",
+          "surface": "contribution_or_automation_governance"
+        },
+        {
+          "path": ".gitignore",
+          "status": "M",
+          "surface": "other_observable_surface"
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "status": "A",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "ai-governance-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "commercial-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "commercial-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "corporate-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "corporate-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "employment-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "employment-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "ip-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "law-student/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "law-student/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-builder-hub/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "legal-builder-hub/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-clinic/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "legal-clinic/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "litigation-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "privacy-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "privacy-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "product-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "product-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "regulatory-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "scripts/deploy-managed-agent.sh",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "scripts/lint-tool-scope.py",
+          "status": "M",
+          "surface": "automation_or_script"
+        },
+        {
+          "path": "scripts/orchestrate.py",
+          "status": "M",
+          "surface": "automation_or_script"
+        },
+        {
+          "path": "scripts/test-cookbooks.sh",
+          "status": "M",
+          "surface": "automation_or_script"
+        },
+        {
+          "path": "scripts/validate.py",
+          "status": "M",
+          "surface": "automation_or_script"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/1",
+      "merge_commit_sha": "d96c61846eebc5affc9f00f3890d7fc23af68ab9",
+      "pr_number": 1,
+      "surface_counts": {
+        "automation_or_script": 4,
+        "configuration_or_metadata": 12,
+        "contribution_or_automation_governance": 1,
+        "documentation_or_instruction": 14,
+        "managed_agent_deployment": 1,
+        "other_observable_surface": 1
+      }
+    },
+    {
+      "base_sha": "d96c61846eebc5affc9f00f3890d7fc23af68ab9",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": "QUICKSTART.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "ai-governance-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/references/currency-watch.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "commercial-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "commercial-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "commercial-legal/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "commercial-legal/skills/renewal-tracker/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "corporate-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "employment-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "employment-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "ip-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "law-student/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "law-student/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-builder-hub/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "legal-builder-hub/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-clinic/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "legal-clinic/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "litigation-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "privacy-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "privacy-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "product-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "product-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "regulatory-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/2",
+      "merge_commit_sha": "2d3259870a87c278d15fb055b67c2955024afe70",
+      "pr_number": 2,
+      "surface_counts": {
+        "configuration_or_metadata": 12,
+        "documentation_or_instruction": 17
+      }
+    },
+    {
+      "base_sha": "2d3259870a87c278d15fb055b67c2955024afe70",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": "QUICKSTART.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/3",
+      "merge_commit_sha": "52e06d17db6e0820c800213774a1d7f62ad98dba",
+      "pr_number": 3,
+      "surface_counts": {
+        "documentation_or_instruction": 2
+      }
+    },
+    {
+      "base_sha": "52e06d17db6e0820c800213774a1d7f62ad98dba",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": ".claude-plugin/marketplace.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "external_plugins/cocounsel-legal/.claude-plugin/plugin.json",
+          "status": "A",
+          "surface": "partner_or_external_integration"
+        },
+        {
+          "path": "external_plugins/cocounsel-legal/.mcp.json",
+          "status": "A",
+          "surface": "partner_or_external_integration"
+        },
+        {
+          "path": "external_plugins/cocounsel-legal/README.md",
+          "status": "A",
+          "surface": "partner_or_external_integration"
+        },
+        {
+          "path": "external_plugins/cocounsel-legal/skills/deep-research/SKILL.md",
+          "status": "A",
+          "surface": "partner_or_external_integration"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/4",
+      "merge_commit_sha": "993f6619fc2f321cfdd65daa6919ad6cd2c56d92",
+      "pr_number": 4,
+      "surface_counts": {
+        "configuration_or_metadata": 1,
+        "documentation_or_instruction": 1,
+        "partner_or_external_integration": 4
+      }
+    },
+    {
+      "base_sha": "993f6619fc2f321cfdd65daa6919ad6cd2c56d92",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": "CONNECTORS.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "QUICKSTART.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "ai-governance-legal/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "ai-governance-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/skills/aia-generation/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/skills/reg-gap-analysis/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/skills/use-case-triage/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "commercial-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "commercial-legal/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "commercial-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "commercial-legal/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "commercial-legal/skills/saas-msa-review/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "commercial-legal/skills/vendor-agreement-review/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "corporate-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "corporate-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "corporate-legal/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "corporate-legal/skills/diligence-issue-extraction/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "employment-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "employment-legal/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "employment-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "employment-legal/skills/hiring-review/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "employment-legal/skills/termination-review/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "employment-legal/skills/wage-hour-qa/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "employment-legal/skills/worker-classification/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "ip-legal/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "ip-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/skills/cease-desist/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/skills/clearance/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/skills/fto-triage/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/skills/infringement-triage/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/skills/ip-clause-review/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/skills/oss-review/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ip-legal/skills/takedown/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "law-student/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "law-student/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "law-student/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "law-student/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "law-student/skills/case-brief/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "law-student/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "law-student/skills/flashcards/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "law-student/skills/irac-practice/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "law-student/skills/outline-builder/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-builder-hub/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "legal-builder-hub/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-clinic/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "legal-clinic/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "legal-clinic/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-clinic/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-clinic/skills/client-intake/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-clinic/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-clinic/skills/memo/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-clinic/skills/research-start/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "litigation-legal/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "litigation-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/skills/brief-section-drafter/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/skills/demand-draft/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/skills/demand-received/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/skills/deposition-prep/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/skills/privilege-log-review/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/skills/subpoena-triage/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "managed-agent-cookbooks/README.md",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "managed-agent-cookbooks/reg-monitor/README.md",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "managed-agent-cookbooks/reg-monitor/agent.yaml",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "managed-agent-cookbooks/reg-monitor/subagents/feed-reader.yaml",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "privacy-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "privacy-legal/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "privacy-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "privacy-legal/skills/dpa-review/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "privacy-legal/skills/dsar-response/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "privacy-legal/skills/pia-generation/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "privacy-legal/skills/reg-gap-analysis/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "product-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "product-legal/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "product-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "product-legal/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "product-legal/skills/feature-risk-assessment/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "product-legal/skills/launch-review/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "product-legal/skills/marketing-claims-review/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "regulatory-legal/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "regulatory-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/agents/reg-change-monitor.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/gap-surfacer/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/policy-diff/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/policy-redraft/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/reg-feed-watcher/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/5",
+      "merge_commit_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "pr_number": 5,
+      "surface_counts": {
+        "configuration_or_metadata": 22,
+        "documentation_or_instruction": 71,
+        "managed_agent_deployment": 4
+      }
+    },
+    {
+      "base_sha": "9cecd91b0f26f732d18315afc3c9bb5ff99e0fbb",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": ".claude-plugin/marketplace.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "CLAUDE.md",
+          "status": "A",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "ai-governance-legal/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "ai-governance-legal/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "commercial-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "commercial-legal/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "commercial-legal/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "corporate-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "employment-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "external_plugins/cocounsel-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "partner_or_external_integration"
+        },
+        {
+          "path": "external_plugins/cocounsel-legal/.mcp.json",
+          "status": "M",
+          "surface": "partner_or_external_integration"
+        },
+        {
+          "path": "external_plugins/cocounsel-legal/README.md",
+          "status": "M",
+          "surface": "partner_or_external_integration"
+        },
+        {
+          "path": "ip-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "law-student/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "law-student/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-builder-hub/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "legal-builder-hub/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "legal-clinic/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "legal-clinic/.mcp.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "legal-clinic/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "litigation-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "litigation-legal/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "managed-agent-cookbooks/launch-radar/README.md",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "managed-agent-cookbooks/launch-radar/agent.yaml",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "managed-agent-cookbooks/reg-monitor/subagents/materiality-filter.yaml",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "privacy-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "privacy-legal/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "product-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "product-legal/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "references/company-profile-template.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/.claude-plugin/plugin.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "regulatory-legal/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/33",
+      "merge_commit_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "pr_number": 33,
+      "surface_counts": {
+        "configuration_or_metadata": 14,
+        "documentation_or_instruction": 15,
+        "managed_agent_deployment": 3,
+        "partner_or_external_integration": 3
+      }
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": ".claude-plugin/marketplace.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        },
+        {
+          "path": "managed-agent-cookbooks/reg-monitor/README.md",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "managed-agent-cookbooks/reg-monitor/subagents/feed-reader.yaml",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "regulatory-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/agents/reg-change-monitor.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/reg-feed-watcher/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "scripts/deploy-managed-agent.sh",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/41",
+      "merge_commit_sha": "efc8d4edf9c625c93d393feeb2fc710badc32069",
+      "pr_number": 41,
+      "surface_counts": {
+        "configuration_or_metadata": 1,
+        "documentation_or_instruction": 6,
+        "managed_agent_deployment": 3
+      }
+    },
+    {
+      "base_sha": "4d55f53962293ab0ec0dcfad84c51afb54535975",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": "scripts/deploy-managed-agent.sh",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/54",
+      "merge_commit_sha": "cd764014578e82fd347821af6eab6d4dfeea6981",
+      "pr_number": 54,
+      "surface_counts": {
+        "managed_agent_deployment": 1
+      }
+    },
+    {
+      "base_sha": "b0aeeba7fea60a5de911549f2852fa5b078c7d76",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": "scripts/deploy-managed-agent.sh",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "scripts/orchestrate.py",
+          "status": "M",
+          "surface": "automation_or_script"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/56",
+      "merge_commit_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "pr_number": 56,
+      "surface_counts": {
+        "automation_or_script": 1,
+        "managed_agent_deployment": 1
+      }
+    },
+    {
+      "base_sha": "cd764014578e82fd347821af6eab6d4dfeea6981",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": ".claude-plugin/marketplace.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/59",
+      "merge_commit_sha": "2859912482261374c8aebed7316d2685e994ee26",
+      "pr_number": 59,
+      "surface_counts": {
+        "configuration_or_metadata": 1
+      }
+    },
+    {
+      "base_sha": "2859912482261374c8aebed7316d2685e994ee26",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": ".claude-plugin/marketplace.json",
+          "status": "M",
+          "surface": "configuration_or_metadata"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/60",
+      "merge_commit_sha": "1657cb355a2432853e49b7ec922d61c8029b10f0",
+      "pr_number": 60,
+      "surface_counts": {
+        "configuration_or_metadata": 1
+      }
+    },
+    {
+      "base_sha": "1657cb355a2432853e49b7ec922d61c8029b10f0",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": "managed-agent-cookbooks/reg-monitor/README.md",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "managed-agent-cookbooks/reg-monitor/subagents/feed-reader.yaml",
+          "status": "M",
+          "surface": "managed_agent_deployment"
+        },
+        {
+          "path": "regulatory-legal/CLAUDE.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/README.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/agents/reg-change-monitor.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/cold-start-interview/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/customize/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        },
+        {
+          "path": "regulatory-legal/skills/reg-feed-watcher/SKILL.md",
+          "status": "M",
+          "surface": "documentation_or_instruction"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/65",
+      "merge_commit_sha": "b0aeeba7fea60a5de911549f2852fa5b078c7d76",
+      "pr_number": 65,
+      "surface_counts": {
+        "documentation_or_instruction": 6,
+        "managed_agent_deployment": 2
+      }
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": "CLA.md",
+          "status": "A",
+          "surface": "documentation_or_instruction"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/72",
+      "merge_commit_sha": "ef27866472e487c0e691f230e82c2a54a35bd356",
+      "pr_number": 72,
+      "surface_counts": {
+        "documentation_or_instruction": 1
+      }
+    },
+    {
+      "base_sha": "248331e0fedd76418edd8b46ca895518f9a009ce",
+      "bounded_observation": "Categories classify changed path names and Git status only. They do not establish purpose, priority, customer usage, provider behavior, or strategy.",
+      "changed_paths": [
+        {
+          "path": ".github/workflows/cla.yaml",
+          "status": "M",
+          "surface": "contribution_or_automation_governance"
+        },
+        {
+          "path": "CLA.md",
+          "status": "A",
+          "surface": "documentation_or_instruction"
+        }
+      ],
+      "html_url": "https://github.com/anthropics/claude-for-legal/pull/74",
+      "merge_commit_sha": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+      "pr_number": 74,
+      "surface_counts": {
+        "contribution_or_automation_governance": 1,
+        "documentation_or_instruction": 1
+      }
+    }
+  ],
+  "schema": "claude-legal-audit.pr-surface-taxonomy.v1",
+  "summary": {
+    "locally_linked_pr_count": 14,
+    "surface_counts": {
+      "automation_or_script": 5,
+      "configuration_or_metadata": 64,
+      "contribution_or_automation_governance": 2,
+      "documentation_or_instruction": 134,
+      "managed_agent_deployment": 15,
+      "other_observable_surface": 1,
+      "partner_or_external_integration": 7
+    }
+  }
+}

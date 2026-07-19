@@ -1,0 +1,28 @@
+{
+  "schema": "claude-legal-audit.design-authority.v1",
+  "owners": [
+    {"surface": "project_execution_state", "authority": "registry/project-roadmap.json", "human_view": "docs/ROADMAP.md", "schema": "schemas/project-roadmap.schema.json", "validator": "scripts/validate_roadmap.py"},
+    {"surface": "public_release_readiness", "authority": "registry/release-readiness.json", "schema": "schemas/release-readiness.schema.json", "validator": "scripts/validate_release_readiness.py --require-ready", "status": "blocked", "human_activation_required": true},
+    {"surface": "epistemic_method", "authority": "AGENTS.md", "validator": "human review"},
+    {"surface": "navigation", "authority": "MACHINE_NAVIGATION_MANIFEST.json", "validator": "scripts/validate_navigation.py"},
+    {"surface": "source_identity", "authority": "registry/source-registry.json", "validator": "scripts/validate_navigation.py"},
+    {"surface": "claim_semantics", "authority": "registry/claim-registry.json", "schema": "schemas/claim-registry.schema.json", "validator": "scripts/upgrade_claim_registry_v2.py --check"},
+    {"surface": "chunk_control_plane", "authority": "registry/chunk-policy.json", "schemas": ["schemas/chunk-policy.schema.json", "schemas/chunk-registry.schema.json", "schemas/chunk-id-migration.schema.json"], "projection": "registry/chunk-registry.json", "compatibility_map": "registry/chunk-id-migration.json", "validator": "scripts/build_chunk_registry.py --check --verify-reconstruction", "rust_parity": "rust/chunk-engine", "activated_kinds": ["static_file_span"]},
+    {"surface": "typed_evidence_graph", "authority": "registry/edge-type-library.json", "schema": "schemas/evidence-graph.schema.json", "projection": "registry/evidence-graph.json", "validator": "scripts/build_evidence_graph.py --check", "truth_promotion_from_similarity": false},
+    {"surface": "candidate_thesis_map", "authority": "registry/thesis-map.json", "schema": "schemas/thesis-map.schema.json", "projection": "docs/THESIS_MAP.md", "validator": "scripts/build_thesis_map.py --check", "status": "candidate_blocked", "human_release_required": true},
+    {"surface": "blocked_white_paper_candidate", "authority": "registry/white-paper-export.json", "schema": "schemas/white-paper-export.schema.json", "outputs": ["public/generated-release-artifacts/candidate/white-paper.md", "public/generated-release-artifacts/candidate/index.html"], "validator": "scripts/build_white_paper_candidate.py --check", "status": "blocked", "human_release_required": true},
+    {"surface": "mini_white_paper_engine", "authority": "registry/mini-paper-plan.json", "schemas": ["schemas/mini-paper-plan.schema.json", "schemas/mini-paper-sidecar.schema.json"], "outputs": ["public/generated-release-artifacts/candidate/mini-papers/"], "validator": "scripts/build_mini_papers.py --check", "capability_class": "portable_core", "status": "blocked", "human_release_required": true},
+    {"surface": "artifact_genealogy", "authority": "registry/lineage-policy.json", "projection": "registry/derivation-registry.json", "validator": "scripts/validate_navigation.py"},
+    {"surface": "argument_mesh", "authority": "docs/ARGUMENT_MESH_STANDARD.md", "registry": "registry/argument-mesh.json", "validator": "scripts/validate_argument_mesh.py", "human_release_required": true},
+    {"surface": "industry_research_priority", "authority": "docs/CROSS_INDUSTRY_ONTOLOGY_RISK.md", "registry": "registry/industry-research-taxonomy.json", "validator": "scripts/validate_research_radar.py", "human_promotion_required": true},
+    {"surface": "research_radar", "authority": "docs/RESEARCH_RADAR.md", "registry": "registry/research-radar-watchlist.json", "validator": "scripts/validate_research_radar.py", "automation_authorized": false},
+    {"surface": "defensive_counterfactual_capture", "authority": "docs/FRONTIER_LAB_ONTOLOGY_CAPTURE_COUNTERFACTUAL.md", "registries": ["registry/law-firm-value-chain.json", "registry/counterfactual-capture-patterns.json"], "projection": "registry/counterfactual-exposure-graph.json", "validator": "scripts/build_counterfactual_graph.py --check", "collection_authorized": false, "human_release_required": true},
+    {"surface": "public_contribution_intake", "authority": "CONTRIBUTING.md", "validator": "human review", "status": "preview_closed", "human_activation_required": true},
+    {"surface": "license_selection", "authority": "LICENSE", "decision_brief": "docs/LICENSING_OPTIONS.md", "validator": "owner and legal review", "human_activation_required": true},
+    {"surface": "record_contracts", "authority": "schemas/", "validator": "scripts/validate_navigation.py"},
+    {"surface": "upstream_revision", "authority": "UPSTREAM.lock.json", "validator": "scripts/verify_upstream.sh"},
+    {"surface": "generated_audit_outputs", "authority": "scripts/", "output": "results/", "authority_class": "candidate_evidence"}
+  ],
+  "change_rule": "Any change to sources, claims, chunks, graph nodes or edges, thesis paths, parents, derived content, industry facets, radar sources, or contribution gates must rebuild the affected projection and pass validation in the same change.",
+  "promotion_rule": "Candidate evidence becomes reviewed analysis only after exact source binding, epistemic classification, counterevidence review, and human approval. It never becomes a primary source."
+}

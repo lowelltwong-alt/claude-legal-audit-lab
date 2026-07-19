@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema", "revision", "status", "search_receipt", "sources", "bounded_conclusion"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.mini-paper-related-work.v1"}, "revision": {"const": "1.0.0"}, "status": {"const": "candidate_research_metadata"},
+    "search_receipt": {"type": "object", "additionalProperties": false, "required": ["searched_at", "method", "queries", "selection_rule", "limitations"], "properties": {
+      "searched_at": {"type": "string", "format": "date-time"}, "method": {"type": "string"},
+      "queries": {"type": "array", "minItems": 4, "items": {"type": "string"}}, "selection_rule": {"type": "string"}, "limitations": {"type": "array", "minItems": 2, "items": {"type": "string"}}
+    }},
+    "sources": {"type": "array", "minItems": 12, "uniqueItems": true, "items": {"type": "string", "pattern": "^SRC-[0-9]{4}$"}},
+    "bounded_conclusion": {"type": "string", "minLength": 100}
+  }
+}

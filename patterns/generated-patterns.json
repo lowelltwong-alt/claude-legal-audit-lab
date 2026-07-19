@@ -1,1 +1,8 @@
-[]
+[
+  {"id":"GEN-001","category":"judgment_feedback","name":"decision-to-policy calibration","regex":"(?i)(accepted deviation|fallback.{0,40}rationale|update (the )?playbook|learned from)","rationale":"Finds outcome-to-reusable-policy loops.","false_positive":"May describe a proposed, local, or never-executed workflow."},
+  {"id":"GEN-002","category":"workflow_capture","name":"durable professional profile","regex":"(?i)(practice profile|risk posture|escalation threshold|house style|never accept)","rationale":"Finds firm-specific operating-policy capture.","false_positive":"Persistence does not establish provider custody or reuse."},
+  {"id":"GEN-003","category":"data_flow","name":"remote read-to-handoff boundary","regex":"(?i)(mcp_servers|remote MCP|notification|handoff|scheduled agent)","rationale":"Finds potential remote sources and bounded sinks.","false_positive":"Declarations do not establish credentials, traffic, or payload content."},
+  {"id":"GEN-004","category":"hosted_boundary","name":"hosted skill or instruction upload","regex":"(?i)(/v1/skills|/v1/agents|upload.{0,20}skill|resolved instructions)","rationale":"Finds explicit hosted-agent deployment boundaries.","false_positive":"Upload does not establish retention, training, or cross-customer use."},
+  {"id":"GEN-005","category":"counterevidence","name":"untrusted-reader authority separation","regex":"(?i)(untrusted document|read-only|no network|writer agent|schema validation)","rationale":"Finds counterevidence and control boundaries.","false_positive":"Prompt instructions may not be technically enforced."},
+  {"id":"GEN-006","category":"supply_chain","name":"skill supply-chain gate","regex":"(?i)(allowlist|raw source|fresh approval|skill installer|auto-updater)","rationale":"Finds acquisition, review, and installation boundaries.","false_positive":"A documented gate may be optional, bypassable, or not executed."}
+]

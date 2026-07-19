@@ -1,0 +1,60 @@
+{
+  "schema": "claude-legal-audit.targeted-adjudication.v1",
+  "version": 1,
+  "adjudication_id": "ROUND-2-ADJUDICATION-A",
+  "assigned_pattern_ids": [
+    "GEN-001",
+    "GEN-002"
+  ],
+  "source_match_file": "results/generated-pattern-matches.jsonl",
+  "upstream_revision": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+  "total_reviewed": 694,
+  "reviewed_by_pattern": {
+    "GEN-001": 13,
+    "GEN-002": 681
+  },
+  "counts": {
+    "canonical_cluster_rediscovery": 682,
+    "false_positive": 0,
+    "counterevidence": 12,
+    "genuinely_new_material_pattern_or_source_to_sink_candidate": 0
+  },
+  "count_check": {
+    "classified_total": 694,
+    "equals_total_reviewed": true
+  },
+  "integrity_validation": {
+    "method": "For every assigned record, resolve path beneath the pinned upstream, read the stated one-based line from the UTF-8 file, and compare SHA-256 of the full line without its line terminator to full_line_sha256.",
+    "paths_validated": 694,
+    "lines_validated": 694,
+    "hashes_validated": 694,
+    "path_or_hash_failures": []
+  },
+  "classification_method": {
+    "canonical_cluster_rediscovery": "GEN-001 matches restate the already merged decision-to-policy or seed-to-style calibration mechanisms (MERGE-001/MERGE-002). GEN-002 matches restate the already merged firm-specific profile, risk, escalation, house-style, or prohibited-position mechanisms (MERGE-001), except for the twelve explicit non-disclosure guardrails listed as counterevidence.",
+    "counterevidence": "A match is counterevidence when its full line expressly says retrieved content must never surface the practice profile or reveal matter/conflicts material. These written controls correspond to MERGE-006; their runtime effectiveness remains unknown.",
+    "false_positive": "No assigned line was unrelated to the generated pattern's bounded subject after full-line review.",
+    "new_candidate": "A candidate would require a material mechanism or source-to-sink class not already represented by MERGE-001 through MERGE-006. None was found."
+  },
+  "counterevidence_records": [
+    {"path": "ai-governance-legal/CLAUDE.md", "line": 423, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "commercial-legal/CLAUDE.md", "line": 443, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "corporate-legal/CLAUDE.md", "line": 265, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "employment-legal/CLAUDE.md", "line": 264, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "ip-legal/CLAUDE.md", "line": 351, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "law-student/CLAUDE.md", "line": 297, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "legal-builder-hub/CLAUDE.md", "line": 227, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "legal-clinic/CLAUDE.md", "line": 395, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "litigation-legal/CLAUDE.md", "line": 312, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "privacy-legal/CLAUDE.md", "line": 356, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "product-legal/CLAUDE.md", "line": 273, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"},
+    {"path": "regulatory-legal/CLAUDE.md", "line": 293, "full_line_sha256": "3e8c93a8cebb3cd8c315f7cf17d395ff61ba429892b442788af06db616124162"}
+  ],
+  "new_candidates": [],
+  "runtime_boundary": "Static prompt and documentation lines establish designed local profiles, calibration, and written non-disclosure controls only. They do not establish deployed behavior, provider custody, retention, training, or cross-customer reuse.",
+  "saturation_recommendation": {
+    "assigned_patterns_saturated": true,
+    "basis": "All 694 assigned records passed path/line/hash validation and resolved only to existing canonical clusters or repeated counterevidence; no new material pattern class or source-to-sink candidate remained.",
+    "scope": "GEN-001 and GEN-002 at the pinned upstream revision only"
+  }
+}

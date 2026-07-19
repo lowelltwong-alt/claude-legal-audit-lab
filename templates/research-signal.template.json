@@ -1,0 +1,44 @@
+{
+  "schema": "claude-legal-audit.research-signal.v1",
+  "signal_id": "SIG-2026-0001",
+  "title": "Replace with one bounded observed development",
+  "signal_family": "vertical_product_launch",
+  "epistemic_status": "Hypothesis",
+  "candidate_only": true,
+  "source_refs": [
+    {
+      "source_id": "SRC-0001",
+      "revision": "dated observation 2026-07-14",
+      "locator_kind": "section",
+      "locator": "Replace with exact section, page, selector, or path and lines",
+      "support_type": "supports",
+      "quoted_text_sha256": null
+    }
+  ],
+  "industry_ids": ["IND-HEALTHCARE-PAYER-PROVIDER"],
+  "times": {
+    "event_time": null,
+    "observed_at": "2026-07-14T00:00:00Z",
+    "captured_at": null,
+    "valid_from": null,
+    "valid_to": null
+  },
+  "freshness": {
+    "status": "watch",
+    "reason": "Dynamic page without a public content hash",
+    "last_verified_at": "2026-07-14T00:00:00Z",
+    "next_review_at": "2026-09-12T00:00:00Z",
+    "supersedes_id": null
+  },
+  "observed_fact": "Replace with the smallest fact the source directly establishes.",
+  "does_not_prove": "Replace with capability, custody, retention, training, intent, and generalization limits.",
+  "confirmation_tests": ["Name evidence that would confirm the larger hypothesis."],
+  "falsifiers": ["Name evidence that would weigh against or resolve the larger hypothesis benignly."],
+  "review": {
+    "status": "candidate",
+    "author": "replace-with-contributor",
+    "independent_reviewer": null,
+    "human_promotion_required": true
+  }
+}
+

@@ -1,0 +1,520 @@
+{
+  "claims": [
+    {
+      "claim_id": "CLM-0001",
+      "confidence": "high",
+      "does_not_prove": "Provider-side retention, generalized training, covert reuse, or intent.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Product sections on playbooks, standards, fallbacks, setup, and risk calibration",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0001",
+          "support_type": "paraphrase"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Cold-start interviews; practice profiles; deal-debrief; playbook-monitor",
+          "locator_kind": "repository_scope",
+          "source_id": "SRC-0002",
+          "support_type": "structured_observation"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Captured sections on legal plugins, playbooks, precedent, and house style",
+          "locator_kind": "captured_selector",
+          "source_id": "SRC-0050",
+          "support_type": "first_party_documented_design"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Captured sections on skills, subagents, playbooks, precedent, and house style",
+          "locator_kind": "captured_selector",
+          "source_id": "SRC-0051",
+          "support_type": "first_party_documented_design"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "supports",
+        "H2": "neutral"
+      },
+      "lifecycle": "active",
+      "proposition": "The pinned repository and captured official product pages document a static design that invites legal users to encode playbooks, fallbacks, deviations, rationales, risk posture, and house style.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Narrowed to observed static design; deployed runtime behavior is split into CLM-0017.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0002",
+      "confidence": "high",
+      "does_not_prove": "A hosted runtime never receives profile content through inference or a separate upload.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "reproducible",
+          "locator": "scripts/deploy-managed-agent.sh lines 75-190",
+          "locator_kind": "path_lines",
+          "source_id": "SRC-0002",
+          "support_type": "code_observation"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "neutral",
+        "H2": "weighs_against"
+      },
+      "lifecycle": "active",
+      "proposition": "The official repository does not automatically upload a populated local practice profile, matter folder, deviation log, or proposal history through its Managed Agent deployment script.",
+      "publication_eligibility": "eligible",
+      "repair_note": "Migrated without substantive expansion; remains bounded by its evidence and does-not-prove field.",
+      "review_state": "reviewed"
+    },
+    {
+      "claim_id": "CLM-0003",
+      "confidence": "high",
+      "does_not_prove": "Technical compliance, zero processing, zero retention, or the terms of an executed customer agreement.",
+      "epistemic_status": "counterevidence",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Section B",
+          "locator_kind": "section",
+          "source_id": "SRC-0005",
+          "support_type": "paraphrase"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "neutral",
+        "H2": "weighs_against"
+      },
+      "lifecycle": "active",
+      "proposition": "Anthropic's public standard commercial terms prohibit model training on Customer Content by default and leave input/output ownership with the customer.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Classified as contractual control and counterevidence to default-training allegations.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0004",
+      "confidence": "high",
+      "does_not_prove": "Retained material is used for generalized training or cross-customer productization.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "ZDR exclusions and feature table",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0009",
+          "support_type": "paraphrase"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Scope and retention sections",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0010",
+          "support_type": "paraphrase"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "supports",
+        "H2": "neutral"
+      },
+      "lifecycle": "active",
+      "proposition": "Registered official documentation describes feature-dependent retention and zero-data-retention policy boundaries for hosted services.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Narrowed to documented feature policy; tenant-specific behavior is split into CLM-0018.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0005",
+      "confidence": "high",
+      "does_not_prove": "Ordinary commercial conversations are used by default or that raw connector content is always included.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Feedback and disabling-feedback sections",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0007",
+          "support_type": "paraphrase"
+        }
+      ],
+      "hypotheses": {
+        "H0": "neutral",
+        "H1": "neutral",
+        "H2": "supports"
+      },
+      "lifecycle": "active",
+      "proposition": "Commercial feedback submission is a disclosed secondary-use path that can include the related conversation and support research, behavior analysis, and model training.",
+      "publication_eligibility": "quarantined",
+      "repair_note": "Quarantined until the cited dynamic feedback source is recaptured and hash-bound.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0006",
+      "confidence": "high",
+      "does_not_prove": "Claude for Legal content is enrolled or that negotiated terms cannot differ.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Program scope and opt-in/out sections",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0008",
+          "support_type": "paraphrase"
+        }
+      ],
+      "hypotheses": {
+        "H0": "neutral",
+        "H1": "neutral",
+        "H2": "supports"
+      },
+      "lifecycle": "active",
+      "proposition": "The Development Partner Program is an explicit organization-wide opt-in path currently documented for first-party Claude Code input/output tokens, not a default Claude for Legal data-use rule.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Migrated without substantive expansion; remains bounded by its evidence and does-not-prove field.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0007",
+      "confidence": "medium",
+      "does_not_prove": "Identification, reconstruction, or cross-customer reuse of a particular firm's legal playbook.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Method and privacy sections",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0012",
+          "support_type": "paraphrase"
+        }
+      ],
+      "hypotheses": {
+        "H0": "neutral",
+        "H1": "supports",
+        "H2": "supports"
+      },
+      "lifecycle": "active",
+      "proposition": "Anthropic has demonstrated aggregate privacy-preserving analysis of business/API usage, but public evidence does not establish customer-specific law-firm ontology extraction.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Migrated without substantive expansion; remains bounded by its evidence and does-not-prove field.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0008",
+      "confidence": "medium",
+      "does_not_prove": "Measured exit cost, anticompetitive conduct, customer harm, or malicious intent.",
+      "epistemic_status": "hypothesis",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Product architecture and customization sections",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0001",
+          "support_type": "paraphrase"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Firm-wide co-development announcement",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0011",
+          "support_type": "paraphrase"
+        }
+      ],
+      "hypotheses": {
+        "H0": "neutral",
+        "H1": "supports",
+        "H2": "neutral"
+      },
+      "lifecycle": "active",
+      "proposition": "Deep integration of firm playbooks, connectors, shared Skills, recurring agents, governance, and user habits can create dependency and switching costs without transferring ownership or proving covert training.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Kept explicitly as a switching-cost hypothesis rather than an observed outcome.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0009",
+      "confidence": "high",
+      "does_not_prove": "Which configuration governs a particular customer.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Page 15",
+          "locator_kind": "page",
+          "source_id": "SRC-0004",
+          "support_type": "structured_observation"
+        }
+      ],
+      "hypotheses": {
+        "H0": "weighs_against",
+        "H1": "supports",
+        "H2": "neutral"
+      },
+      "lifecycle": "retired",
+      "proposition": "The official legal deployment guide is internally inconsistent about whether Claude.ai and Cowork can use zero-retention configurations.",
+      "publication_eligibility": "retired",
+      "repair_note": "Retired because the cited inconsistency has not been reproduced from a registered source-to-locator path.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0010",
+      "confidence": "high",
+      "does_not_prove": "That implementation is flawless or that closed runtime, support, telemetry, negotiated agreements, and future practices pose no risk.",
+      "epistemic_status": "unknown",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Repository-wide source-to-sink review",
+          "locator_kind": "repository_scope",
+          "source_id": "SRC-0002",
+          "support_type": "structured_observation"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Sections B and E",
+          "locator_kind": "section",
+          "source_id": "SRC-0005",
+          "support_type": "paraphrase"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "supports",
+        "H2": "weighs_against"
+      },
+      "lifecycle": "active",
+      "proposition": "No evidence currently registered in this project establishes covert pooling of identifiable law-firm ontologies or default training on ordinary commercial content.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Rewritten as a bounded statement about this registry, not a claim about the complete public record.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0011",
+      "confidence": "high",
+      "does_not_prove": "That AlphaGo's strategy transfers to law, that the move was creative in a human sense, or that a legal system can optimize an equivalent reward.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "A creative spark section, captured page lines 140-144",
+          "locator_kind": "captured_selector",
+          "source_id": "SRC-0042",
+          "support_type": "first_party_retrospective"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "neutral",
+        "H2": "neutral"
+      },
+      "lifecycle": "active",
+      "proposition": "AlphaGo's famous Move 37 occurred in Game 2 against Lee Sedol; professional commentators initially thought the unconventional move was a mistake, and DeepMind's retrospective describes it as decisive much later in the game.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Migrated without substantive expansion; remains bounded by its evidence and does-not-prove field.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0012",
+      "confidence": "high",
+      "does_not_prove": "That law has an adequate rule set or reward for self-play, or that private legal expertise is unnecessary for every useful legal capability.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Abstract, page lines 64-66 in the 2026-07-14 observation",
+          "locator_kind": "captured_selector",
+          "source_id": "SRC-0044",
+          "support_type": "peer_reviewed_result"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "neutral",
+        "H2": "weighs_against"
+      },
+      "lifecycle": "active",
+      "proposition": "AlphaGo Zero achieved superhuman Go performance using reinforcement learning from self-play without human game data, guidance, or domain knowledge beyond the rules.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Migrated without substantive expansion; remains bounded by its evidence and does-not-prove field.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0013",
+      "confidence": "high",
+      "does_not_prove": "Indefinite exponential improvement, a universal efficiency law, or any forecast of frontier legal-strategy capability.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Abstract, methodology, and fixed-threshold results",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0045",
+          "support_type": "peer_reviewed_empirical_result"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "neutral",
+        "H2": "neutral"
+      },
+      "lifecycle": "active",
+      "proposition": "A NeurIPS 2024 study found substantial historical algorithmic-efficiency progress across more than 200 language-model evaluations from 2012 through 2023, while attributing more overall performance improvement to increased compute than to algorithmic progress.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Migrated without substantive expansion; remains bounded by its evidence and does-not-prove field.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0014",
+      "confidence": "high",
+      "does_not_prove": "That these assets are legally owned, technically learnable by a frontier model, transferable outside the firm, or sufficient to reproduce attorney judgment.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Abstract and interaction-network knowledge-transfer framework",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0047",
+          "support_type": "peer_reviewed_synthesis"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Abstract and two-phase law-firm study",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0048",
+          "support_type": "peer_reviewed_empirical_context"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "supports",
+        "H2": "neutral"
+      },
+      "lifecycle": "active",
+      "proposition": "Organizational research treats knowledge embedded in relationships among people, tasks, tools, business processes, and employee skills as a potential basis for competitive advantage; empirical law-firm research describes law firms as knowledge-intensive organizations.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Migrated without substantive expansion; remains bounded by its evidence and does-not-prove field.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0015",
+      "confidence": "low",
+      "does_not_prove": "Cross-firm ontology overlap, technical learnability, substitutability, provider rights or aggregation, or competitive harm to a law firm; each remains unmeasured.",
+      "epistemic_status": "hypothesis",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Sections on customer-held and specialised industry data, feedback effects, concentration, and market tipping",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0046",
+          "support_type": "hypothesis_context"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Interaction-network knowledge and transfer framework",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0047",
+          "support_type": "hypothesis_context"
+        }
+      ],
+      "hypotheses": {
+        "H0": "neutral",
+        "H1": "supports",
+        "H2": "supports"
+      },
+      "lifecycle": "active",
+      "proposition": "If multiple firms authorize an upstream AI supplier to retain or generalize substantially overlapping professional interaction patterns, the resulting capability could create a sector externality that reduces the relative scarcity of overlapping knowledge even for a firm that withholds its own data.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Retained only as a conditional, falsifiable sector-externality hypothesis.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0016",
+      "confidence": "high",
+      "does_not_prove": "That a specific standards effort or firm decision violates antitrust law; legal analysis remains fact-specific and requires counsel.",
+      "epistemic_status": "observed",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Opening explanation, health-provider example, and purchasing-manager Q&A",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0049",
+          "support_type": "government_guidance_paraphrase"
+        }
+      ],
+      "hypotheses": {
+        "H0": "neutral",
+        "H1": "neutral",
+        "H2": "neutral"
+      },
+      "lifecycle": "active",
+      "proposition": "FTC guidance distinguishes a business's unilateral choice of trading partners from competitor agreements not to deal with a targeted supplier or to deal only on agreed terms, which may constitute an unlawful group boycott.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Migrated without substantive expansion; remains bounded by its evidence and does-not-prove field.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0017",
+      "confidence": "high",
+      "does_not_prove": "That deployed behavior is unsafe, safe, equivalent to the repository, or different from the repository.",
+      "epistemic_status": "unknown",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Pinned repository static design boundary",
+          "locator_kind": "repository_scope",
+          "source_id": "SRC-0002",
+          "support_type": "scope_boundary"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "supports",
+        "H2": "neutral"
+      },
+      "lifecycle": "active",
+      "proposition": "Whether the static repository design maps to a deployed legal-product runtime, and how that runtime moves or retains tenant data, remains unknown in the registered evidence.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Created as the unknown-runtime half of the CLM-0001 split.",
+      "review_state": "candidate"
+    },
+    {
+      "claim_id": "CLM-0018",
+      "confidence": "high",
+      "does_not_prove": "Any tenant's actual configuration, data movement, retention, training use, breach, or compliance failure.",
+      "epistemic_status": "unknown",
+      "evidence": [
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Feature-dependent retention and ZDR policy boundary",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0009",
+          "support_type": "scope_boundary"
+        },
+        {
+          "evidence_grade": "locator_only",
+          "locator": "Customer-specific processing instructions and agreement boundary",
+          "locator_kind": "section_description",
+          "source_id": "SRC-0006",
+          "support_type": "scope_boundary"
+        }
+      ],
+      "hypotheses": {
+        "H0": "supports",
+        "H1": "supports",
+        "H2": "neutral"
+      },
+      "lifecycle": "active",
+      "proposition": "A particular tenant's negotiated terms, enabled features, retention settings, connector behavior, and operational compliance remain unknown in the registered evidence.",
+      "publication_eligibility": "blocked_review",
+      "repair_note": "Created as the unknown-tenant-behavior half of the CLM-0004 split.",
+      "review_state": "candidate"
+    }
+  ],
+  "reviewed_at": "2026-07-16T15:42:26Z",
+  "revision": "2.0.0",
+  "schema": "claude-legal-audit.claim-registry.v2"
+}

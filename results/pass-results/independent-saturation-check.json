@@ -1,0 +1,80 @@
+{
+  "schema": "claude-legal-audit.independent-saturation-check.v1",
+  "check_id": "INDEPENDENT-SATURATION-CHECK-001",
+  "verdict": "FAIL",
+  "scope": {
+    "repository": "anthropics/claude-for-legal",
+    "revision": "5ceb305b30b4c82653c9b6642499c12e946ec319",
+    "network_used": false,
+    "private_material_used": false
+  },
+  "verified": {
+    "coverage": {
+      "files_expected": 315,
+      "files_receipted": 315,
+      "unique_paths_receipted": 315,
+      "lines_expected": 49365,
+      "lines_receipted": 49365,
+      "duplicate_paths": 0,
+      "deferred_files": 0,
+      "worklist_hash_mismatches": 0,
+      "upstream_hash_mismatches": 0,
+      "worker_schema_errors": 0,
+      "worker_evidence_locator_errors": 0
+    },
+    "generated_pattern_sweep": {
+      "records": 1212,
+      "pattern_counts": {
+        "GEN-001": 13,
+        "GEN-002": 681,
+        "GEN-003": 315,
+        "GEN-004": 21,
+        "GEN-005": 49,
+        "GEN-006": 133
+      },
+      "missing_paths_or_invalid_line_numbers": 0,
+      "regex_nonmatches": 0
+    },
+    "history_semantics": "The normalized PR summary preserves 33 unknown or incomplete records separately from 14 hash-verified merged linkages and 29 bounded open/unmerged snapshots. The final report expressly states that unknown does not mean no change.",
+    "epistemic_calibration": "The merged output and final report preserve counterevidence, distinguish static declarations from runtime behavior, and do not complete a provider-retention, generalized-training, or cross-customer-pooling chain. The claim registry keeps 17 of 18 claims blocked, quarantined, or retired, and every thesis-map node remains blocked_review.",
+    "final_report": "Calibrated and supportable as a bounded report of the completed first-round static review; it does not claim that static saturation was established."
+  },
+  "actionable_defects": [
+    {
+      "id": "SAT-DEF-001",
+      "severity": "blocking",
+      "title": "No completed targeted round establishes saturation",
+      "evidence": "The generated-pattern sweep contains 1,212 matches, but there is no round-2 pass result that reviews and adjudicates those matches. Searching only the six already-known regex classes cannot establish that no new material pattern class or source-to-sink candidate exists.",
+      "required_action": "Run a bounded targeted static round over the generated matches, record reviewed/deferred receipts and candidate adjudications, and declare saturation only if that completed round yields zero new material classes and zero new source-to-sink candidates."
+    },
+    {
+      "id": "SAT-DEF-002",
+      "severity": "high",
+      "title": "Merged source-pass identifiers do not resolve",
+      "evidence": "round-1-merged.json names R1-W1 through R1-W6, while the six source artifacts declare pass_id values round-1-worker-1 through round-1-worker-6.",
+      "required_action": "Replace the six aliases with the exact declared pass IDs or add an explicit, validated alias map so merge genealogy resolves deterministically."
+    },
+    {
+      "id": "SAT-DEF-003",
+      "severity": "medium",
+      "title": "Specialized runtime locators lack source-root authority",
+      "evidence": "specialized-runtime-validation.json cites project-local prompts, docs, and a pass result using the same bare path shape that worker findings use for pinned-upstream evidence.",
+      "required_action": "Add a locator authority or source_id field that distinguishes pinned upstream paths from audit-project paths, then validate both namespaces explicitly."
+    },
+    {
+      "id": "SAT-DEF-004",
+      "severity": "low",
+      "title": "Two generated match excerpts are silently truncated",
+      "evidence": "The records for legal-builder-hub/CLAUDE.md lines 54 and 56 contain 1,000-character excerpts rather than the complete 1,006- and 1,007-character source lines.",
+      "required_action": "Record explicit truncation metadata and a full-line hash, or retain the complete line, so excerpt inequality cannot be mistaken for source drift."
+    }
+  ],
+  "saturation": {
+    "decision": "not_established",
+    "new_material_class_found_by_checker": false,
+    "provider_secondary_use_chain_completed": false,
+    "another_static_round_warranted": true,
+    "reason": "The six-cluster synthesis is well calibrated, but the required no-new-class result must come from a completed adjudication round rather than an unreviewed, known-pattern-only match file."
+  },
+  "publication_effect": "The bounded final report may remain a candidate, but the project must not represent static research as saturated or complete until SAT-DEF-001 and SAT-DEF-002 are resolved. Release remains blocked."
+}

@@ -1,0 +1,216 @@
+{
+  "pass_id": "SPECIALIZED-RUNTIME-VALIDATION-001",
+  "scope": [
+    "prompts/50-runtime-validation.md",
+    "results/pass-results/round-1-merged.json",
+    "docs/FEATURE_EVIDENCE_MATRIX.md",
+    "registry/counterfactual-exposure-graph.json"
+  ],
+  "coverage": {
+    "files_reviewed": 4,
+    "lines_reviewed": 17135,
+    "deferred": []
+  },
+  "findings": [
+    {
+      "id": "RTV-001",
+      "title": "Synthetic local-persistence and deletion test",
+      "claim_status": "Assumed",
+      "evidence": [{"path": "prompts/50-runtime-validation.md", "line_start": 5, "line_end": 20, "description": "Requires an authorized synthetic test that distinguishes local persistence and includes setup, evidence, criteria, limits, and approvals.", "locator_authority": "audit_project"}],
+      "source_to_sink": ["unique synthetic agreement and canary", "legal workflow in a dedicated test tenant", "documented local profile, matter, cache, log, and output paths", "inventory, deletion, export, and termination observations"],
+      "proves": "Hypothesis: the tested workflow writes only to disclosed local locations and removes or exports them as documented. Setup: use a dedicated test device and tenant, synthetic documents, unique per-run canaries, filesystem auditing, process/file-open logs, and before/after disk snapshots. Evidence: created/modified paths, hashes, timestamps, ownership and permissions, application caches, logs, export contents, uninstall results, deletion receipts, and post-termination inventory. Pass: every observed durable local copy is disclosed, access-controlled, exportable, and removed under the approved deletion procedure; fail: an undisclosed durable copy, unapproved reader, incomplete export, or surviving canary is observed.",
+      "does_not_prove": "A passing local test does not establish provider-side deletion, absence of remote copies, behavior on other versions or platforms, or absence of retention or training. Encrypted, inaccessible, delayed, backup, crash, and swap artifacts may evade observation.",
+      "alternative_explanation": "A surviving artifact may be an operating-system cache, backup, or expected audit record rather than provider collection; classify it by owner, purpose, and documented lifecycle before drawing a conclusion.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Obtain written security, privacy, records-management, and test-tenant-owner approval for synthetic-only filesystem instrumentation, deletion, uninstall, export, and termination; prohibit privileged or client data.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "RTV-002",
+      "title": "Synthetic inference-request content boundary test",
+      "claim_status": "Assumed",
+      "evidence": [{"path": "prompts/50-runtime-validation.md", "line_start": 6, "line_end": 20, "description": "Requires testing inference request content with contractually permitted request capture and synthetic inputs.", "locator_authority": "audit_project"}],
+      "source_to_sink": ["field-level synthetic canaries in profile, matter, and connector records", "prompt assembly and tool execution", "contractually permitted client-side request capture", "documented inference endpoint and response"],
+      "proves": "Hypothesis: only content necessary for the invoked task is included in inference requests. Setup: place distinct canaries in synthetic fields, invoke one feature at a time, and capture request bodies and headers at an approved SDK, gateway, proxy, or provider debug boundary without defeating encryption. Evidence: byte-level request/response captures, feature configuration, tool traces, endpoint, model identifier, timestamps, and a canary-to-field inclusion matrix. Pass: request contents match the approved minimum-data expectation; fail: unrelated synthetic matter, profile, rationale, credential, or hidden instruction content reaches the endpoint.",
+      "does_not_prove": "It does not reveal server-side processing after receipt, unobserved encrypted traffic, later reuse, or all feature paths. Limited absence of a canary does not prove absence of retention or training.",
+      "alternative_explanation": "Unexpected content may be required system context or a user-selected attachment; necessity and disclosure must be assessed before treating inclusion as excessive.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Require provider terms and security-team approval for capture, minimization, secure storage, and deletion of synthetic traces; do not intercept credentials or real user content and do not evade transport controls.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "RTV-003",
+      "title": "Connector retrieval versus copying or indexing test",
+      "claim_status": "Assumed",
+      "evidence": [{"path": "docs/FEATURE_EVIDENCE_MATRIX.md", "line_start": 14, "line_end": 17, "description": "Static declarations do not establish connector traffic, caching, copying, indexing, grants, or enforcement.", "locator_authority": "audit_project"}],
+      "source_to_sink": ["instrumented connector serving synthetic canary objects", "authorized retrieval by one configured tool", "connector, proxy, DNS, and tool audit logs", "subsequent search, cache, export, deletion, and access observations"],
+      "proves": "Hypothesis: the tested connector retrieves only requested objects transiently and does not create an undisclosed corpus or index. Setup: expose synthetic objects through a dedicated instrumented endpoint with distinct canaries, least-privilege credentials, short-lived grants, and controlled updates/deletions. Evidence: endpoint request logs, object IDs and byte ranges, DNS/proxy logs, OAuth scopes, tool traces, cache/index documentation, later retrieval attempts, exports, and deletion behavior. Pass: accesses are request-bound and disclosed copies follow the approved lifecycle; fail: bulk enumeration, unrelated-object reads, persistent undisclosed searchability, or access after revocation/deletion.",
+      "does_not_prove": "It does not establish behavior of third-party connectors, other configurations, provider backups, or secondary use. A negative canary search is not proof that no copy or index exists.",
+      "alternative_explanation": "Prefetch, retry, pagination, or an explicitly enabled index may explain additional reads; compare behavior with the approved connector contract and configuration.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Require connector-owner, provider, privacy, and security approval; use only a dedicated endpoint and synthetic objects, never probe another customer or production repository.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "RTV-004",
+      "title": "Provider retention and deletion lifecycle test",
+      "claim_status": "Assumed",
+      "evidence": [{"path": "docs/FEATURE_EVIDENCE_MATRIX.md", "line_start": 12, "line_end": 13, "description": "Feature-specific retention, deletion, backup, legal-hold, and contract applicability remain unknown.", "locator_authority": "audit_project"}],
+      "source_to_sink": ["synthetic feature-specific canaries", "provider-hosted feature", "documented primary, backup, abuse-monitoring, and legal-hold retention classes", "deletion request, export, termination, and attestation"],
+      "proves": "Hypothesis: each tested feature follows the retention and deletion commitments applicable to the exact test tenant. Setup: map contract hierarchy and feature eligibility first, create dated canaries per feature, cease use, request export and deletion on a controlled schedule, and terminate the tenant if approved. Evidence: executed terms, tenant settings, retention clocks, admin logs, exports, deletion tickets, completion attestations, exception notices, backup-aging statements, and post-deletion access results. Pass: observed and attested lifecycle matches the governing feature-specific commitment; fail: contradictory export/access evidence, missed deadline, undisclosed exception, or inconsistent provider response.",
+      "does_not_prove": "An attestation or failed retrieval cannot independently prove physical erasure from every system, backup, or derived artifact, nor absence of training. Limited absence of leakage does not prove absence of retention.",
+      "alternative_explanation": "A retained item may fall under a disclosed security, legal-hold, billing, or backup exception; the exception must be contractually identified and time bounded.",
+      "confidence": "medium",
+      "risk": "high",
+      "test_to_confirm": "Require legal, procurement, records, privacy, provider, and tenant-owner approval for the exact contract, deletion scope, termination effects, evidence access, and preservation exceptions.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "RTV-005",
+      "title": "Telemetry and metadata minimization test",
+      "claim_status": "Assumed",
+      "evidence": [{"path": "prompts/50-runtime-validation.md", "line_start": 9, "line_end": 20, "description": "Telemetry and metadata collection require a distinct authorized synthetic test.", "locator_authority": "audit_project"}],
+      "source_to_sink": ["synthetic actions and canary labels", "client and hosted feature events", "network, SDK, admin, and provider telemetry records", "analytics, security, billing, and operations destinations"],
+      "proves": "Hypothesis: telemetry is limited to disclosed operational metadata and excludes synthetic legal content, prompts, rationales, and document text unless explicitly authorized. Setup: execute a controlled action matrix with distinctive non-sensitive labels while recording client events and approved network metadata. Evidence: event schemas, payload captures where permitted, endpoint/operator identity, timestamps, tenant/admin analytics, data dictionary, purposes, retention, opt-out behavior, and deletion results. Pass: observed fields and destinations match disclosures and minimization expectations; fail: undisclosed content-bearing fields, identifiers enabling prohibited linkage, an unapproved destination, or ineffective approved opt-out.",
+      "does_not_prove": "It cannot establish every server-generated event, downstream join, or future schema. No observed content-bearing event in a bounded run does not prove absence of telemetry, retention, or training.",
+      "alternative_explanation": "A value resembling content may be a user-defined filename or diagnostic field; classify semantics and necessity before alleging content capture.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Require privacy, security, provider, and tenant approval for telemetry inspection and opt-out testing; collect only synthetic fields and avoid credentials, personal data, and production identifiers.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "RTV-006",
+      "title": "Human and support access control test",
+      "claim_status": "Assumed",
+      "evidence": [{"path": "docs/FEATURE_EVIDENCE_MATRIX.md", "line_start": 12, "line_end": 18, "description": "Actual personnel access and enforcement are not established by static repository or general policy evidence.", "locator_authority": "audit_project"}],
+      "source_to_sink": ["synthetic support case and canary artifact", "approved support workflow", "just-in-time access grant and personnel session", "customer-visible and provider audit records, revocation, and retention"],
+      "proves": "Hypothesis: human access to test-tenant content requires an authorized purpose, least privilege, time-bounded grant, logging, and revocation. Setup: prearrange a synthetic support incident that requires and one that does not require content access; observe consent and access workflow. Evidence: ticket, identity/role, approval, scope, access time, fields viewed, session/audit logs, customer notice, subcontractor identity, revocation, and retained case content. Pass: access occurs only after the required approval and within the approved scope; fail: silent access, excess scope, missing audit trail, access after revocation, or unexplained subcontractor access.",
+      "does_not_prove": "A controlled support case does not test emergency, abuse, legal-process, insider, or unlogged access paths and cannot prove no other human access occurs.",
+      "alternative_explanation": "Automated service identities may appear in logs without human viewing; correlate identity, session, action, and provider explanation.",
+      "confidence": "medium",
+      "risk": "high",
+      "test_to_confirm": "Require provider, tenant administrator, security, privacy, employment, and legal approval; use synthetic content and an agreed support script, not deception or unauthorized employee testing.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "RTV-007",
+      "title": "Explicit feedback submission boundary test",
+      "claim_status": "Assumed",
+      "evidence": [{"path": "prompts/50-runtime-validation.md", "line_start": 11, "line_end": 20, "description": "Feedback submission must be distinguished from ordinary inference and tested with unique synthetic canaries.", "locator_authority": "audit_project"}],
+      "source_to_sink": ["synthetic prompt, response, and unique feedback canary", "ordinary use versus explicit feedback controls", "feedback payload and consent interface", "feedback store, review, retention, evaluation, and training eligibility"],
+      "proves": "Hypothesis: content enters the feedback channel only through an explicit, adequately disclosed action and follows the stated feedback lifecycle. Setup: compare matched synthetic sessions with no feedback, positive/negative feedback, and free-text feedback; capture the UI disclosure and permitted payloads. Evidence: request payload, included context window, consent text/version, admin control, receipt, deletion option, retention and reviewer access, and documented downstream purposes. Pass: only the expressly submitted scope is sent under the displayed terms and controls; fail: silent submission, excess surrounding context, misleading consent, or use inconsistent with the applicable commitment.",
+      "does_not_prove": "Not finding the canary later does not establish deletion or non-use; feedback-channel behavior does not determine ordinary commercial-content handling.",
+      "alternative_explanation": "Diagnostic context may be bundled to reproduce a reported failure if clearly disclosed and consented; assess scope and necessity.",
+      "confidence": "high",
+      "risk": "high",
+      "test_to_confirm": "Require privacy, legal, provider, and tenant-owner approval of feedback content, capture method, consent review, deletion request, and retention period; submit synthetic content only.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "RTV-008",
+      "title": "Model-evaluation use and isolation test",
+      "claim_status": "Assumed",
+      "evidence": [{"path": "prompts/50-runtime-validation.md", "line_start": 12, "line_end": 20, "description": "Evaluation use is a separate downstream purpose requiring its own evidence and approval.", "locator_authority": "audit_project"}],
+      "source_to_sink": ["synthetic legal interaction and evaluation canary", "provider or customer evaluation pipeline", "evaluation dataset, scorer, reviewer, report, and retention", "product or model decision"],
+      "proves": "Hypothesis: test-tenant interactions are not placed into provider evaluation datasets unless the governing agreement and an explicit control authorize it. Setup: obtain the applicable evaluation data-flow description, create synthetic canaries, exercise opt-in and opt-out states if available, and request tenant-level audit or attestation. Evidence: configuration, dataset lineage or exclusion attestation, evaluator access, de-identification method, sampling rule, retention, deletion, and report aggregation. Pass: lineage or a scoped attestation shows treatment consistent with the approved state; fail: a canary appears in an unapproved evaluation artifact or the provider identifies unauthorized eligibility.",
+      "does_not_prove": "An exclusion attestation or inability to locate a canary does not prove that no evaluation copy or derived metric exists. Evaluation is not synonymous with generalized training.",
+      "alternative_explanation": "Customer-controlled evaluation for the customer's own deployment may be legitimate requested processing; distinguish operator, beneficiary, dataset custody, and downstream purpose.",
+      "confidence": "medium",
+      "risk": "high",
+      "test_to_confirm": "Require contract, provider, privacy, model-risk, and tenant approval; use provider-supplied audit mechanisms and synthetic datasets, never attempt unauthorized access to internal evaluation systems.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "RTV-009",
+      "title": "Generalized training or fine-tuning governance test",
+      "claim_status": "Assumed",
+      "evidence": [{"path": "docs/FEATURE_EVIDENCE_MATRIX.md", "line_start": 12, "line_end": 25, "description": "Static design and general policy cannot establish actual training or secondary use; a feature- and tenant-specific chain is required.", "locator_authority": "audit_project"}],
+      "source_to_sink": ["synthetic customer content or derivative", "eligibility and selection decision", "training or fine-tuning dataset lineage", "model update, deletion/exclusion, and governance evidence"],
+      "proves": "Hypothesis: ordinary test-tenant commercial content and its identifiable derivatives are excluded from generalized training or fine-tuning unless separately and explicitly authorized. Setup: bind the exact contract and feature state, create synthetic canaries, inspect available admin controls, obtain scoped provider lineage/exclusion evidence, and test approved deletion or opt-out procedures. Evidence: executed terms, data-use settings and change logs, dataset eligibility rules, exclusion/deletion attestations, fine-tuning ownership and isolation terms, audit reports, and exception handling. Pass: authoritative, revision-bound evidence supports exclusion or limits use to an expressly customer-controlled fine-tune; fail: provider-confirmed unauthorized eligibility or reproducible lineage into a generalized training dataset.",
+      "does_not_prove": "Do not perform model-memorization extraction or infer training from a model repeating public or synthetic text. A bounded behavioral absence cannot prove non-training, and contract language alone cannot prove implementation.",
+      "alternative_explanation": "A model may produce a canary-like string by prompt echo, retrieval, cache, or chance; only controlled lineage and source-to-sink evidence can distinguish training.",
+      "confidence": "medium",
+      "risk": "critical",
+      "test_to_confirm": "Require explicit provider, legal, privacy, model-risk, security, procurement, and tenant approval; prohibit privileged/client data, memorization attacks, control evasion, or tests against unrelated models or customers.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "RTV-010",
+      "title": "Cross-tenant and cross-product reuse boundary test",
+      "claim_status": "Assumed",
+      "evidence": [{"path": "results/pass-results/round-1-merged.json", "line_start": 59, "line_end": 70, "description": "The merged review leaves cross-customer normalization and generalized reuse unresolved and does not complete a provider-reuse chain.", "locator_authority": "audit_project"}],
+      "source_to_sink": ["synthetic tenant-A ontology canaries and interaction-derived labels", "retention or normalization layer", "tenant-B or adjacent-product retrieval, recommendation, metric, or behavior", "provider governance and audit evidence"],
+      "proves": "Hypothesis: identifiable or reconstructable test-tenant artifacts and derivatives are not made available to another tenant or product outside authorized aggregated operations. Setup: only if the provider authorizes two organization-owned synthetic tenants, seed distinct non-secret canaries in tenant A, keep tenant B clean, exercise documented exports/recommendations, and obtain architecture and audit evidence. Evidence: tenant identifiers, access-control tests, search/export results, derived-field definitions, aggregation thresholds, product data-flow maps, audit logs, and provider attestations. Pass: authorized isolation checks and governance evidence show no cross-boundary availability; fail: a reproducible tenant-A artifact or non-permitted derivative is accessible from tenant B or an adjacent product.",
+      "does_not_prove": "No observed crossover in two synthetic tenants does not prove universal isolation, absence of aggregate learning, absence of retention, or absence of training. Similar output can arise from public knowledge or common task structure.",
+      "alternative_explanation": "Matching recommendations may derive independently from the base model, public sources, or identical prompts; require a unique canary and a reproducible access path before attributing reuse.",
+      "confidence": "medium",
+      "risk": "critical",
+      "test_to_confirm": "Require written provider, legal, privacy, security, model-risk, and both test-tenant-owner approval. Never probe another customer, impersonate users, evade isolation controls, or use privileged/client data.",
+      "hypotheses": ["H0", "H1", "H2"]
+    }
+  ],
+  "new_patterns": [
+    {
+      "id": "RTV-PAT-001",
+      "name": "Feature-purpose-retention matrix",
+      "logic": "Treat inference, connectors, telemetry, support, feedback, evaluation, training, and cross-product reuse as separate source-to-sink chains with feature-, tenant-, contract-, and revision-specific evidence.",
+      "search_terms": ["retention", "telemetry", "support access", "feedback", "evaluation", "training", "cross-tenant", "cross-product", "deletion", "export"],
+      "false_positive_risk": "Documentation may describe capability or policy without establishing tenant applicability, execution, custody, or secondary use."
+    },
+    {
+      "id": "RTV-PAT-002",
+      "name": "Synthetic canary genealogy",
+      "logic": "Assign a unique non-sensitive canary per tenant, feature, asset field, purpose, and run so any observation has a bounded origin and cannot be generalized across test surfaces.",
+      "search_terms": ["canary", "audit log", "request capture", "dataset lineage", "deletion receipt", "access grant"],
+      "false_positive_risk": "Canary echo, retrieval, chance generation, caching, or public occurrence can be mistaken for retention or training without a complete lineage."
+    }
+  ],
+  "negative_evidence": [
+    {
+      "path": "results/pass-results/round-1-merged.json",
+      "description": "The completed static review did not complete a provider secondary-use chain and preserved isolation, human-gate, and local-storage counterevidence.",
+      "effect": "H2 remains unestablished; runtime tests must be framed to distinguish H0 and H1 rather than assume covert reuse."
+    },
+    {
+      "path": "docs/FEATURE_EVIDENCE_MATRIX.md",
+      "description": "General commercial, retention, and connector documents are registered, but tenant applicability and actual enforcement remain unknown.",
+      "effect": "Contract text may constrain hypotheses and acceptance criteria but cannot substitute for runtime, tenant, audit, and lineage evidence."
+    },
+    {
+      "path": "prompts/50-runtime-validation.md",
+      "description": "The authorized design expressly excludes other-customer probing, real privileged/client material, control evasion, and memorization extraction.",
+      "effect": "The program remains defensive and synthetic; inability to perform intrusive tests must be recorded as a limit, not converted into a conclusion."
+    }
+  ],
+  "unknowns": [
+    {
+      "question": "What exact contract hierarchy and feature-specific commitments govern a future dedicated test tenant?",
+      "why_source_cannot_answer": "Public standard documents and static repository files do not establish an executed order form, negotiated terms, enabled features, or later amendments.",
+      "needed_evidence": "Executed contract set, feature inventory, tenant settings, applicable policy revisions, and written provider confirmation."
+    },
+    {
+      "question": "Can request, connector, telemetry, support, evaluation, and dataset-lineage evidence be exposed at sufficient detail without weakening security or violating terms?",
+      "why_source_cannot_answer": "The repository contains no hosted-runtime observability, provider audit interface, internal event schema, or dataset lineage system.",
+      "needed_evidence": "Approved test protocol, observability agreement, provider audit exports or attestations, and evidence-handling plan."
+    },
+    {
+      "question": "Do retention and deletion controls cover backups, security logs, derived artifacts, evaluation sets, and legal-hold exceptions?",
+      "why_source_cannot_answer": "The available sources describe general boundaries but do not prove feature- and tenant-specific implementation or physical deletion.",
+      "needed_evidence": "Retention schedule, system inventory, exception register, backup-aging evidence, deletion attestation, and scoped independent audit."
+    },
+    {
+      "question": "Does any identifiable or reconstructable firm-specific derivative cross a tenant, product, evaluation, or generalized-model boundary?",
+      "why_source_cannot_answer": "The static repository has no provider-side retention, normalization, evaluation, training, or cross-product lineage records.",
+      "needed_evidence": "Authorized synthetic multi-tenant test plus provider architecture, dataset lineage, access logs, aggregation rules, and independent audit evidence."
+    },
+    {
+      "question": "Would a completed limited synthetic program establish absence of retention, training, or cross-customer reuse?",
+      "why_source_cannot_answer": "No bounded empirical test can observe every time, system, backup, derivative, employee, product, or future implementation.",
+      "needed_evidence": "It cannot prove universal absence; combine repeatable testing with enforceable commitments, continuous controls, audit rights, revision monitoring, and explicit residual-risk reporting."
+    }
+  ]
+}

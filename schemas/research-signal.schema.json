@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/research-signal.schema.json",
+  "title": "Candidate research-radar signal",
+  "type": "object",
+  "required": ["schema", "signal_id", "title", "signal_family", "epistemic_status", "candidate_only", "source_refs", "industry_ids", "times", "freshness", "observed_fact", "does_not_prove", "confirmation_tests", "falsifiers", "review"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.research-signal.v1"},
+    "signal_id": {"type": "string", "pattern": "^SIG-[0-9]{4}-[0-9]{4}$"},
+    "signal_family": {"type": "string"},
+    "epistemic_status": {"enum": ["Observed", "Inferred", "Hypothesis", "Unknown"]},
+    "candidate_only": {"const": true},
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source_id", "revision", "locator_kind", "locator", "support_type"],
+        "properties": {
+          "source_id": {"type": "string", "pattern": "^SRC-[0-9]{4}$"},
+          "revision": {"type": "string", "minLength": 1},
+          "locator_kind": {"enum": ["path_lines", "page_span", "captured_selector", "section", "metadata_only"]},
+          "locator": {"type": "string", "minLength": 1},
+          "support_type": {"enum": ["supports", "weighs_against", "qualifies", "contradicts"]},
+          "quoted_text_sha256": {"type": ["string", "null"], "pattern": "^[a-fA-F0-9]{64}$"}
+        }
+      }
+    },
+    "industry_ids": {"type": "array", "items": {"type": "string", "pattern": "^IND-[A-Z0-9-]+$"}},
+    "times": {
+      "type": "object",
+      "required": ["event_time", "observed_at", "captured_at", "valid_from", "valid_to"],
+      "properties": {
+        "event_time": {"type": ["string", "null"], "format": "date-time"},
+        "observed_at": {"type": "string", "format": "date-time"},
+        "captured_at": {"type": ["string", "null"], "format": "date-time"},
+        "valid_from": {"type": ["string", "null"], "format": "date-time"},
+        "valid_to": {"type": ["string", "null"], "format": "date-time"}
+      }
+    },
+    "freshness": {
+      "type": "object",
+      "required": ["status", "reason", "last_verified_at", "next_review_at", "supersedes_id"],
+      "properties": {
+        "status": {"enum": ["current", "watch", "stale", "superseded", "unknown"]},
+        "reason": {"type": "string", "minLength": 1},
+        "last_verified_at": {"type": ["string", "null"], "format": "date-time"},
+        "next_review_at": {"type": ["string", "null"], "format": "date-time"},
+        "supersedes_id": {"type": ["string", "null"]}
+      }
+    },
+    "does_not_prove": {"type": "string", "minLength": 20},
+    "confirmation_tests": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "falsifiers": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "review": {
+      "type": "object",
+      "required": ["status", "author", "independent_reviewer", "human_promotion_required"],
+      "properties": {
+        "status": {"enum": ["candidate", "under_review", "reviewed", "rejected", "retracted"]},
+        "author": {"type": "string"},
+        "independent_reviewer": {"type": ["string", "null"]},
+        "human_promotion_required": {"const": true}
+      }
+    }
+  }
+}
+

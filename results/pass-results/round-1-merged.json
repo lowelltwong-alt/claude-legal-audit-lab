@@ -1,0 +1,71 @@
+{
+  "schema": "claude-legal-audit.discovery-merge.v1",
+  "merge_id": "ROUND-1-MERGE-001",
+  "source_passes": ["round-1-worker-1", "round-1-worker-2", "round-1-worker-3", "round-1-worker-4", "round-1-worker-5", "round-1-worker-6"],
+  "coverage": {"files": 315, "lines": 49365, "deferred": 0, "integrity": "exact"},
+  "promotion_rule": "Repeated model conclusions are not independent evidence; cluster status is bounded by exact source locators and the weakest unresolved source-to-sink step.",
+  "canonical_clusters": [
+    {
+      "id": "MERGE-001",
+      "title": "Firm-specific operating ontology",
+      "status": "Confirmed static design",
+      "source_to_sink": ["attorney answers or prior work product", "customer-specific profile", "later review, drafting, escalation, or governance workflow"],
+      "evidence": ["commercial-legal/CLAUDE.md:66-72", "privacy-legal/skills/cold-start-interview/SKILL.md:93-101", "ai-governance-legal/CLAUDE.md:75-96"],
+      "does_not_prove": "Provider custody, retention, training, cross-customer pooling, uniqueness, or economic value."
+    },
+    {
+      "id": "MERGE-002",
+      "title": "Decision-to-policy calibration loop",
+      "status": "Confirmed static design",
+      "source_to_sink": ["accepted deviation, outcome, or attorney rationale", "debrief or calibration workflow", "proposed reusable playbook or profile update", "human review"],
+      "evidence": ["commercial-legal/agents/deal-debrief.md:15-20", "commercial-legal/agents/playbook-monitor.md:18-24", "regulatory-legal/skills/cold-start-interview/SKILL.md:197-214"],
+      "does_not_prove": "Automatic learning, provider-side derivation, or use outside the customer context."
+    },
+    {
+      "id": "MERGE-003",
+      "title": "Durable matter and investigation memory",
+      "status": "Confirmed static design",
+      "source_to_sink": ["matter or investigation facts", "local matter history or evidentiary corpus", "later analysis, decision record, or archive"],
+      "evidence": ["product-legal/skills/matter-workspace/SKILL.md:28-38", "employment-legal/skills/internal-investigation/SKILL.md:113-155", "litigation-legal/skills/matter-intake/SKILL.md:11-16"],
+      "does_not_prove": "Remote copying, provider access, deletion behavior, or deployed cross-matter access."
+    },
+    {
+      "id": "MERGE-004",
+      "title": "Remote connector and hosted-agent trust boundaries",
+      "status": "Confirmed declarations; runtime unknown",
+      "source_to_sink": ["remote MCP or uploaded skill/instructions", "agent analysis", "notification, handoff, or hosted agent"],
+      "evidence": ["commercial-legal/.mcp.json:2-44", "scripts/deploy-managed-agent.sh:4-12", "managed-agent-cookbooks/diligence-grid/subagents/doc-reader.yaml:17-35"],
+      "does_not_prove": "Credentials, grants, traffic, tenant behavior, provider retention, or secondary use."
+    },
+    {
+      "id": "MERGE-005",
+      "title": "Governed third-party skill supply chain",
+      "status": "Confirmed static boundary",
+      "source_to_sink": ["community skill source", "allowlist and structural review", "fresh human approval", "local installation"],
+      "evidence": ["legal-builder-hub/skills/auto-updater/SKILL.md:24-67", "legal-builder-hub/skills/registry-browser/SKILL.md:30-37", "legal-builder-hub/skills/skill-installer/SKILL.md:17-23"],
+      "does_not_prove": "Runtime enforcement or absence of compromised approved content."
+    },
+    {
+      "id": "MERGE-006",
+      "title": "Isolation and human-gate counterevidence",
+      "status": "Confirmed written controls; effectiveness unknown",
+      "source_to_sink": ["untrusted or sensitive input", "read-only or schema-limited analysis", "separate writer or human approval gate"],
+      "evidence": ["managed-agent-cookbooks/reg-monitor/agent.yaml:19-38", "managed-agent-cookbooks/docket-watcher/subagents/docket-reader.yaml:5-23", "regulatory-legal/skills/policy-redraft/SKILL.md:14-19"],
+      "does_not_prove": "Deployed enforcement, complete tenant isolation, or harmlessness."
+    }
+  ],
+  "preserved_dissent": [
+    "Broad connector or messaging declarations are real trust boundaries, but they are not evidence that legal artifacts were transmitted.",
+    "Local-path persistence supports a benign customer-adaptation architecture and does not resolve what inference requests or hosted features retain.",
+    "Prompt-level safeguards are evidence of intended controls, not proof of technical enforcement."
+  ],
+  "novelty": {"worker_findings": 46, "canonical_clusters": 6, "new_material_source_to_sink_classes": 6, "provider_reuse_chain_completed": false},
+  "remaining_gaps": [
+    "Inference request and telemetry payloads",
+    "Feature-specific retention, deletion, support-access, evaluation, and training terms",
+    "Tenant configuration and actual connector grants/traffic",
+    "Runtime enforcement of prompt-described isolation and approval controls",
+    "Cross-customer normalization or generalized reuse evidence",
+    "Remaining 33 unknown or incomplete public PR records"
+  ]
+}

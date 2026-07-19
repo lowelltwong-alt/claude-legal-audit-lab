@@ -1,0 +1,54 @@
+{
+  "schema": "claude-legal-audit.targeted-adjudication.v1",
+  "version": 1,
+  "adjudication_id": "ROUND-2-ADJUDICATION-C",
+  "assigned_pattern_ids": [
+    "GEN-005",
+    "GEN-006"
+  ],
+  "source_matches": "results/generated-pattern-matches.jsonl",
+  "pinned_source_root": "upstream/claude-for-legal",
+  "validation_method": "For every assigned record, resolve path under the pinned source root, select the declared one-based line from byte-preserving splitlines(), and compare SHA-256 of the complete line bytes with full_line_sha256.",
+  "total_reviewed": 182,
+  "counts": {
+    "canonical_cluster_rediscovery": 147,
+    "false_positive": 23,
+    "counterevidence": 12,
+    "genuinely_new_material_pattern_or_source_to_sink_candidate": 0
+  },
+  "counts_by_pattern": {
+    "GEN-005": {
+      "total_reviewed": 49,
+      "canonical_cluster_rediscovery": 36,
+      "false_positive": 13,
+      "counterevidence": 0,
+      "genuinely_new_material_pattern_or_source_to_sink_candidate": 0
+    },
+    "GEN-006": {
+      "total_reviewed": 133,
+      "canonical_cluster_rediscovery": 111,
+      "false_positive": 10,
+      "counterevidence": 12,
+      "genuinely_new_material_pattern_or_source_to_sink_candidate": 0
+    }
+  },
+  "classification_basis": {
+    "canonical_cluster_rediscovery": "GEN-005 matches that restate read-only authority separation, schema-limited handoff, or the legal-builder skill-install isolation already bounded by MERGE-006 or MERGE-005; GEN-006 matches in legal-builder-hub and its root README restate the governed skill supply-chain gate already bounded by MERGE-005.",
+    "false_positive": "Generic checklist questions about whether a property is read-only, root schema-validation headings, contributor-identity allowlists, and AI-governance vendor allowlists do not establish either generated pattern's targeted control chain.",
+    "counterevidence": "GEN-006 matches in managed-agent orchestration and deployment surfaces describe target or egress allowlists. They weigh against unrestricted transmission, but are not skill-supply-chain gates and remain written controls whose runtime effectiveness is unknown.",
+    "genuinely_new_material_pattern_or_source_to_sink_candidate": "Reserved for an evidence class or source-to-sink chain not represented by the six canonical round-1 clusters; none was found."
+  },
+  "integrity": {
+    "paths_validated": 182,
+    "line_numbers_validated": 182,
+    "full_line_sha256_validated": 182,
+    "path_or_hash_failures": []
+  },
+  "exact_new_candidates": [],
+  "runtime_boundary": "Static repository text only. No claim is made about deployment, enforcement, traffic, retention, training, cross-customer reuse, or tenant configuration.",
+  "saturation_recommendation": {
+    "assigned_patterns_saturated": true,
+    "basis": "Every GEN-005 and GEN-006 match was integrity-validated and adjudicated; all material matches rediscover MERGE-005/MERGE-006 or provide bounded counterevidence, and no new material pattern class or source-to-sink candidate emerged.",
+    "scope_limit": "This recommendation covers only GEN-005 and GEN-006 and does not independently establish whole-round or whole-repository saturation."
+  }
+}

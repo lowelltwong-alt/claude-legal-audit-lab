@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/counterfactual-exposure-graph.schema.json",
+  "title": "Generated defensive ontology-exposure graph",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "status", "safety_contract", "generated_from", "edge_type_library", "nodes", "edges"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.counterfactual-exposure-graph.v1"},
+    "status": {"const": "generated_candidate_evidence"},
+    "safety_contract": {
+      "type": "object",
+      "required": ["mode", "collection_enabled", "network_access", "actual_actor_intent_inferred", "authority"],
+      "properties": {
+        "mode": {"const": "defensive_synthetic_only"},
+        "collection_enabled": {"const": false},
+        "network_access": {"const": false},
+        "actual_actor_intent_inferred": {"const": false},
+        "authority": {"type": "string", "minLength": 20}
+      }
+    },
+    "generated_from": {"type": "object", "minProperties": 4},
+    "edge_type_library": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["edge_type", "definition"],
+        "properties": {
+          "edge_type": {"type": "string", "pattern": "^[A-Z_]+$"},
+          "definition": {"type": "string", "minLength": 20}
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["node_id", "node_type", "label"],
+        "properties": {
+          "node_id": {"type": "string", "minLength": 3},
+          "node_type": {"type": "string", "minLength": 3},
+          "label": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["edge_id", "source", "relation", "target", "basis", "source_ids", "evidence_scope", "binding_type", "exact_locator", "review_status"],
+        "properties": {
+          "edge_id": {"type": "string", "pattern": "^EDGE-[A-F0-9]{16}$"},
+          "source": {"type": "string", "minLength": 3},
+          "relation": {"type": "string", "pattern": "^[A-Z_]+$"},
+          "target": {"type": "string", "minLength": 3},
+          "basis": {"type": "string", "minLength": 5},
+          "source_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^SRC-[0-9]{4}$"}},
+          "evidence_scope": {"enum": ["catalog_statement_only", "authored_model_relation"]},
+          "binding_type": {"enum": ["catalog_context", "model_derived"]},
+          "exact_locator": {"type": "string", "minLength": 5},
+          "review_status": {"const": "candidate"}
+        }
+      }
+    }
+  }
+}

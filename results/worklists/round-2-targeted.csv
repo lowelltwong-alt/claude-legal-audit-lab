@@ -1,0 +1,8 @@
+target_id,cluster,hypothesis,evidence_needed,status
+TGT-001,MERGE-001,Provider receives or retains populated firm profiles,Authorized inference traces plus feature-specific retention terms,unknown_closed_runtime
+TGT-002,MERGE-002,Decision feedback is generalized beyond the tenant,Evaluation or training data-flow records and cross-tenant controls,unknown_closed_runtime
+TGT-003,MERGE-003,Matter histories leave customer-controlled custody,Instrumented connector and request traces plus deletion receipts,unknown_closed_runtime
+TGT-004,MERGE-004,Declared connectors and hosted agents are deployed with material grants,Tenant configuration audit logs and synthetic traffic receipts,unknown_closed_runtime
+TGT-005,MERGE-005,Supply-chain controls are enforced at runtime,Authorized installer execution trace and policy-bypass tests,unknown_runtime
+TGT-006,MERGE-006,Written isolation and approval gates are technically enforced,Authorized synthetic adversarial runtime tests,unknown_runtime
+TGT-007,PR-HISTORY,Remaining public revisions change material evidence classes,Next bounded PR capture cohort with terminal pagination proof,open_public_research

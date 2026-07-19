@@ -1,0 +1,54 @@
+{
+  "schema": "claude-legal-audit.ai-front-door.v1",
+  "navigation_version": "2.0.0",
+  "entrypoint": "AI_FRONT_DOOR.md",
+  "matching_contract": {
+    "normalization": "Unicode NFKC, casefold, hyphen-to-space, collapse whitespace",
+    "selection": "Choose the matching route with the highest integer priority.",
+    "tie_behavior": "Fail closed when two matched routes share the highest priority.",
+    "no_match_behavior": "Use fallback_route_id."
+  },
+  "fallback_route_id": "orientation",
+  "routes": [
+    {"route_id": "roadmap_and_release", "priority": 116, "triggers": ["roadmap", "what next", "next step", "project status", "release readiness", "publish", "rename repository"], "read": ["docs/ROADMAP.md", "registry/project-roadmap.json", "registry/release-readiness.json"]},
+    {"route_id": "evidence_control_plane", "priority": 115, "triggers": ["chunk registry", "evidence graph", "typed graph", "source to chunk", "evidence explorer", "exact genealogy"], "read": ["registry/chunk-policy.json", "registry/chunk-registry.json", "registry/edge-type-library.json", "registry/evidence-graph.json", "registry/thesis-map.json", "public/generated-release-artifacts/candidate/index.html"]},
+    {"route_id": "ajax_line", "priority": 114, "triggers": ["hold the line", "ajax line", "collective brain trust", "collective alpha", "move 37", "sector externality", "protective holdout"], "read": ["docs/THESIS_MAP.md", "registry/thesis-map.json", "registry/evidence-graph.json", "registry/argument-mesh.json", "registry/claim-registry.json", "registry/source-registry.json"]},
+    {"route_id": "counterfactual_capture", "priority": 112, "triggers": ["capture law firm ontology", "frontier lab", "law firm alpha", "eat law firms", "flatten law firms", "attorney brain trust", "operational ontology", "judgment ontology"], "read": ["docs/FRONTIER_LAB_ONTOLOGY_CAPTURE_COUNTERFACTUAL.md", "registry/source-registry.json", "registry/law-firm-value-chain.json", "registry/counterfactual-capture-patterns.json", "registry/counterfactual-exposure-graph.json", "docs/COUNTERFACTUAL_CAPTURE_DECISION.md"]},
+    {"route_id": "contribution", "priority": 110, "triggers": ["contribute", "contribution", "pull request", "submit research", "correction"], "read": ["CONTRIBUTING.md", "docs/RESEARCH_CONTRIBUTION_MODEL.md", "templates/"]},
+    {"route_id": "licensing", "priority": 108, "triggers": ["license", "licensing", "copyright", "commercial reuse", "dco", "trademark"], "read": ["docs/LICENSING_OPTIONS.md", "docs/CONTRIBUTION_RADAR_DECISION.md", "LICENSE"]},
+    {"route_id": "cross_industry", "priority": 106, "triggers": ["industry", "industries", "healthcare", "finance", "insurance", "manufacturing", "ontology exposure"], "read": ["docs/CROSS_INDUSTRY_ONTOLOGY_RISK.md", "registry/industry-research-taxonomy.json", "templates/industry-research-profile.template.md"]},
+    {"route_id": "research_radar", "priority": 104, "triggers": ["radar", "monitor", "monitoring", "watchlist", "development", "signal"], "read": ["docs/RESEARCH_RADAR.md", "registry/research-radar-watchlist.json", "templates/research-signal.template.json"]},
+    {"route_id": "genealogy", "priority": 100, "triggers": ["source", "citation", "genealogy", "lineage", "derived", "synthesis"], "read": ["registry/evidence-graph.json", "registry/derivation-registry.json", "registry/claim-registry.json", "registry/source-registry.json"]},
+    {"route_id": "argument_and_white_paper", "priority": 95, "triggers": ["theory", "thesis", "argument", "hypothesis", "white paper"], "read": ["docs/THESIS_MAP.md", "registry/thesis-map.json", "registry/white-paper-export.json", "public/generated-release-artifacts/candidate/white-paper.md", "docs/ARGUMENT_MESH_STANDARD.md"]},
+    {"route_id": "telemetry_and_retention", "priority": 90, "triggers": ["telemetry", "retention", "training", "secondary use"], "read": ["docs/THREAT_MODEL.md", "docs/RUNTIME_VALIDATION_PLAN.md", "research/QUESTIONS_TO_ANTHROPIC.md"]},
+    {"route_id": "claim_check", "priority": 80, "triggers": ["claim", "prove", "confidence", "hypothesis"], "read": ["registry/claim-registry.json", "registry/source-registry.json"]},
+    {"route_id": "code_evidence", "priority": 70, "triggers": ["code", "line", "lines", "file", "implementation"], "read": ["UPSTREAM.lock.json", "registry/chunk-registry.json", "audit/EVIDENCE_MAP.md", "upstream/claude-for-legal/"]},
+    {"route_id": "run_audit", "priority": 60, "triggers": ["scan", "audit", "agent", "agents", "workflow"], "read": ["AGENTS.md", "prompts/00-master-orchestrator.md", "schemas/pass-result.schema.json"]},
+    {"route_id": "generated_results", "priority": 50, "triggers": ["result", "results", "match", "matches", "graph", "report"], "read": ["registry/source-of-truth.json", "results/"]},
+    {"route_id": "orientation", "priority": 10, "triggers": ["what is this", "scope", "overview"], "read": ["README.md", "docs/SCOPE_BOUNDARY.md"]}
+  ],
+  "routing_fixtures": [
+    {"query":"What is the project roadmap and next step?","expected_route_id":"roadmap_and_release"},
+    {"query":"Is this repository ready to publish?","expected_route_id":"roadmap_and_release"},
+    {"query":"Why must law firms hold the line on their collective brain trust?","expected_route_id":"ajax_line"},
+    {"query":"Open the typed evidence graph and exact genealogy","expected_route_id":"evidence_control_plane"},
+    {"query":"How could a frontier lab capture a law firm ontology?","expected_route_id":"counterfactual_capture"},
+    {"query":"Prove this code claim","expected_route_id":"claim_check"},
+    {"query":"TRACE THE SOURCE GENEALOGY","expected_route_id":"genealogy"},
+    {"query":"Show matching reports","expected_route_id":"generated_results"},
+    {"query":"Review telemetry retention","expected_route_id":"telemetry_and_retention"},
+    {"query":"Map this white-paper thesis","expected_route_id":"argument_and_white_paper"},
+    {"query":"How can I contribute research?","expected_route_id":"contribution"},
+    {"query":"Which industries have ontology exposure?","expected_route_id":"cross_industry"},
+    {"query":"Monitor new research signals","expected_route_id":"research_radar"},
+    {"query":"Choose a license for commercial reuse","expected_route_id":"licensing"},
+    {"query":"Unrecognized request","expected_route_id":"orientation"}
+  ],
+  "invariants": [
+    "Every route begins at AI_FRONT_DOOR.md.",
+    "Every route path exists or is the documented bootstrap checkout.",
+    "Generated results remain candidate evidence.",
+    "Genealogy routes reach both claims and registered sources.",
+    "Priority resolves overlap; a highest-priority tie fails closed."
+  ]
+}

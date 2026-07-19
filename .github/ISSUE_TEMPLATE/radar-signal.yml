@@ -1,0 +1,46 @@
+name: Research radar signal
+description: Submit one candidate public development for independent review.
+title: "[Radar signal] "
+labels: ["radar-signal", "candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: "Signals are candidate-only. A signal cannot update a claim, thesis, or publication automatically."
+  - type: dropdown
+    id: family
+    attributes:
+      label: Signal family
+      options:
+        - Vertical product or connector
+        - Forward-deployed engineering or co-development
+        - Retention, training, feedback, telemetry, or evaluation
+        - Portability, export, security, privacy, or residency
+        - Partnership, acquisition, regulation, terms, or repository revision
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official public URL and revision/date
+    validations:
+      required: true
+  - type: textarea
+    id: locator
+    attributes:
+      label: Exact locator and smallest observed fact
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: What this does not prove, alternative explanations, and next check
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checks
+      options:
+        - label: I have supplied pointers and locators, not confidential or full third-party captures.
+          required: true
+

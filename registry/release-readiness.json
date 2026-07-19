@@ -1,0 +1,196 @@
+{
+  "as_of": "2026-07-15T13:40:00-04:00",
+  "authority_boundary": "This registry may prove that a candidate is blocked or mechanically complete. It cannot choose a name or license, approve publication, waive legal or privacy review, mutate Git, or create human authority.",
+  "decisions": [
+    {
+      "decision_id": "REL-DEC-001",
+      "evidence_refs": [
+        "docs/TROJAN_WAR_NAMING_CONVENTION.md"
+      ],
+      "status": "pending",
+      "subject": "public repository name",
+      "value": null
+    },
+    {
+      "decision_id": "REL-DEC-002",
+      "evidence_refs": [
+        "docs/LICENSING_OPTIONS.md"
+      ],
+      "status": "pending",
+      "subject": "copyright holder or governing entity",
+      "value": null
+    },
+    {
+      "decision_id": "REL-DEC-003",
+      "evidence_refs": [
+        "docs/LICENSING_OPTIONS.md"
+      ],
+      "status": "pending",
+      "subject": "path-level software research and metadata licenses",
+      "value": null
+    },
+    {
+      "decision_id": "REL-DEC-004",
+      "evidence_refs": [
+        "docs/LICENSING_OPTIONS.md"
+      ],
+      "status": "pending",
+      "subject": "trademark and name policy",
+      "value": null
+    },
+    {
+      "decision_id": "REL-DEC-005",
+      "evidence_refs": [
+        "SECURITY.md"
+      ],
+      "status": "pending",
+      "subject": "public security contact and disclosure route",
+      "value": null
+    },
+    {
+      "decision_id": "REL-DEC-006",
+      "evidence_refs": [
+        "CONTRIBUTING.md"
+      ],
+      "status": "pending",
+      "subject": "named release approver and contribution activation authority",
+      "value": null
+    },
+    {
+      "decision_id": "REL-DEC-007",
+      "evidence_refs": [
+        "docs/CONTRIBUTION_RADAR_DECISION.md"
+      ],
+      "status": "pending",
+      "subject": "physical separation of the private research workspace",
+      "value": null
+    }
+  ],
+  "human_approval": null,
+  "human_release_approved": false,
+  "inventory_snapshot": {
+    "generated_from": "git ls-files --cached plus --others --exclude-standard, NUL-delimited, sorted",
+    "public_path_sha256": "f1a6bf5311e851fcd2ed1a2953f1cceff84c544b724a632494275e3c50284c35",
+    "tracked_file_count": 53,
+    "untracked_public_candidate_count": 171
+  },
+  "private_path_patterns": [
+    ".private/",
+    "private/"
+  ],
+  "receipts": [
+    {
+      "evidence_refs": [],
+      "limitation": "No approved allowlist or allowlist hash exists.",
+      "receipt_id": "REL-RCP-001",
+      "status": "pending",
+      "subject": "frozen default-deny public allowlist"
+    },
+    {
+      "evidence_refs": [],
+      "limitation": "Prior baseline scan did not establish coverage of every untracked release candidate.",
+      "receipt_id": "REL-RCP-002",
+      "status": "pending",
+      "subject": "baseline public content and path scan"
+    },
+    {
+      "evidence_refs": [],
+      "limitation": "No approved stronger scanner receipt exists.",
+      "receipt_id": "REL-RCP-003",
+      "status": "pending",
+      "subject": "strong secret and PII scan of frozen export"
+    },
+    {
+      "evidence_refs": [],
+      "limitation": "No content scan of public Git history exists.",
+      "receipt_id": "REL-RCP-004",
+      "status": "pending",
+      "subject": "Git-history privacy and secret scan"
+    },
+    {
+      "evidence_refs": [],
+      "limitation": "Raw and derived source rights have not been frozen for an export.",
+      "receipt_id": "REL-RCP-005",
+      "status": "pending",
+      "subject": "path-level provenance and third-party redistribution review"
+    },
+    {
+      "evidence_refs": [],
+      "limitation": "Current passing tests apply to a dirty evolving workspace, not a frozen release commit.",
+      "receipt_id": "REL-RCP-006",
+      "status": "pending",
+      "subject": "all deterministic research validators on frozen candidate"
+    },
+    {
+      "evidence_refs": [
+        "independent roadmap checker: release FAIL"
+      ],
+      "limitation": "The independent review found release-blocking issues and did not approve release.",
+      "receipt_id": "REL-RCP-007",
+      "status": "pending",
+      "subject": "independent evidence privacy license and security review"
+    },
+    {
+      "evidence_refs": [
+        "registry/white-paper-export.json content_sha256 8e82c9b0f8b5041a0ca0c499d6d474b662c80f6841ae4aecdff58e6e18e1dfa0",
+        "scripts/build_white_paper_candidate.py --check"
+      ],
+      "limitation": "A deterministic blocked preview now exists, but it is not a frozen allowlisted release artifact and has no human approval.",
+      "receipt_id": "REL-RCP-008",
+      "status": "pending",
+      "subject": "reproducible public export and exact SHA-256"
+    },
+    {
+      "evidence_refs": [],
+      "limitation": "No human approval record exists and agents cannot create one.",
+      "receipt_id": "REL-RCP-009",
+      "status": "pending",
+      "subject": "named human approval of exact export hash"
+    }
+  ],
+  "release_blockers": [
+    "REL-DEC-001",
+    "REL-DEC-002",
+    "REL-DEC-003",
+    "REL-DEC-004",
+    "REL-DEC-005",
+    "REL-DEC-006",
+    "REL-DEC-007",
+    "REL-RCP-001",
+    "REL-RCP-002",
+    "REL-RCP-003",
+    "REL-RCP-004",
+    "REL-RCP-005",
+    "REL-RCP-006",
+    "REL-RCP-007",
+    "REL-RCP-008",
+    "REL-RCP-009"
+  ],
+  "release_candidate": {
+    "allowlist_path": null,
+    "allowlist_sha256": null,
+    "commit": null,
+    "export_path": null,
+    "export_sha256": null,
+    "frozen": false
+  },
+  "required_validator_commands": [
+    "python scripts/upgrade_claim_registry_v2.py --check",
+    "python scripts/build_chunk_registry.py --check --verify-reconstruction",
+    "python scripts/build_pr_linkage.py --check",
+    "python scripts/build_evidence_graph.py --check",
+    "python scripts/build_thesis_map.py --check",
+    "python scripts/build_white_paper_candidate.py --check",
+    "python scripts/build_counterfactual_graph.py --check",
+    "python scripts/build_lineage.py --check",
+    "python scripts/validate_argument_mesh.py",
+    "python scripts/validate_research_radar.py",
+    "python scripts/validate_roadmap.py",
+    "python scripts/validate_navigation.py",
+    "python -m unittest discover -s tests -v",
+    "python scripts/validate_release_readiness.py --require-ready"
+  ],
+  "revision": "1.0.0",
+  "schema": "claude-legal-audit.release-readiness.v1",
+  "status": "blocked"
+}

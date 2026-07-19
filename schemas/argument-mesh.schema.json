@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/argument-mesh.schema.json",
+  "title": "Candidate white-paper argument mesh",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "revision", "status", "method_document", "aliases", "objects", "edges"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.argument-mesh.v1"},
+    "revision": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "status": {"const": "candidate"},
+    "method_document": {"const": "docs/ARGUMENT_MESH_STANDARD.md"},
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["alias", "descriptive_name", "authority"],
+        "properties": {
+          "alias": {"type": "string", "minLength": 3},
+          "descriptive_name": {"type": "string", "minLength": 10},
+          "authority": {"const": "mnemonic_only"}
+        }
+      }
+    },
+    "objects": {"type": "array", "minItems": 10, "items": {"$ref": "#/$defs/object"}},
+    "edges": {"type": "array", "minItems": 10, "items": {"$ref": "#/$defs/edge"}}
+  },
+  "$defs": {
+    "object": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_id", "object_type", "title", "statement", "epistemic_status", "review_status", "scope", "does_not_prove", "claim_ids", "source_ids", "applies_when", "does_not_apply_when", "danger_if_misapplied"],
+      "properties": {
+        "object_id": {"type": "string", "pattern": "^(THY|THS|ARG|OBJ|REB|FAL|GAP|SEC)-[0-9]{4}$"},
+        "object_type": {"enum": ["theory", "thesis", "supporting_argument", "objection", "rebuttal", "falsifier", "proof_gap", "paper_section"]},
+        "title": {"type": "string", "minLength": 5},
+        "statement": {"type": "string", "minLength": 25},
+        "epistemic_status": {"enum": ["Observed", "Inferred", "Hypothesis", "Normative", "Unknown"]},
+        "review_status": {"const": "candidate"},
+        "scope": {"type": "string", "minLength": 20},
+        "does_not_prove": {"type": "string", "minLength": 20},
+        "claim_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^CLM-[0-9]{4}$"}},
+        "source_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^SRC-[0-9]{4}$"}},
+        "applies_when": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 12}},
+        "does_not_apply_when": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 12}},
+        "danger_if_misapplied": {"type": "string", "minLength": 20}
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["edge_id", "source", "relation", "target", "inverse_relation", "basis", "review_status"],
+      "properties": {
+        "edge_id": {"type": "string", "pattern": "^AME-[0-9]{4}$"},
+        "source": {"type": "string", "pattern": "^(THY|THS|ARG|OBJ|REB|FAL|GAP|SEC)-[0-9]{4}$"},
+        "relation": {"enum": ["HAS_THESIS", "PART_OF_THEORY", "SUPPORTED_BY", "SUPPORTS", "CHALLENGED_BY", "CHALLENGES", "ANSWERED_BY", "ANSWERS", "FALSIFIED_BY", "FALSIFIES", "WEAKENED_BY", "WEAKENS", "HAS_PROOF_GAP", "PROOF_GAP_OF", "PRESENTED_IN", "PRESENTS"]},
+        "target": {"type": "string", "pattern": "^(THY|THS|ARG|OBJ|REB|FAL|GAP|SEC)-[0-9]{4}$"},
+        "inverse_relation": {"type": "string", "minLength": 3},
+        "basis": {"type": "string", "minLength": 20},
+        "review_status": {"const": "candidate"}
+      }
+    }
+  }
+}

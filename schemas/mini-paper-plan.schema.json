@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/claude-legal-audit/mini-paper-plan.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "revision", "capability_class", "status", "title", "tag_vocabulary", "units", "profiles", "scoring"],
+  "properties": {
+    "schema": {"const": "claude-legal-audit.mini-paper-plan.v1"},
+    "revision": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "capability_class": {"const": "portable_core"},
+    "status": {"const": "blocked_unpublished_candidate"},
+    "title": {"type": "string", "minLength": 3},
+    "tag_vocabulary": {"type": "array", "minItems": 10, "uniqueItems": true, "items": {"type": "string", "pattern": "^tag:[a-z_]+:[a-z0-9_-]+$"}},
+    "units": {"type": "array", "minItems": 7, "items": {"$ref": "#/$defs/unit"}},
+    "profiles": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/profile"}, "allOf": [
+      {"contains": {"type": "object", "properties": {"profile_id": {"const": "executive"}}, "required": ["profile_id"]}, "minContains": 1, "maxContains": 1},
+      {"contains": {"type": "object", "properties": {"profile_id": {"const": "academic"}}, "required": ["profile_id"]}, "minContains": 1, "maxContains": 1},
+      {"contains": {"type": "object", "properties": {"profile_id": {"const": "adversarial"}}, "required": ["profile_id"]}, "minContains": 1, "maxContains": 1}
+    ]},
+    "scoring": {
+      "type": "object", "additionalProperties": false,
+      "required": ["revision", "mode", "weights_basis_points"],
+      "properties": {
+        "revision": {"type": "string"},
+        "mode": {"const": "compare_only"},
+        "weights_basis_points": {
+          "type": "object", "additionalProperties": false,
+          "required": ["genealogy", "boundary", "objections", "falsifiers", "profile_order", "proof_gaps"],
+          "properties": {
+            "genealogy": {"type": "integer", "minimum": 0}, "boundary": {"type": "integer", "minimum": 0},
+            "objections": {"type": "integer", "minimum": 0}, "falsifiers": {"type": "integer", "minimum": 0},
+            "profile_order": {"type": "integer", "minimum": 0}, "proof_gaps": {"type": "integer", "minimum": 0}
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "unit": {
+      "type": "object", "additionalProperties": false,
+      "required": ["unit_id", "thesis_node_id", "semantic_role", "tags", "text_by_profile"],
+      "properties": {
+        "unit_id": {"type": "string", "pattern": "^MPU-[0-9]{4}$"},
+        "thesis_node_id": {"type": "string", "pattern": "^TMN-[0-9]{4}$"},
+        "semantic_role": {"enum": ["asset", "observation", "conditional_mechanism", "externality", "recommendation", "horizon", "boundary"]},
+        "tags": {"type": "array", "minItems": 3, "uniqueItems": true, "items": {"type": "string"}},
+        "text_by_profile": {"type": "object", "additionalProperties": {"type": "string", "minLength": 120}}
+      }
+    },
+    "section": {
+      "type": "object", "additionalProperties": false,
+      "required": ["section_id", "title", "unit_ids"],
+      "properties": {
+        "section_id": {"type": "string", "pattern": "^MPS-[0-9]{4}$"},
+        "title": {"type": "string"},
+        "unit_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^MPU-[0-9]{4}$"}}
+      }
+    },
+    "profile": {
+      "type": "object", "additionalProperties": false,
+      "required": ["profile_id", "audience", "title", "subtitle", "sections", "order_constraints"],
+      "properties": {
+        "profile_id": {"enum": ["executive", "academic", "adversarial"]},
+        "audience": {"type": "string"}, "title": {"type": "string"}, "subtitle": {"type": "string"},
+        "sections": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/section"}},
+        "order_constraints": {"type": "array", "minItems": 2, "items": {"type": "array", "prefixItems": [{"type": "string"}, {"type": "string"}], "items": false, "minItems": 2, "maxItems": 2}}
+      }
+    }
+  }
+}

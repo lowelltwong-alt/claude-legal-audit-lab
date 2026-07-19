@@ -1,0 +1,165 @@
+{
+  "pass_id": "round-1-worker-5",
+  "scope": [
+    "results/worklists/worker-5.csv",
+    "pinned upstream/claude-for-legal assigned files only"
+  ],
+  "coverage": {
+    "files_reviewed": 51,
+    "lines_reviewed": 8227,
+    "deferred": []
+  },
+  "findings": [
+    {
+      "id": "R1-W5-F001",
+      "title": "Durable shared and practice profiles encode firm operating context",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "corporate-legal/CLAUDE.md", "line_start": 4, "line_end": 18, "description": "Directs user configuration to durable paths, migrates it across plugin updates, and shares company facts across twelve plugins."},
+        {"path": "corporate-legal/CLAUDE.md", "line_start": 227, "line_end": 230, "description": "Requires ordinary practice-area answers to apply configured jurisdiction, risk posture, playbook positions, and escalation chain."},
+        {"path": "ai-governance-legal/README.md", "line_start": 128, "line_end": 130, "description": "States that the practice profile improves through use and may record new positions."}
+      ],
+      "source_to_sink": ["typed answers and expressly supplied seed documents", "cold-start/profile update instructions", "durable local config under ~/.claude/plugins/config/claude-for-legal", "subsequent skills and plugins read the shared/practice profile"],
+      "proves": "The static design deliberately persists reusable firm context and uses it across later workflows, supporting a customer-specific professional interaction graph at the local configuration layer.",
+      "does_not_prove": "It does not establish provider-side retention, provider access to the files, cross-customer pooling, training, or product improvement.",
+      "alternative_explanation": "Durable local configuration is the expected benign mechanism for consistent customer-specific assistance.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Trace runtime file access and network egress while creating, editing, and using these profiles; inspect contractual custody and retention terms.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "R1-W5-F002",
+      "title": "Employment setup captures substantive judgment signals from answers and prior work product",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "employment-legal/skills/cold-start-interview/SKILL.md", "line_start": 74, "line_end": 84, "description": "Explains that risk calibration and house conventions are written to a reusable profile, limits inputs to typed or approved material, and disclaims ambient personal-history collection."},
+        {"path": "employment-legal/skills/cold-start-interview/SKILL.md", "line_start": 199, "line_end": 203, "description": "Offers to build positions, stances, fallbacks, review triggers, and escalation points from user input or existing playbooks."},
+        {"path": "employment-legal/skills/cold-start-interview/SKILL.md", "line_start": 240, "line_end": 250, "description": "Requests employment documents and extracts house format, severance posture, high-risk patterns, and actual approval patterns."}
+      ],
+      "source_to_sink": ["user answers and explicitly supplied employment documents", "cold-start extraction and synthesis", "employment practice-profile configuration", "future hiring, termination, policy, and escalation workflows"],
+      "proves": "The repository explicitly solicits and structures firm-specific positions, fallbacks, escalation criteria, house style, and observed approval patterns.",
+      "does_not_prove": "It does not show that the extracted information leaves customer custody or is reused by Anthropic beyond serving that customer.",
+      "alternative_explanation": "The captured signals are necessary to avoid generic, jurisdiction-insensitive legal workflow output.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Observe prompts, tool calls, file writes, and outbound requests during cold start and later profile-driven reviews; compare against tenant data controls.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "R1-W5-F003",
+      "title": "Litigation intake creates a structured, longitudinal matter and decision record",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "litigation-legal/skills/matter-intake/SKILL.md", "line_start": 11, "line_end": 16, "description": "Captures identification, conflicts, risk, owners, legal hold, dates, and posture into matter, history, and portfolio-log files with confirmation."},
+        {"path": "litigation-legal/skills/matter-intake/SKILL.md", "line_start": 52, "line_end": 76, "description": "Preserves conflicts findings, waivers, owners, due dates, and bypass rationale as continuing records."},
+        {"path": "litigation-legal/skills/matter-intake/SKILL.md", "line_start": 139, "line_end": 147, "description": "Captures the initial fight, settle, investigate, or wait posture."},
+        {"path": "litigation-legal/matters/_log.yaml", "line_start": 3, "line_end": 7, "description": "Defines the matter log as the durable rollup source of truth with searchable closed-matter history."}
+      ],
+      "source_to_sink": ["matter facts and user conflict/risk judgments", "uniform intake", "matter.md and history.md plus structured _log.yaml", "portfolio rollups and later matter updates"],
+      "proves": "The static workflow builds an explicit longitudinal graph of matter identity, conflicts, posture, owners, rationale, and outcomes inside local matter storage.",
+      "does_not_prove": "It does not prove the proprietary runtime transmits that graph to a provider or derives generalized litigation strategy from it.",
+      "alternative_explanation": "A durable matter ledger is ordinary legal-operations recordkeeping and improves auditability and consistency.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Instrument intake and portfolio-status runs for local reads/writes and egress; inspect access controls and deletion behavior for closed matters.",
+      "hypotheses": ["H0", "H1"]
+    },
+    {
+      "id": "R1-W5-F004",
+      "title": "Configured connectors and scheduled agents create bounded remote source and notification paths",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "ai-governance-legal/.mcp.json", "line_start": 2, "line_end": 14, "description": "Declares remote Slack and Google Drive MCP endpoints for workspace messages and documents."},
+        {"path": "corporate-legal/agents/dataroom-watcher.md", "line_start": 3, "line_end": 8, "description": "Defines a scheduled VDR watcher with wildcard Box, Intralinks, Datasite, and Slack-send tools."},
+        {"path": "corporate-legal/agents/dataroom-watcher.md", "line_start": 17, "line_end": 33, "description": "Describes daily VDR queries and posting deal updates, with local-file fallback when integrations are unavailable."},
+        {"path": "corporate-legal/agents/dataroom-watcher.md", "line_start": 51, "line_end": 54, "description": "Limits the watcher to flagging new documents and reporting checklist status rather than reading documents or updating the checklist."}
+      ],
+      "source_to_sink": ["VDR metadata and configured deal state", "scheduled watcher using external MCPs", "Slack deal channel or local update file", "deal-team notification"],
+      "proves": "The design includes remote connector calls and an ambient scheduled notification path; the watcher tool declaration is broader than its stated read-only/document-flagging behavior.",
+      "does_not_prove": "It does not prove connector activation, tenant permissions, actual payloads, provider logging, retention, training, or covert exfiltration.",
+      "alternative_explanation": "Remote reads and team notifications are explicit user-facing workflow functions, with documented local fallbacks and stated limits.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Capture runtime MCP authorization, exact tool calls and payloads, Slack destinations, credential scopes, logs, and retention during a scheduled run.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1-W5-F005",
+      "title": "Managed-agent cookbooks support hosted deployment while isolating untrusted documents from write and network authority",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "managed-agent-cookbooks/diligence-grid/README.md", "line_start": 8, "line_end": 17, "description": "Describes headless fleet review for POST /v1/agents and repeatedly bounds extracted cells as unverified leads."},
+        {"path": "managed-agent-cookbooks/diligence-grid/README.md", "line_start": 36, "line_end": 47, "description": "Separates untrusted-document readers from write holders and connectors and requires schema/length controls and spreadsheet-injection defenses."},
+        {"path": "managed-agent-cookbooks/diligence-grid/README.md", "line_start": 55, "line_end": 61, "description": "Requires deployment-time connector/output wiring and states the agent never directly uploads or posts to Slack."},
+        {"path": "managed-agent-cookbooks/diligence-grid/subagents/extractor.yaml", "line_start": 29, "line_end": 40, "description": "Treats document bytes as data and makes the extractor read-only with no MCP, network, or write authority."}
+      ],
+      "source_to_sink": ["VDR documents", "read-only connector/document reader", "schema-validated extraction and normalization", "isolated local grid writer", "deployment-owned upload or notification handoff"],
+      "proves": "The repository contemplates hosted managed-agent execution but includes explicit authority separation that materially weighs against a simple document-to-exfiltration chain.",
+      "does_not_prove": "Static cookbook controls do not prove the deployed service enforces them, nor do they answer service-side logging, retention, model inference, or secondary use.",
+      "alternative_explanation": "The architecture is an affirmative least-authority design intended to safely automate ordinary diligence.",
+      "confidence": "high",
+      "risk": "medium",
+      "test_to_confirm": "Deploy in a controlled tenant and verify effective tool grants, blocked outbound calls, schema caps, write isolation, service logs, and operator access.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1-W5-F006",
+      "title": "Default cross-matter isolation coexists with deliberate practice-level learning",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "corporate-legal/CLAUDE.md", "line_start": 298, "line_end": 304, "description": "Sets cross-matter context off, prohibits reading another matter by default, and routes approved reusable learnings to the practice profile."},
+        {"path": "regulatory-legal/CLAUDE.md", "line_start": 333, "line_end": 339, "description": "Repeats default matter isolation and the practice-level destination for cross-matter learnings."},
+        {"path": "employment-legal/skills/matter-workspace/SKILL.md", "line_start": 1, "line_end": 12, "description": "Defines client/matter workspaces as an isolation mechanism for multi-client practice."}
+      ],
+      "source_to_sink": ["matter-specific facts", "active matter workspace", "matter-local outputs by default", "human-selected reusable learning", "practice-level profile"],
+      "proves": "The design distinguishes prohibited automatic cross-matter reads from a controlled channel for carrying generalized firm learnings across matters.",
+      "does_not_prove": "It does not prove runtime enforcement, prevent a user from manually moving sensitive material, or establish any cross-customer transfer.",
+      "alternative_explanation": "This is an explicit privacy and privilege control paired with a normal mechanism for maintaining firm-wide standards.",
+      "confidence": "high",
+      "risk": "low",
+      "test_to_confirm": "Use canary data in two matters to verify negative reads, then test the exact approval and provenance required to promote a learning into the practice profile.",
+      "hypotheses": ["H0", "H1", "H2"]
+    },
+    {
+      "id": "R1-W5-F007",
+      "title": "Product launch workflow separates privileged reasoning from tracker-safe output and gates clearance",
+      "claim_status": "Confirmed",
+      "evidence": [
+        {"path": "product-legal/skills/launch-review/SKILL.md", "line_start": 165, "line_end": 175, "description": "Requires explicit attorney-review confirmation before affirmative launch clearance for non-lawyer users."},
+        {"path": "product-legal/skills/launch-review/SKILL.md", "line_start": 210, "line_end": 225, "description": "Requires separate privileged and redacted outputs and forbids rationale, citations, and escalation detail in the tracker block."},
+        {"path": "product-legal/skills/launch-review/SKILL.md", "line_start": 239, "line_end": 242, "description": "Directs users to post only the redacted block and restrict the full analysis to the privilege circle."}
+      ],
+      "source_to_sink": ["launch facts and legal analysis", "privileged internal memo", "explicit redaction transform", "limited tracker comment"],
+      "proves": "The static instructions recognize destination-sensitive disclosure and attempt to prevent legal rationale from flowing into broadly shared trackers.",
+      "does_not_prove": "It does not prove perfect redaction, tracker connector enforcement, user compliance, or provider-side confidentiality and retention.",
+      "alternative_explanation": "The split-output pattern is a substantive safeguard that supports benign workflow automation rather than covert collection.",
+      "confidence": "high",
+      "risk": "low",
+      "test_to_confirm": "Run adversarial launch examples and compare both outputs for rationale leakage; verify any tracker connector receives only the redacted artifact.",
+      "hypotheses": ["H0", "H1", "H2"]
+    }
+  ],
+  "new_patterns": [
+    {"id": "R1-W5-P001", "name": "Durable professional profile promotion", "logic": "Find instructions that extract customer-specific positions or approval patterns into version-independent shared or practice configuration consumed by later workflows.", "search_terms": ["practice profile learns", "survives plugin updates", "playbook positions", "what the team actually approves", "company-profile.md"], "false_positive_risk": "A durable local profile establishes customer adaptation, not provider custody or secondary use."},
+    {"id": "R1-W5-P002", "name": "Matter isolation with controlled abstraction", "logic": "Pair default cross-matter denial with any explicit mechanism for promoting reusable matter learnings into a practice-level store.", "search_terms": ["Cross-matter context", "never reads matter", "practice-level CLAUDE.md", "learnings that should carry"], "false_positive_risk": "Human-approved firm-level standardization is not cross-customer pooling."},
+    {"id": "R1-W5-P003", "name": "Ambient connector path with stated behavioral limit", "logic": "Compare scheduled-agent tool grants and wildcard connectors against prose limits, fallbacks, and actual output destinations.", "search_terms": ["on schedule", "mcp__*", "post to", "write to a file", "does NOT do"], "false_positive_risk": "Declared tools may be unavailable or more constrained at runtime; prose may not be enforcement."},
+    {"id": "R1-W5-P004", "name": "Privilege-boundary transform", "logic": "Locate workflows that derive a shareable artifact from privileged analysis and test whether rationale or sensitive metadata can cross the boundary.", "search_terms": ["SAFE TO POST", "redacted", "privilege circle", "destination check", "handoff_request"], "false_positive_risk": "The existence of a shareable output does not show sensitive content actually leaks."}
+  ],
+  "negative_evidence": [
+    {"path": "employment-legal/skills/cold-start-interview/SKILL.md", "description": "Limits setup inputs to typed answers and explicitly uploaded documents and requires approval before using visible conversational context.", "effect": "Weighs against ambient or undisclosed personal-history harvesting in the documented design."},
+    {"path": "corporate-legal/CLAUDE.md", "description": "Sets cross-matter context off by default and says a skill in matter A never reads matter B.", "effect": "Contradicts an unbounded automatic cross-matter collection theory at the static-instruction layer."},
+    {"path": "managed-agent-cookbooks/diligence-grid/README.md", "description": "Separates untrusted readers, connectors, and writers; direct upload and Slack posting are excluded from the agent.", "effect": "Materially weakens a direct document-to-arbitrary-egress source-to-sink theory for this cookbook."},
+    {"path": "managed-agent-cookbooks/renewal-watcher/README.md", "description": "States the agent does not send Slack itself and the cookbook does not schedule itself.", "effect": "Bounds ambient authority and makes orchestration/deployment configuration an observable proof gap."},
+    {"path": "product-legal/skills/launch-review/SKILL.md", "description": "Requires attorney-review gating and separate tracker-safe output stripped of legal rationale.", "effect": "Shows affirmative human and destination controls inconsistent with an indiscriminate disclosure design."},
+    {"path": "corporate-legal/agents/dataroom-watcher.md", "description": "Says the watcher flags documents without reading them and reports checklist status without updating it.", "effect": "Limits the stated scheduled-agent collection and mutation surface, subject to runtime verification."}
+  ],
+  "unknowns": [
+    {"question": "Do profile, matter, prompt, tool, or connector contents leave customer-controlled storage during hosted inference?", "why_source_cannot_answer": "The repository provides static prompts and paths but not proprietary runtime network traces or service architecture.", "needed_evidence": "Tenant-scoped packet/tool-call captures, service architecture, operator-access controls, and authenticated runtime logs."},
+    {"question": "What telemetry, support, abuse-monitoring, and diagnostic payloads are collected from these workflows?", "why_source_cannot_answer": "No effective hosted telemetry implementation or production event schema is present in the assigned source.", "needed_evidence": "Production telemetry schemas, sampled events, destination mapping, retention schedules, and contractual disclosures."},
+    {"question": "Are customer-specific workflow signals retained or used for generalized model or product improvement?", "why_source_cannot_answer": "Static inference and local persistence instructions contain no source-to-sink evidence for retention plus secondary use.", "needed_evidence": "Current contracts and product terms, training/reuse policy, opt-in state, data lineage, deletion evidence, and auditable backend controls."},
+    {"question": "Are cross-matter isolation, read-only MCP scopes, and managed-agent tool tiers enforced by the deployed runtime?", "why_source_cannot_answer": "Prompt declarations and cookbook manifests describe intended behavior but are not runtime enforcement evidence.", "needed_evidence": "Effective authorization manifests, negative canary tests, tool-call logs, sandbox policy, and deployment configuration."},
+    {"question": "Who operates each external MCP endpoint and what are its retention and downstream-use rules?", "why_source_cannot_answer": "The repository names endpoints and capabilities but not authenticated tenant terms or operator-side processing.", "needed_evidence": "Connector-specific DPA/terms, subprocessor identity, scopes, retention, audit logs, and deletion tests."},
+    {"question": "Does the redacted tracker workflow reliably prevent privileged rationale leakage under adversarial inputs?", "why_source_cannot_answer": "The source specifies the transformation but contains no executed output corpus or leakage evaluation.", "needed_evidence": "Adversarial fixtures, paired privileged/redacted outputs, automated leakage checks, and human legal review."}
+  ]
+}
