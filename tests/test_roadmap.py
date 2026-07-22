@@ -24,11 +24,20 @@ class RoadmapTest(unittest.TestCase):
 
     def test_frontier_uses_only_reviewed_dependencies(self):
         frontier = unlock_frontier(self.payload)
+        # Terminal Local Completion: no ready/validate unlock frontier remains.
+        self.assertEqual(frontier, [])
         self.assertNotIn("CLAO-WS-00", frontier)
         self.assertNotIn("CLAO-WS-01", frontier)
-        self.assertIn("CLAO-WS-02", frontier)
-        self.assertIn("CLAO-WS-03", frontier)
         self.assertNotIn("CLAO-WS-04", frontier)
+
+        synthetic = deepcopy(self.payload)
+        by_id = {row["workstream_id"]: row for row in synthetic["workstreams"]}
+        by_id["CLAO-WS-02"]["state"] = "ready"
+        by_id["CLAO-WS-03"]["state"] = "ready"
+        synthetic_frontier = unlock_frontier(synthetic)
+        self.assertIn("CLAO-WS-02", synthetic_frontier)
+        self.assertIn("CLAO-WS-03", synthetic_frontier)
+        self.assertNotIn("CLAO-WS-04", synthetic_frontier)
 
     def test_adversarial_mutations_fail(self):
         mutations = []
@@ -42,8 +51,10 @@ class RoadmapTest(unittest.TestCase):
         mutations.append(stale_fingerprint)
 
         stale_graph_count = deepcopy(self.payload)
+        graph_summary = json.loads((ROOT / "registry/evidence-graph.json").read_text(encoding="utf-8"))["summary"]
+        current = f"{graph_summary['node_count']} nodes"
         stale_graph_count["resume_capsule"]["last_acceptance_evidence"] = [
-            item.replace("1058 nodes", "1046 nodes")
+            item.replace(current, "0 nodes")
             for item in stale_graph_count["resume_capsule"]["last_acceptance_evidence"]
         ]
         mutations.append(stale_graph_count)
@@ -54,10 +65,20 @@ class RoadmapTest(unittest.TestCase):
 
         false_delivery = deepcopy(self.payload)
         false_delivery["workstreams"][2]["state"] = "delivered"
+        false_delivery["workstreams"][2]["acceptance_evidence"][0]["status"] = "pending"
         mutations.append(false_delivery)
 
         hidden_overflow = deepcopy(self.payload)
-        hidden_overflow["wip_overflow"].append(hidden_overflow["today"][0])
+        if hidden_overflow["today"]:
+            hidden_overflow["wip_overflow"].append(hidden_overflow["today"][0])
+        elif hidden_overflow["wip_overflow"]:
+            # Quiet-hold roadmaps may have an empty Today list; still require overlap detection.
+            hidden_overflow["today"] = [hidden_overflow["wip_overflow"][0]]
+        else:
+            # Terminal Local Completion: both Today and overflow empty; invent overlap.
+            synthetic_id = "CLAO-WS-00"
+            hidden_overflow["today"] = [synthetic_id]
+            hidden_overflow["wip_overflow"] = [synthetic_id]
         mutations.append(hidden_overflow)
 
         unleased_active = deepcopy(self.payload)

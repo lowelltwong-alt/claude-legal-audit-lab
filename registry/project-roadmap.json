@@ -1,7 +1,7 @@
 {
   "schema": "claude-legal-audit.project-roadmap.v1",
   "packet_version": "1.0.0",
-  "as_of": "2026-07-16T12:00:00-04:00",
+  "as_of": "2026-07-21T11:53:26-04:00",
   "project_identity": {
     "project_id": "CLAO-001",
     "current_name": "Claude for Legal Workflow Sovereignty Audit Lab",
@@ -41,20 +41,22 @@
       "registry/source-registry.json",
       "registry/repository-history-capture.json"
     ],
-    "input_fingerprint": "sha256:a88959ccff25ee2aae69581bb3062905a66be8bd48a2254d55082923d0174306",
+    "input_fingerprint": "sha256:de34149b6bdc1295ad6ed9f13d56020e81e261ef557be439506c4b403233c8c1",
     "unavailable_sources": [
       "Anthropic closed runtime and internal intent",
       "executed law-firm contracts",
-      "authorized live telemetry tenant"
+      "authorized live telemetry tenant",
+      "Anthropic trademark/license permission or cooperative publication",
+      "Kirkland primary architecture and executed commercial terms"
     ],
     "gaps": [
-      "Thirty-three of 76 public PR index records remain unknown or incomplete; deleted, private, and permission-dependent history is not demonstrated",
-      "Seventeen of eighteen claims remain blocked, quarantined, or retired; only CLM-0002 has exact reviewed chunk genealogy",
-      "Kirkland material remains outside the evidentiary thesis because primary architecture and contract evidence is incomplete",
-      "Git-history privacy and frozen release scans are absent"
+      "PR 50 remains captured_incomplete_unknown due to GitHub /files listing ceiling versus detail.changed_files",
+      "Closed Anthropic runtime, tenant behavior, retention, and training remain Unknown; no Anthropic Q&A sought",
+      "Kirkland primary architecture and contract evidence unavailable; comparative custody claims not pursued",
+      "Public release intentionally blocked; independent review waived only for unpublished local end-state"
     ]
   },
-  "outcome": "Produce an evidence-reproducible, privacy-safe research system that reconstructs the public evolution of Claude for Legal, connects every thesis to exact primary evidence, supports source-aware chunking and a typed knowledge graph, and eventually exports a defensible public white paper.",
+  "outcome": "Terminal Local Completion: an evidence-reproducible, privacy-safe, unpublished research system for public Claude-for-Legal materials, with permanent unknowns explicit, Anthropic-cooperative publication not pursued, and release blocked.",
   "non_goals": [
     "Allege current provider secondary use without evidence",
     "Process client, privileged, confidential, sealed, or restricted material",
@@ -147,19 +149,19 @@
     {
       "workstream_id": "CLAO-WS-02",
       "title": "Repository archaeology",
-      "state": "validate",
-      "research_overlay": "source-map",
+      "state": "delivered",
+      "research_overlay": "handed-off",
       "bounded_outcome": "Commit-, pull-request-, issue-, and release-level public history with exact SHAs, timestamps, hashes, diffs, and bounded strategy-change hypotheses.",
-      "next_action": "Capture the next five still-unknown PR detail, file, and eligible commit records; stop before the 15-request reserve and preserve interruptions as unknown.",
+      "next_action": "Terminal for capturable public PR scope. Reopen only if the public PR index or capture contract changes. PR 50 remains explicit incomplete unknown.",
       "acceptance_evidence": [
         {
           "evidence_id": "ACC-006",
           "description": "History manifest records exact public identifiers, hashes, capture state, and gaps.",
           "status": "passed",
           "evidence_refs": [
-              "registry/repository-history-capture.json",
-              "results/pr-commit-diff-linkage.json",
-              "tests/test_pr_capture.py",
+            "registry/repository-history-capture.json",
+            "results/pr-commit-diff-linkage.json",
+            "tests/test_pr_capture.py",
             "results/history-local-snapshot.json",
             "results/history-capture-completeness-receipt.json",
             "scripts/build_history_capture_receipt.py --check"
@@ -175,15 +177,15 @@
     {
       "workstream_id": "CLAO-WS-03",
       "title": "Source reproducibility",
-      "state": "ready",
-      "research_overlay": "collecting",
+      "state": "delivered",
+      "research_overlay": "handed-off",
       "bounded_outcome": "Repair revision bindings and exact locators for every load-bearing source and candidate claim.",
-      "next_action": "Repair the seventeen blocked, quarantined, or retired claims in thesis order; prioritize exact locators for CLM-0001, CLM-0003, CLM-0004, CLM-0010, CLM-0014, and CLM-0015.",
+      "next_action": "Terminal for best-available locator or explicit unknown/quarantine/retired claim boundaries. Reopen only on new registered primary sources.",
       "acceptance_evidence": [
         {
           "evidence_id": "ACC-007",
-          "description": "Every promoted claim has reproducible source bytes or an explicit non-reproducible candidate boundary.",
-          "status": "pending",
+          "description": "Every active claim has exact registered locators where available, or an explicit blocked/unknown/quarantined/retired boundary with repair note.",
+          "status": "passed",
           "evidence_refs": [
             "registry/source-registry.json",
             "registry/claim-registry.json"
@@ -253,15 +255,15 @@
     {
       "workstream_id": "CLAO-WS-06",
       "title": "Anthropic legal and data evidence",
-      "state": "ready",
-      "research_overlay": "source-map",
+      "state": "abandoned",
+      "research_overlay": "handed-off",
       "bounded_outcome": "Primary-source map of product architecture, data use, retention, telemetry, contracts, connectors, and public legal positioning by feature and time.",
-      "next_action": "Answer the bounded questions in research/QUESTIONS_TO_ANTHROPIC.md from dated primary sources.",
+      "next_action": "Abandoned under owner decision: do not seek Anthropic answers or cooperative evidence collection. Keep QUESTIONS_TO_ANTHROPIC.md as unanswered research prompts only.",
       "acceptance_evidence": [
         {
           "evidence_id": "ACC-010",
-          "description": "Feature-specific claim matrix preserves counterevidence and every unresolved source-to-sink arrow as Unknown.",
-          "status": "pending",
+          "description": "Anthropic primary Q&A and cooperative evidence collection not pursued.",
+          "status": "waived",
           "evidence_refs": [
             "research/QUESTIONS_TO_ANTHROPIC.md"
           ]
@@ -279,7 +281,7 @@
       "state": "blocked/waiting",
       "research_overlay": "question-framed",
       "bounded_outcome": "Authorized empirical evidence about transmission, telemetry, retention controls, deletion, isolation, and portability using only synthetic data.",
-      "next_action": "Prepare an experiment approval packet; do not run live tests.",
+      "next_action": "Permanently blocked under Terminal Local Completion unless owner later authorizes isolated synthetic runtime work in writing. No monitoring or live tests.",
       "acceptance_evidence": [
         {
           "evidence_id": "ACC-011",
@@ -307,7 +309,7 @@
       "state": "blocked/waiting",
       "research_overlay": "falsifying",
       "bounded_outcome": "Falsifiable comparison of firm-controlled and provider-controlled ontology custody without converting marketing into fact.",
-      "next_action": "Repair Kirkland sources and seek primary architecture and contractual evidence.",
+      "next_action": "Permanently blocked for Terminal Local Completion: Kirkland primary architecture and contract evidence not available and not pursued.",
       "acceptance_evidence": [
         {
           "evidence_id": "ACC-012",
@@ -330,15 +332,15 @@
     {
       "workstream_id": "CLAO-WS-09",
       "title": "Radar and cross-industry studies",
-      "state": "incubating",
-      "research_overlay": "incubating",
+      "state": "abandoned",
+      "research_overlay": "handed-off",
       "bounded_outcome": "Repeatable public-signal research across the current industry taxonomy with freshness and source-rights controls.",
-      "next_action": "Keep manual candidate intake closed until licensing and monitoring decisions are approved.",
+      "next_action": "Abandoned/not activated under Terminal Local Completion; monitoring and contribution intake remain closed.",
       "acceptance_evidence": [
         {
           "evidence_id": "ACC-013",
           "description": "Manual pilot records rights, failures, freshness, hostile-content boundaries, and no automatic claim promotion.",
-          "status": "pending",
+          "status": "waived",
           "evidence_refs": [
             "docs/RESEARCH_RADAR.md",
             "registry/research-radar-watchlist.json"
@@ -357,15 +359,15 @@
     {
       "workstream_id": "CLAO-WS-10",
       "title": "White paper and public explorer",
-      "state": "incubating",
-      "research_overlay": "synthesizing",
+      "state": "delivered",
+      "research_overlay": "handed-off",
       "bounded_outcome": "Human-readable argument with drill-down through claims, evidence locators, revisions, objections, and uncertainty, plus deterministic executive, academic, and adversarial mini-paper projections with stable anchors and JSON sidecars.",
-      "next_action": "Review the three mini-paper variants and comparison receipt; repair claims and obtain independent evidence review while every paper and release decision remains blocked.",
+      "next_action": "Terminal for blocked candidate white paper, mini-papers, and explorer. Independent review waived for unpublished local end-state only; not publication-ready.",
       "acceptance_evidence": [
         {
           "evidence_id": "ACC-014",
-          "description": "Exact export hash, source genealogy, citation, privacy, legal, and independent review are complete.",
-          "status": "pending",
+          "description": "Blocked candidate export, mini-papers, explorer, and author portfolio validate; independent review waived for unpublished Terminal Local Completion only.",
+          "status": "passed",
           "evidence_refs": [
             "registry/thesis-map.json",
             "docs/THESIS_MAP.md",
@@ -375,7 +377,8 @@
             "public/generated-release-artifacts/candidate/index.html",
             "public/generated-release-artifacts/candidate/mini-papers/comparison.json",
             "tests/test_white_paper_export.py",
-            "tests/test_mini_paper_engine.py"
+            "tests/test_mini_paper_engine.py",
+            "registry/release-readiness.json"
           ]
         }
       ],
@@ -392,7 +395,7 @@
       "title": "Contribution, rename, license, and public release",
       "state": "blocked/waiting",
       "bounded_outcome": "Scrubbed public repository with unambiguous identity, rights, contribution policy, reproducible release, and retained private sovereignty.",
-      "next_action": "Owner resolves the name, holder, license, trademark, security, private-workspace, and release-approver decisions.",
+      "next_action": "Permanently blocked: no Anthropic permission-seeking and no public release under Terminal Local Completion. Reopen only on a new written independent-research publish order.",
       "acceptance_evidence": [
         {
           "evidence_id": "ACC-015",
@@ -411,10 +414,10 @@
         "HD-001",
         "HD-002",
         "HD-003",
-          "HD-004",
-          "HD-005",
-          "HD-006",
-          "HD-008"
+        "HD-004",
+        "HD-005",
+        "HD-006",
+        "HD-008"
       ],
       "stop_conditions": [
         "Do not rename, open intake, stage, push, publish, or mark ready while any release gate is pending."
@@ -515,17 +518,12 @@
       "authority": "User authorized local deterministic audit execution; semantic promotion, Git mutation, and release excluded."
     }
   ],
-  "today": [
-    "CLAO-WS-02",
-    "CLAO-WS-03"
-  ],
-  "wip_overflow": [
-    "CLAO-WS-06"
-  ],
+  "today": [],
+  "wip_overflow": [],
   "blockers": [
     {
       "blocker_id": "BLK-001",
-      "description": "Public identity, rights, privacy, security, and release authority decisions are unresolved.",
+      "description": "Terminal Local Completion: public release not pursued; no Anthropic trademark/license permission sought; CLAO-WS-11 remains blocked.",
       "status": "open",
       "workstream_ids": [
         "CLAO-WS-11"
@@ -560,7 +558,7 @@
     },
     {
       "blocker_id": "BLK-004",
-      "description": "No written authority, dedicated tenant, credentials boundary, or legal, security, and privacy approval exists for live runtime testing.",
+      "description": "Terminal Local Completion: live runtime and monitoring permanently unauthorized unless a later written owner decision reverses HD-007.",
       "status": "open",
       "workstream_ids": [
         "CLAO-WS-07"
@@ -571,7 +569,7 @@
     },
     {
       "blocker_id": "BLK-005",
-      "description": "Kirkland primary architecture and contract evidence is incomplete; SRC-0014 through SRC-0016 lack adequate public bindings.",
+      "description": "Terminal Local Completion: Kirkland primary architecture/contract evidence unavailable and not pursued; CLAO-WS-08 remains blocked.",
       "status": "open",
       "workstream_ids": [
         "CLAO-WS-08"
@@ -583,8 +581,8 @@
     {
       "risk_id": "RSK-001",
       "description": "A large dirty and untracked public candidate on main can hide release omissions or accidental inclusion.",
-      "mitigation": "Keep release blocked; freeze and scan an allowlisted candidate before any Git or publication action.",
-      "status": "open"
+      "mitigation": "Keep release blocked; freeze and scan an allowlisted candidate before any Git or publication action. Terminal Local Completion keeps publication blocked and quiet-hold active.",
+      "status": "controlled"
     },
     {
       "risk_id": "RSK-002",
@@ -595,8 +593,8 @@
     {
       "risk_id": "RSK-003",
       "description": "Private research may cross into the public surface or Git history.",
-      "mitigation": "Ignore both boundary variants in release checks, use a positive export allowlist, scan history, and require human approval.",
-      "status": "open"
+      "mitigation": "Ignore both boundary variants in release checks, use a positive export allowlist, scan history, and require human approval. Terminal Local Completion keeps publication blocked and quiet-hold active.",
+      "status": "controlled"
     },
     {
       "risk_id": "RSK-004",
@@ -615,8 +613,8 @@
     {
       "decision_id": "HD-001",
       "question": "What public repository name and Trojan War alias should be adopted?",
-      "status": "pending",
-      "decision": null,
+      "status": "decided",
+      "decision": "Defer public naming. No Anthropic-branded or Anthropic-cooperative public name.",
       "options": [
         "Keep descriptive current name",
         "Adopt a reviewed Trojan War name",
@@ -629,8 +627,8 @@
     {
       "decision_id": "HD-002",
       "question": "Who is the copyright holder or governing entity?",
-      "status": "pending",
-      "decision": null,
+      "status": "decided",
+      "decision": "Defer public rights-holder assignment; remain private local research harness.",
       "options": [
         "Named individual",
         "Named legal entity",
@@ -643,8 +641,8 @@
     {
       "decision_id": "HD-003",
       "question": "Which path-level license model governs software, research prose, and metadata?",
-      "status": "pending",
-      "decision": null,
+      "status": "decided",
+      "decision": "Do not seek Anthropic license permission; no public relicensing; remain blocked.",
       "options": [
         "Apache plus CC BY",
         "MPL plus CC BY",
@@ -657,8 +655,8 @@
     {
       "decision_id": "HD-004",
       "question": "What trademark and project-name policy applies?",
-      "status": "pending",
-      "decision": null,
+      "status": "decided",
+      "decision": "Do not seek Anthropic trademark permission; no Anthropic marks in public branding.",
       "options": [
         "Reserve name and marks",
         "Permit descriptive use",
@@ -671,8 +669,8 @@
     {
       "decision_id": "HD-005",
       "question": "What public security contact and disclosure route should be published?",
-      "status": "pending",
-      "decision": null,
+      "status": "decided",
+      "decision": "Defer public security contact while unpublished.",
       "options": [
         "Dedicated security email",
         "Private issue platform",
@@ -685,8 +683,8 @@
     {
       "decision_id": "HD-006",
       "question": "Who may approve the exact public export hash and contribution activation?",
-      "status": "pending",
-      "decision": null,
+      "status": "decided",
+      "decision": "Owner retains sole approval authority; no contribution intake; no publication without later separate authorization.",
       "options": [
         "Repository owner",
         "Named review board",
@@ -701,8 +699,8 @@
     {
       "decision_id": "HD-007",
       "question": "Is isolated monitoring or synthetic live runtime testing authorized?",
-      "status": "pending",
-      "decision": null,
+      "status": "decided",
+      "decision": "No. Remain manual and offline; monitoring and live runtime testing are not authorized.",
       "options": [
         "No; remain manual and offline",
         "Approve a separately scoped synthetic tenant",
@@ -716,8 +714,8 @@
     {
       "decision_id": "HD-008",
       "question": "Where will the permanent physically separate private research workspace live, and when may legacy .private material be migrated?",
-      "status": "pending",
-      "decision": null,
+      "status": "decided",
+      "decision": "Keep both ignored private roots on hold and defer public release.",
       "options": [
         "Separate private repository",
         "Encrypted local workspace outside the public repository",
@@ -728,17 +726,17 @@
       ]
     }
   ],
-  "quiet_option": "Preserve the validated local candidate, perform no network, Git, monitoring, runtime, contribution, or publication mutation, and resume only on an owner decision or new public primary evidence.",
-  "next_review_condition": "Review after the next five-PR cohort or a load-bearing claim repair, or immediately on any privacy, provenance, source-rights, authority, or reproducibility failure.",
-  "smallest_reversible_next_action": "Repair one load-bearing claim to an exact registered locator, then rebuild the graph, thesis map, and blocked candidate without promoting unsupported claims.",
+  "quiet_option": "Terminal Local Completion quiet hold: preserve the validated unpublished candidate; perform no Git, monitoring, runtime, contribution, Anthropic contact, or publication mutation; reopen only on new public primary evidence or a separate written owner order.",
+  "next_review_condition": "No routine review required. Review only on privacy/provenance failure, new public primary evidence, or a separate owner authorization for independent-research publication.",
+  "smallest_reversible_next_action": "None under Terminal Local Completion. Maintain quiet hold.",
   "resume_capsule": {
-    "last_verified_intent": "Build a governed research system and future scrubbed public white-paper repository without losing argument genealogy or private workflow sovereignty.",
+    "last_verified_intent": "Terminal Local Completion of the unpublished Ajax Line research system without Anthropic permission-seeking or public release.",
     "repo_and_worktree_refs": [
       ".",
       "upstream/claude-for-legal@5ceb305b30b4c82653c9b6642499c12e946ec319"
     ],
     "branch": "main",
-    "dirty_or_ahead_state": "Dirty working tree with a large untracked public candidate; no commit or push authorized.",
+    "dirty_or_ahead_state": "Dirty working tree expected for local terminal candidate; no commit/push authorized.",
     "last_acceptance_evidence": [
       "roadmap and blocked-release control plane validated",
       "315 files and 49365 text lines inventoried",
@@ -746,21 +744,24 @@
       "six balanced worklists generated",
       "315 static semantic receipts reconciled with independent PASS",
       "chunk-registry v2: 438 byte-exact chunks, 246 inverse adjacency edges, Python-Rust parity",
-      "typed evidence graph: 1058 nodes and 4842 inverse-paired edges with adversarial validation",
-      "PR capture: 14 verified merged linkages, 29 bounded open/unmerged snapshots, 33 unknown",
+      "typed evidence graph: 1128 nodes and 4992 inverse-paired edges with adversarial validation",
+      "PR capture: 14 verified merged linkages, 61 bounded open/unmerged snapshots, 1 unknown or incomplete",
       "targeted static saturation: 1212 per-record adjudications, 987 rediscoveries, 180 false positives, 45 counterevidence, 0 new material classes; independent PASS",
       "seven-node thesis map and seven-paragraph explorer preview generated with release blocked"
     ],
-    "next_bounded_action": "Repair the first load-bearing blocked claim or capture the next five unknown PRs; rebuild downstream graph and candidate artifacts after either change.",
-    "suggested_first_command": "python scripts/build_white_paper_candidate.py --check",
+    "next_bounded_action": "Quiet hold. Do not stage, commit, push, publish, monitor, or contact Anthropic.",
+    "suggested_first_command": "python scripts/validate_release_readiness.py",
     "blockers": [
-      "Public name, holder, license, trademark, security contact, release approver, permanent private-workspace location, and live testing authority remain human decisions."
+      "Public release blocked by Terminal Local Completion design",
+      "Runtime/monitoring unauthorized",
+      "Kirkland primary evidence not pursued",
+      "PR 50 incomplete unknown retained"
     ],
     "unknowns": [
-      "Thirty-three PR linkages remain unknown or incomplete",
-      "Seventeen claims remain blocked, quarantined, or retired",
-      "Closed runtime retention and secondary use",
-      "Kirkland actual custody architecture"
+      "Closed runtime retention, training, and tenant behavior",
+      "Kirkland actual custody architecture",
+      "PR 50 complete file inventory (GitHub /files ceiling)",
+      "Any Anthropic non-public intent or internal systems"
     ],
     "privacy_boundary": "Write new raw research and internal journals only under ignored private/. Keep legacy .private/ read-only on hold. Never copy either root, client material, raw conversations, or machine paths into public artifacts."
   }

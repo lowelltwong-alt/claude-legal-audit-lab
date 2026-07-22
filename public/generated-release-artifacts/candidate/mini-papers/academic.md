@@ -18,7 +18,7 @@ The study's negative conclusion is registry-bounded. No currently registered evi
 
 **Tags:** tag:audience:academic, tag:epistemic:unknown, tag:evidence:counterevidence, tag:role:boundary, tag:subject:provider-reuse
 
-**Genealogy:** claims CLM-0003, CLM-0010, CLM-0017, CLM-0018; sources SRC-0002, SRC-0005, SRC-0006, SRC-0009; hash `c6f90676e6e268884aeaf6472b70536cfbe1d85a8314072135117cb0da0a5b04`.
+**Genealogy:** claims CLM-0003, CLM-0010, CLM-0017, CLM-0018; sources SRC-0002, SRC-0005, SRC-0006, SRC-0009; hash `639baa3ef7d5d847b547f389aaaea82b51b7910bf895178def4f10a2d787a80f`.
 
 <a id="mpu-0001"></a>
 ### MPU-0001 - Asset
@@ -29,7 +29,7 @@ The paper begins from a bounded organizational-learning proposition: firm-specif
 
 **Tags:** tag:audience:academic, tag:evidence:bounded, tag:role:asset, tag:subject:firm-ontology
 
-**Genealogy:** claims CLM-0014; sources SRC-0047, SRC-0048; hash `ff1b41ccc7df69d3975dd4a7bde9ed14ae9232a6000e5bbdd96348aaf2b68950`.
+**Genealogy:** claims CLM-0014; sources SRC-0047, SRC-0048; hash `d38b76f2e114e9ec95bdf28858fbcafd84dd5b9fec33bab6583cffe29c4e213f`.
 
 ## Observed architecture and mechanism
 
@@ -42,7 +42,7 @@ At the pinned revision, the repository contains repeated mechanisms for elicitin
 
 **Tags:** tag:audience:academic, tag:epistemic:observed, tag:role:observation, tag:subject:workflow-design
 
-**Genealogy:** claims CLM-0001, CLM-0002, CLM-0017; sources SRC-0001, SRC-0002, SRC-0050, SRC-0051; hash `c3f1a576d376ddf83d7b54cf9b2d6f910fa4e435529f51e142ef912b761ead57`.
+**Genealogy:** claims CLM-0001, CLM-0002, CLM-0017; sources SRC-0001, SRC-0002, SRC-0050, SRC-0051; hash `ea953219eaff17839e1490b1395dee5bb685c5cf84a8accb43abb2eb4696ce48`.
 
 <a id="mpu-0003"></a>
 ### MPU-0003 - Conditional Mechanism
@@ -53,7 +53,7 @@ The causal mechanism requires a complete source-to-sink chain: professional asse
 
 **Tags:** tag:audience:academic, tag:epistemic:mixed, tag:evidence:runtime-gap, tag:role:conditional-mechanism, tag:subject:provider-reuse
 
-**Genealogy:** claims CLM-0003, CLM-0004, CLM-0018; sources SRC-0005, SRC-0006, SRC-0009, SRC-0010; hash `63d4420653859052fcee260bbbdeb5c02faf3886ed0f59bede42591ebc15090c`.
+**Genealogy:** claims CLM-0003, CLM-0004, CLM-0018; sources SRC-0005, SRC-0006, SRC-0009; hash `9c54c3a133c2d8db2425b6f6e72fd60169baee7f811c6fc58e7ff3de239a66d8`.
 
 ## Hypothesis, governance, and research horizon
 
@@ -66,7 +66,7 @@ The proposed sector externality is conditional on overlap, transferability, lega
 
 **Tags:** tag:audience:academic, tag:epistemic:hypothesis, tag:evidence:runtime-gap, tag:role:externality, tag:subject:collective-alpha
 
-**Genealogy:** claims CLM-0015; sources SRC-0046, SRC-0047; hash `52ad1114bd52b59b9bb6c177e0d0bb55f48568c5a71d809a8906084b747fec3f`.
+**Genealogy:** claims CLM-0015; sources SRC-0046, SRC-0047; hash `eb979816073e7acc0a7eec8bdbcc1107ab480131c632a4cb50e3c5e3e9f99e12`.
 
 <a id="mpu-0005"></a>
 ### MPU-0005 - Recommendation
@@ -77,7 +77,7 @@ The normative conclusion is intentionally narrower than the causal hypothesis. R
 
 **Tags:** tag:audience:academic, tag:epistemic:normative, tag:evidence:bounded, tag:role:recommendation, tag:subject:collective-alpha
 
-**Genealogy:** claims CLM-0003, CLM-0015, CLM-0016; sources SRC-0005, SRC-0046, SRC-0047, SRC-0049; hash `32a0fbaa6266e9c9ed555150323e4cac59f079ac9d83688275bf97c705d43793`.
+**Genealogy:** claims CLM-0003, CLM-0015, CLM-0016; sources SRC-0005, SRC-0046, SRC-0047, SRC-0049; hash `67285244a93943a85993c8c7f766e598f31678bd35312550962b51907eed7adf`.
 
 <a id="mpu-0006"></a>
 ### MPU-0006 - Horizon
@@ -88,7 +88,7 @@ The Move 37 analogy motivates a benchmark question: can a legal system identify 
 
 **Tags:** tag:audience:academic, tag:epistemic:hypothesis, tag:evidence:bounded, tag:role:horizon, tag:subject:move-37
 
-**Genealogy:** claims CLM-0011, CLM-0012, CLM-0013; sources SRC-0042, SRC-0044, SRC-0045; hash `def66f1d3b4ba452b0c1caca0c3c509b43c80553dd0e30120d6929b5a2026afd`.
+**Genealogy:** claims CLM-0011, CLM-0012, CLM-0013; sources SRC-0042, SRC-0044, SRC-0045; hash `043409541c94c0a67bbf8ee7d4427fabf5c93e1543de5628b218e5f9c40a537a`.
 
 ## Release boundary
 

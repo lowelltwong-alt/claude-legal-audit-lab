@@ -260,6 +260,39 @@ def build_graph() -> dict:
             graph.add_relation(chunk["chunk_id"], "EVIDENCES", "CLM-0002", "The byte-exact chunk overlaps the registered lines 75-190 deployment-script locator.", exact["does_not_prove"], evidence_refs=["SRC-0002", chunk["chunk_id"]], review_state="reviewed", authority="candidate_analysis", classification="candidate_evidence")
             graph.add_relation("CLM-0002", "DERIVED_FROM", chunk["chunk_id"], "The reviewed bounded code observation is derived from this exact immutable chunk.", exact["does_not_prove"], evidence_refs=["SRC-0002", chunk["chunk_id"]], review_state="reviewed", authority="candidate_analysis", classification="candidate_evidence")
 
+    design = claim_by_id["CLM-0001"]
+    design_bindings = (
+        ("commercial-legal/skills/cold-start-interview/SKILL.md", ((23, 25), (72, 74))),
+        ("commercial-legal/agents/deal-debrief.md", ((89, 118),)),
+        ("commercial-legal/agents/playbook-monitor.md", ((50, 74), (135, 166))),
+    )
+    for path, ranges in design_bindings:
+        for chunk in chunks_by_path.get(path, []):
+            locator = chunk["exact_locator"]
+            if any(locator["line_start"] <= end and locator["line_end"] >= start for start, end in ranges):
+                graph.add_relation(
+                    chunk["chunk_id"],
+                    "EVIDENCES",
+                    "CLM-0001",
+                    f"The byte-exact chunk overlaps a registered static-design locator in {path}.",
+                    design["does_not_prove"],
+                    evidence_refs=["SRC-0002", chunk["chunk_id"]],
+                    review_state="candidate",
+                    authority="candidate_analysis",
+                    classification="candidate_evidence",
+                )
+                graph.add_relation(
+                    "CLM-0001",
+                    "DERIVED_FROM",
+                    chunk["chunk_id"],
+                    f"The bounded static-design observation is derived from an immutable chunk of {path}.",
+                    design["does_not_prove"],
+                    evidence_refs=["SRC-0002", chunk["chunk_id"]],
+                    review_state="candidate",
+                    authority="candidate_analysis",
+                    classification="candidate_evidence",
+                )
+
     object_type: dict[str, str] = {}
     for index, obj in enumerate(arguments["objects"], start=1):
         object_id = obj["object_id"]

@@ -26,6 +26,32 @@
       "repeat": "x",
       "repeat_count": 100000,
       "lines_per_chunk": 200
+    },
+    {
+      "name": "crlf_only_lines",
+      "text": "one\r\ntwo\r\nthree\r\n",
+      "lines_per_chunk": 1
+    },
+    {
+      "name": "lf_with_final_newline",
+      "text": "alpha\nomega\n",
+      "lines_per_chunk": 1
     }
+  ],
+  "required_rejection_cases": [
+    "gap",
+    "overlap",
+    "reorder",
+    "duplicate_id",
+    "conflicting_preimage",
+    "stale_parent",
+    "stale_source_revision",
+    "bad_hash",
+    "invalid_locator",
+    "missing_inverse",
+    "unknown_endpoint",
+    "forbidden_cycle",
+    "utf8_mid_codepoint",
+    "private_path_leakage"
   ]
 }

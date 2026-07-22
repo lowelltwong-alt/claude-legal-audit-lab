@@ -11,7 +11,7 @@ Firm-specific value can reside in context-to-choice-to-rationale-to-outcome rela
 
 **Boundary:** Ownership, legal protectability, uniqueness, portability, technical learnability, or economic value.
 
-Genealogy: thesis TMN-0001; claims CLM-0014; sources SRC-0047, SRC-0048; paths TEP-0001, TEP-0002; hash `ff1b41ccc7df69d3975dd4a7bde9ed14ae9232a6000e5bbdd96348aaf2b68950`.
+Genealogy: thesis TMN-0001; claims CLM-0014; sources SRC-0047, SRC-0048; paths TEP-0001, TEP-0002; hash `d38b76f2e114e9ec95bdf28858fbcafd84dd5b9fec33bab6583cffe29c4e213f`.
 
 ## WPP-0002 · OBSERVED
 
@@ -19,7 +19,7 @@ Pinned legal materials invite users to encode playbooks, fallbacks, deviations, 
 
 **Boundary:** Actual tenant configuration, data movement, retention, training, connector execution, or deployed runtime equivalence.
 
-Genealogy: thesis TMN-0002; claims CLM-0001, CLM-0002, CLM-0017; sources SRC-0001, SRC-0002, SRC-0050, SRC-0051; paths TEP-0003, TEP-0004; hash `c3f1a576d376ddf83d7b54cf9b2d6f910fa4e435529f51e142ef912b761ead57`.
+Genealogy: thesis TMN-0002; claims CLM-0001, CLM-0002, CLM-0017; sources SRC-0001, SRC-0002, SRC-0050, SRC-0051; paths TEP-0003, TEP-0004; hash `ea953219eaff17839e1490b1395dee5bb685c5cf84a8accb43abb2eb4696ce48`.
 
 ## WPP-0003 · MIXED
 
@@ -27,7 +27,7 @@ Connectors, feedback, support, telemetry, or hosted features could expose profes
 
 **Boundary:** That a named provider currently captures, retains, pools, trains on, or generalizes a firm's ontology.
 
-Genealogy: thesis TMN-0003; claims CLM-0003, CLM-0004, CLM-0018; sources SRC-0005, SRC-0006, SRC-0009, SRC-0010; paths TEP-0005, TEP-0006; hash `63d4420653859052fcee260bbbdeb5c02faf3886ed0f59bede42591ebc15090c`.
+Genealogy: thesis TMN-0003; claims CLM-0003, CLM-0004, CLM-0018; sources SRC-0005, SRC-0006, SRC-0009; paths TEP-0005, TEP-0006; hash `9c54c3a133c2d8db2425b6f6e72fd60169baee7f811c6fc58e7ff3de239a66d8`.
 
 ## WPP-0004 · HYPOTHESIS
 
@@ -35,7 +35,7 @@ If overlapping multi-firm professional traces are legally and technically reusab
 
 **Boundary:** Present harm, provider intent, data aggregation, antitrust violation, transferability, substitutability, or inevitability.
 
-Genealogy: thesis TMN-0004; claims CLM-0015; sources SRC-0046, SRC-0047; paths TEP-0007; hash `52ad1114bd52b59b9bb6c177e0d0bb55f48568c5a71d809a8906084b747fec3f`.
+Genealogy: thesis TMN-0004; claims CLM-0015; sources SRC-0046, SRC-0047; paths TEP-0007; hash `eb979816073e7acc0a7eec8bdbcc1107ab480131c632a4cb50e3c5e3e9f99e12`.
 
 ## WPP-0005 · NORMATIVE
 
@@ -43,7 +43,7 @@ Each firm should independently control ontology, derivatives, telemetry, evaluat
 
 **Boundary:** Guaranteed security, competitive superiority, compliance, provider wrongdoing, or business survival.
 
-Genealogy: thesis TMN-0005; claims CLM-0003, CLM-0015, CLM-0016; sources SRC-0005, SRC-0046, SRC-0047, SRC-0049; paths TEP-0008, TEP-0009; hash `32a0fbaa6266e9c9ed555150323e4cac59f079ac9d83688275bf97c705d43793`.
+Genealogy: thesis TMN-0005; claims CLM-0003, CLM-0015, CLM-0016; sources SRC-0005, SRC-0046, SRC-0047, SRC-0049; paths TEP-0008, TEP-0009; hash `67285244a93943a85993c8c7f766e598f31678bd35312550962b51907eed7adf`.
 
 ## WPP-0006 · HYPOTHESIS
 
@@ -51,7 +51,7 @@ Legal-AI research should test unconventional delayed-value strategies, while tre
 
 **Boundary:** That an AlphaGo moment exists in law, that Go predicts legal performance, or that private expert traces are necessary.
 
-Genealogy: thesis TMN-0006; claims CLM-0011, CLM-0012, CLM-0013; sources SRC-0042, SRC-0044, SRC-0045; paths TEP-0010; hash `def66f1d3b4ba452b0c1caca0c3c509b43c80553dd0e30120d6929b5a2026afd`.
+Genealogy: thesis TMN-0006; claims CLM-0011, CLM-0012, CLM-0013; sources SRC-0042, SRC-0044, SRC-0045; paths TEP-0010; hash `043409541c94c0a67bbf8ee7d4427fabf5c93e1543de5628b218e5f9c40a537a`.
 
 ## WPP-0007 · UNKNOWN
 
@@ -59,10 +59,10 @@ No evidence currently registered in this project establishes covert pooling of i
 
 **Boundary:** Impossibility, flawless compliance, zero processing or retention, absence of negotiated differences, or harmlessness.
 
-Genealogy: thesis TMN-0007; claims CLM-0003, CLM-0010, CLM-0017, CLM-0018; sources SRC-0002, SRC-0005, SRC-0006, SRC-0009; paths TEP-0011, TEP-0012; hash `c6f90676e6e268884aeaf6472b70536cfbe1d85a8314072135117cb0da0a5b04`.
+Genealogy: thesis TMN-0007; claims CLM-0003, CLM-0010, CLM-0017, CLM-0018; sources SRC-0002, SRC-0005, SRC-0006, SRC-0009; paths TEP-0011, TEP-0012; hash `639baa3ef7d5d847b547f389aaaea82b51b7910bf895178def4f10a2d787a80f`.
 
 ## Release boundary
 
-Release remains blocked with 16 registered decision/receipt blocker IDs; the readiness validator may report additional derived conditions. Human approval of an exact frozen export hash is mandatory and has not been supplied.
+Release remains blocked with 9 registered decision/receipt blocker IDs; the readiness validator may report additional derived conditions. Human approval of an exact frozen export hash is mandatory and has not been supplied.
 
 Move 37 is analogy and benchmark motivation only. Iliad and Trojan-War material is outside the causal evidence chain.
