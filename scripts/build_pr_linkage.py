@@ -171,7 +171,10 @@ def verified_file_capture(pr_number: int, expected_count: int | None) -> dict | 
     if not isinstance(expected_count, int) or expected_count < 0:
         raise SystemExit(f"PR detail changed_files is invalid for PR {pr_number}")
     if len(files) != expected_count:
-        raise SystemExit(f"PR file count mismatch for PR {pr_number}: detail={expected_count}, captured={len(files)}")
+        # GitHub's /pulls/{n}/files listing can terminate before detail.changed_files
+        # (observed public ceiling near 3000). Preserve as incomplete/unknown rather
+        # than treating a terminal page as a complete inventory or aborting rebuild.
+        return None
     return {"status": "captured_complete", "page_count": len(pages), "file_count": len(files), "page_sha256": hashes, "observed_at": observations, "custody_ids": custody_ids}
 
 

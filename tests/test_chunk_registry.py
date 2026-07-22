@@ -23,6 +23,7 @@ from build_chunk_registry import (  # noqa: E402
     build_outputs,
     canon,
     git_tree_snapshot,
+    is_utf8_boundary,
     partition_static_file,
     validate_migration_payload,
     validate_policy,
@@ -103,6 +104,26 @@ class ChunkRegistryTest(unittest.TestCase):
 
     def test_fixture_corpus_preserves_utf8_and_newlines(self) -> None:
         fixtures = json.loads((ROOT / "tests" / "fixtures" / "chunk-adversarial.json").read_text(encoding="utf-8"))
+        required = set(fixtures["required_rejection_cases"])
+        self.assertEqual(
+            required,
+            {
+                "gap",
+                "overlap",
+                "reorder",
+                "duplicate_id",
+                "conflicting_preimage",
+                "stale_parent",
+                "stale_source_revision",
+                "bad_hash",
+                "invalid_locator",
+                "missing_inverse",
+                "unknown_endpoint",
+                "forbidden_cycle",
+                "utf8_mid_codepoint",
+                "private_path_leakage",
+            },
+        )
         for case in fixtures["cases"]:
             if "text" in case:
                 data = case["text"].encode("utf-8")
@@ -112,13 +133,16 @@ class ChunkRegistryTest(unittest.TestCase):
             self.assertEqual(b"".join(data[start:end] for start, end in spans), data, case["name"])
             for start, end in spans:
                 data[start:end].decode("utf-8")
-                if start < len(data):
-                    self.assertNotEqual(data[start] & 0xC0, 0x80)
-                if end < len(data):
-                    self.assertNotEqual(data[end] & 0xC0, 0x80)
-        bom_case = fixtures["cases"][0]["text"].encode("utf-8")
+                self.assertTrue(is_utf8_boundary(data, start), case["name"])
+                self.assertTrue(is_utf8_boundary(data, end), case["name"])
+        bom_case = next(case for case in fixtures["cases"] if case["name"] == "bom_utf8_crlf")["text"].encode("utf-8")
         self.assertTrue(bom_case.startswith(b"\xef\xbb\xbf"))
         self.assertIn(b"\r\n", bom_case)
+        mid = "π".encode("utf-8")
+        self.assertEqual(len(mid), 2)
+        self.assertTrue(is_utf8_boundary(mid, 0))
+        self.assertFalse(is_utf8_boundary(mid, 1))
+        self.assertTrue(is_utf8_boundary(mid, 2))
 
     def test_typed_adjacency_edges_are_complete_and_invertible(self) -> None:
         edges = self.payload["edges"]
@@ -149,15 +173,34 @@ class ChunkRegistryTest(unittest.TestCase):
             ordered[1]["exact_locator"]["byte_start"] = ordered[0]["exact_locator"]["byte_end_exclusive"] - 1
             ordered[1]["identity"]["locator"] = deepcopy(ordered[1]["exact_locator"])
 
+        def utf8_mid_codepoint(payload: dict) -> None:
+            for chunk in payload["chunks"]:
+                locator = chunk["exact_locator"]
+                path = chunk["parent"]["path"]
+                _, data = self.tree[path]
+                start = locator["byte_start"]
+                end = locator["byte_end_exclusive"]
+                for offset in range(start + 1, end):
+                    if not is_utf8_boundary(data, offset):
+                        locator["byte_end_exclusive"] = offset
+                        chunk["identity"]["locator"] = deepcopy(locator)
+                        return
+            self.fail("no multi-byte UTF-8 span available for mid-codepoint fixture")
+
+        def stale_source_revision(payload: dict) -> None:
+            payload["chunks"][0]["identity"]["source_revision"] = "0" * 40
+
         mutations.extend(
             [
                 ("gap", gap),
                 ("overlap", overlap),
-                ("reordered chunks", lambda p: p["chunks"].__setitem__(slice(0, 2), list(reversed(p["chunks"][:2])))),
-                ("stale parent", lambda p: p["chunks"][0]["parent"].__setitem__("sha256", "0" * 64)),
-                ("bad content", lambda p: p["chunks"][0].__setitem__("content_sha256", "0" * 64)),
-                ("bad line hint", lambda p: p["chunks"][0]["exact_locator"].__setitem__("line_start", 99)),
-                ("zero length", lambda p: p["chunks"][0]["exact_locator"].__setitem__("byte_end_exclusive", 0)),
+                ("reorder", lambda p: p["chunks"].__setitem__(slice(0, 2), list(reversed(p["chunks"][:2])))),
+                ("stale_parent", lambda p: p["chunks"][0]["parent"].__setitem__("sha256", "0" * 64)),
+                ("stale_source_revision", stale_source_revision),
+                ("bad_hash", lambda p: p["chunks"][0].__setitem__("content_sha256", "0" * 64)),
+                ("invalid_locator", lambda p: p["chunks"][0]["exact_locator"].__setitem__("line_start", 99)),
+                ("zero_length", lambda p: p["chunks"][0]["exact_locator"].__setitem__("byte_end_exclusive", 0)),
+                ("utf8_mid_codepoint", utf8_mid_codepoint),
             ]
         )
         for name, mutate in mutations:
@@ -221,6 +264,18 @@ class ChunkRegistryTest(unittest.TestCase):
         extra["source_chunk_id"], extra["target_chunk_id"] = first["target_chunk_id"], first["source_chunk_id"]
         cycle["edges"].append(extra)
         self.assert_invalid(cycle, "edge set mismatch")
+
+        # Named coverage receipt for the fixture catalog contract.
+        covered = {
+            "duplicate_id",
+            "conflicting_preimage",
+            "missing_inverse",
+            "unknown_endpoint",
+            "forbidden_cycle",
+            "private_path_leakage",
+        }
+        fixtures = json.loads((ROOT / "tests" / "fixtures" / "chunk-adversarial.json").read_text(encoding="utf-8"))
+        self.assertTrue(covered.issubset(set(fixtures["required_rejection_cases"])))
 
     def test_policy_and_migration_fail_closed(self) -> None:
         bad_policy = deepcopy(self.policy)

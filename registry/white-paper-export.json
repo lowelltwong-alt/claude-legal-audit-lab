@@ -279,11 +279,25 @@
           "support_type": "paraphrase"
         },
         {
-          "evidence_grade": "locator_only",
-          "locator": "Cold-start interviews; practice profiles; deal-debrief; playbook-monitor",
-          "locator_kind": "repository_scope",
+          "evidence_grade": "reproducible",
+          "locator": "commercial-legal/skills/cold-start-interview/SKILL.md lines 23-25 and 72-74",
+          "locator_kind": "path_lines",
           "source_id": "SRC-0002",
-          "support_type": "structured_observation"
+          "support_type": "code_observation"
+        },
+        {
+          "evidence_grade": "reproducible",
+          "locator": "commercial-legal/agents/deal-debrief.md lines 89-118",
+          "locator_kind": "path_lines",
+          "source_id": "SRC-0002",
+          "support_type": "code_observation"
+        },
+        {
+          "evidence_grade": "reproducible",
+          "locator": "commercial-legal/agents/playbook-monitor.md lines 50-74 and 135-166",
+          "locator_kind": "path_lines",
+          "source_id": "SRC-0002",
+          "support_type": "code_observation"
         },
         {
           "evidence_grade": "locator_only",
@@ -329,11 +343,11 @@
       "epistemic_status": "counterevidence",
       "evidence": [
         {
-          "evidence_grade": "locator_only",
-          "locator": "Section B",
-          "locator_kind": "section",
+          "evidence_grade": "reproducible",
+          "locator": "Captured HTML Sections A.2, B, and E; content_sha256:573e1018aec92cc04fc1c60bce27959e8efeddb9d15ce76992fbadb31885b282; retrieved 2026-07-15T13:29:28Z",
+          "locator_kind": "captured_selector",
           "source_id": "SRC-0005",
-          "support_type": "paraphrase"
+          "support_type": "first_party_documented_terms"
         }
       ],
       "lifecycle": "active",
@@ -347,18 +361,11 @@
       "epistemic_status": "observed",
       "evidence": [
         {
-          "evidence_grade": "locator_only",
-          "locator": "ZDR exclusions and feature table",
-          "locator_kind": "section_description",
+          "evidence_grade": "reproducible",
+          "locator": "Captured HTML API and data retention sections, feature eligibility table, stateful products, and ZDR exclusions; content_sha256:386dd211007587aa05ce59bb6869690c8c74976df8161d9fe57ad5d31e1de02e; retrieved 2026-07-15T13:12:19Z",
+          "locator_kind": "captured_selector",
           "source_id": "SRC-0009",
-          "support_type": "paraphrase"
-        },
-        {
-          "evidence_grade": "locator_only",
-          "locator": "Scope and retention sections",
-          "locator_kind": "section_description",
-          "source_id": "SRC-0010",
-          "support_type": "paraphrase"
+          "support_type": "first_party_documented_design"
         }
       ],
       "lifecycle": "active",
@@ -391,14 +398,14 @@
       "evidence": [
         {
           "evidence_grade": "locator_only",
-          "locator": "Product architecture and customization sections",
+          "locator": "Product architecture and customization sections (precedents, playbooks, standards, fallbacks)",
           "locator_kind": "section_description",
           "source_id": "SRC-0001",
           "support_type": "paraphrase"
         },
         {
           "evidence_grade": "locator_only",
-          "locator": "Firm-wide co-development announcement",
+          "locator": "Firm-wide co-development / institutional-knowledge deployment announcement",
           "locator_kind": "section_description",
           "source_id": "SRC-0011",
           "support_type": "paraphrase"
@@ -416,21 +423,21 @@
       "evidence": [
         {
           "evidence_grade": "locator_only",
-          "locator": "Repository-wide source-to-sink review",
+          "locator": "Pinned repository-wide source-to-sink review at commit 5ceb305b30b4c82653c9b6642499c12e946ec319",
           "locator_kind": "repository_scope",
           "source_id": "SRC-0002",
           "support_type": "structured_observation"
         },
         {
-          "evidence_grade": "locator_only",
-          "locator": "Sections B and E",
-          "locator_kind": "section",
+          "evidence_grade": "reproducible",
+          "locator": "Captured HTML Sections B and E; content_sha256:573e1018aec92cc04fc1c60bce27959e8efeddb9d15ce76992fbadb31885b282; retrieved 2026-07-15T13:29:28Z",
+          "locator_kind": "captured_selector",
           "source_id": "SRC-0005",
-          "support_type": "paraphrase"
+          "support_type": "first_party_documented_terms"
         }
       ],
       "lifecycle": "active",
-      "proposition": "No evidence currently registered in this project establishes covert pooling of identifiable law-firm ontologies or default training on ordinary commercial content.",
+      "proposition": "No registered evidence establishes covert pooling of identifiable law-firm ontologies or default training on ordinary commercial content.",
       "publication_eligibility": "blocked_review",
       "review_state": "candidate"
     },
@@ -459,7 +466,7 @@
       "evidence": [
         {
           "evidence_grade": "locator_only",
-          "locator": "Abstract, page lines 64-66 in the 2026-07-14 observation",
+          "locator": "Nature 550, 354-359; DOI 10.1038/nature24270; abstract and observation lines 64-66 (2026-07-14)",
           "locator_kind": "captured_selector",
           "source_id": "SRC-0044",
           "support_type": "peer_reviewed_result"
@@ -477,7 +484,7 @@
       "evidence": [
         {
           "evidence_grade": "locator_only",
-          "locator": "Abstract, methodology, and fixed-threshold results",
+          "locator": "NeurIPS 2024 algorithmic-efficiency study; abstract, methodology, and fixed-threshold results across >200 LM evaluations (2012-2023)",
           "locator_kind": "section_description",
           "source_id": "SRC-0045",
           "support_type": "peer_reviewed_empirical_result"
@@ -495,15 +502,15 @@
       "evidence": [
         {
           "evidence_grade": "locator_only",
-          "locator": "Abstract and interaction-network knowledge-transfer framework",
-          "locator_kind": "section_description",
+          "locator": "OBHDP Vol. 82 Issue 1 pp. 150-169; DOI 10.1006/obhd.2000.2893; abstract and interaction-network knowledge-transfer framework",
+          "locator_kind": "page_span",
           "source_id": "SRC-0047",
           "support_type": "peer_reviewed_synthesis"
         },
         {
           "evidence_grade": "locator_only",
-          "locator": "Abstract and two-phase law-firm study",
-          "locator_kind": "section_description",
+          "locator": "JIT Vol. 15 Issue 1 pp. 69-78; DOI 10.1177/026839620001500106; abstract and two-phase law-firm study",
+          "locator_kind": "page_span",
           "source_id": "SRC-0048",
           "support_type": "peer_reviewed_empirical_context"
         }
@@ -519,16 +526,16 @@
       "epistemic_status": "hypothesis",
       "evidence": [
         {
-          "evidence_grade": "locator_only",
-          "locator": "Sections on customer-held and specialised industry data, feedback effects, concentration, and market tipping",
-          "locator_kind": "section_description",
+          "evidence_grade": "reproducible",
+          "locator": "OECD AI Papers No. 18 PDF; content_sha256:bd8b592d5015d0c8af67ffedfda4961917828d37bde0ef48bc50ffbece97f0d0; sections on customer-held and specialised industry data, feedback effects, concentration, and market tipping",
+          "locator_kind": "captured_selector",
           "source_id": "SRC-0046",
           "support_type": "hypothesis_context"
         },
         {
           "evidence_grade": "locator_only",
-          "locator": "Interaction-network knowledge and transfer framework",
-          "locator_kind": "section_description",
+          "locator": "OBHDP DOI 10.1006/obhd.2000.2893; interaction-network knowledge and transfer framework (hypothesis context only)",
+          "locator_kind": "page_span",
           "source_id": "SRC-0047",
           "support_type": "hypothesis_context"
         }
@@ -580,16 +587,16 @@
       "epistemic_status": "unknown",
       "evidence": [
         {
-          "evidence_grade": "locator_only",
-          "locator": "Feature-dependent retention and ZDR policy boundary",
-          "locator_kind": "section_description",
+          "evidence_grade": "reproducible",
+          "locator": "Documented feature-dependent retention/ZDR policy boundary only; content_sha256:386dd211007587aa05ce59bb6869690c8c74976df8161d9fe57ad5d31e1de02e; not a tenant observation",
+          "locator_kind": "captured_selector",
           "source_id": "SRC-0009",
           "support_type": "scope_boundary"
         },
         {
-          "evidence_grade": "locator_only",
-          "locator": "Customer-specific processing instructions and agreement boundary",
-          "locator_kind": "section_description",
+          "evidence_grade": "reproducible",
+          "locator": "Documented DPA processing/agreement boundary only; content_sha256:dccc8d857d3b5fc5f7e119bca400ce27c72319bfa93d5e4c6901eb3527d16eb4; Sections B, F, H, Schedule 2; not a tenant observation",
+          "locator_kind": "captured_selector",
           "source_id": "SRC-0006",
           "support_type": "scope_boundary"
         }
@@ -600,7 +607,7 @@
       "review_state": "candidate"
     }
   ],
-  "content_sha256": "8e82c9b0f8b5041a0ca0c499d6d474b662c80f6841ae4aecdff58e6e18e1dfa0",
+  "content_sha256": "37b7b776e5b836d26b459821b2a8160c6d2fc75713137849b3abc2bdc4561a35",
   "contribution_lanes": [
     {
       "lane_id": "LANE-0001",
@@ -692,9 +699,9 @@
     "claim_count": 18,
     "eligible_claim_count": 1,
     "eligible_thesis_node_count": 0,
-    "open_unmerged_snapshot_count": 29,
+    "open_unmerged_snapshot_count": 61,
     "thesis_node_count": 7,
-    "unknown_pr_count": 33,
+    "unknown_pr_count": 1,
     "verified_merged_pr_count": 14
   },
   "graph_edges": [
@@ -905,14 +912,6 @@
       "review_state": "candidate",
       "source_node_id": "CLM-0004",
       "target_node_id": "SRC-0009"
-    },
-    {
-      "edge_id": "gedge:sha256:29d06a07a34013f0cc04503edb20b4c89d94a52b084dd147f8a5c4b350776b43",
-      "edge_type": "EVIDENCED_BY",
-      "inverse_edge_id": "gedge:sha256:b394fea9cd10d45d96c38cedc6099d44e06a7ab00bde811fd3d2633c9d88b33c",
-      "review_state": "candidate",
-      "source_node_id": "CLM-0004",
-      "target_node_id": "SRC-0010"
     },
     {
       "edge_id": "gedge:sha256:4a181596a8368da55f5ac26b621ea41e59e52fe8754b855533a4e17bfc9c4657",
@@ -1555,14 +1554,6 @@
       "target_node_id": "CLM-0018"
     },
     {
-      "edge_id": "gedge:sha256:b394fea9cd10d45d96c38cedc6099d44e06a7ab00bde811fd3d2633c9d88b33c",
-      "edge_type": "EVIDENCES",
-      "inverse_edge_id": "gedge:sha256:29d06a07a34013f0cc04503edb20b4c89d94a52b084dd147f8a5c4b350776b43",
-      "review_state": "candidate",
-      "source_node_id": "SRC-0010",
-      "target_node_id": "CLM-0004"
-    },
-    {
       "edge_id": "gedge:sha256:c2d2c79b90d2c578bcb9d8a55d55d32418ddfaed7d75bb50eff8e734a201dcf3",
       "edge_type": "EVIDENCES",
       "inverse_edge_id": "gedge:sha256:5cfa709e153becfa00e91a485164f17c959e95edc1c5ee85112f7be733a35603",
@@ -1788,12 +1779,12 @@
     }
   ],
   "input_sha256": {
-    "registry/claim-registry.json": "c751f9178d9c73bb2b796ca0d48077c2855f53f412a5f97455a079fa8883979c",
-    "registry/evidence-graph.json": "5bd7d3cec94d98f8d8fce493af523ff4f577bf95ef5dbb9c8cbbbe7656028af5",
-    "registry/release-readiness.json": "5637f3f2f05711a993983fdd2aa3115a5e9c0dcba7607dcf2a063a17a9e502a7",
+    "registry/claim-registry.json": "1727add8520c2b0989b9fe96ed95b39369202f48f3959477e8b7fd93287a2256",
+    "registry/evidence-graph.json": "453a8a6bfa6395a7dbf7fdd7282d23fa5772b6e4c06a771e54eeab7f093ca882",
+    "registry/release-readiness.json": "883ac02fc040b308ea9f8009413699ed7b51e100d0e47377bf565298e65ad254",
     "registry/source-registry.json": "58e184814546c50a9821e44fdf414a6c38ac803c725594baca1d62f512850f0a",
     "registry/thesis-map.json": "f212db19f141ac276103283b7c9c0f8204bcb703b0b2306f0dbe266401c60076",
-    "results/pr-commit-diff-linkage.json": "5b180fb498fb82a0822ae154f594136cef9cd450321486da6a8905e6ed673b3d"
+    "results/pr-commit-diff-linkage.json": "34ec2a4203fba417b0d97f16fa1c02a1e968fbe6f7dab3e493beb38d739c2452"
   },
   "paragraphs": [
     {
@@ -1824,14 +1815,14 @@
         "locators": [
           {
             "evidence_grade": "locator_only",
-            "locator": "Abstract and interaction-network knowledge-transfer framework",
-            "locator_kind": "section_description",
+            "locator": "OBHDP Vol. 82 Issue 1 pp. 150-169; DOI 10.1006/obhd.2000.2893; abstract and interaction-network knowledge-transfer framework",
+            "locator_kind": "page_span",
             "source_id": "SRC-0047"
           },
           {
             "evidence_grade": "locator_only",
-            "locator": "Abstract and two-phase law-firm study",
-            "locator_kind": "section_description",
+            "locator": "JIT Vol. 15 Issue 1 pp. 69-78; DOI 10.1177/026839620001500106; abstract and two-phase law-firm study",
+            "locator_kind": "page_span",
             "source_id": "SRC-0048"
           }
         ],
@@ -1843,7 +1834,7 @@
           "TMN-0001"
         ]
       },
-      "genealogy_sha256": "ff1b41ccc7df69d3975dd4a7bde9ed14ae9232a6000e5bbdd96348aaf2b68950",
+      "genealogy_sha256": "d38b76f2e114e9ec95bdf28858fbcafd84dd5b9fec33bab6583cffe29c4e213f",
       "label": "mixed",
       "order": 1,
       "paragraph_id": "WPP-0001",
@@ -1894,9 +1885,21 @@
             "source_id": "SRC-0001"
           },
           {
-            "evidence_grade": "locator_only",
-            "locator": "Cold-start interviews; practice profiles; deal-debrief; playbook-monitor",
-            "locator_kind": "repository_scope",
+            "evidence_grade": "reproducible",
+            "locator": "commercial-legal/skills/cold-start-interview/SKILL.md lines 23-25 and 72-74",
+            "locator_kind": "path_lines",
+            "source_id": "SRC-0002"
+          },
+          {
+            "evidence_grade": "reproducible",
+            "locator": "commercial-legal/agents/deal-debrief.md lines 89-118",
+            "locator_kind": "path_lines",
+            "source_id": "SRC-0002"
+          },
+          {
+            "evidence_grade": "reproducible",
+            "locator": "commercial-legal/agents/playbook-monitor.md lines 50-74 and 135-166",
+            "locator_kind": "path_lines",
             "source_id": "SRC-0002"
           },
           {
@@ -1946,7 +1949,7 @@
           "TMN-0002"
         ]
       },
-      "genealogy_sha256": "c3f1a576d376ddf83d7b54cf9b2d6f910fa4e435529f51e142ef912b761ead57",
+      "genealogy_sha256": "ea953219eaff17839e1490b1395dee5bb685c5cf84a8accb43abb2eb4696ce48",
       "label": "observed",
       "order": 2,
       "paragraph_id": "WPP-0002",
@@ -1987,47 +1990,40 @@
         ],
         "locators": [
           {
-            "evidence_grade": "locator_only",
-            "locator": "Section B",
-            "locator_kind": "section",
+            "evidence_grade": "reproducible",
+            "locator": "Captured HTML Sections A.2, B, and E; content_sha256:573e1018aec92cc04fc1c60bce27959e8efeddb9d15ce76992fbadb31885b282; retrieved 2026-07-15T13:29:28Z",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0005"
           },
           {
-            "evidence_grade": "locator_only",
-            "locator": "ZDR exclusions and feature table",
-            "locator_kind": "section_description",
+            "evidence_grade": "reproducible",
+            "locator": "Captured HTML API and data retention sections, feature eligibility table, stateful products, and ZDR exclusions; content_sha256:386dd211007587aa05ce59bb6869690c8c74976df8161d9fe57ad5d31e1de02e; retrieved 2026-07-15T13:12:19Z",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0009"
           },
           {
-            "evidence_grade": "locator_only",
-            "locator": "Scope and retention sections",
-            "locator_kind": "section_description",
-            "source_id": "SRC-0010"
-          },
-          {
-            "evidence_grade": "locator_only",
-            "locator": "Feature-dependent retention and ZDR policy boundary",
-            "locator_kind": "section_description",
+            "evidence_grade": "reproducible",
+            "locator": "Documented feature-dependent retention/ZDR policy boundary only; content_sha256:386dd211007587aa05ce59bb6869690c8c74976df8161d9fe57ad5d31e1de02e; not a tenant observation",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0009"
           },
           {
-            "evidence_grade": "locator_only",
-            "locator": "Customer-specific processing instructions and agreement boundary",
-            "locator_kind": "section_description",
+            "evidence_grade": "reproducible",
+            "locator": "Documented DPA processing/agreement boundary only; content_sha256:dccc8d857d3b5fc5f7e119bca400ce27c72319bfa93d5e4c6901eb3527d16eb4; Sections B, F, H, Schedule 2; not a tenant observation",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0006"
           }
         ],
         "source_ids": [
           "SRC-0005",
           "SRC-0006",
-          "SRC-0009",
-          "SRC-0010"
+          "SRC-0009"
         ],
         "thesis_node_ids": [
           "TMN-0003"
         ]
       },
-      "genealogy_sha256": "63d4420653859052fcee260bbbdeb5c02faf3886ed0f59bede42591ebc15090c",
+      "genealogy_sha256": "9c54c3a133c2d8db2425b6f6e72fd60169baee7f811c6fc58e7ff3de239a66d8",
       "label": "mixed",
       "order": 3,
       "paragraph_id": "WPP-0003",
@@ -2065,15 +2061,15 @@
         ],
         "locators": [
           {
-            "evidence_grade": "locator_only",
-            "locator": "Sections on customer-held and specialised industry data, feedback effects, concentration, and market tipping",
-            "locator_kind": "section_description",
+            "evidence_grade": "reproducible",
+            "locator": "OECD AI Papers No. 18 PDF; content_sha256:bd8b592d5015d0c8af67ffedfda4961917828d37bde0ef48bc50ffbece97f0d0; sections on customer-held and specialised industry data, feedback effects, concentration, and market tipping",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0046"
           },
           {
             "evidence_grade": "locator_only",
-            "locator": "Interaction-network knowledge and transfer framework",
-            "locator_kind": "section_description",
+            "locator": "OBHDP DOI 10.1006/obhd.2000.2893; interaction-network knowledge and transfer framework (hypothesis context only)",
+            "locator_kind": "page_span",
             "source_id": "SRC-0047"
           }
         ],
@@ -2085,7 +2081,7 @@
           "TMN-0004"
         ]
       },
-      "genealogy_sha256": "52ad1114bd52b59b9bb6c177e0d0bb55f48568c5a71d809a8906084b747fec3f",
+      "genealogy_sha256": "eb979816073e7acc0a7eec8bdbcc1107ab480131c632a4cb50e3c5e3e9f99e12",
       "label": "hypothesis",
       "order": 4,
       "paragraph_id": "WPP-0004",
@@ -2129,21 +2125,21 @@
         ],
         "locators": [
           {
-            "evidence_grade": "locator_only",
-            "locator": "Section B",
-            "locator_kind": "section",
+            "evidence_grade": "reproducible",
+            "locator": "Captured HTML Sections A.2, B, and E; content_sha256:573e1018aec92cc04fc1c60bce27959e8efeddb9d15ce76992fbadb31885b282; retrieved 2026-07-15T13:29:28Z",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0005"
           },
           {
-            "evidence_grade": "locator_only",
-            "locator": "Sections on customer-held and specialised industry data, feedback effects, concentration, and market tipping",
-            "locator_kind": "section_description",
+            "evidence_grade": "reproducible",
+            "locator": "OECD AI Papers No. 18 PDF; content_sha256:bd8b592d5015d0c8af67ffedfda4961917828d37bde0ef48bc50ffbece97f0d0; sections on customer-held and specialised industry data, feedback effects, concentration, and market tipping",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0046"
           },
           {
             "evidence_grade": "locator_only",
-            "locator": "Interaction-network knowledge and transfer framework",
-            "locator_kind": "section_description",
+            "locator": "OBHDP DOI 10.1006/obhd.2000.2893; interaction-network knowledge and transfer framework (hypothesis context only)",
+            "locator_kind": "page_span",
             "source_id": "SRC-0047"
           },
           {
@@ -2163,7 +2159,7 @@
           "TMN-0005"
         ]
       },
-      "genealogy_sha256": "32a0fbaa6266e9c9ed555150323e4cac59f079ac9d83688275bf97c705d43793",
+      "genealogy_sha256": "67285244a93943a85993c8c7f766e598f31678bd35312550962b51907eed7adf",
       "label": "normative",
       "order": 5,
       "paragraph_id": "WPP-0005",
@@ -2207,13 +2203,13 @@
           },
           {
             "evidence_grade": "locator_only",
-            "locator": "Abstract, page lines 64-66 in the 2026-07-14 observation",
+            "locator": "Nature 550, 354-359; DOI 10.1038/nature24270; abstract and observation lines 64-66 (2026-07-14)",
             "locator_kind": "captured_selector",
             "source_id": "SRC-0044"
           },
           {
             "evidence_grade": "locator_only",
-            "locator": "Abstract, methodology, and fixed-threshold results",
+            "locator": "NeurIPS 2024 algorithmic-efficiency study; abstract, methodology, and fixed-threshold results across >200 LM evaluations (2012-2023)",
             "locator_kind": "section_description",
             "source_id": "SRC-0045"
           }
@@ -2227,7 +2223,7 @@
           "TMN-0006"
         ]
       },
-      "genealogy_sha256": "def66f1d3b4ba452b0c1caca0c3c509b43c80553dd0e30120d6929b5a2026afd",
+      "genealogy_sha256": "043409541c94c0a67bbf8ee7d4427fabf5c93e1543de5628b218e5f9c40a537a",
       "label": "hypothesis",
       "order": 6,
       "paragraph_id": "WPP-0006",
@@ -2269,21 +2265,21 @@
         ],
         "locators": [
           {
-            "evidence_grade": "locator_only",
-            "locator": "Section B",
-            "locator_kind": "section",
+            "evidence_grade": "reproducible",
+            "locator": "Captured HTML Sections A.2, B, and E; content_sha256:573e1018aec92cc04fc1c60bce27959e8efeddb9d15ce76992fbadb31885b282; retrieved 2026-07-15T13:29:28Z",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0005"
           },
           {
             "evidence_grade": "locator_only",
-            "locator": "Repository-wide source-to-sink review",
+            "locator": "Pinned repository-wide source-to-sink review at commit 5ceb305b30b4c82653c9b6642499c12e946ec319",
             "locator_kind": "repository_scope",
             "source_id": "SRC-0002"
           },
           {
-            "evidence_grade": "locator_only",
-            "locator": "Sections B and E",
-            "locator_kind": "section",
+            "evidence_grade": "reproducible",
+            "locator": "Captured HTML Sections B and E; content_sha256:573e1018aec92cc04fc1c60bce27959e8efeddb9d15ce76992fbadb31885b282; retrieved 2026-07-15T13:29:28Z",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0005"
           },
           {
@@ -2293,15 +2289,15 @@
             "source_id": "SRC-0002"
           },
           {
-            "evidence_grade": "locator_only",
-            "locator": "Feature-dependent retention and ZDR policy boundary",
-            "locator_kind": "section_description",
+            "evidence_grade": "reproducible",
+            "locator": "Documented feature-dependent retention/ZDR policy boundary only; content_sha256:386dd211007587aa05ce59bb6869690c8c74976df8161d9fe57ad5d31e1de02e; not a tenant observation",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0009"
           },
           {
-            "evidence_grade": "locator_only",
-            "locator": "Customer-specific processing instructions and agreement boundary",
-            "locator_kind": "section_description",
+            "evidence_grade": "reproducible",
+            "locator": "Documented DPA processing/agreement boundary only; content_sha256:dccc8d857d3b5fc5f7e119bca400ce27c72319bfa93d5e4c6901eb3527d16eb4; Sections B, F, H, Schedule 2; not a tenant observation",
+            "locator_kind": "captured_selector",
             "source_id": "SRC-0006"
           }
         ],
@@ -2315,7 +2311,7 @@
           "TMN-0007"
         ]
       },
-      "genealogy_sha256": "c6f90676e6e268884aeaf6472b70536cfbe1d85a8314072135117cb0da0a5b04",
+      "genealogy_sha256": "639baa3ef7d5d847b547f389aaaea82b51b7910bf895178def4f10a2d787a80f",
       "label": "unknown",
       "order": 7,
       "paragraph_id": "WPP-0007",
@@ -2327,13 +2323,6 @@
   ],
   "release": {
     "blockers": [
-      "REL-DEC-001",
-      "REL-DEC-002",
-      "REL-DEC-003",
-      "REL-DEC-004",
-      "REL-DEC-005",
-      "REL-DEC-006",
-      "REL-DEC-007",
       "REL-RCP-001",
       "REL-RCP-002",
       "REL-RCP-003",
@@ -2347,37 +2336,37 @@
     "human_decisions": [
       {
         "decision_id": "REL-DEC-001",
-        "status": "pending",
+        "status": "decided",
         "subject": "public repository name"
       },
       {
         "decision_id": "REL-DEC-002",
-        "status": "pending",
+        "status": "decided",
         "subject": "copyright holder or governing entity"
       },
       {
         "decision_id": "REL-DEC-003",
-        "status": "pending",
+        "status": "decided",
         "subject": "path-level software research and metadata licenses"
       },
       {
         "decision_id": "REL-DEC-004",
-        "status": "pending",
+        "status": "decided",
         "subject": "trademark and name policy"
       },
       {
         "decision_id": "REL-DEC-005",
-        "status": "pending",
+        "status": "decided",
         "subject": "public security contact and disclosure route"
       },
       {
         "decision_id": "REL-DEC-006",
-        "status": "pending",
+        "status": "decided",
         "subject": "named release approver and contribution activation authority"
       },
       {
         "decision_id": "REL-DEC-007",
-        "status": "pending",
+        "status": "decided",
         "subject": "physical separation of the private research workspace"
       }
     ],
@@ -2498,22 +2487,6 @@
       "status": "verified_content_hash",
       "title": "API and data retention",
       "url": "https://platform.claude.com/docs/en/manage-claude/api-and-data-retention"
-    },
-    {
-      "accessed_at": "2026-07-14T14:57:06Z",
-      "limitation": "Distinguishes local filesystem Skills from uploaded workspace Skills.",
-      "locator": "Organizational knowledge, local versus workspace scope, and retention",
-      "publisher": "Anthropic",
-      "revision_binding": {
-        "content_sha256": null,
-        "kind": "dated_dynamic_page",
-        "value": "2026-07-14"
-      },
-      "source_class": "official_documentation",
-      "source_id": "SRC-0010",
-      "status": "dynamic_unarchived",
-      "title": "Agent Skills overview",
-      "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview"
     },
     {
       "accessed_at": "2026-07-14T14:57:06Z",

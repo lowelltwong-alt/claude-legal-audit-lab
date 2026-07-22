@@ -144,6 +144,13 @@ class FilePaginationReceiptTest(unittest.TestCase):
         self.write_capture(first_link=f'<{second}>; rel="next"', final_link="", completion="interrupted_rate_budget")
         self.assertIsNone(self.verify())
 
+    def test_detail_file_count_mismatch_remains_incomplete_unknown(self) -> None:
+        second = f"{API}/pulls/7/files?per_page=100&page=2"
+        self.write_capture(first_link=f'<{second}>; rel="next"', final_link="")
+        with patch.object(linkage, "ROOT", self.root), patch.object(linkage, "CAPTURE_DIRS", (self.capture_root,)):
+            # Terminal pagination observed, but detail.changed_files disagrees.
+            self.assertIsNone(linkage.verified_file_capture(7, 9999))
+
 
 class CaptureResumeTest(unittest.TestCase):
     def setUp(self) -> None:

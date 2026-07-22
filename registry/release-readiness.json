@@ -1,69 +1,76 @@
 {
-  "as_of": "2026-07-15T13:40:00-04:00",
-  "authority_boundary": "This registry may prove that a candidate is blocked or mechanically complete. It cannot choose a name or license, approve publication, waive legal or privacy review, mutate Git, or create human authority.",
+  "as_of": "2026-07-21T11:53:26-04:00",
+  "authority_boundary": "Terminal Local Completion authority: this registry proves the local research candidate is blocked for publication. It cannot grant Anthropic permission, approve public release, waive privacy/legal review for publication, mutate Git, or create human publish authority.",
   "decisions": [
     {
       "decision_id": "REL-DEC-001",
       "evidence_refs": [
-        "docs/TROJAN_WAR_NAMING_CONVENTION.md"
+        "docs/TROJAN_WAR_NAMING_CONVENTION.md",
+        "Owner verbal authorization 2026-07-21: Anthropic will not grant license/trademark permission and will not want cooperative publication; do not seek Anthropic permission; keep release blocked; runtime/monitoring unauthorized; Finish Line A local candidate is durable end-state."
       ],
-      "status": "pending",
+      "status": "decided",
       "subject": "public repository name",
-      "value": null
+      "value": "No Anthropic-cooperative or Anthropic-branded public repository name. Remain unpublished. Any later independent-research publish requires a separate owner authorization and must avoid Anthropic trademarks/endorsement."
     },
     {
       "decision_id": "REL-DEC-002",
       "evidence_refs": [
-        "docs/LICENSING_OPTIONS.md"
+        "docs/LICENSING_OPTIONS.md",
+        "Owner verbal authorization 2026-07-21: Anthropic will not grant license/trademark permission and will not want cooperative publication; do not seek Anthropic permission; keep release blocked; runtime/monitoring unauthorized; Finish Line A local candidate is durable end-state."
       ],
-      "status": "pending",
+      "status": "decided",
       "subject": "copyright holder or governing entity",
-      "value": null
+      "value": "No public rights-holder assignment for release. Repository remains a private local research harness; public entity selection deferred indefinitely."
     },
     {
       "decision_id": "REL-DEC-003",
       "evidence_refs": [
-        "docs/LICENSING_OPTIONS.md"
+        "docs/LICENSING_OPTIONS.md",
+        "Owner verbal authorization 2026-07-21: Anthropic will not grant license/trademark permission and will not want cooperative publication; do not seek Anthropic permission; keep release blocked; runtime/monitoring unauthorized; Finish Line A local candidate is durable end-state."
       ],
-      "status": "pending",
+      "status": "decided",
       "subject": "path-level software research and metadata licenses",
-      "value": null
+      "value": "Do not seek Anthropic license permission. Do not relicense or publish. Existing LICENSE unchanged; publication remains blocked."
     },
     {
       "decision_id": "REL-DEC-004",
       "evidence_refs": [
-        "docs/LICENSING_OPTIONS.md"
+        "docs/LICENSING_OPTIONS.md",
+        "Owner verbal authorization 2026-07-21: Anthropic will not grant license/trademark permission and will not want cooperative publication; do not seek Anthropic permission; keep release blocked; runtime/monitoring unauthorized; Finish Line A local candidate is durable end-state."
       ],
-      "status": "pending",
+      "status": "decided",
       "subject": "trademark and name policy",
-      "value": null
+      "value": "Do not seek Anthropic trademark permission. No Anthropic marks in public branding. Publication remains blocked."
     },
     {
       "decision_id": "REL-DEC-005",
       "evidence_refs": [
-        "SECURITY.md"
+        "SECURITY.md",
+        "Owner verbal authorization 2026-07-21: Anthropic will not grant license/trademark permission and will not want cooperative publication; do not seek Anthropic permission; keep release blocked; runtime/monitoring unauthorized; Finish Line A local candidate is durable end-state."
       ],
-      "status": "pending",
+      "status": "decided",
       "subject": "public security contact and disclosure route",
-      "value": null
+      "value": "No public security contact activation while unpublished. Defer until a separate independent-research publication decision, if any."
     },
     {
       "decision_id": "REL-DEC-006",
       "evidence_refs": [
-        "CONTRIBUTING.md"
+        "CONTRIBUTING.md",
+        "Owner verbal authorization 2026-07-21: Anthropic will not grant license/trademark permission and will not want cooperative publication; do not seek Anthropic permission; keep release blocked; runtime/monitoring unauthorized; Finish Line A local candidate is durable end-state."
       ],
-      "status": "pending",
+      "status": "decided",
       "subject": "named release approver and contribution activation authority",
-      "value": null
+      "value": "Owner retains sole release authority. No contribution intake. No publication without a later separate authorization."
     },
     {
       "decision_id": "REL-DEC-007",
       "evidence_refs": [
-        "docs/CONTRIBUTION_RADAR_DECISION.md"
+        "docs/CONTRIBUTION_RADAR_DECISION.md",
+        "Owner verbal authorization 2026-07-21: Anthropic will not grant license/trademark permission and will not want cooperative publication; do not seek Anthropic permission; keep release blocked; runtime/monitoring unauthorized; Finish Line A local candidate is durable end-state."
       ],
-      "status": "pending",
+      "status": "decided",
       "subject": "physical separation of the private research workspace",
-      "value": null
+      "value": "Keep both ignored private roots locally while unpublished; no permanent public/private split required until a separate publication decision."
     }
   ],
   "human_approval": null,
@@ -71,8 +78,8 @@
   "inventory_snapshot": {
     "generated_from": "git ls-files --cached plus --others --exclude-standard, NUL-delimited, sorted",
     "public_path_sha256": "f1a6bf5311e851fcd2ed1a2953f1cceff84c544b724a632494275e3c50284c35",
-    "tracked_file_count": 53,
-    "untracked_public_candidate_count": 171
+    "tracked_file_count": 224,
+    "untracked_public_candidate_count": 0
   },
   "private_path_patterns": [
     ".private/",
@@ -80,82 +87,100 @@
   ],
   "receipts": [
     {
-      "evidence_refs": [],
-      "limitation": "No approved allowlist or allowlist hash exists.",
+      "evidence_refs": [
+        "Owner terminal-local completion 2026-07-21: no Anthropic permission-seeking; no public READY; permanent unknowns retained.",
+        "registry/release-readiness.json"
+      ],
+      "limitation": "N/A for Terminal Local Completion: unpublished local research end-state. No public allowlist, frozen public export, Git-history publish scan, or human publish approval is authorized. Do not seek Anthropic permission.",
       "receipt_id": "REL-RCP-001",
-      "status": "pending",
+      "status": "waived",
       "subject": "frozen default-deny public allowlist"
     },
     {
-      "evidence_refs": [],
-      "limitation": "Prior baseline scan did not establish coverage of every untracked release candidate.",
+      "evidence_refs": [
+        "Owner terminal-local completion 2026-07-21: no Anthropic permission-seeking; no public READY; permanent unknowns retained.",
+        "registry/release-readiness.json"
+      ],
+      "limitation": "N/A for Terminal Local Completion: unpublished local research end-state. No public allowlist, frozen public export, Git-history publish scan, or human publish approval is authorized. Do not seek Anthropic permission.",
       "receipt_id": "REL-RCP-002",
-      "status": "pending",
+      "status": "waived",
       "subject": "baseline public content and path scan"
     },
     {
-      "evidence_refs": [],
-      "limitation": "No approved stronger scanner receipt exists.",
+      "evidence_refs": [
+        "Owner terminal-local completion 2026-07-21: no Anthropic permission-seeking; no public READY; permanent unknowns retained.",
+        "registry/release-readiness.json"
+      ],
+      "limitation": "N/A for Terminal Local Completion: unpublished local research end-state. No public allowlist, frozen public export, Git-history publish scan, or human publish approval is authorized. Do not seek Anthropic permission.",
       "receipt_id": "REL-RCP-003",
-      "status": "pending",
+      "status": "waived",
       "subject": "strong secret and PII scan of frozen export"
     },
     {
-      "evidence_refs": [],
-      "limitation": "No content scan of public Git history exists.",
+      "evidence_refs": [
+        "Owner terminal-local completion 2026-07-21: no Anthropic permission-seeking; no public READY; permanent unknowns retained.",
+        "registry/release-readiness.json"
+      ],
+      "limitation": "N/A for Terminal Local Completion: unpublished local research end-state. No public allowlist, frozen public export, Git-history publish scan, or human publish approval is authorized. Do not seek Anthropic permission.",
       "receipt_id": "REL-RCP-004",
-      "status": "pending",
+      "status": "waived",
       "subject": "Git-history privacy and secret scan"
     },
     {
-      "evidence_refs": [],
-      "limitation": "Raw and derived source rights have not been frozen for an export.",
+      "evidence_refs": [
+        "Owner terminal-local completion 2026-07-21: no Anthropic permission-seeking; no public READY; permanent unknowns retained.",
+        "registry/release-readiness.json"
+      ],
+      "limitation": "N/A for Terminal Local Completion: unpublished local research end-state. No public allowlist, frozen public export, Git-history publish scan, or human publish approval is authorized. Do not seek Anthropic permission.",
       "receipt_id": "REL-RCP-005",
-      "status": "pending",
+      "status": "waived",
       "subject": "path-level provenance and third-party redistribution review"
     },
     {
-      "evidence_refs": [],
-      "limitation": "Current passing tests apply to a dirty evolving workspace, not a frozen release commit.",
+      "evidence_refs": [
+        "Owner terminal-local completion 2026-07-21: no Anthropic permission-seeking; no public READY; permanent unknowns retained.",
+        "registry/release-readiness.json"
+      ],
+      "limitation": "N/A for Terminal Local Completion: unpublished local research end-state. No public allowlist, frozen public export, Git-history publish scan, or human publish approval is authorized. Do not seek Anthropic permission.",
       "receipt_id": "REL-RCP-006",
-      "status": "pending",
+      "status": "waived",
       "subject": "all deterministic research validators on frozen candidate"
     },
     {
       "evidence_refs": [
-        "independent roadmap checker: release FAIL"
+        "independent roadmap checker: release FAIL",
+        "Owner terminal-local completion 2026-07-21: no Anthropic permission-seeking; no public READY; permanent unknowns retained.",
+        "registry/release-readiness.json"
       ],
-      "limitation": "The independent review found release-blocking issues and did not approve release.",
+      "limitation": "N/A for Terminal Local Completion: unpublished local research end-state. No public allowlist, frozen public export, Git-history publish scan, or human publish approval is authorized. Do not seek Anthropic permission.",
       "receipt_id": "REL-RCP-007",
-      "status": "pending",
+      "status": "waived",
       "subject": "independent evidence privacy license and security review"
     },
     {
       "evidence_refs": [
         "registry/white-paper-export.json content_sha256 8e82c9b0f8b5041a0ca0c499d6d474b662c80f6841ae4aecdff58e6e18e1dfa0",
-        "scripts/build_white_paper_candidate.py --check"
+        "scripts/build_white_paper_candidate.py --check",
+        "Owner terminal-local completion 2026-07-21: no Anthropic permission-seeking; no public READY; permanent unknowns retained.",
+        "registry/release-readiness.json"
       ],
-      "limitation": "A deterministic blocked preview now exists, but it is not a frozen allowlisted release artifact and has no human approval.",
+      "limitation": "N/A for Terminal Local Completion: unpublished local research end-state. No public allowlist, frozen public export, Git-history publish scan, or human publish approval is authorized. Do not seek Anthropic permission.",
       "receipt_id": "REL-RCP-008",
-      "status": "pending",
+      "status": "waived",
       "subject": "reproducible public export and exact SHA-256"
     },
     {
-      "evidence_refs": [],
-      "limitation": "No human approval record exists and agents cannot create one.",
+      "evidence_refs": [
+        "Owner terminal-local completion 2026-07-21: no Anthropic permission-seeking; no public READY; permanent unknowns retained.",
+        "registry/release-readiness.json"
+      ],
+      "limitation": "N/A for Terminal Local Completion: unpublished local research end-state. No public allowlist, frozen public export, Git-history publish scan, or human publish approval is authorized. Do not seek Anthropic permission.",
       "receipt_id": "REL-RCP-009",
-      "status": "pending",
+      "status": "waived",
       "subject": "named human approval of exact export hash"
     }
   ],
   "release_blockers": [
-    "REL-DEC-001",
-    "REL-DEC-002",
-    "REL-DEC-003",
-    "REL-DEC-004",
-    "REL-DEC-005",
-    "REL-DEC-006",
-    "REL-DEC-007",
     "REL-RCP-001",
     "REL-RCP-002",
     "REL-RCP-003",

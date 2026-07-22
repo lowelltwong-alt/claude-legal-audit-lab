@@ -1759,9 +1759,9 @@
       "public_capture_linkage": {
         "commit": null,
         "detail": {
-          "custody_id": "custody:sha256:ebcba7178a59b1b029f791e0ff478e14593ddd78c85b993bb9b33243150775f4",
-          "observed_at": "2026-07-16T20:14:50Z",
-          "sha256": "623562f9efd92327f938d407803a12368707da91cdd5ed1d20791a4d30e94a12"
+          "custody_id": "custody:sha256:f988e881c6b9acaa1a56cddfe8af0b275a9c6f103262e46548d43953db46209c",
+          "observed_at": "2026-07-20T15:20:04Z",
+          "sha256": "1a2ebf0b5bf846ad36017d83d4315c17c2c0b7d837e695fec286ea3e121bc4a8"
         },
         "files": null,
         "reason": "open or unmerged detail snapshot lacks complete PR-file pagination",
@@ -1791,9 +1791,27 @@
       "pr_number": 51,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:834ec10136d77a17b532279c83c793f70773f81ed1d33d434d51628f77781f55",
+          "observed_at": "2026-07-20T15:20:30Z",
+          "sha256": "7f93a445a40ccf7352866b85f91a3475c20f951a6242cace6959142e0347ca8d"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:3b7aa5f74b7aa92cd2ddc8fcdd1d52616a9a86b45cf8829d6c131a82f33b64d6"
+          ],
+          "file_count": 9,
+          "observed_at": [
+            "2026-07-20T15:20:31Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "e85a053f1f8f2096be46cc7b206656cb5d54aa9a4497f115912a0cfc43bcf1c8"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "feat(commercial-legal): SpotDraft CLM connector + four new skills"
@@ -1819,9 +1837,27 @@
       "pr_number": 52,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:c07acb23345bd34ccdb878505dac980fd5635cc634eeeebb53c78f2610041975",
+          "observed_at": "2026-07-20T15:20:32Z",
+          "sha256": "3106548693955a379c702681ed743e323ff2ec8132a80e648b9ae57085a38d89"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:dfa1754a2aca066bb116233e7a11324d5529c96c8c2320e1afd52187a489fd48"
+          ],
+          "file_count": 2,
+          "observed_at": [
+            "2026-07-20T15:20:33Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "143345e03824851f6e0684f267ad204538dbf9e2b27dbecb9ebc5cf1abaff889"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Update Definely connector URL"
@@ -1847,9 +1883,27 @@
       "pr_number": 53,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:5de70be85d496346965d3a3a3ea6ef85a81f25b9e748b42100f096ea5b74b76f",
+          "observed_at": "2026-07-20T15:20:33Z",
+          "sha256": "5b2679d0c70ce0b0f22c922479c6c4cbc946063298719e3dce754a587d45a75d"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:b01774eec9956bafa673ebb3878b2acd3ce2a2537bb723b6add4b29ebb08ca4b"
+          ],
+          "file_count": 16,
+          "observed_at": [
+            "2026-07-20T15:20:34Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "e19336f50cdc83e83d81d8d793ebd8d257cbb3ffe2183971868bdc71959fd97b"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Add Brazilian legal MCP (Letra da Lei) as external plugin and connector"
@@ -1985,9 +2039,27 @@
       "pr_number": 58,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:c94a309097a1b4c0c2de95db9e9f794962f52756085a63da319851769ffaff0f",
+          "observed_at": "2026-07-20T15:20:35Z",
+          "sha256": "4e559914c5d6aeffea9c92ff20b40b906f211a494be0e573a0c795532517b809"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:e5ea578394eebb799435f19a7517171e1bd3831734c4cfcec5618a8bedc55fa5"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-20T15:20:36Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "271beb87193861d4c28175efced0a273cf91712467a59328595cc9dbb06c2925"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "closed",
       "title": "Add compliance baseline for ip-legal plugin"
@@ -2123,9 +2195,27 @@
       "pr_number": 61,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:a8c890d9d77f45b5ce37edd4da5c52bb5d80d4d46d7aecf370b85adfa77b53f0",
+          "observed_at": "2026-07-20T18:58:05Z",
+          "sha256": "e9293198e21376466280915d45f5f2792c57ede717036931e992b1cea65b360a"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:e103d24c02037dd45ade189e540cea847bc7d5ee9827b3871182b0c191e0da88"
+          ],
+          "file_count": 20,
+          "observed_at": [
+            "2026-07-20T18:58:06Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "f9c78cf2af26941939896cf271e0420902054a8582c954426800eb4de4ca4758"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Add billing-legal plugin \u2014 time tracking and billing for AI-assisted legal work"
@@ -2151,9 +2241,27 @@
       "pr_number": 62,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:e295b7b461b021220c1a2c9bbcf06094791f72921c479171d4a8b7b6358f88dd",
+          "observed_at": "2026-07-20T18:58:06Z",
+          "sha256": "91f38284bb5a338b652c4920539bc615a14d668ff6a051a8a0f884fc3537b36d"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:5575cfa5d5c460ac50c4cd2ba77f4d0a063d8356220978779649b47a42a9eff0"
+          ],
+          "file_count": 2,
+          "observed_at": [
+            "2026-07-20T18:58:07Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "9d62e0c2e6e73562f92a554d1227ec7dc3aff67b07d3c20d1d00a48fdf561e7e"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Add belgian-corporate-law skill to corporate-legal"
@@ -2179,9 +2287,27 @@
       "pr_number": 63,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:40326296abbffb3a2c683a11025f730001551b161647db9ac4bf3e2072467f7d",
+          "observed_at": "2026-07-20T18:58:07Z",
+          "sha256": "7b1fb7605ca7a51bf938199170a9e522b4a90c529e391c6fa100812462fe3047"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:e6cec46af64ba8c37b9fd4036d8fcbbf3bca5b08cf58ee66a5e7e35271aa599f"
+          ],
+          "file_count": 10,
+          "observed_at": [
+            "2026-07-20T18:58:08Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "b6b218f6d31339229bfbdc057b5b450b6e407dc1739f3f90ac327ea73e504655"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Add external plugin: redjudicial-legal (Chile + LATAM hispano)"
@@ -2207,9 +2333,27 @@
       "pr_number": 64,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:264d33a16584e79f91c362c672d72011068ac47e4cac4dda93a6d52eebc398ff",
+          "observed_at": "2026-07-20T18:58:09Z",
+          "sha256": "e190ff2e85a232a9b278f24f986ee5920c52bbafbb451706aefca83002323187"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:ed3d106e5f1acda5f62230ba5a54599712b2e6aff04bb3b190e012e5a838b92e"
+          ],
+          "file_count": 8,
+          "observed_at": [
+            "2026-07-20T18:58:09Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "4113eb8ff003f2b31b23746fac3d1d487eb503bf9839fb9dc2a436e79188402f"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "closed",
       "title": "Remove unused references"
@@ -2290,9 +2434,27 @@
       "pr_number": 67,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:c6a4ea67812975d663fdae91eec53dc24d1493cf752622b062ff34a241160de2",
+          "observed_at": "2026-07-20T18:58:10Z",
+          "sha256": "e806f5fad03986e85b7bd8fad7b99e1597fa9f4e33f2aa06d07a8a2eb57b0f6b"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:5ca239e5f1d8955b0205c3f1b779fc1b97e7d6b856d9c99a468030564118ce3d"
+          ],
+          "file_count": 5,
+          "observed_at": [
+            "2026-07-20T18:58:10Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "b3b30fd9e5d54a53c2c4d9f2d1b2b48ab6153d08c1a81fa2ec7d39a14e8d2790"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Add Patent Connector to ip-legal"
@@ -2318,9 +2480,27 @@
       "pr_number": 69,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:7abc9cbc1fcd187d69851d5085dc88a00bebd70c90c9a50cc3ee8669a3b758ec",
+          "observed_at": "2026-07-20T22:55:23Z",
+          "sha256": "82a8006d7515a8e1236bc3199e50f82546442d7203ced3bca61dcbd306342e29"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:e7da4496f7c6195aff88edbf4c126832406112d23d6c459b85a70d68ea60cf78"
+          ],
+          "file_count": 16,
+          "observed_at": [
+            "2026-07-20T22:55:24Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "8f17aeac3f4c9ef7e1a77ae1af7464760c3fa3179dc80a58abfd25fb2082c033"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "closed",
       "title": "Add eu-finreg plugin \u2014 EU financial regulation specialist"
@@ -2346,9 +2526,27 @@
       "pr_number": 71,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:7fb2b390744423f4d9a418f894dcc6bee5b45d274d596e810ba68326db6e8536",
+          "observed_at": "2026-07-20T22:55:24Z",
+          "sha256": "8b64c459ae683f7c62087bc3cf7e95cc8388b876efc671f17228475e246a3cce"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:ec40e42b53be3204ffa50ae4069b8a7668b013b124ef94081d64559f3a27ccc5"
+          ],
+          "file_count": 3,
+          "observed_at": [
+            "2026-07-20T22:55:25Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "2d5f71df7e4a1f986a32d48ae83b72d71fd3cb2b1af68e574c88588be543ab88"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Add ContractsAI MCP connector for commerical-legal"
@@ -2429,9 +2627,27 @@
       "pr_number": 73,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:28913f42c24d75d41e9b2e1c40e7de3e145e961a3805be81210715c33cf31eab",
+          "observed_at": "2026-07-20T22:55:25Z",
+          "sha256": "902f7e98802e6c40412090d0a10f41580be67d7b297e2d31e4846311bd09188c"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:1b78ccdf80dd484cb15fc7d4e79568316fde1add383dc9b01294c0691b4beaad"
+          ],
+          "file_count": 7,
+          "observed_at": [
+            "2026-07-20T22:55:26Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "b68ba32158b4b4200e5830ba3a02cea77026c60bf177194873c9d6a45cfd310b"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Lawaigovhub"
@@ -2512,9 +2728,27 @@
       "pr_number": 75,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:b6d9545a69f67010b7d2fbf942cc21b0545b0a04b248a825efc30b038413f31c",
+          "observed_at": "2026-07-20T22:55:26Z",
+          "sha256": "9bde32b9324c2608d76d28a172a5a67e0aa78e86718e184823bc9b453f402e61"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:63c5babf575be0c24e892f904b3e629c3622615fa3cd7e27d9281727ae7ffd50"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-20T22:55:27Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "37971687366a7a1cfdce4c961bd1576439a130c4ca63d9e35ed295e18bc05ace"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "ip-legal/invention-intake: correct \u00a7102 bar-date screen to post-AIA framing"
@@ -2540,9 +2774,27 @@
       "pr_number": 76,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:7de5515b3d1d9269403b93247db320bd5d9af2f9d6253d2d445dbdfdb12913f3",
+          "observed_at": "2026-07-20T22:55:28Z",
+          "sha256": "78ad7222189dd7b2ecfef1a32712e13deb59750617afe3b768dcafcfbe9d0e8d"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:d0150e0decc861e7708412689fd8e872a844d320b01720a8541458fd7aee9215"
+          ],
+          "file_count": 21,
+          "observed_at": [
+            "2026-07-20T22:55:28Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "f8cc8404aaf0c86856cef8dab0c8d0fc5eb9022f4cbab133637582a920249675"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Bump managed-agent cookbooks from claude-opus-4-7 to claude-opus-4-8"
@@ -2568,9 +2820,27 @@
       "pr_number": 78,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:ce28ccf0fae02502451d3f598016c1bf0d817742f060ea64fd277e43923f33c6",
+          "observed_at": "2026-07-21T00:23:00Z",
+          "sha256": "30abc729126223eae8151dd00281a4f7cd7699b9eaa08dacffb119a328505e24"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:068ff8859251de6f9e4810061c53072c529caa9ac8ec04b7aa40ffa88fb1a2f4"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-21T00:23:01Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "8085b9657e2fff96fcf2815f10d134f4313425b33749aff938dc338ea6b09a69"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Make deploy-managed-agent.sh fail when an env-var value is refused"
@@ -2596,9 +2866,27 @@
       "pr_number": 79,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:f3e75d40f33cdb2463991e1f2eb2fb9210ce45975eb1c438a46cc308e0b794ac",
+          "observed_at": "2026-07-21T00:23:01Z",
+          "sha256": "56325a4615a1d2ea3984bd6f67492bda439c7e3fcac367bf68a77b5aeb197242"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:34b58338631364c44e5ea83791953d4d6fcbd34d0b6248a161f535df48ca1983"
+          ],
+          "file_count": 86,
+          "observed_at": [
+            "2026-07-21T00:23:01Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "677542c6898530efc67f5c9cc01f294215b6d3405361665b621360641eaba128"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "closed",
       "title": "feat: add eu-legal external plugin (EU legal ops for regulated financial institutions)"
@@ -2624,9 +2912,27 @@
       "pr_number": 81,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:9471e6af51d003611e75a97b4d3cf7e632fe19fc273b2838942dc6eb8c505a48",
+          "observed_at": "2026-07-21T00:23:02Z",
+          "sha256": "389dfc8d5ea15dbd80c428b12e19956b814926fb3e203f075ed0bdbbb107204f"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:0aae6ab4652108d5c2b02e93b4b867f1ac4a1cae5123f0ec16782391536dccef"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-21T00:23:03Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "9a8978aaed687023a320143f4a919a75f98452ab2688e59b9d948af974d96d9c"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Add an external-benchmark reference to skills-qa's performance discla\u2026"
@@ -2652,9 +2958,27 @@
       "pr_number": 83,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:f8c145891f4f8429515985e5ffedc4d0f886ed0f72560774330d95abf7de5b9f",
+          "observed_at": "2026-07-21T00:23:04Z",
+          "sha256": "e730550c3bc977d38183d21650184cb47131d11d0cf94c32df6673dc81d69b7a"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:a26672284fa70269cc80c636fdc8ed6cd044cc000386afc9118be18c278537b9"
+          ],
+          "file_count": 23,
+          "observed_at": [
+            "2026-07-21T00:23:04Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "07b2622d38daca916606b66ba1a167c81ec58fafa59d50f0246693928ace55c2"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "closed",
       "title": "feat: add fi-startup-legal \u2014 Finnish startup legal toolkit"
@@ -2680,9 +3004,27 @@
       "pr_number": 84,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:2522f9310385dc26acbc24eb5ca47b9c2b14cc6d8780a14a9d27e58d66799a9c",
+          "observed_at": "2026-07-21T00:23:05Z",
+          "sha256": "acaab3e125322e2982fe0c772b0b7c0e9941cf799c435d6d529217f85d34de5f"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:62c7b63c1792edb3cda7f155279ea863610460d478c0e796bd27ff1f35c404ce"
+          ],
+          "file_count": 3,
+          "observed_at": [
+            "2026-07-21T00:23:06Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "5c374ed61966f8efc871800fbe64247c8886828399c695e5efc2934b4ff17423"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "closed",
       "title": "feat: add Velvoite as connector to regulatory-legal and privacy-legal"
@@ -2708,9 +3050,33 @@
       "pr_number": 85,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:2e050fd9c37f47d41e189d2535e8b2de43fdacd9343b2e4a90c03cc50780578e",
+          "observed_at": "2026-07-21T13:49:00Z",
+          "sha256": "d95bfd29f2fb76304f2c015847704b73b9c79dbd8a84b06713a1fb1e1fa07fe8"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:ee3249f4dd2e8e4b36d2c5b12f9f1c9617c8dfecf84e6cd70546521fbb417435",
+            "custody:sha256:4cc7b5d41438edcb32d6446bcd8144aac237492ffbd08d06ea7311f793e58b7c",
+            "custody:sha256:9e4b80717c44248d010b56a093a51f02448eae6e7a0fe0d3cdb1b39e3a6bd8b5"
+          ],
+          "file_count": 251,
+          "observed_at": [
+            "2026-07-21T13:49:01Z",
+            "2026-07-21T13:49:02Z",
+            "2026-07-21T13:49:03Z"
+          ],
+          "page_count": 3,
+          "page_sha256": [
+            "7b5f2081810b751211a49ad75e7b642fc3b656f9849dce736eb369df6e163950",
+            "cad3a3e283760fdd4c8cccd69ccf8759666ddf619fda680ed6b618735ce08e38",
+            "cb5a0c8fa51d9bb64f5f394b36cfd3e36e485af86027cf9405a986d2ad3f68e4"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "New release \u2014 June 3: jurisdiction support, plaintiff-side litigation, and suite-wide refinements from launch feedback"
@@ -2736,9 +3102,27 @@
       "pr_number": 86,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:2e55e955c48e504708277ca7049100966f238561b9b0ef258d18300a8be71c4b",
+          "observed_at": "2026-07-21T13:49:03Z",
+          "sha256": "20ac8e008b4e6ffef4af30c6b03f09d79b7335de5508669741068733bcfd93aa"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:59bc5828dd674955b53ea86791aef830d8830493bd4ee30de2271f9f72cd3577"
+          ],
+          "file_count": 8,
+          "observed_at": [
+            "2026-07-21T13:49:04Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "b194b21e224ac84bb716779f89682d38db73d4bd770f10f05df89eb18e4c057b"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "closed",
       "title": "localize(privacy-legal): replace GDPR/ICO/CCPA with LGPD/ANPD equivalents"
@@ -2764,9 +3148,27 @@
       "pr_number": 87,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:2c7607e16ef851ef3e9a045e1e0d781f7cd6bdc1460011c7aeebd5910f9b1e56",
+          "observed_at": "2026-07-21T13:49:05Z",
+          "sha256": "34ab030a0943d805df8677eb2e1a79c81be7e8260c50612780f7146732cfa4af"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:2551108c282ebfe03e124b1ea7058085d77ca66704f401ba4c92bbb67faee030"
+          ],
+          "file_count": 5,
+          "observed_at": [
+            "2026-07-21T13:49:05Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "89e8422a631b53afc08ab7753c50c2eb78d2d7df9ee8e330ed43e73156911cc8"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "closed",
       "title": "Add PharosLex connector (EU primary law + CJEU, via EUR-Lex/CELLAR) to 5 plugins"
@@ -2792,9 +3194,27 @@
       "pr_number": 88,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:1b45aec6b739590b72491a7b3e9b09529205add828f750ba4fc7751dac45255d",
+          "observed_at": "2026-07-21T13:49:06Z",
+          "sha256": "f8c153b56880b94f5c9f215f60e2d9834a49e8b397ff08a96cfe68cc5ced3e03"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:800e18c1e2c1fdc2340c41184fa7d76250ab77f9bfffc94af0b1982f7fdd233e"
+          ],
+          "file_count": 9,
+          "observed_at": [
+            "2026-07-21T13:49:06Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "78e62b91e6a3ef8bf9a0f958ceabc1e127635ea07d21a5d433f1478944f9d49b"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "feat(connectors): add ARBI as external plugin"
@@ -2820,9 +3240,27 @@
       "pr_number": 92,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:f868fbb3a53b71a9ee0e3b6b5afea5b684a2d371e1f7f81782ff4c1669a285da",
+          "observed_at": "2026-07-21T13:49:07Z",
+          "sha256": "b4b334ba4e814ccbd9e0aed5ce0a5517a072ecde7f78d41e0c4b1f5314f01685"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:ccb149c05746f98d0ade3c790d005bc82c4311076dd5f8abf695d7cdfa215f57"
+          ],
+          "file_count": 62,
+          "observed_at": [
+            "2026-07-21T13:49:08Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "eadb072de125629c40ab3337fd99c85eeee1126f9871c49df4362dc48365df3f"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "feat: add eu-legal and fi-startup-legal external plugins (Silly Pilot Oy)"
@@ -2848,9 +3286,27 @@
       "pr_number": 93,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:475b8391ffb22a49667b9060ced675e4c7a1184677d8c6d7a6f47ffce76ec10d",
+          "observed_at": "2026-07-21T13:54:59Z",
+          "sha256": "71537164f885215ae1e0374748301a520e2272993e80bb79f6fea66135537e9c"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:334eccf9ee4116db0e10f96038620eeb1e8d35fbe3be0d69bf5bceae6ca15ad2"
+          ],
+          "file_count": 4,
+          "observed_at": [
+            "2026-07-21T13:55:00Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "321bd81a0f1aa950f358fe41ba6f50ec49ff753a5822e4e4aef9e8e66ebb2d6f"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "feat: add Velvoite as MCP connector to regulatory-legal, privacy-legal, ai-governance-legal"
@@ -2876,9 +3332,27 @@
       "pr_number": 95,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:76a97fd78c936e875adb9da1744115a8d6502fa7c96135d9cd0182358e581daa",
+          "observed_at": "2026-07-21T13:55:00Z",
+          "sha256": "5193e4e400027664f850436ce3081e76d2f753fb441864f3fe3c4886744e6767"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:32c84214ffbc008749f14d98ab9c15728e46dfd0527e9db602aa1e63d8e9c27c"
+          ],
+          "file_count": 6,
+          "observed_at": [
+            "2026-07-21T13:55:01Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "5e7f1c85d66479d285adcb4fc07c1be212d0d421ee85cc29fbe1c16416da3cbf"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Add `singapore-court-legal` \u2014 MikeROS connector for Singapore civil court procedure"
@@ -2904,9 +3378,27 @@
       "pr_number": 96,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:719d631df5ad07b8a988f8d557beb3894804060330086e26922c8fcdc4a8c5ae",
+          "observed_at": "2026-07-21T13:55:02Z",
+          "sha256": "982a933e067b571be778890b2d740e9219c69553ecbc675c7f8496993de2b30a"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:c6834e16373dff15c764c6aaa93740b461251e7b4e84331ae00e9e47435ddfe8"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-21T13:55:03Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "b255cc77929c052f97c8f6db3bbbb26e28639c0eacbacacef18424ae3434e067"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Update print statement from 'Hello' to 'Goodbye'"
@@ -2932,9 +3424,27 @@
       "pr_number": 97,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:02227c0a81e024b61e129aef3f66de43fb55ee91d15deedbe9dcd5fb04c59635",
+          "observed_at": "2026-07-21T13:55:03Z",
+          "sha256": "b247ee17e2d37778d69b0e7b72247d801b7ee4c0fc97ec5dad5f890cc1e78c2f"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:c3ab4fa8df306f0fb961fcc2e69ed935b9e53822d4efe8328f555b26503bc0b2"
+          ],
+          "file_count": 5,
+          "observed_at": [
+            "2026-07-21T13:55:04Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "b077694d52e206fcede021deb2bf150d60c918600c5aeebde03ea400d39bcedf"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Add boolean-search skill to litigation-legal"
@@ -2960,9 +3470,33 @@
       "pr_number": 98,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:a1fe31e3781e4a82b02a372a71df0a59decde8d27e3a00299ac5046d48324645",
+          "observed_at": "2026-07-21T13:55:04Z",
+          "sha256": "b6b5561967a095bc78a33a7cbcc01db0d67ce1a9742cbc87886473fd6b3a5767"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:e0f12e513c26ff087d57e7b139e5a71831ed4995638ff8becff3a844a245ca87",
+            "custody:sha256:2898e9c77f3bd825b19e80eb292633340566264fa5b22d581af133be242c59ac",
+            "custody:sha256:86946a25139d17b8ba0ae0a0272f6677f757323e7a356342c766133a5d2b05c7"
+          ],
+          "file_count": 279,
+          "observed_at": [
+            "2026-07-21T13:55:05Z",
+            "2026-07-21T13:55:06Z",
+            "2026-07-21T13:55:07Z"
+          ],
+          "page_count": 3,
+          "page_sha256": [
+            "d12f3f2852c479a555e890181a9c3b3a4fd8605ad4a1f58cfb2105c9ae0baf49",
+            "34cca602544dc29d9be6b0993b79511efba3edbb91646a53cf182ae92c9cd4d3",
+            "fb4ee58d014170fcc254bbcebc83a61c5e1cf25dea78f5c3dc6567ea2b857b71"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "closed",
       "title": "Add 12 Japanese legal plugins (\u65e5\u672c\u6cd5\u5bfe\u5fdc\u30d7\u30e9\u30b0\u30a4\u30f3)"
@@ -2988,9 +3522,27 @@
       "pr_number": 99,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:7d6c6daf6c8803f270dcb95f1cff06f443188553a78f79c154290e3b6e159a0d",
+          "observed_at": "2026-07-21T13:56:02Z",
+          "sha256": "3336a31410b4f02975d5eabcc92e0a002ce9f7cb812fe95b9fefca658e062029"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:3d80877ace2c78e2312f44f802d9ece4526c123dcebd4b711a80287d66591ea2"
+          ],
+          "file_count": 1,
+          "observed_at": [
+            "2026-07-21T13:56:03Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "cf35818bac1e9f26eeb0af9eee351ce6495f03e5bed61e465e78e78d0e5efb29"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "closed",
       "title": "Harden validation CLI argument handling"
@@ -3016,9 +3568,33 @@
       "pr_number": 101,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:b76eb96e75b0991a64226929b90c0bbb925fbcd98ccb023c91997cc618fd4cf7",
+          "observed_at": "2026-07-21T13:56:03Z",
+          "sha256": "0836854fed95bb2707eb26b3a34e20f14fe66a440780edff23d4768153b8340c"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:6ef0776f8d8fd32270c17b7e3c9395125440748299e65677ac000a9281c7e37a",
+            "custody:sha256:3391b82f6d1be77a4d0d10d92e33f8a35eb454a038b417c88c65cacae3c6c993",
+            "custody:sha256:a1836e0f9cbf6912b2c9247ab01e33a186484f19cbe446489e8a877d48178c36"
+          ],
+          "file_count": 278,
+          "observed_at": [
+            "2026-07-21T13:56:04Z",
+            "2026-07-21T13:56:05Z",
+            "2026-07-21T13:56:06Z"
+          ],
+          "page_count": 3,
+          "page_sha256": [
+            "01ef2f3ebf193726aa0ff542960d3382e61a7431123c99694a77f3f21a2ead96",
+            "4ccf953a6a6982649074a84e70defd6446d7864c026f62aeec53f88077ec9e85",
+            "2c5243d6f8dbe418034c57181a05ce471fc3862cece6438edc0942760dfee592"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Fix documentation URL in README"
@@ -3044,9 +3620,27 @@
       "pr_number": 102,
       "public_capture_linkage": {
         "commit": null,
-        "detail": null,
-        "files": null,
-        "status": "unknown"
+        "detail": {
+          "custody_id": "custody:sha256:025c26061af14e6ceaa4adc5d128dd0b1dec0e719ee4d08ebd4083bfc70439cb",
+          "observed_at": "2026-07-21T13:56:06Z",
+          "sha256": "4b570855c2cc84d38f5ee0e7c7563016d331cb62210753c6cf4194d80d7a11b7"
+        },
+        "files": {
+          "custody_ids": [
+            "custody:sha256:a9af04c0ccd13cf0a061453b94c31ef81d1e09fe4f6fc51fbad2de7c0e4563e6"
+          ],
+          "file_count": 3,
+          "observed_at": [
+            "2026-07-21T13:56:07Z"
+          ],
+          "page_count": 1,
+          "page_sha256": [
+            "b96dc0454aba6fda074d819ff1b776e1918c562a3cb96dc927f932e4c2211e67"
+          ],
+          "status": "captured_complete"
+        },
+        "reason": "detail snapshot does not report a merged event",
+        "status": "captured_open_or_unmerged_snapshot"
       },
       "state": "open",
       "title": "Add Ansvar Gateway connector \u2014 European regulatory primary sources (regulatory-legal, privacy-legal, ai-governance-legal)"
@@ -3054,12 +3648,12 @@
   ],
   "schema": "claude-legal-audit.pr-commit-diff-linkage.v2",
   "summary": {
-    "captured_open_or_unmerged_snapshot_count": 29,
-    "coverage_statement": "14 of 76 captured public PR index records have hash-verified detail, merged-commit, and terminal file-page linkage; 29 have bounded open/unmerged detail and file snapshots; 33 remain unknown or incomplete.",
+    "captured_open_or_unmerged_snapshot_count": 61,
+    "coverage_statement": "14 of 76 captured public PR index records have hash-verified detail, merged-commit, and terminal file-page linkage; 61 have bounded open/unmerged detail and file snapshots; 1 remain unknown or incomplete.",
     "diff_available_count": 14,
     "local_merge_commit_count": 14,
     "pr_count": 76,
-    "public_linkage_unknown_count": 33,
+    "public_linkage_unknown_count": 1,
     "publicly_linked_capture_count": 14
   }
 }
