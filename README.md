@@ -41,12 +41,14 @@ in a public builder or export.
 
 ## Contributions and licensing status
 
-The contribution model is documented, but outside intake is **preview/closed**.
-The current root `LICENSE` is only an Apache-2.0 application notice rather than
-the complete license text, and its copyright holder is not identified. Read
-[`CONTRIBUTING.md`](CONTRIBUTING.md) and
-[`docs/LICENSING_OPTIONS.md`](docs/LICENSING_OPTIONS.md) before proposing work.
-No monitoring automation or license change is authorized by these files.
+The contribution model is documented, but outside intake remains **preview/closed**.
+Original software is licensed under **Apache-2.0**; original research prose under
+**CC BY 4.0**. Copyright holder: **Lowell T Wong**. See
+[`LICENSE`](LICENSE), [`NOTICE`](NOTICE),
+[`docs/LICENSE_MAP.md`](docs/LICENSE_MAP.md), and
+[`docs/LICENSING_OPTIONS.md`](docs/LICENSING_OPTIONS.md).
+Public product release remains **BLOCKED** by `registry/release-readiness.json`.
+No monitoring automation is authorized by these files.
 
 For research beyond law, start with
 [`docs/CROSS_INDUSTRY_ONTOLOGY_RISK.md`](docs/CROSS_INDUSTRY_ONTOLOGY_RISK.md)

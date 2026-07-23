@@ -1,7 +1,7 @@
 {
   "schema": "claude-legal-audit.project-roadmap.v1",
   "packet_version": "1.0.0",
-  "as_of": "2026-07-22T18:00:23-04:00",
+  "as_of": "2026-07-22T21:27:50-04:00",
   "project_identity": {
     "project_id": "CLAO-001",
     "current_name": "Claude for Legal Workflow Sovereignty Audit Lab",
@@ -41,7 +41,7 @@
       "registry/source-registry.json",
       "registry/repository-history-capture.json"
     ],
-    "input_fingerprint": "sha256:58f96c39541b1b13fdfc4ea6f5435662a836d021dea4f18e134dd093b6856f4a",
+    "input_fingerprint": "sha256:23048d35fe0a812236eb0e8e592d0ca379f29f760c998dc311dd7db4ab8d2902",
     "unavailable_sources": [
       "Anthropic closed runtime and internal intent",
       "executed law-firm contracts",

@@ -1,10 +1,11 @@
 # Contributing
 
 > **Intake status: preview / closed.** Do not submit pull requests containing
-> substantive research or code yet. Contribution intake opens only after the
-> repository owner approves the license map, identifies the copyright holder,
-> installs the complete governing license text, and enables the review gates in
-> this document.
+> substantive research or code yet. The copyright holder is **Lowell T Wong**.
+> Software is **Apache-2.0**; original research prose is **CC BY 4.0** (see
+> [`docs/LICENSE_MAP.md`](docs/LICENSE_MAP.md), [`LICENSE`](LICENSE),
+> [`NOTICE`](NOTICE)). Contribution intake still opens only after the owner
+> separately enables the review gates in this document.
 
 This project welcomes rigorous research on how frontier AI products enter
 expert workflows, what institutional knowledge those workflows encode, and

@@ -71,6 +71,7 @@
     "radar_policy": "docs/RESEARCH_RADAR.md",
     "radar_watchlist": "registry/research-radar-watchlist.json",
     "licensing_options": "docs/LICENSING_OPTIONS.md",
+    "license_map": "docs/LICENSE_MAP.md",
     "counterfactual_method": "docs/FRONTIER_LAB_ONTOLOGY_CAPTURE_COUNTERFACTUAL.md",
     "law_firm_value_chain": "registry/law-firm-value-chain.json",
     "counterfactual_patterns": "registry/counterfactual-capture-patterns.json",

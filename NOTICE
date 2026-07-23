@@ -1,0 +1,28 @@
+Claude Legal Audit Lab
+Copyright 2026 Lowell T Wong
+
+This product includes software developed by Lowell T Wong.
+
+Licensing (see docs/LICENSE_MAP.md for the path-level map):
+
+- Software, schemas, scripts, tests, configuration, and machine registries
+  are licensed under the Apache License, Version 2.0. See the LICENSE file
+  in the project root and https://www.apache.org/licenses/LICENSE-2.0
+
+- Original scholarly prose and human-readable research commentary authored
+  for this project are licensed under Creative Commons Attribution 4.0
+  International (CC BY 4.0). See LICENSES/CC-BY-4.0.txt and
+  https://creativecommons.org/licenses/by/4.0/
+
+Attribution for CC BY 4.0 material:
+  Title: Claude Legal Audit Lab (named path as applicable)
+  Creator: Lowell T Wong
+  License: CC BY 4.0
+  URL: https://github.com/lowelltwong-alt/claude-legal-audit-lab
+
+Third-party and upstream materials (including upstream/claude-for-legal and
+any captured third-party sources) remain under their own licenses and are
+not relicensed by this NOTICE.
+
+Trademarks: This NOTICE does not grant trademark rights in any project name,
+logo, or third-party mark (including Anthropic marks).
