@@ -2,7 +2,7 @@
   "generated_from": {
     "builder_sha256": "20ef41812530b425e2b1c268893043f9092c82819a2669e490cbf3e54fc7f368",
     "claim_registry_sha256": "1727add8520c2b0989b9fe96ed95b39369202f48f3959477e8b7fd93287a2256",
-    "lineage_policy_sha256": "5652fffd736c8655ea49bf206eefd87afcee3189342fc8ff91eecb71fd1a2fbc",
+    "lineage_policy_sha256": "eca48bba97445517b20497f5e93fcbc0b4b388b91cb7a2cc2d46ec3fb62b3358",
     "source_registry_sha256": "58e184814546c50a9821e44fdf414a6c38ac803c725594baca1d62f512850f0a"
   },
   "records": [
@@ -699,6 +699,173 @@
         "SRC-0001",
         "SRC-0002",
         "SRC-0005",
+        "SRC-0050",
+        "SRC-0051"
+      ]
+    },
+    {
+      "artifact_class": "method",
+      "artifact_id": "ART-4C0F7D625BFBD5A6",
+      "authority_class": "governing_method",
+      "claim_ids": [
+        "CLM-0001",
+        "CLM-0002",
+        "CLM-0003",
+        "CLM-0010"
+      ],
+      "claim_lineage": [
+        {
+          "claim_id": "CLM-0001",
+          "evidence_reproducible": false,
+          "review_status": "candidate",
+          "source_ids": [
+            "SRC-0001",
+            "SRC-0002",
+            "SRC-0050",
+            "SRC-0051"
+          ]
+        },
+        {
+          "claim_id": "CLM-0002",
+          "evidence_reproducible": true,
+          "review_status": "reviewed",
+          "source_ids": [
+            "SRC-0002"
+          ]
+        },
+        {
+          "claim_id": "CLM-0003",
+          "evidence_reproducible": false,
+          "review_status": "candidate",
+          "source_ids": [
+            "SRC-0005"
+          ]
+        },
+        {
+          "claim_id": "CLM-0010",
+          "evidence_reproducible": false,
+          "review_status": "candidate",
+          "source_ids": [
+            "SRC-0002",
+            "SRC-0005"
+          ]
+        }
+      ],
+      "claim_source_ids": [
+        "SRC-0001",
+        "SRC-0002",
+        "SRC-0005",
+        "SRC-0050",
+        "SRC-0051"
+      ],
+      "direct_source_ids": [
+        "SRC-0002"
+      ],
+      "evidence_reproducible": false,
+      "lineage_complete": true,
+      "lineage_status": "reviewed",
+      "lineage_warnings": [],
+      "parent_artifacts": [
+        "docs/AI_NAVIGATION_AND_LINEAGE_STANDARD.md",
+        "docs/THESIS_MAP.md",
+        "registry/claim-registry.json",
+        "registry/thesis-map.json"
+      ],
+      "path": "docs/AI_FINDINGS_PROVENANCE_PROOF_ROUTE.md",
+      "primary_source_closure": [
+        "SRC-0001",
+        "SRC-0002",
+        "SRC-0004",
+        "SRC-0005",
+        "SRC-0006",
+        "SRC-0007",
+        "SRC-0008",
+        "SRC-0009",
+        "SRC-0011",
+        "SRC-0012",
+        "SRC-0013",
+        "SRC-0017",
+        "SRC-0018",
+        "SRC-0019",
+        "SRC-0020",
+        "SRC-0021",
+        "SRC-0022",
+        "SRC-0023",
+        "SRC-0024",
+        "SRC-0025",
+        "SRC-0026",
+        "SRC-0027",
+        "SRC-0028",
+        "SRC-0029",
+        "SRC-0030",
+        "SRC-0031",
+        "SRC-0032",
+        "SRC-0033",
+        "SRC-0034",
+        "SRC-0035",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038",
+        "SRC-0039",
+        "SRC-0040",
+        "SRC-0041",
+        "SRC-0042",
+        "SRC-0043",
+        "SRC-0044",
+        "SRC-0045",
+        "SRC-0046",
+        "SRC-0047",
+        "SRC-0048",
+        "SRC-0049",
+        "SRC-0050",
+        "SRC-0051"
+      ],
+      "sha256": "9d3e59067db0b7fd7f355d88737c898388b5d78ee69316876def0f1f140a63e9",
+      "source_closure": [
+        "SRC-0001",
+        "SRC-0002",
+        "SRC-0004",
+        "SRC-0005",
+        "SRC-0006",
+        "SRC-0007",
+        "SRC-0008",
+        "SRC-0009",
+        "SRC-0011",
+        "SRC-0012",
+        "SRC-0013",
+        "SRC-0017",
+        "SRC-0018",
+        "SRC-0019",
+        "SRC-0020",
+        "SRC-0021",
+        "SRC-0022",
+        "SRC-0023",
+        "SRC-0024",
+        "SRC-0025",
+        "SRC-0026",
+        "SRC-0027",
+        "SRC-0028",
+        "SRC-0029",
+        "SRC-0030",
+        "SRC-0031",
+        "SRC-0032",
+        "SRC-0033",
+        "SRC-0034",
+        "SRC-0035",
+        "SRC-0036",
+        "SRC-0037",
+        "SRC-0038",
+        "SRC-0039",
+        "SRC-0040",
+        "SRC-0041",
+        "SRC-0042",
+        "SRC-0043",
+        "SRC-0044",
+        "SRC-0045",
+        "SRC-0046",
+        "SRC-0047",
+        "SRC-0048",
+        "SRC-0049",
         "SRC-0050",
         "SRC-0051"
       ]
@@ -2201,7 +2368,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "4290555028e726aa46d3cbd4f43811728a900d97236f1c7c8da970d38bcdb718",
+      "sha256": "4f6b7afcc69606e54c6f348baa084367984489558aa381c578e9e4ce54a1f248",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -2627,7 +2794,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "29013542c6ab1df250c17209eb9bc9774cce5f0978681fff15160fb933d2f84b",
+      "sha256": "d56fad2cb21c48fe825c5c89e24446617df299658327897ef75cc724dd8794a7",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -2896,7 +3063,7 @@
         "SRC-0063",
         "SRC-0064"
       ],
-      "sha256": "e0541444b81837d36e542dd409504fea5a1ab498b9bc4f88993edeeec9eb3b63",
+      "sha256": "d78db09bdde6b959c0238a524261bb52a75cdb76abeab3596d5278818eb81d91",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -3035,7 +3202,7 @@
         "SRC-0063",
         "SRC-0064"
       ],
-      "sha256": "91e59e668f35ee6abe9c7dcb91cba8aa9ebcd3547095ad0926d46a4a87c7f637",
+      "sha256": "71bb485835663bd7c30e91bce88152c46096bd7ab764c0fb3c5a0e2cb088ccd1",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -3316,7 +3483,7 @@
         "SRC-0063",
         "SRC-0064"
       ],
-      "sha256": "f46f7163ce93fe4eee9d6eb5a371af3360aace47b5a8db3bd9294693188b32f6",
+      "sha256": "cb005a53f170b215747bbdb6a6da2257d1b3a06ec9dab31d885501ab0f5f05b5",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -3455,7 +3622,7 @@
         "SRC-0063",
         "SRC-0064"
       ],
-      "sha256": "d4a0facecb8d2f1a82e666affffbdf492d7f65b6b4a1c6722ac14128670bf4df",
+      "sha256": "1f219e09650f1f86dad33301d9c8eb73332218a7764acb51d74bb2d49aed662f",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -3876,7 +4043,7 @@
         "SRC-0063",
         "SRC-0064"
       ],
-      "sha256": "ce7bd414fa7271f53013d25cf9659772d912f9d43667cb607394047e210e8539",
+      "sha256": "8e81bc3a32313aa8087435159bd360422b8ba2d18ea363996cd8244c934af773",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -4015,7 +4182,7 @@
         "SRC-0063",
         "SRC-0064"
       ],
-      "sha256": "030e630ca7243bcd2b11435f351789a1872601dec50fc94b61492d554f6a325e",
+      "sha256": "9418fda8ff8a0340415016ec66bca04d975cd976c4699e5d21ae3613fae04a54",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -4283,7 +4450,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "682bc376aaa3afb79e86eb1d2ed9c819be045e916c4ba9b5e9de7feca2d15755",
+      "sha256": "8a1eaebfe50a35373edca659751919e0be5ec582c749a69f22f855a45ffe4bfc",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -5415,7 +5582,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "453a8a6bfa6395a7dbf7fdd7282d23fa5772b6e4c06a771e54eeab7f093ca882",
+      "sha256": "0f52669dc3dea4e11cf654b02a46c2e181c8f927abdcf4cab333f085d79f1996",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -5887,7 +6054,7 @@
       ],
       "path": "registry/project-roadmap.json",
       "primary_source_closure": [],
-      "sha256": "e1c79163b5e6fecf6145cd747e64fef54947a866bd687dbc3feae7a99e166cd1",
+      "sha256": "d7c3fcfab23a0a49d93d4bf155888bdc6db1f266f5e2b63dc00ccf2df075ecba",
       "source_closure": []
     },
     {
@@ -5908,7 +6075,7 @@
       ],
       "path": "registry/release-readiness.json",
       "primary_source_closure": [],
-      "sha256": "883ac02fc040b308ea9f8009413699ed7b51e100d0e47377bf565298e65ad254",
+      "sha256": "233cf11a0b9e0282cf384e8bc05f1df40d0dfb674e3774e8560cc0e9d01071ea",
       "source_closure": []
     },
     {
@@ -6421,7 +6588,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "209bdda450e6c3706429f050b05f780a41e2de30ab789dfc36ffeef7b52af090",
+      "sha256": "0584e972a7e41f425cecafbd95b350ccccf35e530e3c962b84dc51d8c9c98481",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -7179,7 +7346,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "34ec2a4203fba417b0d97f16fa1c02a1e968fbe6f7dab3e493beb38d739c2452",
+      "sha256": "a17765822c83b31345b6ae2831b5ca9ca1fc5545959fe6963c4466b4ef06a0f5",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -8522,7 +8689,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "48cd2e56e9a5394808619ab9bbd094511cd91bd5b0a754e6cc67700d41ea74ee",
+      "sha256": "e53684cbba977c80bf0e97e3765391f2d71a3fc9cf3fb2194c68ed7bd38bd6a2",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -8783,7 +8950,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "89b1168d9d69b3134cce5c92d80c4635e9e38e1b5162b4d6b33d04829a6de4a7",
+      "sha256": "c19d01a181fadd62b7efb9553d07a4773e8ab05261da61d99b8e35c987a3170b",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -8948,7 +9115,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "707fab870ac9c4a66b9bd8931f5084669d4a488f97a1de7485e49bd61013f3d6",
+      "sha256": "8ace25e8881ec46e1c46e1ccd531b17742855add355bd5f7b733473f1fcfe304",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",

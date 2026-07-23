@@ -101,6 +101,7 @@ locator and preserves what the evidence does and does not prove.
 
 | Question | Start here | Then inspect |
 |---|---|---|
+| What are the findings, provenance, and line-of-code proofs? | `docs/AI_FINDINGS_PROVENANCE_PROOF_ROUTE.md` | `docs/THESIS_MAP.md`, `registry/claim-registry.json`, then open the upstream locators |
 | What is the roadmap, what is unblocked, and what happens next? | `docs/ROADMAP.md` | `registry/project-roadmap.json` and `scripts/validate_roadmap.py` |
 | Is this ready to rename, stage, or publish? | `registry/release-readiness.json` | Run `python scripts/validate_release_readiness.py --require-ready`; human approval is still required |
 | What is this repository and what is out of scope? | `README.md` | `docs/SCOPE_BOUNDARY.md` |

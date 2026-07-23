@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07-21T11:53:26-04:00",
+  "as_of": "2026-07-22T18:00:24-04:00",
   "authority_boundary": "Terminal Local Completion authority: this registry proves the local research candidate is blocked for publication. It cannot grant Anthropic permission, approve public release, waive privacy/legal review for publication, mutate Git, or create human publish authority.",
   "decisions": [
     {
@@ -77,9 +77,9 @@
   "human_release_approved": false,
   "inventory_snapshot": {
     "generated_from": "git ls-files --cached plus --others --exclude-standard, NUL-delimited, sorted",
-    "public_path_sha256": "f1a6bf5311e851fcd2ed1a2953f1cceff84c544b724a632494275e3c50284c35",
+    "public_path_sha256": "1c7738f6a11fdc68c3b7606ba1381490afdd779ef2a94428a9348c36cba39a40",
     "tracked_file_count": 224,
-    "untracked_public_candidate_count": 0
+    "untracked_public_candidate_count": 1
   },
   "private_path_patterns": [
     ".private/",
