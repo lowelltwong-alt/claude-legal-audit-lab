@@ -2,7 +2,7 @@
   "generated_from": {
     "builder_sha256": "20ef41812530b425e2b1c268893043f9092c82819a2669e490cbf3e54fc7f368",
     "claim_registry_sha256": "1727add8520c2b0989b9fe96ed95b39369202f48f3959477e8b7fd93287a2256",
-    "lineage_policy_sha256": "eca48bba97445517b20497f5e93fcbc0b4b388b91cb7a2cc2d46ec3fb62b3358",
+    "lineage_policy_sha256": "69fe948f069080e3b0576ae450110447359520f55baab77f01b6124bb0d706bb",
     "source_registry_sha256": "58e184814546c50a9821e44fdf414a6c38ac803c725594baca1d62f512850f0a"
   },
   "records": [
@@ -34,7 +34,7 @@
         "SRC-0029",
         "SRC-0030"
       ],
-      "sha256": "bb152bec8db429527597f7e96a732e9b43ab5611950bcf754ee10b61d9db77d0",
+      "sha256": "e8fab4341f26fa778b27e58cb281ce8200b18ff7b85c9db8b16f4e4e56b617d6",
       "source_closure": [
         "SRC-0025",
         "SRC-0026",
@@ -265,7 +265,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "ad529d7d0a2d2a49c5b288f38b64b87c1178b1f691abf831480ee44934a45223",
+      "sha256": "4f48261dcab765b55d3e7b2e55d2ba9090d7abc745019e248d9ae3bfba656f53",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -820,7 +820,7 @@
         "SRC-0050",
         "SRC-0051"
       ],
-      "sha256": "9d3e59067db0b7fd7f355d88737c898388b5d78ee69316876def0f1f140a63e9",
+      "sha256": "cc0a3c08e8959f71d55c6605cc3eeea1c7d357d6261e256fbb2989821e8c747f",
       "source_closure": [
         "SRC-0001",
         "SRC-0002",
@@ -1710,6 +1710,43 @@
     },
     {
       "artifact_class": "method",
+      "artifact_id": "ART-8B94CE706BBBB654",
+      "authority_class": "governing_method",
+      "claim_ids": [],
+      "claim_lineage": [],
+      "claim_source_ids": [],
+      "direct_source_ids": [
+        "SRC-0026",
+        "SRC-0028"
+      ],
+      "evidence_reproducible": true,
+      "lineage_complete": true,
+      "lineage_status": "reviewed",
+      "lineage_warnings": [],
+      "parent_artifacts": [
+        "docs/LICENSING_OPTIONS.md"
+      ],
+      "path": "docs/LICENSE_MAP.md",
+      "primary_source_closure": [
+        "SRC-0025",
+        "SRC-0026",
+        "SRC-0027",
+        "SRC-0028",
+        "SRC-0029",
+        "SRC-0030"
+      ],
+      "sha256": "88f3abc79213836c9bd4076bb0f82248bc0df60fa3b2a12496030e95577298b9",
+      "source_closure": [
+        "SRC-0025",
+        "SRC-0026",
+        "SRC-0027",
+        "SRC-0028",
+        "SRC-0029",
+        "SRC-0030"
+      ]
+    },
+    {
+      "artifact_class": "method",
       "artifact_id": "ART-39F453994A65FECE",
       "authority_class": "governing_method",
       "claim_ids": [],
@@ -1737,7 +1774,7 @@
         "SRC-0029",
         "SRC-0030"
       ],
-      "sha256": "8d3b9589b4018bdee456360a8f4138c4f4abfd3c23472a005e63a5b9a293fe81",
+      "sha256": "f6d284d4ba3dab05916eb45d8867d4be9472a3e8ecbb3e49f6f9b475297caa95",
       "source_closure": [
         "SRC-0025",
         "SRC-0026",
@@ -6054,7 +6091,7 @@
       ],
       "path": "registry/project-roadmap.json",
       "primary_source_closure": [],
-      "sha256": "d7c3fcfab23a0a49d93d4bf155888bdc6db1f266f5e2b63dc00ccf2df075ecba",
+      "sha256": "9222d724de2e35d30c4c664b4e1e4b91af8fb95235ccc6a22549ecc1e6a51119",
       "source_closure": []
     },
     {
@@ -6075,7 +6112,7 @@
       ],
       "path": "registry/release-readiness.json",
       "primary_source_closure": [],
-      "sha256": "233cf11a0b9e0282cf384e8bc05f1df40d0dfb674e3774e8560cc0e9d01071ea",
+      "sha256": "d6bedaed838420b80ac0980f3389a38e068f64c499db1e404108e89768c128cd",
       "source_closure": []
     },
     {

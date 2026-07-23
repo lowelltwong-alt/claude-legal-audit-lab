@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07-22T18:00:24-04:00",
+  "as_of": "2026-07-22T21:27:50-04:00",
   "authority_boundary": "Terminal Local Completion authority: this registry proves the local research candidate is blocked for publication. It cannot grant Anthropic permission, approve public release, waive privacy/legal review for publication, mutate Git, or create human publish authority.",
   "decisions": [
     {
@@ -16,21 +16,27 @@
       "decision_id": "REL-DEC-002",
       "evidence_refs": [
         "docs/LICENSING_OPTIONS.md",
-        "Owner verbal authorization 2026-07-21: Anthropic will not grant license/trademark permission and will not want cooperative publication; do not seek Anthropic permission; keep release blocked; runtime/monitoring unauthorized; Finish Line A local candidate is durable end-state."
+        "docs/LICENSE_MAP.md",
+        "NOTICE",
+        "Owner authorization 2026-07-22: copyright holder Lowell T Wong; Apache-2.0 software + CC BY 4.0 research prose."
       ],
       "status": "decided",
       "subject": "copyright holder or governing entity",
-      "value": "No public rights-holder assignment for release. Repository remains a private local research harness; public entity selection deferred indefinitely."
+      "value": "Lowell T Wong"
     },
     {
       "decision_id": "REL-DEC-003",
       "evidence_refs": [
+        "LICENSE",
+        "LICENSES/CC-BY-4.0.txt",
+        "NOTICE",
+        "docs/LICENSE_MAP.md",
         "docs/LICENSING_OPTIONS.md",
-        "Owner verbal authorization 2026-07-21: Anthropic will not grant license/trademark permission and will not want cooperative publication; do not seek Anthropic permission; keep release blocked; runtime/monitoring unauthorized; Finish Line A local candidate is durable end-state."
+        "Owner authorization 2026-07-22: Apache-2.0 for software; CC BY 4.0 for original research prose; path-level map installed."
       ],
       "status": "decided",
       "subject": "path-level software research and metadata licenses",
-      "value": "Do not seek Anthropic license permission. Do not relicense or publish. Existing LICENSE unchanged; publication remains blocked."
+      "value": "Apache-2.0 for software, schemas, scripts, tests, configuration, and machine registries; CC BY 4.0 for original scholarly prose (docs/audit/research narrative paths per docs/LICENSE_MAP.md). Upstream and private trees not relicensed. Public READY remains blocked."
     },
     {
       "decision_id": "REL-DEC-004",
@@ -77,9 +83,9 @@
   "human_release_approved": false,
   "inventory_snapshot": {
     "generated_from": "git ls-files --cached plus --others --exclude-standard, NUL-delimited, sorted",
-    "public_path_sha256": "1c7738f6a11fdc68c3b7606ba1381490afdd779ef2a94428a9348c36cba39a40",
-    "tracked_file_count": 224,
-    "untracked_public_candidate_count": 1
+    "public_path_sha256": "bc30279495505f9166734c963d9994080be4e91d86849c1e118a6596a6b9dd6b",
+    "tracked_file_count": 228,
+    "untracked_public_candidate_count": 0
   },
   "private_path_patterns": [
     ".private/",

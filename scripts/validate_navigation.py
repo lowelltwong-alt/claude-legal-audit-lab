@@ -19,7 +19,7 @@ TRUSTED_AUTHORITIES = {"reviewed_analysis"}
 INCOMPLETE_SOURCE_STATUSES = {"missing_url_and_capture"}
 PUBLIC_TOP_LEVEL = {
     "AGENTS.md", "AI_FRONT_DOOR.md", "AI_TABLE_OF_CONTENTS.md", "CLAUDE.md",
-    "CONTRIBUTING.md", "LICENSE", "MACHINE_NAVIGATION_MANIFEST.json", "README.md",
+    "CONTRIBUTING.md", "LICENSE", "LICENSES", "NOTICE", "MACHINE_NAVIGATION_MANIFEST.json", "README.md",
     "SECURITY.md", "UPSTREAM.lock.json",
     "audit", "docs", "patterns", "prompts", "registry", "research", "results",
     "public", "runtime-lab", "schemas", "scripts", "templates", "tests", "upstream"

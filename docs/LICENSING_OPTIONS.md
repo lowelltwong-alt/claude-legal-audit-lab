@@ -1,15 +1,25 @@
 # Licensing Options and Decision Gate
 
-This is a decision brief, not legal advice. No license change is authorized by
-this document.
+This is a decision brief, not legal advice.
 
-## Current blocker
+## Owner decision (2026-07-22)
 
-The root `LICENSE` file is only an Apache-2.0 application notice, not the full
-Apache License 2.0 text, and its copyright line does not identify a holder.
-Public contribution intake should remain closed until the owner identifies the
-rights holder, chooses a license model, installs complete license texts, and
-publishes an exact path-level license map.
+| Item | Decision |
+|---|---|
+| Copyright holder | **Lowell T Wong** |
+| Software / schemas / scripts / tests / registries | **Apache License 2.0** (full text in root `LICENSE`) |
+| Original scholarly prose (`docs/`, `audit/` prose, etc.) | **CC BY 4.0** (`LICENSES/CC-BY-4.0.txt`) |
+| Path-level map | [`docs/LICENSE_MAP.md`](LICENSE_MAP.md) |
+| Attribution / NOTICE | root [`NOTICE`](../NOTICE) |
+| Trademark / Anthropic marks | Not granted; no Anthropic-cooperative branding |
+| Public product release | Remains **blocked** (license clarity ≠ READY) |
+| Outside contribution intake | Remains closed until separately activated |
+
+## Prior blocker (resolved for license text)
+
+The root `LICENSE` previously held only an Apache-2.0 application notice without
+a named holder. That is replaced by the full Apache-2.0 text, named copyright
+holder, CC BY 4.0 companion license, NOTICE, and path-level map.
 
 ## What “protection” can mean
 
@@ -27,11 +37,12 @@ No license creates ownership over facts, ideas, methods, or an industry's
 underlying ontology. It can govern original expression and, in some
 jurisdictions, protected selection/arrangement or database rights.
 
-## Options
+## Options considered
 
 | Model | Protection | Tradeoff |
 |---|---|---|
 | Apache-2.0 for everything | Simple, permissive, express patent grant, attribution notices | Commercial reuse and proprietary forks are allowed; little reciprocity |
+| **Apache-2.0 software + CC BY 4.0 research (chosen)** | Familiar software license, clear attribution for prose | Commercial reuse remains allowed; dual-license boundary must stay mapped |
 | MPL-2.0 for software; CC BY 4.0 for original research | File-level software copyleft plus scholarly attribution | Mixed-license boundary must be meticulous; commercial use remains allowed |
 | Apache-2.0 for software; CC BY 4.0 for original research; CC0 for deliberately open metadata | Familiar software license, clear attribution for prose, interoperable metadata | Commercial reuse remains allowed; CC0 waives attribution where effective |
 | Apache-2.0 or MPL-2.0 for software; CC BY-SA 4.0 for original research; ODbL for a qualifying database | Reciprocity for adapted research/database | Higher compliance burden and compatibility risk |
@@ -55,45 +66,34 @@ Authoritative starting points:
 - [GitHub Terms of Service](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
   (`SRC-0030`)
 
-## Recommended decision path
+## Implemented path
 
-For a genuinely public research commons, the cleanest default is:
+For this public research commons:
 
-- **software, executable schemas, validators, configuration, and tests:**
-  Apache-2.0 or MPL-2.0 after a deliberate reciprocity choice;
-- **original scholarly prose and human-readable taxonomy commentary:**
+- **software, executable schemas, validators, configuration, tests, and machine registries:**
+  Apache-2.0;
+- **original scholarly prose and human-readable research commentary:**
   CC BY 4.0;
-- **normalized factual metadata:** CC0 only if you intentionally prioritize
-  interoperability over legally required attribution; otherwise CC BY 4.0;
+- **normalized factual metadata in registries:** treated as Apache-2.0 machine artifacts (not CC0);
 - **raw third-party captures:** excluded unless redistribution rights are
   individually documented;
-- **name and logo:** reserved under a separate trademark policy;
-- **private raw research, agent workflows, and unpublished theses:** not part of
-  the public distribution.
-
-If your priority is stopping a commercial actor from reusing the published
-research without permission, choose a noncommercial or commercial-dual-license
-model only after counsel review and accept that the repository should not be
-described as fully open source. A public GitHub host may also receive rights
-under its own platform terms independently of your repository license.
+- **name and logo:** reserved; no Anthropic marks;
+- **private raw research, agent workflows, and unpublished private theses:** not part of
+  the public distribution (`private/` / `.private/`).
 
 ## Contributor rights
 
-Start with DCO 1.1 plus an explicit inbound-equals-outbound rule for each path.
-Do not adopt a CLA by default. A counsel-reviewed CLA may be warranted if you
-need future relicensing, copyright assignment, or proprietary dual licensing.
-Decide that before accepting outside contributions.
+Start with DCO 1.1 plus an explicit inbound-equals-outbound rule for each path
+when intake opens. Do not adopt a CLA by default. A counsel-reviewed CLA may be
+warranted if you need future relicensing, copyright assignment, or proprietary
+dual licensing.
 
-## Required human decision
+## Remaining human gates (not completed by this license install)
 
-Before opening intake, record:
+Before opening intake or marking public READY, still record/confirm as needed:
 
-1. copyright holder or governing entity;
-2. open-commons versus commercial-protection objective;
-3. Apache-2.0 versus MPL-2.0 for software;
-4. CC BY, CC BY-SA, or CC BY-NC-SA for original research;
-5. metadata/database treatment;
-6. trademark/name policy;
-7. DCO-only versus a counsel-reviewed CLA;
-8. hosting-platform acceptance;
-9. whether the private workspace moves to a physically separate repository.
+1. trademark/name policy details beyond “no Anthropic marks”;
+2. DCO-only versus a counsel-reviewed CLA;
+3. hosting-platform acceptance;
+4. whether the private workspace moves to a physically separate repository;
+5. separate public READY / contribution-activation authorization.
