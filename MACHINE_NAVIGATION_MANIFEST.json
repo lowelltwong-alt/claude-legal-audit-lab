@@ -44,6 +44,7 @@
     "thesis_map": "registry/thesis-map.json",
     "thesis_map_schema": "schemas/thesis-map.schema.json",
     "thesis_map_human_view": "docs/THESIS_MAP.md",
+    "findings_provenance_proof_route": "docs/AI_FINDINGS_PROVENANCE_PROOF_ROUTE.md",
     "thesis_map_builder": "scripts/build_thesis_map.py",
     "white_paper_export": "registry/white-paper-export.json",
     "white_paper_export_schema": "schemas/white-paper-export.schema.json",
